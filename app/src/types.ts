@@ -72,4 +72,8 @@ export interface DayStats {
   newCards: number
   reviews: number
   correct: number
+  /** O gün kazanılan XP */
+  xp?: number
+  /** O gün çalışılan süre (saniye) */
+  seconds?: number
 }

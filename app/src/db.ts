@@ -1,4 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie'
+import { applyFreezes, computeStreak, EMPTY_FREEZES, type FreezeState } from './stats'
 import { DEFAULT_SETTINGS, LEVELS, type Card, type DayStats, type Level, type Progress, type Settings } from './types'
 
 const db = new Dexie('kelime') as Dexie & {
@@ -42,19 +43,62 @@ export async function loadDay(date = today()): Promise<DayStats> {
   return (await db.days.get(date)) ?? { date, newCards: 0, reviews: 0, correct: 0 }
 }
 
-export async function recordAnswer(p: Progress, wasNew: boolean, correct: boolean) {
+export async function recordAnswer(p: Progress, wasNew: boolean, correct: boolean, xp = 0, seconds = 0) {
   await db.transaction('rw', db.progress, db.days, async () => {
     await db.progress.put(p)
     const day = await loadDay(today(p.lastSeen))
     day.reviews++
     if (wasNew) day.newCards++
     if (correct) day.correct++
+    day.xp = (day.xp ?? 0) + xp
+    day.seconds = (day.seconds ?? 0) + seconds
     await db.days.put(day)
   })
 }
 
+/** Sınav ve oyunlar: ilerlemeye dokunmadan bugünün XP ve süresine ekler */
+export async function addActivity(xp: number, seconds: number) {
+  await db.transaction('rw', db.days, async () => {
+    const day = await loadDay()
+    day.xp = (day.xp ?? 0) + xp
+    day.seconds = (day.seconds ?? 0) + seconds
+    await db.days.put(day)
+  })
+}
+
+export async function loadDays(): Promise<DayStats[]> {
+  return db.days.toArray()
+}
+
+/** Rozetler için tutulan sayaçlar */
+export interface Counters {
+  bestCombo: number
+  perfectSessions: number
+  gamesPlayed: number
+}
+
+export async function loadCounters(): Promise<Counters> {
+  return { bestCombo: 0, perfectSessions: 0, gamesPlayed: 0, ...((await db.meta.get('counters'))?.value as Partial<Counters>) }
+}
+
+export async function bumpCounters(patch: { combo?: number; perfect?: boolean; game?: boolean }) {
+  const c = await loadCounters()
+  if (patch.combo) c.bestCombo = Math.max(c.bestCombo, patch.combo)
+  if (patch.perfect) c.perfectSessions++
+  if (patch.game) c.gamesPlayed++
+  await db.meta.put({ key: 'counters', value: c })
+}
+
+export async function loadSeenBadges(): Promise<Set<string>> {
+  return new Set(((await db.meta.get('seenBadges'))?.value as string[]) ?? [])
+}
+
+export async function saveSeenBadges(ids: Iterable<string>) {
+  await db.meta.put({ key: 'seenBadges', value: [...ids] })
+}
+
 /** Son cevabı geri alır: kartın önceki durumunu ve günlük sayaçları eski haline getirir */
-export async function undoAnswer(prev: Progress | undefined, current: Progress, wasNew: boolean, correct: boolean) {
+export async function undoAnswer(prev: Progress | undefined, current: Progress, wasNew: boolean, correct: boolean, xp = 0, seconds = 0) {
   await db.transaction('rw', db.progress, db.days, async () => {
     if (prev) await db.progress.put(prev)
     else await db.progress.delete(current.id)
@@ -62,6 +106,8 @@ export async function undoAnswer(prev: Progress | undefined, current: Progress, 
     day.reviews = Math.max(day.reviews - 1, 0)
     if (wasNew) day.newCards = Math.max(day.newCards - 1, 0)
     if (correct) day.correct = Math.max(day.correct - 1, 0)
+    day.xp = Math.max((day.xp ?? 0) - xp, 0)
+    day.seconds = Math.max((day.seconds ?? 0) - seconds, 0)
     await db.days.put(day)
   })
 }
@@ -127,17 +173,16 @@ export async function setProgress(id: string, p: Progress | null) {
   else await db.progress.delete(id)
 }
 
-/** Bugünden geriye doğru, en az bir kart çalışılmış ardışık gün sayısı */
-export async function streak(now = Date.now()): Promise<number> {
-  const days = new Set((await db.days.toArray()).filter((d) => d.reviews > 0).map((d) => d.date))
-  let n = 0
-  const d = new Date(now)
-  if (!days.has(today(d.getTime()))) d.setDate(d.getDate() - 1) // bugün henüz çalışılmadıysa seri bozulmaz
-  while (days.has(today(d.getTime()))) {
-    n++
-    d.setDate(d.getDate() - 1)
-  }
-  return n
+/**
+ * Seri: bugünden geriye, en az bir kart çalışılmış ardışık gün sayısı. Haftalık seri koruyucular
+ * kaçırılan günleri kapatır. Koruyucu durumu da döner.
+ */
+export async function streak(now = Date.now()): Promise<{ days: number; freezes: FreezeState }> {
+  const active = new Set((await db.days.toArray()).filter((d) => d.reviews > 0).map((d) => d.date))
+  const stored = ((await db.meta.get('freezes'))?.value as FreezeState) ?? EMPTY_FREEZES
+  const freezes = applyFreezes(active, stored, now)
+  if (JSON.stringify(freezes) !== JSON.stringify(stored)) await db.meta.put({ key: 'freezes', value: freezes })
+  return { days: computeStreak(active, new Set(freezes.used), now), freezes }
 }
 
 export async function exportBackup(): Promise<string> {

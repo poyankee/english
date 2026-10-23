@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import type { AppData, Nav } from '../App'
-import { useT } from '../i18n'
+import { badgeList } from '../badgeList'
+import { saveSeenBadges } from '../db'
+import { useT, type T } from '../i18n'
 import { inScope, nextLevel } from '../session'
 import { isMistake } from '../srs'
+import { totalXp, xpLevel } from '../stats'
 import type { Settings } from '../types'
 
 export function Today({ data, nav, updateSettings }: { data: AppData; nav: Nav; updateSettings: (s: Settings) => void }) {
@@ -17,6 +20,9 @@ export function Today({ data, nav, updateSettings }: { data: AppData; nav: Nav; 
   const mistakes = [...progress.values()].filter(isMistake).length
   const accuracy = day.reviews ? Math.round((100 * day.correct) / day.reviews) : null
   const up = nextLevel(cards, progress, settings)
+  const xp = xpLevel(totalXp(data.days))
+  const fresh = badgeList(data).filter((b) => b.earned && !data.seenBadges.has(b.id))
+  const [dismissed, setDismissed] = useState(false)
 
   return (
     <main className="home stagger with-tabs">
@@ -35,10 +41,33 @@ export function Today({ data, nav, updateSettings }: { data: AppData; nav: Nav; 
             </span>
             <span className="pill">📚 {t('today.cards', { n: day.reviews })}</span>
             {accuracy !== null && <span className="pill">🎯 %{accuracy}</span>}
+            <span className="pill">⭐ {t('stats.xpLevel', { n: xp.level })}</span>
+            {data.freezes.available > 0 && <span className="pill">🧊 {data.freezes.available}</span>}
           </div>
         </div>
         <Ring value={day.newCards} goal={settings.dailyNew} label={t('today.ringNew', { n: settings.dailyNew })} />
       </section>
+
+      {fresh.length > 0 && !dismissed && (
+        <section className="levelup badge-banner">
+          <span className="badge-big">{fresh[0].icon}</span>
+          <div className="grow">
+            <b>{t('today.newBadge')}</b>
+            <p>
+              {t(`badge.${fresh[0].id}` as Parameters<T>[0])} · {t(`badge.${fresh[0].id}.desc` as Parameters<T>[0])}
+            </p>
+          </div>
+          <button
+            className="primary"
+            onClick={() => {
+              setDismissed(true)
+              saveSeenBadges([...data.seenBadges, ...fresh.map((b) => b.id)])
+            }}
+          >
+            {t('today.ok')}
+          </button>
+        </section>
+      )}
 
       {up && (
         <section className="levelup">

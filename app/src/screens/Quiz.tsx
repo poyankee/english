@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { AppData } from '../App'
 import { Choices, QuestionCard } from '../components/QuestionCard'
-import { easeConfusion, recordAnswer, recordConfusion, undoAnswer } from '../db'
+import { addActivity, bumpCounters, easeConfusion, recordAnswer, recordConfusion, undoAnswer } from '../db'
 import { feedback } from '../feedback'
 import { useT } from '../i18n'
 import {
@@ -19,6 +19,7 @@ import {
 } from '../session'
 import { speak } from '../speech'
 import { answer } from '../srs'
+import { xpForAnswer } from '../stats'
 import type { Answer, Card, Progress, QuestionType } from '../types'
 
 const CONFETTI_COLORS = ['#6c5ce7', '#a66cff', '#ff6b9d', '#f97316', '#22c55e', '#3b82f6', '#facc15']
@@ -38,6 +39,8 @@ interface UndoState {
   saved: Progress
   countsAsNew: boolean
   correct: boolean
+  xp: number
+  seconds: number
   session: Session
   counts: Counts
   combo: number
@@ -62,6 +65,9 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
   const [praise, setPraise] = useState('')
   const [undo, setUndo] = useState<UndoState | null>(null)
   const [wrongList, setWrongList] = useState<Card[]>([])
+  const [xpTotal, setXpTotal] = useState(0)
+  // Kartın gösterildiği an: çalışma süresi için (kart başına en çok 60 sn sayılır)
+  const shownAt = useRef(Date.now())
   // "Devam"a iki kez hızlıca basılınca aynı cevap iki kez kaydedilmesin
   const saving = useRef(false)
   // İlerleme çubuğu için oturumun başında planlanan kart sayısı (yanlışlar sonradan eklenir)
@@ -85,6 +91,7 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
   const correct = !card ? false : type === 'type' ? typedResult !== 'wrong' : picked === card[field]
 
   useEffect(() => {
+    shownAt.current = Date.now()
     window.scrollTo({ top: 0 })
     if (card && type === 'en-tr' && settings.autoSpeak) speak(card.word)
   }, [card, type, settings.autoSpeak])
@@ -97,8 +104,10 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
 
   const finished = !pick
   useEffect(() => {
-    if (finished && counts.done > 0) feedback('finish')
-  }, [finished, counts.done])
+    if (!finished || counts.done === 0) return
+    feedback('finish')
+    bumpCounters({ combo: bestCombo, perfect: counts.done >= 10 && counts.correct === counts.done })
+  }, [finished]) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!pick || !card) {
     const pct = counts.done ? Math.round((100 * counts.correct) / counts.done) : 0
@@ -114,6 +123,10 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
             <div className="score">
               <b>{counts.done}</b>
               <span>{t('done.cards')}</span>
+            </div>
+            <div className="score">
+              <b>+{xpTotal}</b>
+              <span>XP</span>
             </div>
             <div className="score">
               <b>%{pct}</b>
@@ -181,8 +194,12 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
     if (saving.current || !pick) return
     saving.current = true
     const c = pick.card
+    const seconds = Math.min(60, Math.round((Date.now() - shownAt.current) / 1000))
+    const xp = xpForAnswer(result, combo)
+    setXpTotal((x) => x + xp)
     if (mode === 'exam') {
       // Sınav modu tekrar takvimini etkilemez; yanlışlar sonda listelenir
+      addActivity(xp, seconds)
       if (result === 'wrong') setWrongList((w) => [...w, c])
       const s = afterAnswer(session, c.id, false, false)
       setSession(s)
@@ -203,9 +220,9 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
     const p = offSchedule ? { ...prev, seen: prev.seen + 1, lastSeen: now } : answer(prev, c.id, result, now, graduates(c, settings))
     // Geçilen seviyelerden gelen kontrol soruları günlük yeni kelime hakkından düşmez
     const countsAsNew = !prev && pick.kind !== 'checkup'
-    setUndo({ pick, type, prev, saved: p, countsAsNew, correct: result === 'correct', session, counts, combo })
+    setUndo({ pick, type, prev, saved: p, countsAsNew, correct: result === 'correct', xp, seconds, session, counts, combo })
     progress.set(c.id, p)
-    await recordAnswer(p, countsAsNew, result === 'correct')
+    await recordAnswer(p, countsAsNew, result === 'correct', xp, seconds)
     const s = afterAnswer(session, c.id, result === 'wrong', countsAsNew)
     setSession(s)
     setCounts((n) => ({
@@ -224,7 +241,8 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
 
   async function undoLast() {
     if (!undo) return
-    await undoAnswer(undo.prev, undo.saved, undo.countsAsNew, undo.correct)
+    await undoAnswer(undo.prev, undo.saved, undo.countsAsNew, undo.correct, undo.xp, undo.seconds)
+    setXpTotal((x) => x - undo.xp)
     if (undo.prev) progress.set(undo.pick.card.id, undo.prev)
     else progress.delete(undo.pick.card.id)
     setSession(undo.session)
@@ -305,7 +323,10 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
       {answered && <div className="sheet-space" />}
       {answered && (
         <section className={`sheet ${correct ? 'ok' : 'no'}`}>
-          <h3>{correct ? (typedResult === 'almost' ? t('quiz.almost') : praise) : t('quiz.wrong')}</h3>
+          <div className="row between">
+            <h3>{correct ? (typedResult === 'almost' ? t('quiz.almost') : praise) : t('quiz.wrong')}</h3>
+            <span className="xp-pop">+{xpForAnswer(correct ? 'correct' : 'wrong', combo)} XP</span>
+          </div>
           {(!correct || typedResult === 'almost') && (
             <span className="answer">{t('quiz.correctIs', { word: card.word, tr: card.tr })}</span>
           )}

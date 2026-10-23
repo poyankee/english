@@ -1583,6 +1583,244 @@ input[type='checkbox'] {
   }
 }
 
+/* ---------- İlerleme ---------- */
+.xp-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: var(--radius);
+  color: #fff;
+  background: linear-gradient(135deg, #f59e0b, #f97316 50%, #ef4444);
+  box-shadow: var(--shadow-lg);
+}
+.xp-card small {
+  opacity: 0.9;
+}
+.xp-badge {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.25);
+}
+.bar.light {
+  background: rgba(255, 255, 255, 0.3);
+  margin: 6px 0 4px;
+}
+.bar.light .learned {
+  background: #fff;
+}
+.xp-pop {
+  font-weight: 900;
+  color: var(--orange);
+  animation: pop 0.5s ease;
+}
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.week-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px 2px;
+  border-radius: 12px;
+  background: var(--surface-2);
+}
+.week-stat b {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.week-stat span {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+.week-stat em {
+  font-style: normal;
+  font-size: 0.7rem;
+  font-weight: 800;
+  margin-top: 2px;
+}
+.week-stat .up {
+  color: var(--right);
+}
+.week-stat .down {
+  color: var(--wrong);
+}
+.heatmap-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.heatmap {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 3px;
+}
+.heat-col {
+  display: grid;
+  gap: 3px;
+}
+.heat-cell {
+  display: inline-block;
+  aspect-ratio: 1;
+  width: 100%;
+  min-width: 10px;
+  padding: 0;
+  border-radius: 3px;
+  background: var(--surface-2);
+}
+.heat-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.heat-legend .heat-cell {
+  width: 10px;
+}
+.heat-cell.h1 {
+  background: color-mix(in srgb, var(--accent) 25%, var(--surface-2));
+}
+.heat-cell.h2 {
+  background: color-mix(in srgb, var(--accent) 50%, var(--surface-2));
+}
+.heat-cell.h3 {
+  background: color-mix(in srgb, var(--accent) 75%, var(--surface-2));
+}
+.heat-cell.h4 {
+  background: var(--accent);
+}
+.heat-cell.future {
+  opacity: 0.25;
+}
+.bars {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 4px;
+  height: 120px;
+  align-items: end;
+}
+.bar-col {
+  position: relative;
+  height: 100%;
+  padding: 0 0 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 6px;
+}
+.bar-fill {
+  display: block;
+  width: 100%;
+  min-height: 2px;
+  border-radius: 4px 4px 0 0;
+  background: var(--accent);
+  transform-origin: bottom;
+  animation: rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.bar-col.sel .bar-fill {
+  background: var(--accent-3);
+}
+.bar-label {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.62rem;
+  color: var(--muted);
+}
+.bars-tip {
+  margin: 6px 0 0;
+  min-height: 1em;
+}
+.totals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+  padding: 12px 4px;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.total b {
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+.total small {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 4px;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  filter: grayscale(1);
+  opacity: 0.55;
+}
+.badge.earned {
+  filter: none;
+  opacity: 1;
+}
+.badge-icon {
+  font-size: 1.8rem;
+}
+.badge.earned .badge-icon {
+  animation: pop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.badge-name {
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+.badge-desc {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.badge-banner {
+  background: linear-gradient(135deg, #e0f2fe, #ede9fe);
+  color: #1e1b3a;
+}
+.badge-big {
+  font-size: 2.4rem;
+  animation: pop-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.tag.no-bg {
+  background: transparent;
+  color: var(--wrong);
+}
+
+@keyframes rise {
+  from {
+    transform: scaleY(0);
+  }
+}
+
 /* ---------- Animasyonlar ---------- */
 @keyframes fade-up {
   from {

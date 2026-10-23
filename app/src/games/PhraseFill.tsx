@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import type { AppData } from '../App'
-import { loadBest, saveBest } from '../db'
+import { addActivity, bumpCounters, loadBest, saveBest } from '../db'
 import { feedback } from '../feedback'
 import { useT } from '../i18n'
+import { GAME_XP } from '../stats'
 import { phraseRound } from '../session'
 import { speak } from '../speech'
 import { GameOver, GameTop } from './GameShell'
@@ -15,6 +16,7 @@ export function PhraseFill({ data, onExit }: { data: AppData; onExit: () => void
   const [score, setScore] = useState(0)
   const [result, setResult] = useState<{ record: boolean; best: number } | null>(null)
   const q = round[i]
+  const [started, setStarted] = useState(() => Date.now())
 
   async function next() {
     setPicked(null)
@@ -25,6 +27,8 @@ export function PhraseFill({ data, onExit }: { data: AppData; onExit: () => void
     const best = await loadBest('phrase')
     const record = best === null || score > best
     if (record) await saveBest('phrase', score)
+    await addActivity(score * GAME_XP, Math.round((Date.now() - started) / 1000))
+    await bumpCounters({ game: true })
     feedback('finish')
     setResult({ record, best: record ? score : best! })
   }
@@ -47,6 +51,7 @@ export function PhraseFill({ data, onExit }: { data: AppData; onExit: () => void
         record={!!result?.record}
         onAgain={() => {
           setRound(phraseRound(data.cards, data.settings))
+          setStarted(Date.now())
           setI(0)
           setScore(0)
           setResult(null)

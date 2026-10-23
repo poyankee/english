@@ -1,5 +1,18 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { loadConfusions, loadCustomWords, loadDay, loadFavorites, loadProgress, loadSettings, saveSettings, streak } from './db'
+import {
+  loadConfusions,
+  loadCounters,
+  loadCustomWords,
+  loadDay,
+  loadDays,
+  loadFavorites,
+  loadProgress,
+  loadSeenBadges,
+  loadSettings,
+  saveSettings,
+  streak,
+  type Counters,
+} from './db'
 import { setFeedback } from './feedback'
 import { I18n, makeT } from './i18n'
 import { Match } from './games/Match'
@@ -15,6 +28,7 @@ import { Today } from './screens/Today'
 import { Words } from './screens/Words'
 import { newCardOrder, type Confusions, type Mode } from './session'
 import { setAccent } from './speech'
+import type { FreezeState } from './stats'
 import type { Card, DayStats, Progress, Settings } from './types'
 
 export type Tab = 'today' | 'practice' | 'words' | 'progress' | 'profile'
@@ -28,8 +42,13 @@ export interface AppData {
   settings: Settings
   day: DayStats
   streak: number
+  freezes: FreezeState
   confusions: Confusions
   favorites: Set<string>
+  /** Tüm günlerin istatistikleri (grafikler, haftalık özet, XP) */
+  days: DayStats[]
+  counters: Counters
+  seenBadges: Set<string>
 }
 
 export interface Nav {
@@ -60,17 +79,21 @@ export default function App() {
   const baseCards = useRef<Card[]>([])
 
   const load = useCallback(async () => {
-    const [progress, settings, day, s, confusions, favorites, custom] = await Promise.all([
+    // Seri koruyucu günleri işaretleyebildiği için seri, günler okunmadan önce hesaplanır
+    const st = await streak()
+    const [progress, settings, day, confusions, favorites, custom, days, counters, seenBadges] = await Promise.all([
       loadProgress(),
       loadSettings(),
       loadDay(),
-      streak(),
       loadConfusions(),
       loadFavorites(),
       loadCustomWords(),
+      loadDays(),
+      loadCounters(),
+      loadSeenBadges(),
     ])
     const cards = newCardOrder([...baseCards.current, ...custom])
-    return { cards, progress, settings, day, streak: s, confusions, favorites }
+    return { cards, progress, settings, day, streak: st.days, freezes: st.freezes, confusions, favorites, days, counters, seenBadges }
   }, [])
 
   const refresh = useCallback(async () => {
@@ -133,7 +156,7 @@ export default function App() {
   else if (overlay?.name === 'onboarding') content = <Onboarding data={data} updateSettings={updateSettings} onDone={close} />
   else if (tab === 'practice') content = <Practice data={data} nav={nav} />
   else if (tab === 'words') content = <Words data={data} nav={nav} refresh={refresh} />
-  else if (tab === 'progress') content = <ProgressScreen data={data} />
+  else if (tab === 'progress') content = <ProgressScreen data={data} refresh={refresh} />
   else if (tab === 'profile') content = <ProfileScreen data={data} updateSettings={updateSettings} nav={nav} />
   else content = <Today data={data} nav={nav} updateSettings={updateSettings} />
 

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import type { AppData } from '../App'
-import { loadBest, saveBest } from '../db'
+import { addActivity, bumpCounters, loadBest, saveBest } from '../db'
 import { feedback } from '../feedback'
 import { useT } from '../i18n'
+import { GAME_XP } from '../stats'
 import { gamePool } from '../session'
 import type { Card } from '../types'
 import { GameOver, GameTop } from './GameShell'
@@ -37,6 +38,8 @@ export function Match({ data, onExit }: { data: AppData; onExit: () => void }) {
     const best = await loadBest('match')
     const record = best === null || secs < best
     if (record) await saveBest('match', secs)
+    await addActivity(PAIRS * ROUNDS * GAME_XP, secs)
+    await bumpCounters({ game: true })
     feedback('finish')
     setResult({ secs, record, best: record ? secs : best! })
   }

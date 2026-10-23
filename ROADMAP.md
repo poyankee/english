@@ -118,9 +118,9 @@ Seçilen özellikler (numaralar özellik listesindeki sırayla):
 - [x] Favori / "zaten biliyorum" işaretleme (15); kendi kelimeni ekle (14)
 
 ### Faz 6 — İlerleme ve motivasyon
-- [ ] İstatistik sayfası (17), takvim ısı haritası (18)
-- [ ] Rozetler (19), XP ve unvanlar (20), seri koruyucu (21), haftalık özet (22)
-- [ ] Zor kelime tespiti: sık yanlış yapılan kelimeler daha sık gelir (24)
+- [x] İstatistik sayfası (17), takvim ısı haritası (18)
+- [x] Rozetler (19), XP ve unvanlar (20), seri koruyucu (21), haftalık özet (22)
+- [x] Zor kelime tespiti: sık yanlış yapılan kelimeler daha sık gelir (24)
 
 ### Faz 7 — Veri zenginleştirme
 - [ ] Telaffuz yazısı / IPA (11), kelime ailesi (12), eş ve zıt anlamlılar (13), konu desteleri (16)

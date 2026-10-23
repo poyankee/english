@@ -33,12 +33,23 @@ export function answer(prev: Progress | undefined, id: string, result: Answer, n
   return {
     id,
     box: done ? MAX_BOX : box,
-    due: now + (done ? NEVER : INTERVALS[box]),
+    due: now + (done ? NEVER : Math.round(INTERVALS[box] * (result === 'correct' && prev ? difficultyFactor(prev) : 1))),
     seen: (prev?.seen ?? 0) + 1,
     wrong: (prev?.wrong ?? 0) + (result === 'wrong' ? 1 : 0),
     lastSeen: now,
     ...(done ? { done: true } : {}),
   }
+}
+
+/**
+ * Zor kelime ayarı: sık yanlış yapılan kartların aralığı kısalır (en çok %60), hiç yanlış yapılmamış
+ * ve iyi bilinen kartların aralığı biraz uzar.
+ */
+export function difficultyFactor(prev: Progress): number {
+  const rate = prev.seen ? prev.wrong / prev.seen : 0
+  if (rate >= 0.25) return Math.max(0.4, 1 - rate)
+  if (prev.wrong === 0 && prev.box >= KNOWN_BOX) return 1.2
+  return 1
 }
 
 /** Seviye tespit sınavında bilinen kelime: kolay/geçilen seviyede tamamlanır, diğerlerinde "biliyorum"dan başlar */

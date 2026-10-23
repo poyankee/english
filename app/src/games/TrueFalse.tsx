@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import type { AppData } from '../App'
-import { loadBest, saveBest } from '../db'
+import { addActivity, bumpCounters, loadBest, saveBest } from '../db'
 import { feedback } from '../feedback'
 import { useT } from '../i18n'
+import { GAME_XP } from '../stats'
 import { gamePool } from '../session'
 import type { Card } from '../types'
 import { GameOver, GameTop } from './GameShell'
@@ -44,6 +45,8 @@ export function TrueFalse({ data, onExit }: { data: AppData; onExit: () => void 
         const best = await loadBest('truefalse')
         const record = best === null || scoreRef.current > best
         if (record) await saveBest('truefalse', scoreRef.current)
+        await addActivity(scoreRef.current * GAME_XP, SECONDS)
+        await bumpCounters({ game: true })
         feedback('finish')
         setResult({ record, best: record ? scoreRef.current : best! })
       })()
