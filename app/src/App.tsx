@@ -34,7 +34,7 @@ import type { Card, DayStats, Progress, Settings } from './types'
 export type Tab = 'today' | 'practice' | 'words' | 'progress' | 'profile'
 /** Sekme çubuğunun gizlendiği tam ekran akışlar */
 export type Game = 'match' | 'truefalse' | 'phrase'
-type Overlay = { name: 'quiz'; mode: Mode } | { name: 'game'; game: Game } | { name: 'mistakes' } | { name: 'onboarding' } | null
+type Overlay = { name: 'quiz'; mode: Mode; ids?: string[] } | { name: 'game'; game: Game } | { name: 'mistakes' } | { name: 'onboarding' } | null
 
 export interface AppData {
   cards: Card[]
@@ -52,7 +52,7 @@ export interface AppData {
 }
 
 export interface Nav {
-  quiz: (mode: Mode) => void
+  quiz: (mode: Mode, ids?: string[]) => void
   game: (g: Game) => void
   mistakes: () => void
   onboarding: () => void
@@ -127,7 +127,7 @@ export default function App() {
   }
 
   const nav: Nav = {
-    quiz: (mode) => refresh().then(() => setOverlay({ name: 'quiz', mode })),
+    quiz: (mode, ids) => refresh().then(() => setOverlay({ name: 'quiz', mode, ids })),
     game: (game) => refresh().then(() => setOverlay({ name: 'game', game })),
     mistakes: () => refresh().then(() => setOverlay({ name: 'mistakes' })),
     onboarding: () => setOverlay({ name: 'onboarding' }),
@@ -142,7 +142,7 @@ export default function App() {
   if (!data) return <main className="center">{t('loading')}</main>
 
   let content
-  if (overlay?.name === 'quiz') content = <Quiz data={data} mode={overlay.mode} onExit={close} />
+  if (overlay?.name === 'quiz') content = <Quiz data={data} mode={overlay.mode} ids={overlay.ids} onExit={close} />
   else if (overlay?.name === 'game')
     content =
       overlay.game === 'match' ? (

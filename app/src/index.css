@@ -1821,6 +1821,29 @@ input[type='checkbox'] {
   }
 }
 
+.ipa {
+  position: relative;
+  font-family: 'Charis SIL', 'Doulos SIL', 'Lucida Sans Unicode', system-ui, sans-serif;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+.relations {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.relations .chip {
+  padding: 5px 11px;
+  font-size: 0.85rem;
+}
+.chip.plain {
+  border-color: var(--line);
+  color: var(--muted);
+  font-weight: 700;
+  border-radius: 12px;
+}
+
 /* ---------- Animasyonlar ---------- */
 @keyframes fade-up {
   from {

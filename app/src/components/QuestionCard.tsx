@@ -34,6 +34,7 @@ export function QuestionCard({
           </button>
         )}
       </div>
+      {showWord && card.ipa && <div className="ipa">{card.ipa}</div>}
       <div className="meta">
         <span className="tag level">{card.level}</span>
         <span className="tag">{t(`pos.${card.pos}` as Parameters<typeof t>[0])}</span>

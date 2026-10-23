@@ -19,7 +19,17 @@ export interface Card {
   sense?: string
   /** Kullanıcının kendi eklediği kelime */
   custom?: boolean
+  /** Amerikan telaffuzu (IPA) */
+  ipa?: string
+  /** Aynı kökten kelimeler (listede olanlar) */
+  family?: string[]
+  syn?: string[]
+  ant?: string[]
+  topic?: Topic
 }
+
+export const TOPICS = ['food', 'animals', 'body', 'people', 'places', 'objects', 'nature', 'colors', 'feelings', 'mind', 'communication', 'time', 'money', 'society', 'movement', 'numbers'] as const
+export type Topic = (typeof TOPICS)[number]
 
 export interface Progress {
   id: string

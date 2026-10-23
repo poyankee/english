@@ -5,6 +5,8 @@ Zenginleştirme dosyaları: data/enrich/*.txt, her satır "|" ile ayrılmış 5 
     id | emoji | türkçe | ingilizce açıklama | örnek cümle
 Emoji ve örnek cümle boş bırakılabilir. Kalıpların id'leri "phrase:" ile başlar (ör. phrase:take-over).
 
+Varsa data/lexicon.json'daki telaffuz, kelime ailesi, eş/zıt anlamlı ve konu bilgileri de eklenir.
+
 Kullanım:
     python3 scripts/build_cards.py
 """
@@ -43,6 +45,10 @@ def main():
                 else:
                     enrich[cols[0]] = cols
 
+    # Telaffuz, kelime ailesi, eş/zıt anlamlılar ve konu (scripts/build_lexicon.py üretir)
+    lex_path = os.path.join(ROOT, "data", "lexicon.json")
+    lexicon = json.load(open(lex_path, encoding="utf-8")) if os.path.exists(lex_path) else {}
+
     cards = []
     for id_, b in base.items():
         if id_ not in enrich:
@@ -53,6 +59,7 @@ def main():
             card["emoji"] = emoji
         if ex:
             card["ex"] = ex
+        card.update(lexicon.get(id_, {}))
         cards.append(card)
 
     out = os.path.join(ROOT, "app", "public", "cards.json")

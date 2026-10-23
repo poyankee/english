@@ -1,5 +1,5 @@
 import { isKnown, isMistake, KNOWN_BOX } from './srs'
-import { EASY_LEVELS, LEVELS, type Card, type Level, type Progress, type QuestionType, type Settings } from './types'
+import { EASY_LEVELS, LEVELS, type Card, type Level, type Progress, type QuestionType, type Settings, type Topic } from './types'
 
 /** Yanlış bilinen kart kaç kart sonra tekrar sorulsun */
 export const RELEARN_GAP = 4
@@ -14,7 +14,7 @@ export const LEVEL_UP_RATIO = 0.8
 export const PLACEMENT_PER_LEVEL = 6
 export const PLACEMENT_PASS = 4
 
-export type Mode = 'study' | 'mistakes' | 'verbs' | 'reverse' | 'typing' | 'exam' | 'confused' | 'favorites'
+export type Mode = 'study' | 'mistakes' | 'verbs' | 'reverse' | 'typing' | 'exam' | 'confused' | 'favorites' | 'list'
 /** Sınav modunda sorulacak soru sayısı */
 export const EXAM_SIZE = 30
 /** Karıştırılan kelime çiftleri: kart id -> (yanlışlıkla seçilen kart id -> kaç kez) */
@@ -95,6 +95,8 @@ export function startSession(
   rand = Math.random,
   confusions: Confusions = {},
   favorites: Set<string> = new Set(),
+  /** 'list' modunda sorulacak kartlar (ör. bir konu destesi) */
+  ids: string[] = [],
 ): Session {
   let queue: string[] = []
   const unlocked = (c: Card) => levelIndex(c.level) <= levelIndex(settings.currentLevel) && (c.pos !== 'phrase' || settings.phrases)
@@ -127,6 +129,9 @@ export function startSession(
     queue = shuffle(cards.filter(unlocked), rand)
       .slice(0, EXAM_SIZE)
       .map((c) => c.id)
+  } else if (mode === 'list') {
+    const wanted = new Set(ids)
+    queue = prioritized(cards.filter((c) => wanted.has(c.id)))
   } else if (mode === 'favorites') {
     queue = shuffle(
       cards.filter((c) => favorites.has(c.id)),
@@ -375,6 +380,7 @@ export interface WordFilter {
   level: Level | 'all'
   status: WordStatus | 'all' | 'favorites' | 'custom'
   pos: 'all' | 'noun' | 'verb' | 'adjective' | 'adverb' | 'phrase'
+  topic?: Topic | 'all'
 }
 
 /** Kelimeler sekmesindeki arama ve filtreler; İngilizce kelimede ve Türkçe karşılıkta arar */
@@ -383,6 +389,7 @@ export function filterWords(cards: Card[], progress: Map<string, Progress>, favo
   const res = cards.filter((c) => {
     if (f.level !== 'all' && c.level !== f.level) return false
     if (f.pos !== 'all' && c.pos !== f.pos) return false
+    if (f.topic && f.topic !== 'all' && c.topic !== f.topic) return false
     if (f.status === 'favorites' && !favorites.has(c.id)) return false
     if (f.status === 'custom' && !c.custom) return false
     if ((f.status === 'new' || f.status === 'learning' || f.status === 'known') && wordStatus(progress.get(c.id)) !== f.status) return false

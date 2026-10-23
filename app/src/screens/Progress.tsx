@@ -142,13 +142,7 @@ export function ProgressScreen({ data, refresh }: { data: AppData; refresh: () =
       )}
 
       {open && (
-        <WordSheet
-          card={open}
-          progress={progress.get(open.id)}
-          favorite={data.favorites.has(open.id)}
-          onClose={() => setOpen(null)}
-          onChange={refresh}
-        />
+        <WordSheet key={open.id} card={open} data={data} onClose={() => setOpen(null)} onChange={refresh} />
       )}
     </main>
   )

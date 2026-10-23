@@ -3,25 +3,36 @@ import { loadCustomWords, saveCustomWords, setProgress, toggleFavorite } from '.
 import { useT } from '../i18n'
 import { canSpeak, speak } from '../speech'
 import { daysUntilDue, markDone } from '../srs'
-import type { Card, Progress } from '../types'
+import type { AppData } from '../App'
+import type { Card } from '../types'
 
-/** Kelime detayı: alttan açılan pencere. Favori, "zaten biliyorum", baştan öğren ve (kendi kelimesiyse) silme. */
-export function WordSheet({
+/**
+ * Kelime detayı: alttan açılan pencere. Telaffuz, kelime ailesi ve eş/zıt anlamlılar (dokununca o kelimeye
+ * geçer), favori, "zaten biliyorum", baştan öğren ve (kendi kelimesiyse) silme.
+ */
+export function WordSheet({ card: first, data, onClose, onChange }: { card: Card; data: AppData; onClose: () => void; onChange: () => void }) {
+  const [card, setCard] = useState(first)
+  return <WordDetail key={card.id} card={card} data={data} onClose={onClose} onChange={onChange} onOpen={setCard} />
+}
+
+function WordDetail({
   card,
-  progress,
-  favorite,
+  data,
   onClose,
   onChange,
+  onOpen,
 }: {
   card: Card
-  progress: Progress | undefined
-  favorite: boolean
+  data: AppData
   onClose: () => void
   onChange: () => void
+  onOpen: (c: Card) => void
 }) {
   const t = useT()
-  const [fav, setFav] = useState(favorite)
-  const [p, setP] = useState(progress)
+  const [fav, setFav] = useState(data.favorites.has(card.id))
+  const [p, setP] = useState(data.progress.get(card.id))
+  const related = (words: string[] | undefined) =>
+    (words ?? []).map((w) => ({ w, card: data.cards.find((c) => c.word.toLowerCase() === w) }))
   const now = Date.now()
   const days = p ? daysUntilDue(p, now) : null
 
@@ -65,9 +76,11 @@ export function WordSheet({
                 </button>
               )}
             </div>
+            {card.ipa && <div className="ipa">{card.ipa}</div>}
             <div className="meta left">
               <span className="tag level">{card.level}</span>
               <span className="tag">{t(`pos.${card.pos}` as Parameters<typeof t>[0])}</span>
+              {card.topic && <span className="tag">{t(`topic.${card.topic}`)}</span>}
               {card.custom && <span className="tag new">{t('words.custom')}</span>}
             </div>
           </div>
@@ -78,6 +91,35 @@ export function WordSheet({
           <button className="example-btn" onClick={() => speak(card.ex!)}>
             “{card.ex}” 🔊
           </button>
+        )}
+
+        {(
+          [
+            ['detail.family', card.family],
+            ['detail.syn', card.syn],
+            ['detail.ant', card.ant],
+          ] as const
+        ).map(
+          ([label, words]) =>
+            words &&
+            words.length > 0 && (
+              <div key={label} className="relations">
+                <span className="muted small">{t(label)}</span>
+                <div className="row wrap">
+                  {related(words).map(({ w, card: c }) =>
+                    c ? (
+                      <button key={w} className={`chip lvl-${c.level}`} onClick={() => onOpen(c)}>
+                        {w}
+                      </button>
+                    ) : (
+                      <span key={w} className="chip plain">
+                        {w}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+            ),
         )}
 
         <div className="detail-status">

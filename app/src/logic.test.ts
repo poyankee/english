@@ -285,6 +285,12 @@ describe('kelimeler sekmesi', () => {
     expect(order[0].id).toBe('custom:1')
   })
 
+  it('konuya göre filtreler ve liste modu yalnızca verilen kartları sorar', () => {
+    const pool = [card('apple', { topic: 'food' }), card('dog', { topic: 'animals' }), card('cat', { topic: 'animals' })]
+    expect(filterWords(pool, new Map(), new Set(), { ...base, topic: 'animals' }).map((c) => c.id)).toEqual(['cat', 'dog'])
+    expect(startSession('list', pool, new Map(), 0, settings(), 0, Math.random, {}, new Set(), ['apple']).queue).toEqual(['apple'])
+  })
+
   it('favoriler modu yalnızca favori kartları sorar', () => {
     expect(startSession('favorites', cards, new Map(), 0, settings(), 0, Math.random, {}, new Set(['mouse'])).queue).toEqual(['mouse'])
   })

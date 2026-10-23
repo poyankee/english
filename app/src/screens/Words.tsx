@@ -4,13 +4,13 @@ import { AddWordSheet } from '../components/AddWordSheet'
 import { WordSheet } from '../components/WordSheet'
 import { useT } from '../i18n'
 import { filterWords, wordStatus, type WordFilter } from '../session'
-import { LEVELS, type Card } from '../types'
+import { LEVELS, TOPICS, type Card } from '../types'
 
 const PAGE = 60
 
 export function Words({ data, nav, refresh }: { data: AppData; nav: Nav; refresh: () => Promise<void> }) {
   const t = useT()
-  const [f, setF] = useState<WordFilter>({ query: '', level: 'all', status: 'all', pos: 'all' })
+  const [f, setF] = useState<WordFilter>({ query: '', level: 'all', status: 'all', pos: 'all', topic: 'all' })
   const [limit, setLimit] = useState(PAGE)
   const [open, setOpen] = useState<Card | null>(null)
   const [adding, setAdding] = useState(false)
@@ -66,13 +66,25 @@ export function Words({ data, nav, refresh }: { data: AppData; nav: Nav; refresh
         ))}
       </div>
 
+      <div className="chips-row">
+        {(['all', ...TOPICS] as const).map((tp) => (
+          <button key={tp} className={`chip ${f.topic === tp ? 'on' : ''}`} onClick={() => set({ topic: tp })}>
+            {t(`topic.${tp}`)}
+          </button>
+        ))}
+      </div>
+
       <div className="row between">
         <span className="muted small">{t('words.results', { n: results.length })}</span>
-        {f.status === 'favorites' && results.length > 0 && (
+        {results.length > 0 && (f.status === 'favorites' ? (
           <button className="secondary small-btn" onClick={() => nav.quiz('favorites')}>
             ⭐ {t('words.studyFavs')}
           </button>
-        )}
+        ) : (
+          <button className="secondary small-btn" onClick={() => nav.quiz('list', results.map((c) => c.id))}>
+            🎯 {t('words.studyList')}
+          </button>
+        ))}
       </div>
 
       {results.length === 0 ? (
@@ -103,14 +115,7 @@ export function Words({ data, nav, refresh }: { data: AppData; nav: Nav; refresh
       )}
 
       {open && (
-        <WordSheet
-          key={open.id}
-          card={open}
-          progress={data.progress.get(open.id)}
-          favorite={data.favorites.has(open.id)}
-          onClose={() => setOpen(null)}
-          onChange={refresh}
-        />
+        <WordSheet key={open.id} card={open} data={data} onClose={() => setOpen(null)} onChange={refresh} />
       )}
       {adding && <AddWordSheet level={data.settings.currentLevel} onClose={() => setAdding(false)} onSaved={refresh} />}
     </main>
