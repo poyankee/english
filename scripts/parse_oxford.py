@@ -1,8 +1,9 @@
-"""Oxford 5000 PDF'inden (pdftotext -layout çıktısı) kelime listesini JSON'a çevirir.
+"""Oxford 3000 / 5000 PDF'lerinden (pdftotext -layout çıktısı) kelime listesini JSON'a çevirir.
 
 Kullanım:
     pdftotext -layout American_Oxford_5000.pdf out.txt
     python3 scripts/parse_oxford.py out.txt data/oxford5000-b2c1.json
+    python3 scripts/parse_oxford.py out3000.txt data/oxford3000.json
 """
 import json
 import re
@@ -11,9 +12,13 @@ import sys
 POS = {
     "n": "noun", "v": "verb", "adj": "adjective", "adv": "adverb",
     "prep": "preposition", "pron": "pronoun", "conj": "conjunction",
-    "det": "determiner", "exclam": "exclamation", "number": "number",
+    "noun": "noun", "det": "determiner", "exclam": "exclamation", "number": "number",
+    "modal v": "modal verb", "auxiliary v": "auxiliary verb",
+    "indefinite article": "article", "definite article": "article",
+    "infinitive marker": "infinitive marker",
 }
-_P = r"(?:(?:n|v|adj|adv|prep|pron|conj|det|exclam|number)\.?[,/]?\s*)+"
+_P = (r"(?:(?:modal v|auxiliary v|indefinite article|definite article|infinitive marker"
+      r"|noun|n|v|adj|adv|prep|pron|conj|det|exclam|number)\.?[,/]?\s*)+")
 TAGS = rf"{_P}[ABC][12](?:,\s*{_P}[ABC][12])*"
 ENTRY = re.compile(rf"(.+?)\s+({TAGS})")
 LEVEL_GROUP = re.compile(rf"({_P})([ABC][12])")
@@ -24,7 +29,7 @@ def parse_tags(tags):
     out = []
     for pos_part, level in LEVEL_GROUP.findall(tags):
         for p in re.split(r"[,/]", pos_part):
-            p = p.strip().rstrip(".")
+            p = p.strip().rstrip(".").strip()
             if p:
                 out.append((POS[p], level))
     return out
@@ -37,9 +42,9 @@ def main(src, dst):
             continue
         columns += re.split(r"\s{2,}", line.strip())
 
-    words, pending = [], None
+    words, seen, pending = [], set(), None
     for col in columns:
-        if re.fullmatch(TAGS, col):
+        if pending and re.fullmatch(TAGS, col):
             # "strip (remove clothes/a layer)" bir satırda, "v. C1" alt satırda kalmış
             col, pending = f"{pending} {col}", None
         m = ENTRY.fullmatch(col)
@@ -49,12 +54,17 @@ def main(src, dst):
         head, tags = m.groups()
         sense = re.search(r"\((.+)\)$", head)
         head = re.sub(r"\s*\(.+\)$", "", head)
-        head = re.sub(r"(?<=[a-zé])\d$", "", head)  # bow1, bass1 -> homonim numaralarını at
-        if head[0].isupper() and head[1:].islower():
-            head = head.lower()  # sayfa başındaki "Abolish"
+        homonym = re.search(r"(?<=[a-zé])\d$", head)  # bow1, ring2
+        head = head[:homonym.start()] if homonym else head
+        if not words and head[1:].islower():
+            head = head.lower()  # listenin ilk kelimesi büyük harfle yazılmış: "Abolish"
         for pos, level in parse_tags(tags):
+            id_ = "-".join([head, pos] + ([sense.group(1)] if sense else []) + ([homonym.group()] if homonym else []))
+            if id_ in seen:  # "produce v. A2, v. B2": aynı kelimenin ikinci anlamı, düşük seviyeyi tut
+                continue
+            seen.add(id_)
             words.append({
-                "id": f"{head}-{pos}" + (f"-{sense.group(1)}" if sense else ""),
+                "id": id_,
                 "word": head,
                 "pos": pos,
                 "level": level,

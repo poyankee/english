@@ -36,6 +36,8 @@ Telefona "Ana ekrana ekle" ile kurulan, uygulama gibi tam ekran açılan ve **in
 | Çevrimdışı | Var (Service Worker) | Var |
 | Bildirim | Android'de tam, iOS'ta 16.4+ ana ekrana ekliyse | Tam |
 
+**Karar:** Şimdilik kişisel kullanım için PWA. Store'a çıkmak istediğimizde aynı kod Capacitor ile Android/iOS uygulamasına sarılacak (Faz 4).
+
 Seçilen yığın: **React + TypeScript + Vite**, veriler cihazda **IndexedDB**'de (Dexie), yayın **GitHub Pages**. İleride gerekirse aynı kod Capacitor ile mağaza uygulamasına çevrilebilir.
 
 ## Tekrar sistemi (uzun süreli hafıza)
@@ -59,9 +61,10 @@ Her kartın bir "kutu"su var (Leitner + basit SM-2). Yanlış bilinen kelime ba�
 
 ## Fazlar
 
-### Faz 0 — Veri temeli ✅ (başladı)
-- [x] PDF'ten kelime listesini çıkar → `data/oxford5000-b2c1.json` (1997 kelime, 2158 kart: B2 + C1)
-- [ ] **Oxford 3000 listesini ekle** (A1–B2 arası 3000 kelime). Yüklediğin PDF sadece Oxford 5000'in *ek* 2000 kelimesini içeriyor; 5000'in tamamı için "American Oxford 3000" PDF'i de lazım.
+### Faz 0 — Veri temeli (başladı)
+- [x] Oxford 3000 → `data/oxford3000.json` (2980 kelime, 3802 kart: A1–B2)
+- [x] Oxford 5000 ek liste → `data/oxford5000-b2c1.json` (1997 kelime, 2158 kart: B2–C1)
+- [x] Oxford Phrase List → `data/oxford-phrases.json` (750 kalıp: phrasal verb, deyim, collocation; A1–C1)
 - [ ] Her kart için zenginleştirme: Türkçe karşılık(lar), İngilizce kısa açıklama, örnek cümle, emoji, benzer anlamlı 4+ çeldirici. Toplu üretilip elle örneklem kontrolü yapılacak.
 - [ ] Soyut kelimeler (ör. *assumption*) için emoji yoksa türüne göre varsayılan sembol.
 
@@ -86,9 +89,10 @@ Her kartın bir "kutu"su var (Leitner + basit SM-2). Yanlış bilinen kelime ba�
 - [ ] Yazma modu: kelimeyi klavyeyle yaz (kutu 5+ kartlarda)
 - [ ] Dinleme modu: sadece sesi duy, anlamı seç
 - [ ] Örnek cümlede boşluk doldurma
+- [ ] Kalıp (phrase) modu: "take over", "in other words" gibi kalıpların anlamını seçme, örnek cümlede boşluğa doğru kalıbı yerleştirme
 - [ ] Günlük hatırlatma bildirimi
 - [ ] (İsteğe bağlı) Bulut senkronizasyonu — birden fazla cihaz için
 
-## Açık sorular
-1. Oxford 3000 PDF'ini de yükleyebilir misin? (Yoksa önce elimizdeki 2000 kelimeyle başlarız.)
-2. Platform olarak PWA uygun mu, yoksa mağazadan kurulan gerçek bir uygulama mı istersin?
+### Faz 4 — Store
+- [ ] Capacitor ile Android (Play Store) ve iOS (App Store) paketleri
+- [ ] Gizlilik politikası, mağaza görselleri, ikon seti

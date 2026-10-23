@@ -786,13 +786,13 @@
   "level": "B2"
  },
  {
-  "id": "bow-verb",
+  "id": "bow-verb-1",
   "word": "bow",
   "pos": "verb",
   "level": "C1"
  },
  {
-  "id": "bow-noun",
+  "id": "bow-noun-1",
   "word": "bow",
   "pos": "noun",
   "level": "C1"
@@ -1170,7 +1170,7 @@
   "level": "C1"
  },
  {
-  "id": "bass-noun",
+  "id": "bass-noun-1",
   "word": "bass",
   "pos": "noun",
   "level": "C1"
@@ -1926,7 +1926,7 @@
   "level": "C1"
  },
  {
-  "id": "content-adjective",
+  "id": "content-adjective-2",
   "word": "content",
   "pos": "adjective",
   "level": "C1"
@@ -3314,7 +3314,7 @@
   "level": "B2"
  },
  {
-  "id": "console-noun",
+  "id": "console-noun-2",
   "word": "console",
   "pos": "noun",
   "level": "B2"
@@ -7192,7 +7192,7 @@
   "level": "B2"
  },
  {
-  "id": "minute-adjective",
+  "id": "minute-adjective-2",
   "word": "minute",
   "pos": "adjective",
   "level": "C1"
@@ -7558,7 +7558,7 @@
   "level": "C1"
  },
  {
-  "id": "pension-noun",
+  "id": "pension-noun-1",
   "word": "pension",
   "pos": "noun",
   "level": "C1"
@@ -9874,7 +9874,7 @@
   "level": "C1"
  },
  {
-  "id": "recount-verb",
+  "id": "recount-verb-1",
   "word": "recount",
   "pos": "verb",
   "level": "C1"
