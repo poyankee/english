@@ -1,0 +1,125 @@
+phrase:a-bit-of-a | 🤏 | biraz, epey (bir …) | used to make something sound less serious | It was a bit of a shock.
+phrase:account-for-sth | 📊 | açıklamak; oluşturmak (oran) | to explain; to form an amount | How do you account for the delay? / Tourism accounts for 10% of jobs.
+phrase:accused-of-sth | 👉 | bir şeyle suçlanan | said to have done something wrong | He was accused of theft.
+phrase:act-as-sth | 🎭 | … olarak görev yapmak | to do the job of | She acted as our guide.
+phrase:aimed-at-sb | 🎯 | birini hedefleyen | intended for someone | The ad is aimed at young people.
+phrase:aimed-at-doing-sth | 🎯 | bir şeyi yapmayı amaçlayan | intended to achieve something | a plan aimed at reducing crime
+phrase:all-the-way | 🛣️ | baştan sona, tüm yol boyunca | the whole distance | We walked all the way home.
+phrase:a-means-of-sth | 🛠️ | bir … aracı | a way of doing something | a means of transport
+phrase:appeal-to-sb | 😍 | birine cazip gelmek | to attract or interest someone | The idea appeals to me.
+phrase:apply-to-sb-sth | 📌 | için geçerli olmak | to be relevant to | The rule applies to everyone.
+phrase:as-a-whole | 🌐 | bir bütün olarak | considering all parts together | the country as a whole
+phrase:as-far-as-i-am-concerned | 💭 | bana kalırsa | in my opinion | As far as I'm concerned, it's fine.
+phrase:as-follows | 📋 | şöyle ki, aşağıdaki gibi | used to introduce a list | The rules are as follows…
+phrase:as-for-sb-sth | 👉 | -e gelince | used to start talking about someone or something | As for me, I'm staying here.
+phrase:as-long-as | 🤝 | -dığı sürece | on condition that | You can go as long as you're back by ten.
+phrase:associated-with-sth | 🔗 | ile ilişkili | connected with | health problems associated with smoking
+phrase:as-though | 🎭 | sanki | as if | He looks as though he's tired.
+phrase:at-once | ⚡ | hemen; aynı anda | immediately; at the same time | Come here at once! / Don't talk all at once.
+phrase:at-present | 🕐 | şu anda | now | At present, she lives in Izmir.
+phrase:at-some-point | 📍 | bir noktada, bir ara | at a time not known exactly | At some point, you'll need to decide.
+phrase:at-the-end-of-the-day | 🌇 | nihayetinde, sonuçta | when everything is considered | At the end of the day, it's your choice.
+phrase:at-this-point | 📍 | bu noktada | now; at this stage | At this point, we can't do anything.
+phrase:at-this-stage | 🪜 | bu aşamada | at the present time in a process | It's too early to say at this stage.
+phrase:awareness-of-sth | 💡 | bir şeyin farkında olma | knowledge of something | awareness of the risks
+phrase:back-sb-sth-up | 🤝 | desteklemek; yedeklemek | to support; to copy files | Back up your files.
+phrase:be-charged-with-sth | ⚖️ | bir şeyle itham edilmek | to be officially accused of a crime | He was charged with murder.
+phrase:be-derived-from-sth | 🌱 | -den türemek | to come from | The word is derived from Latin.
+phrase:be-expected-to-do-sth | 🔮 | bir şey yapması beklenmek | to be thought likely or required to | Prices are expected to rise.
+phrase:be-known-to-do-sth | 📌 | bir şey yaptığı bilinmek | to be famous for doing | He is known to be generous.
+phrase:be-made-up-of-sth | 🧩 | -den oluşmak | to consist of | The team is made up of ten players.
+phrase:be-surrounded-by-sb-sth | ⭕ | ile çevrili olmak | to have people or things all around | The house is surrounded by trees.
+phrase:be-to-blame | 👉 | suçlu olmak, sorumlu olmak | to be responsible for something bad | Who is to blame for this?
+phrase:both-sides | ↔️ | her iki taraf | the two opposing groups or sides | both sides of the argument
+phrase:bound-to-do-sth | 🔒 | kesin bir şey yapacak | certain to happen | It's bound to rain.
+phrase:bring-sb-up | 👶 | büyütmek, yetiştirmek | to raise a child | She was brought up by her grandparents.
+phrase:by-now | ⏱️ | şimdiye kadar, artık | before now | He should be home by now.
+phrase:call-for-sth | 📣 | bir şeyi talep etmek, gerektirmek | to demand; to need | They called for a change.
+phrase:case-study | 📚 | vaka çalışması | a detailed study of a particular example | a case study of a small business
+phrase:come-across-sb-sth | 🔍 | rastlamak, tesadüfen bulmak | to find or meet by chance | I came across an old photo.
+phrase:come-true | 🌠 | gerçekleşmek | to happen as hoped | My dream came true.
+phrase:concerned-about-sth | 😟 | bir şeyden endişeli | worried about | I'm concerned about his health.
+phrase:concerned-with-sth | 📖 | ile ilgili | about; involved in | The book is concerned with war.
+phrase:confidence-in-sb-sth | 🤝 | -e güven | trust in | I have confidence in you.
+phrase:contribute-to-sth | 🤲 | bir şeye katkıda bulunmak | to help cause or give to | Smoking contributes to heart disease.
+phrase:control-over-sb-sth | 🎛️ | üzerinde kontrol | power over | She has no control over her kids.
+phrase:cope-with-sth | 💪 | bir şeyle başa çıkmak | to deal successfully with | How do you cope with stress?
+phrase:decline-in-sth | 📉 | -de düşüş | a decrease in | a decline in student numbers
+phrase:dependent-on-sb-sth | 🫂 | -e bağımlı | needing someone or something | dependent on tourism
+phrase:despite-the-fact-that | ↩️ | -e rağmen, -diği halde | although | Despite the fact that it rained, we had fun.
+phrase:draw-attention-to-sb-sth | 👀 | -e dikkat çekmek | to make people notice | The report draws attention to the problem.
+phrase:engage-in-sth | 🤝 | bir şeyle uğraşmak, katılmak | to take part in | engage in sports
+phrase:engaged-in-sth | 🛠️ | bir şeyle meşgul | busy doing something | engaged in research
+phrase:ever-since | ⏳ | -den beri, o zamandan beri | continuously since a time | I've lived here ever since I was born.
+phrase:exposure-to-sth | ☀️ | -e maruz kalma | being in contact with something | exposure to the sun
+phrase:far-from-sth | 🚫 | -den uzak, hiç de … değil | almost the opposite of | The film was far from perfect.
+phrase:figure-sb-sth-out | 🧩 | anlamak, çözmek | to understand or solve | I can't figure out this problem.
+phrase:find-yourself-doing-sth | 😮 | kendini bir şey yaparken bulmak | to realize you are doing something | I found myself smiling.
+phrase:get-in | 🚗 | binmek; girmek; varmak | to enter a car or building; to arrive | Get in the car. / The train got in late.
+phrase:get-over-sth-sb | 🩹 | atlatmak, üstesinden gelmek | to recover from | You'll get over it.
+phrase:get-rid-of-sb-sth | 🗑️ | -den kurtulmak | to remove or throw away | Get rid of those old shoes.
+phrase:go-off | 💥 | patlamak; çalmak (alarm); sönmek; gitmek | to explode; to ring; to stop working; to leave | The alarm went off at 6.
+phrase:go-on-to-do-sth | ⏩ | ardından bir şey yapmak | to do something after something else | She went on to become a doctor.
+phrase:go-through-sth | 😣 | yaşamak, atlatmak; gözden geçirmek | to experience something hard; to examine | She went through a difficult time.
+phrase:had-better | ❗ | -se iyi olur | should (strong advice) | You'd better hurry.
+phrase:hang-on | ✋ | bekle!, bir dakika | wait a moment | Hang on, I'll be right back.
+phrase:human-being | 🧑 | insan | a person | All human beings are equal.
+phrase:human-rights | ⚖️ | insan hakları | basic rights of every person | defend human rights
+phrase:if-only | 😔 | keşke | used to say you wish something were true | If only I had more time.
+phrase:i-have-to-say | 💬 | söylemeliyim ki | used to give an honest opinion | I have to say, I'm impressed.
+phrase:in-action | 🎬 | iş başında, faaliyette | while doing something | See the robot in action.
+phrase:in-advance | ⏩ | önceden, peşin | before a time | Book your tickets in advance.
+phrase:in-an-attempt-to-do-sth | 🎯 | bir şeyi yapmak amacıyla | trying to do something | He ran in an attempt to catch the bus.
+phrase:in-part | 🧩 | kısmen | partly | The delay was due in part to the weather.
+phrase:in-place | 📍 | yerinde, hazır | in the correct position; ready | Everything is in place.
+phrase:in-relation-to-sb-sth | 🔗 | ile ilgili olarak | concerning | questions in relation to the project
+phrase:in-spite-of-sth | ↩️ | -e rağmen | despite | In spite of the rain, we went out.
+phrase:in-the-first-place | 1️⃣ | en başta, zaten | at the beginning; used to give the main reason | Why did you go in the first place?
+phrase:in-the-near-future | 🔜 | yakın gelecekte | soon | We'll meet in the near future.
+phrase:in-turn | 🔄 | sırayla; bunun sonucunda | one after another; as a result | Each student spoke in turn.
+phrase:investment-in-sth | 💹 | -e yatırım | money put into something | investment in education
+phrase:i-would-say | 💭 | bence, diyebilirim ki | used to give an opinion | I'd say she's about 40.
+phrase:loads-of-sb-sth | 📚 | yığınla, bir sürü | a lot of (informal) | I've got loads of work.
+phrase:mental-health | 🧠 | ruh sağlığı | the condition of your mind | Exercise is good for mental health.
+phrase:more-or-less | ≈ | aşağı yukarı, az çok | approximately; almost | I've more or less finished.
+phrase:no-doubt | ✔️ | şüphesiz | certainly; probably | No doubt you've heard the news.
+phrase:no-matter | 🔀 | ne olursa olsun, ne kadar … -se -sin | regardless of | No matter what happens, I'll be there.
+phrase:nothing-but | ☝️ | -den başka bir şey değil, sadece | only | He's nothing but trouble.
+phrase:on-board | 🚢 | gemide, uçakta | on a ship, plane or train | Welcome on board.
+phrase:once-again | 🔁 | bir kez daha | again | Once again, thank you.
+phrase:one-another | 🫂 | birbirini | each other | They help one another.
+phrase:on-the-basis-of-sth | 🧱 | -e dayanarak | because of; using as a reason | on the basis of the evidence
+phrase:on-the-one-hand | ⚖️ | bir yandan | used to give one side of an argument | On the one hand, it's cheap; on the other hand, it's slow.
+phrase:opposed-to-sth | 🙅 | bir şeye karşı | disagreeing with | I'm opposed to the plan.
+phrase:or-so | ≈ | kadar, civarında | about | an hour or so
+phrase:other-than | ➖ | -den başka, dışında | except | I have no family other than my mother.
+phrase:potential-for-sth | 🌱 | bir şey için potansiyel | the possibility of something | potential for growth
+phrase:pretty-much | ≈ | neredeyse, hemen hemen | almost completely | I've pretty much finished.
+phrase:prior-to | ⏮️ | -den önce | before | prior to the meeting
+phrase:prove-to-be-sth | ✅ | … olduğu ortaya çıkmak | to be shown to be | The plan proved to be a success.
+phrase:put-sth-forward | 💡 | ileri sürmek, önermek | to suggest an idea | She put forward a new plan.
+phrase:put-sth-together | 🧩 | bir araya getirmek, hazırlamak | to make or prepare from parts | put together a report
+phrase:quality-of-life | 🌈 | yaşam kalitesi | how good someone's life is | improve the quality of life
+phrase:ranging-from | 📏 | … arasında değişen | varying between limits | prices ranging from €25 to €60
+phrase:regarded-as-sth | 👁️ | … olarak kabul edilen | considered as | He is regarded as the best player.
+phrase:relevant-to-sb-sth | 🎯 | ile ilgili, için önemli | connected with | information relevant to the topic
+phrase:rely-on-sb-sth | 🫂 | -e güvenmek, bel bağlamak | to depend on | You can rely on me.
+phrase:role-model | 🌟 | rol model, örnek kişi | a person others want to copy | She's a great role model.
+phrase:set-out | 🚶 | yola çıkmak; amaçlamak | to start a journey; to intend | We set out at dawn.
+phrase:short-of-sth | ➖ | bir şeyi az olan, sıkıntısı olan | not having enough of | We're short of money.
+phrase:so-as-to-do-sth | 🎯 | bir şeyi yapmak için | in order to | I left early so as to catch the bus.
+phrase:something-like | ≈ | … gibi bir şey; aşağı yukarı | similar to; approximately | It costs something like $50.
+phrase:sort-sb-sth-yourself-out | 🧩 | halletmek, düzene sokmak | to solve or organize | I need to sort out my life.
+phrase:stick-to-sth | 📌 | bir şeye bağlı kalmak | to continue doing or following | Stick to the plan.
+phrase:subject-to-sth | 📌 | -e tabi | depending on; affected by | Prices are subject to change.
+phrase:sum-up | 📝 | özetlemek | to give the main points | To sum up, it was a great year.
+phrase:take-advantage-of-sb-sth | 🎯 | -den yararlanmak; istismar etmek | to use an opportunity; to use someone unfairly | Take advantage of the good weather.
+phrase:take-sth-into-account | ⚖️ | bir şeyi hesaba katmak | to consider | Take the cost into account.
+phrase:take-over | 🏢 | devralmak, kontrolü ele almak | to take control | He took over the company.
+phrase:that-is | 💬 | yani, başka bir deyişle | used to explain more exactly | next month, that is, in May
+phrase:the-vast-majority-of-sth | 👥 | büyük çoğunluğu | almost all of | the vast majority of people
+phrase:turn-into-sth | 🦋 | -e dönüşmek | to become | The caterpillar turned into a butterfly.
+phrase:up-to-sb | 🫵 | birine kalmış | to be someone's decision | It's up to you.
+phrase:when-it-comes-to-sth | 👉 | söz konusu … olduğunda | when the subject is | When it comes to cooking, she's the best.
+phrase:whether-or-not | ❔ | ister … ister …, … olsun olmasın | regardless of whether | Whether or not you like it, you have to go.
+phrase:would-rather | ⚖️ | tercih ederim, -meyi yeğlerim | would prefer | I'd rather stay home.

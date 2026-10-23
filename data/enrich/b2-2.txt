@@ -1,0 +1,300 @@
+contract-noun | 📄 | sözleşme, kontrat | a legal written agreement | Sign the contract.
+contract-verb | 📉 | daralmak, büzülmek; (hastalık) kapmak | to become smaller; to catch a disease | Metal contracts when cold.
+contribute-verb | 🤲 | katkıda bulunmak | to give money, help or ideas | Everyone contributed to the gift.
+contribution-noun | 🤲 | katkı | something given to help | a contribution to science
+controversial-adjective | 🔥 | tartışmalı | causing disagreement | a controversial decision
+controversy-noun | 🔥 | tartışma, anlaşmazlık | public disagreement | The decision caused controversy.
+convenience-noun | 👌 | kolaylık, rahatlık | the quality of being easy or useful | the convenience of online shopping
+convention-noun | 🤝 | gelenek; sözleşme; kongre | a usual way of behaving; an agreement; a large meeting | social conventions / the Geneva Convention
+conventional-adjective | 🟰 | geleneksel, alışılmış | usual; traditional | conventional methods
+convert-verb | 🔄 | dönüştürmek | to change from one form to another | Convert dollars into euros.
+convey-verb | 📨 | iletmek, aktarmak | to communicate an idea or feeling | Words can't convey my feelings.
+convinced-adjective | 💯 | ikna olmuş, emin | completely sure | I'm convinced he's lying.
+convincing-adjective | 👍 | ikna edici | making you believe something | a convincing argument
+cop-noun | 👮 | polis (günlük) | a police officer (informal) | The cops arrived quickly.
+cope-verb | 💪 | başa çıkmak | to deal successfully with something difficult | How do you cope with stress?
+core-adjective | 🎯 | temel, ana | most important | core values
+core-noun | 🍎 | çekirdek, öz | the central part | the core of the problem / an apple core
+corporate-adjective | 🏢 | kurumsal | connected with a large company | corporate culture
+corporation-noun | 🏢 | şirket, kuruluş | a large company | a multinational corporation
+corridor-noun | 🚪 | koridor | a long passage in a building | Wait in the corridor.
+council-noun | 🏛️ | konsey, meclis | a group elected to govern an area | the city council
+counter-noun-long flat surface | 🛎️ | tezgâh | a long flat surface in a shop or kitchen | Pay at the counter.
+county-noun | 🗺️ | ilçe, bölge (idari) | an area of local government | Orange County
+courage-noun | 🦁 | cesaret | the ability to do something dangerous | It takes courage to say no.
+coverage-noun | 📺 | (haber) kapsama, yayın | the reporting of news | TV coverage of the election
+cowboy-noun | 🤠 | kovboy | a man who looks after cattle in the US | a cowboy hat
+crack-noun | 🫙 | çatlak | a thin line where something is broken | a crack in the wall
+crack-verb | 🥚 | çatlamak, kırmak | to break slightly | Crack two eggs into a bowl.
+craft-noun | 🧶 | el sanatı, zanaat | an activity of making things with your hands | arts and crafts
+crash-noun | 💥 | kaza, çarpışma; çökme | an accident; a sudden failure | a car crash / a computer crash
+crash-verb | 💥 | çarpmak; çökmek | to hit something violently; to stop working | The car crashed into a tree.
+creation-noun | ✨ | yaratma, oluşturma; eser | the act of making something new | job creation
+creativity-noun | 🎨 | yaratıcılık | the ability to create new ideas | Art encourages creativity.
+creature-noun | 🐉 | yaratık, canlı | a living thing | sea creatures
+credit-verb | 💳 | hesaba geçirmek; atfetmek | to add money to an account; to give praise for | The money was credited to your account.
+crew-noun | 👨‍✈️ | mürettebat, ekip | the people who work on a ship or plane; a team | the cabin crew
+crisis-noun | 🆘 | kriz, bunalım | a time of great difficulty | an economic crisis
+criterion-noun | 📏 | ölçüt, kriter | a standard used for judging | criteria for success
+critic-noun | 📝 | eleştirmen | a person who gives opinions about films, books, etc. | a film critic
+critical-adjective | 🔥 | eleştirel; kritik | expressing disapproval; very important | a critical moment
+critically-adverb | 🔥 | eleştirel olarak; ciddi şekilde | in a critical way; seriously | critically ill
+criticism-noun | 👎 | eleştiri | expressing what is bad about something | She can't take criticism.
+criticize-verb | 👎 | eleştirmek | to say what is bad about | He criticized my work.
+crop-noun | 🌾 | ürün, mahsul | a plant grown for food | The farmers grow crops.
+crucial-adjective | ❗ | çok önemli, hayati | extremely important | a crucial decision
+cruise-noun | 🛳️ | gemi turu | a holiday on a ship | a Mediterranean cruise
+cruise-verb | 🛳️ | gemiyle gezmek; seyretmek | to travel on a ship; to move at a steady speed | We cruised along the coast.
+cry-noun | 😭 | ağlama; çığlık | an act of crying; a shout | a cry for help
+cue-noun | 🎬 | işaret, ipucu | a signal to do something | That's my cue to leave.
+cure-noun | 💊 | tedavi, çare | a medicine that makes an illness go away | a cure for cancer
+cure-verb | 💊 | tedavi etmek, iyileştirmek | to make an illness go away | This medicine will cure you.
+curious-adjective | 🧐 | meraklı | wanting to know | Children are curious.
+current-noun | 🌊 | akıntı; akım | a flow of water, air or electricity | strong currents
+curriculum-noun | 📚 | müfredat | the subjects taught at a school | the national curriculum
+curve-noun | ↪️ | eğri, viraj | a line that bends | a sharp curve in the road
+curve-verb | ↪️ | kıvrılmak, eğri yapmak | to bend | The road curves to the left.
+curved-adjective | 🌙 | eğri, kavisli | having a curve | a curved line
+cute-adjective | 🐱 | sevimli, şirin | attractive, like a baby or small animal | a cute puppy
+dairy-adjective | 🥛 | süt ürünü | made from milk | dairy products
+dairy-noun | 🧀 | süthane; süt ürünleri | a place where milk is processed; milk products | I don't eat dairy.
+dare-verb | 😤 | cüret etmek, cesaret etmek | to be brave enough to do something | How dare you!
+darkness-noun | 🌑 | karanlık | the state of being dark | in total darkness
+database-noun | 🗄️ | veritabanı | an organized collection of data on a computer | a customer database
+date-verb | 📅 | tarih atmak; çıkmak (biriyle) | to write a date on; to have a romantic relationship | They've been dating for a year.
+deadline-noun | ⏰ | son teslim tarihi | the latest time for finishing something | The deadline is Friday.
+deadly-adjective | ☠️ | ölümcül | causing death | a deadly disease
+dealer-noun | 🤝 | satıcı, bayi | a person who buys and sells | a car dealer
+debate-noun | 🗣️ | tartışma, münazara | a formal discussion | a political debate
+debate-verb | 🗣️ | tartışmak | to discuss formally | They debated the issue.
+debt-noun | 💸 | borç | money owed | He's in debt.
+decent-adjective | 👍 | düzgün, makul, iyi | good enough; honest | a decent salary
+deck-noun | 🛳️ | güverte; (kart) deste | the floor of a ship; a set of cards | on deck / a deck of cards
+declare-verb | 📢 | ilan etmek, beyan etmek | to say officially | They declared war.
+decline-noun | 📉 | düşüş, azalma | a decrease | a decline in sales
+decline-verb | 📉 | azalmak; reddetmek | to decrease; to refuse politely | Sales declined. / She declined the offer.
+decorate-verb | 🎄 | süslemek, dekore etmek | to make more attractive | We decorated the room.
+decoration-noun | 🎊 | süsleme, dekorasyon | something that makes a place look nice | Christmas decorations
+decrease-noun | 📉 | azalma | a reduction | a decrease in crime
+decrease-verb | 📉 | azalmak, azaltmak | to become smaller | The number decreased.
+deeply-adverb | 🌊 | derinden | very much | I'm deeply sorry.
+defeat-noun | 🏳️ | yenilgi | failure to win | a 3–0 defeat
+defeat-verb | 🥇 | yenmek | to win against | They defeated the champions.
+defend-verb | 🛡️ | savunmak | to protect from attack | defend your country
+defender-noun | 🛡️ | defans oyuncusu; savunucu | a player who defends; a person who protects | a strong defender
+defense-noun | 🛡️ | savunma | protection against attack | national defense
+delay-noun | ⏳ | gecikme | a period of waiting | a two-hour delay
+delay-verb | ⏳ | geciktirmek, ertelemek | to make late; to postpone | The flight was delayed.
+delete-verb | 🗑️ | silmek | to remove text or a file | Delete the message.
+deliberate-adjective | 🎯 | kasıtlı | done on purpose | a deliberate lie
+deliberately-adverb | 🎯 | kasıtlı olarak | on purpose | He deliberately broke it.
+delivery-noun | 🚚 | teslimat | the act of delivering goods | free delivery
+demand-noun | 📈 | talep | a strong request; the need for goods | high demand
+demand-verb | ✊ | talep etmek | to ask firmly | They demanded an apology.
+democracy-noun | 🗳️ | demokrasi | government by the people | a modern democracy
+democratic-adjective | 🗳️ | demokratik | based on democracy | a democratic country
+demonstrate-verb | 👨‍🏫 | göstermek; gösteri yapmak | to show; to protest | Let me demonstrate how it works.
+demonstration-noun | ✊ | gösteri, eylem; tanıtım | a public protest; a showing of how something works | a peaceful demonstration
+deny-verb | 🙅 | inkâr etmek, reddetmek | to say something is not true | He denied stealing the money.
+depart-verb | 🛫 | ayrılmak, kalkmak | to leave | The train departs at 9.
+dependent-adjective | 🫂 | bağımlı | needing someone or something for support | dependent on her parents
+deposit-noun | 💰 | depozito, kaparo; mevduat | money paid as part of a price; money in a bank | a deposit of $500
+deposit-verb | 🏦 | yatırmak (para) | to put money in a bank | I deposited the check.
+depressed-adjective | 😞 | depresif, bunalımda | very unhappy | He felt depressed.
+depressing-adjective | 😞 | iç karartıcı | making you sad | depressing news
+depression-noun | 😞 | depresyon; durgunluk | a mental illness of sadness; a period of economic decline | She suffers from depression.
+depth-noun | 🌊 | derinlik | how deep something is | the depth of the lake
+derive-verb | 🌱 | türemek, elde etmek | to come from; to get from | The word derives from Latin.
+desert-verb | 🏜️ | terk etmek | to leave someone without help | He deserted his family.
+deserve-verb | 🏅 | hak etmek | to be worthy of | You deserve a holiday.
+desire-noun | 💖 | arzu, istek | a strong wish | a desire to travel
+desire-verb | 💖 | arzulamak | to want strongly | everything you desire
+desperate-adjective | 😫 | çaresiz; umutsuz | very worried and willing to try anything | desperate for help
+desperately-adverb | 😫 | umutsuzca, deli gibi | very much | I desperately need a holiday.
+destruction-noun | 💥 | yıkım, tahribat | the act of destroying | the destruction of the forest
+detail-verb | 📝 | ayrıntılı anlatmak | to give full information about | The report details the problems.
+detailed-adjective | 🔍 | ayrıntılı | giving many details | a detailed map
+detect-verb | 🔍 | tespit etmek, sezmek | to notice or discover | The test detected a problem.
+determination-noun | 💪 | kararlılık | the quality of continuing to try | She showed great determination.
+devote-verb | ❤️ | adamak | to give time or energy to | He devoted his life to science.
+diabetes-noun | 🩸 | şeker hastalığı, diyabet | a disease where the body can't control sugar | type 2 diabetes
+differ-verb | ≠ | farklı olmak | to be different | Opinions differ.
+dig-verb | ⛏️ | kazmak | to make a hole in the ground | The dog is digging in the garden.
+dime-noun | 🪙 | on sent | a ten-cent coin (US) | It costs a dime.
+disability-noun | ♿ | engellilik | a condition that limits physical or mental ability | people with disabilities
+disabled-adjective | ♿ | engelli | having a disability | disabled parking
+disagreement-noun | 🗯️ | anlaşmazlık | a difference of opinion | a disagreement about money
+disappoint-verb | 😞 | hayal kırıklığına uğratmak | to make someone sad by not being as good as expected | I won't disappoint you.
+disappointment-noun | 😞 | hayal kırıklığı | a feeling of sadness when hopes fail | The film was a disappointment.
+discipline-noun | 📏 | disiplin | training to obey rules | school discipline
+discount-verb | 🏷️ | indirim yapmak; göz ardı etmek | to reduce the price; to consider unimportant | Prices are discounted.
+discourage-verb | 🙅 | cesaretini kırmak, caydırmak | to make someone less likely to do something | Don't let anyone discourage you.
+dishonest-adjective | 🤥 | sahtekâr, dürüst olmayan | not honest | a dishonest politician
+dismiss-verb | 🚪 | reddetmek; işten çıkarmak | to refuse to consider; to remove from a job | He was dismissed.
+disorder-noun | 🩺 | bozukluk, rahatsızlık; düzensizlik | an illness; lack of order | an eating disorder
+display-noun | 🖥️ | sergi; ekran | an arrangement for showing; a screen | a window display
+display-verb | 🖼️ | sergilemek, göstermek | to show | The museum displays old coins.
+distant-adjective | 🏔️ | uzak | far away | a distant country
+distinct-adjective | 🔍 | belirgin; ayrı | clear; different | a distinct smell
+distinguish-verb | 🔍 | ayırt etmek | to see the difference | Can you distinguish the twins?
+distract-verb | 📱 | dikkatini dağıtmak | to take attention away | Don't distract me.
+distribute-verb | 📦 | dağıtmak | to give out to many people | They distributed food.
+distribution-noun | 📦 | dağıtım | the act of giving out | food distribution
+disturb-verb | 🚪 | rahatsız etmek | to interrupt; to worry | Do not disturb.
+dive-noun | 🤿 | dalış | a jump into water head first | a deep dive
+dive-verb | 🤿 | dalmak | to jump into water head first | He dived into the pool.
+diverse-adjective | 🌈 | çeşitli, farklı | very different from each other | a diverse population
+diversity-noun | 🌈 | çeşitlilik | the state of being diverse | cultural diversity
+divide-noun | ↔️ | ayrım, uçurum | a difference between groups | the rich-poor divide
+division-noun | ➗ | bölünme; bölüm; bölme | separation; a department; dividing numbers | the sales division
+divorce-noun | 💔 | boşanma | the legal end of a marriage | They're getting a divorce.
+divorce-verb | 💔 | boşanmak | to end a marriage legally | They divorced last year.
+document-verb | 📝 | belgelemek | to record in detail | The trip was documented in photos.
+domestic-adjective | 🏠 | ev içi; yurt içi | of the home; of one's own country | domestic flights
+dominant-adjective | 👑 | baskın, hâkim | more powerful | the dominant team
+dominate-verb | 👑 | hâkim olmak | to control | They dominated the game.
+donation-noun | 🤲 | bağış | money or goods given | a donation to charity
+dot-noun | ⚫ | nokta | a small round mark | a red dot
+downward-adjective | ⬇️ | aşağı doğru | moving down | a downward trend
+downward-adverb | ⬇️ | aşağıya doğru | toward a lower place | The road goes downward.
+dozen-determiner | 🥚 | düzine | twelve | a dozen eggs
+dozen-noun | 🥚 | düzine, onlarca | a group of twelve; many | dozens of people
+draft-noun | 📝 | taslak | a first version of something | the first draft of my essay
+draft-verb | 📝 | taslak hazırlamak | to write a first version | Draft a letter.
+drag-verb | 🫳 | sürüklemek | to pull along the ground | Drag the file into the folder.
+dramatic-adjective | 🎭 | çarpıcı, büyük; dramatik | sudden and great; connected with theater | a dramatic change
+dramatically-adverb | 📈 | çarpıcı biçimde | greatly and suddenly | Prices rose dramatically.
+drought-noun | 🏜️ | kuraklık | a long period without rain | a severe drought
+dull-adjective | 🥱 | sıkıcı; donuk | boring; not bright | a dull film / a dull color
+dump-verb | 🗑️ | atmak, boşaltmak | to get rid of; to drop carelessly | Don't dump rubbish here.
+duration-noun | ⏳ | süre | how long something lasts | the duration of the course
+dynamic-adjective | ⚡ | dinamik | full of energy | a dynamic leader
+eager-adjective | 🤩 | istekli, hevesli | wanting very much | eager to learn
+economics-noun | 📈 | ekonomi (bilim) | the study of money and trade | She studies economics.
+economist-noun | 📊 | ekonomist | an expert in economics | a famous economist
+ecosystem-noun | 🌿 | ekosistem | living things and their environment | the forest ecosystem
+edit-verb | ✏️ | düzenlemek | to correct or change text, video, etc. | Edit the photo.
+edition-noun | 📖 | baskı, sayı | a version of a book or newspaper | the latest edition
+editorial-adjective | 📰 | editoryal, yayın | connected with editing | editorial decisions
+efficient-adjective | ⚡ | verimli, etkin | working well without waste | an efficient system
+efficiently-adverb | ⚡ | verimli bir şekilde | in an efficient way | Use energy efficiently.
+elbow-noun | 💪 | dirsek | the joint in the middle of your arm | He hurt his elbow.
+elderly-adjective | 👵 | yaşlı | old | elderly people
+elect-verb | 🗳️ | seçmek (oyla) | to choose by voting | She was elected president.
+electronics-noun | 📟 | elektronik | electronic devices; the technology | consumer electronics
+elegant-adjective | 👗 | zarif, şık | stylish and attractive | an elegant dress
+elementary-adjective | 🔤 | temel, ilk | basic; simple | elementary school
+eliminate-verb | ❌ | ortadan kaldırmak, elemek | to remove completely | eliminate the risk
+elsewhere-adverb | 📍 | başka yerde | in another place | Let's go elsewhere.
+embrace-verb | 🫂 | kucaklamak; benimsemek | to hug; to accept eagerly | She embraced her son.
+emerge-verb | 🌅 | ortaya çıkmak | to appear | New problems emerged.
+emission-noun | 🏭 | salınım, emisyon | gas sent into the air | carbon emissions
+emotional-adjective | 😢 | duygusal | connected with feelings | an emotional speech
+emphasis-noun | ❗ | vurgu | special importance | an emphasis on quality
+emphasize-verb | ❗ | vurgulamak | to give special importance to | He emphasized the need for safety.
+empire-noun | 👑 | imparatorluk | a group of countries ruled by one ruler | the Ottoman Empire
+enable-verb | 🔓 | olanak sağlamak, etkinleştirmek | to make possible | The app enables you to learn fast.
+encounter-noun | 🤝 | karşılaşma | an unexpected meeting | a strange encounter
+encounter-verb | 🤝 | karşılaşmak | to meet or experience | We encountered many problems.
+engage-verb | 🤝 | meşgul etmek, katılmak | to involve; to take part | engage students in learning
+enhance-verb | 📈 | geliştirmek, artırmak | to improve | enhance your skills
+enjoyable-adjective | 😊 | keyifli, zevkli | giving pleasure | an enjoyable evening
+ensure-verb | ✅ | sağlamak, garanti etmek | to make certain | Ensure the door is locked.
+entertaining-adjective | 🎪 | eğlenceli | amusing | an entertaining show
+enthusiasm-noun | 🤩 | coşku, heves | strong excitement and interest | She showed great enthusiasm.
+enthusiastic-adjective | 🤩 | hevesli, coşkulu | very interested and excited | enthusiastic fans
+entire-adjective | 💯 | tüm, bütün | whole | the entire day
+entirely-adverb | 💯 | tamamen | completely | I entirely agree.
+entrepreneur-noun | 🚀 | girişimci | a person who starts businesses | a young entrepreneur
+envelope-noun | ✉️ | zarf | a paper cover for a letter | Put the letter in the envelope.
+equal-noun | 🟰 | eşit (kişi) | a person of the same status | We are equals.
+equip-verb | 🧰 | donatmak | to provide with equipment | The kitchen is fully equipped.
+equivalent-adjective | 🟰 | eşdeğer | equal in value | equivalent to $100
+equivalent-noun | 🟰 | karşılık, eşdeğer | something equal | What's the Turkish equivalent of this word?
+era-noun | 🕰️ | çağ, devir | a period of history | the digital era
+erupt-verb | 🌋 | patlamak (yanardağ) | (of a volcano) to send out lava | The volcano erupted.
+essentially-adverb | 💡 | esasen, temelde | basically | It's essentially the same.
+establish-verb | 🏗️ | kurmak; tespit etmek | to start; to discover facts | The company was established in 1990.
+estate-noun | 🏘️ | emlak, arazi; miras | land and buildings; property left after death | real estate
+estimate-noun | 🔢 | tahmin, kestirim | a guess of an amount | a rough estimate
+estimate-verb | 🔢 | tahmin etmek | to guess an amount | I estimate it will take two hours.
+ethic-noun | 🧭 | etik, ahlak ilkesi | a set of moral principles | work ethic
+ethical-adjective | 🧭 | etik, ahlaki | morally right | ethical business
+ethnic-adjective | 🌍 | etnik | connected with a group sharing culture or race | ethnic minorities
+evaluate-verb | 📋 | değerlendirmek | to judge the value of | evaluate the results
+evaluation-noun | 📋 | değerlendirme | the act of evaluating | a performance evaluation
+even-adjective | ➖ | düz; çift (sayı); eşit | flat; divisible by two; equal | an even surface / even numbers
+evident-adjective | 👀 | açık, belli | clear; obvious | It was evident that he was lying.
+evil-adjective | 😈 | kötü, şeytani | very bad | an evil king
+evil-noun | 😈 | kötülük | wickedness | good and evil
+evolution-noun | 🐒 | evrim | the development of living things over time | the theory of evolution
+evolve-verb | 🌱 | evrimleşmek, gelişmek | to develop gradually | Languages evolve over time.
+examination-noun | 📝 | sınav; muayene | a formal test; a careful look | a medical examination
+exceed-verb | ⬆️ | aşmak | to be more than | Don't exceed the speed limit.
+exception-noun | ⚠️ | istisna | something not included in a rule | with the exception of Ali
+excessive-adjective | 🔥 | aşırı | too much | excessive drinking
+exclude-verb | 🚫 | hariç tutmak, dışlamak | to not include | Prices exclude tax.
+excuse-noun | 🤷 | bahane | a reason given to explain a mistake | That's no excuse!
+excuse-verb | 🙏 | affetmek, mazur görmek | to forgive | Excuse me.
+executive-adjective | 💼 | yönetici, yürütme | connected with management | an executive director
+executive-noun | 💼 | yönetici | a senior manager | a company executive
+exhibit-noun | 🖼️ | sergilenen eser | an object shown in a museum | Don't touch the exhibits.
+exhibit-verb | 🖼️ | sergilemek | to show publicly | Her paintings are exhibited in Paris.
+existence-noun | 🌌 | varoluş, varlık | the state of existing | the existence of God
+exit-verb | 🚪 | çıkmak | to leave | Exit the program.
+exotic-adjective | 🌺 | egzotik | from a distant country; unusual | exotic fruit
+expansion-noun | 📈 | genişleme, büyüme | the act of becoming larger | the expansion of the company
+expectation-noun | 🔮 | beklenti | a belief about what will happen | high expectations
+expedition-noun | 🧭 | sefer, keşif gezisi | an organized journey for a purpose | an expedition to the North Pole
+expense-noun | 💸 | masraf, gider | money spent | travel expenses
+expertise-noun | 🎓 | uzmanlık | expert knowledge or skill | technical expertise
+exploit-verb | 🦹 | sömürmek; yararlanmak | to use unfairly; to use well | They exploit workers.
+exploration-noun | 🧭 | keşif | the act of exploring | space exploration
+expose-verb | 👀 | maruz bırakmak; ifşa etmek | to leave unprotected; to reveal | Don't expose your skin to the sun.
+exposure-noun | ☀️ | maruz kalma; ifşa | the state of being exposed | exposure to the sun
+extend-verb | ↔️ | uzatmak, genişletmek | to make longer or larger | They extended the deadline.
+extension-noun | ➕ | uzatma; ek bina; dahili hat | an added part; a phone line | a two-week extension
+extensive-adjective | 🗺️ | kapsamlı, geniş | covering a large area | extensive damage
+extent-noun | 📏 | kapsam, ölçü | how large or important something is | to some extent
+external-adjective | ⬅️ | dış, harici | outside | external walls
+extract-noun | 📖 | alıntı, parça; öz | a short part of a book; a concentrated substance | an extract from the novel
+extraordinary-adjective | 🌟 | olağanüstü | very unusual or special | an extraordinary talent
+extreme-noun | ↔️ | uç, aşırılık | the greatest degree | extremes of heat and cold
+fabric-noun | 🧵 | kumaş | cloth | cotton fabric
+fabulous-adjective | ✨ | harika, muhteşem | extremely good | a fabulous view
+facility-noun | 🏢 | tesis, imkân | a building or equipment for a purpose | sports facilities
+faculty-noun | 🎓 | fakülte; yeti | a department of a university; a natural ability | the Faculty of Law
+failure-noun | ❌ | başarısızlık; arıza | lack of success; a breakdown | The plan was a failure.
+faith-noun | 🙏 | inanç, iman; güven | strong belief; trust | I have faith in you.
+fake-adjective | 🎭 | sahte | not real | a fake passport
+fame-noun | 🌟 | şöhret, ün | being famous | fame and fortune
+fantasy-noun | 🦄 | fantezi, hayal | an imagined situation | a fantasy novel
+fare-noun | 🎫 | yol ücreti | the price of a journey | bus fare
+fault-noun | ⚠️ | kusur, hata, suç | a mistake; responsibility for something bad | It's not my fault.
+favor-verb | 👍 | tercih etmek, desteklemek | to prefer | Most people favor the plan.
+feather-noun | 🪶 | tüy | one of the light soft parts covering a bird | a white feather
+fee-noun | 💲 | ücret, harç | money paid for a service | school fees
+feed-noun | 📰 | akış (sosyal medya); yem | a stream of updates; animal food | my news feed
+feedback-noun | 💬 | geri bildirim | comments about how well something was done | Thanks for the feedback.
+feel-noun | 🤲 | his, doku | the way something feels | the feel of silk
+fellow-adjective | 👥 | aynı durumdaki, … arkadaşı | of the same group | my fellow students
+figure-verb | 🤔 | düşünmek, anlamak (figure out) | to think; to understand | I figured you'd be hungry.
+file-verb | 📁 | dosyalamak; resmi olarak sunmak | to put in a file; to officially submit | File these papers. / file a complaint
+finance-noun | 💰 | finans, maliye | the management of money | the finance department
+finance-verb | 💰 | finanse etmek | to provide money for | The project is financed by the bank.
+finding-noun | 🔍 | bulgu | information discovered by research | the findings of the study
+firefighter-noun | 🚒 | itfaiyeci | a person who puts out fires | The firefighters saved the family.
+firework-noun | 🎆 | havai fişek | a device that explodes with colored light | New Year's fireworks
+firm-adjective | 💪 | sağlam, sıkı, kararlı | solid; strong | a firm bed / a firm decision
+firm-noun | 🏢 | firma | a business | a law firm
+firmly-adverb | 💪 | sıkıca, kesin bir şekilde | in a firm way | Hold it firmly.
+fix-noun | 🔧 | çözüm, onarım | a solution | a quick fix
+flame-noun | 🔥 | alev | the bright burning gas of a fire | the flame of a candle
+flash-noun | ⚡ | parıltı, flaş | a sudden bright light | a flash of lightning
+flash-verb | ⚡ | parlamak, yanıp sönmek | to shine suddenly | The lights flashed.
+flavor-noun | 🍦 | tat, aroma | taste | What flavor do you want?
+flexible-adjective | 🤸 | esnek | able to bend; able to change easily | flexible working hours
+float-verb | 🛟 | yüzmek (su üstünde) | to stay on the surface of water | Wood floats.
+fold-noun | 🗞️ | kıvrım, kat yeri | a line made by folding | a fold in the paper
+folding-adjective | 🪑 | katlanır | that can be folded | a folding chair
+follower-noun | 👥 | takipçi | a person who follows someone | She has 10,000 followers.
