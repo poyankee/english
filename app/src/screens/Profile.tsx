@@ -4,7 +4,8 @@ import { importBackup } from '../db'
 import { download, downloadBackup, toAnki, toCsv } from '../exporter'
 import { useT } from '../i18n'
 import { isMistake } from '../srs'
-import { LEVELS, type Card, type Settings } from '../types'
+import { COLOR_THEMES, PALETTES } from '../theme'
+import { LEVELS, type Card, type Settings, type TextSize, type ThemeMode } from '../types'
 
 export function ProfileScreen({
   data,
@@ -87,6 +88,50 @@ export function ProfileScreen({
         <button className="secondary" onClick={nav.onboarding}>
           🎯 {t('profile.retest')}
         </button>
+      </section>
+
+      <section className="panel">
+        <h3>{t('profile.look')}</h3>
+        <div className="field">
+          <span>{t('profile.theme')}</span>
+          <div className="seg">
+            {(['system', 'light', 'dark'] as ThemeMode[]).map((m) => (
+              <button key={m} className={s.theme === m ? 'on' : ''} onClick={() => set({ theme: m })}>
+                {t(`theme.${m}`)}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="field">
+          <span>{t('profile.color')}</span>
+          <div className="swatches">
+            {COLOR_THEMES.map((c) => {
+              const [a, b, d] = PALETTES[c].light
+              return (
+                <button
+                  key={c}
+                  className={`swatch ${s.color === c ? 'on' : ''}`}
+                  aria-label={t(`color.${c}`)}
+                  aria-pressed={s.color === c}
+                  onClick={() => set({ color: c })}
+                >
+                  <span style={{ background: `linear-gradient(135deg, ${a}, ${b} 55%, ${d})` }} />
+                  <small>{t(`color.${c}`)}</small>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+        <div className="field">
+          <span>{t('profile.textSize')}</span>
+          <div className="seg">
+            {(['small', 'normal', 'large'] as TextSize[]).map((z) => (
+              <button key={z} className={s.textSize === z ? 'on' : ''} onClick={() => set({ textSize: z })}>
+                {t(`size.${z}`)}
+              </button>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="panel">

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   loadConfusions,
   loadCounters,
@@ -16,21 +16,24 @@ import {
 } from './db'
 import { setFeedback } from './feedback'
 import { I18n, makeT } from './i18n'
-import { Match } from './games/Match'
-import { PhraseFill } from './games/PhraseFill'
-import { TrueFalse } from './games/TrueFalse'
-import { Mistakes } from './screens/Mistakes'
-import { Onboarding } from './screens/Onboarding'
 import { Practice } from './screens/Practice'
 import { ProfileScreen } from './screens/Profile'
-import { ProgressScreen } from './screens/Progress'
 import { Quiz } from './screens/Quiz'
 import { Today } from './screens/Today'
-import { Words } from './screens/Words'
 import { newCardOrder, type Confusions, type Mode } from './session'
 import { setAccent } from './speech'
+import { applyTheme } from './theme'
 import type { FreezeState } from './stats'
 import type { Card, DayStats, Progress, Settings } from './types'
+
+// Seyrek açılan ekranlar ayrı dosyalarda; ilk açılış daha hızlı olsun
+const Match = lazy(() => import('./games/Match').then((m) => ({ default: m.Match })))
+const PhraseFill = lazy(() => import('./games/PhraseFill').then((m) => ({ default: m.PhraseFill })))
+const TrueFalse = lazy(() => import('./games/TrueFalse').then((m) => ({ default: m.TrueFalse })))
+const Onboarding = lazy(() => import('./screens/Onboarding').then((m) => ({ default: m.Onboarding })))
+const ProgressScreen = lazy(() => import('./screens/Progress').then((m) => ({ default: m.ProgressScreen })))
+const Words = lazy(() => import('./screens/Words').then((m) => ({ default: m.Words })))
+const Mistakes = lazy(() => import('./screens/Mistakes').then((m) => ({ default: m.Mistakes })))
 
 export type Tab = 'today' | 'practice' | 'words' | 'progress' | 'profile'
 /** Sekme çubuğunun gizlendiği tam ekran akışlar */
@@ -79,6 +82,8 @@ export default function App() {
 
   // cards.json'dan gelen kartlar; kullanıcının eklediği kelimeler her yüklemede bunlara eklenir
   const baseCards = useRef<Card[]>([])
+  // Sıralama 6700 kartta pahalı; kendi kelimeler değişmedikçe önceki sıralı liste kullanılır
+  const ordered = useRef<{ key: string; cards: Card[] }>({ key: '', cards: [] })
 
   const load = useCallback(async () => {
     // Seri koruyucu günleri işaretleyebildiği için seri, günler okunmadan önce hesaplanır
@@ -95,7 +100,9 @@ export default function App() {
       loadSeenBadges(),
       loadLastBackup(),
     ])
-    const cards = newCardOrder([...baseCards.current, ...custom])
+    const key = `${baseCards.current.length}:${JSON.stringify(custom)}`
+    if (ordered.current.key !== key) ordered.current = { key, cards: newCardOrder([...baseCards.current, ...custom]) }
+    const cards = ordered.current.cards
     return { cards, progress, settings, day, streak: st.days, freezes: st.freezes, confusions, favorites, days, counters, seenBadges, lastBackup }
   }, [])
 
@@ -118,6 +125,7 @@ export default function App() {
     if (!data) return
     setAccent(data.settings.accent)
     setFeedback(data.settings.sounds, data.settings.vibration)
+    applyTheme(data.settings)
   }, [data])
 
   const updateSettings = useCallback(async (s: Settings) => {
@@ -165,7 +173,7 @@ export default function App() {
 
   return (
     <I18n.Provider value={t}>
-      {content}
+      <Suspense fallback={<main className="center">{t('loading')}</main>}>{content}</Suspense>
       {!overlay && (
         <nav className="tabbar">
           {TABS.map((item) => (

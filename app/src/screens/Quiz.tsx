@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { AppData } from '../App'
 import { Choices, QuestionCard } from '../components/QuestionCard'
 import { addActivity, bumpCounters, easeConfusion, recordAnswer, recordConfusion, undoAnswer } from '../db'
@@ -84,9 +84,11 @@ export function Quiz({ data, mode, ids, onExit }: { data: AppData; mode: Mode; i
   const choices = useMemo(() => {
     if (!card || type === 'type') return []
     // Karışanlar modunda daha önce karıştırılan kelimeler mutlaka şıklarda olsun
-    const prefer = mode === 'confused' ? Object.keys(data.confusions[card.id] ?? {}).flatMap((id) => cards.filter((c) => c.id === id)) : []
+    const others = new Set(mode === 'confused' ? Object.keys(data.confusions[card.id] ?? {}) : [])
+    const prefer = others.size ? cards.filter((c) => others.has(c.id)) : []
     return buildChoices(card, cards, Math.random, field, prefer)
-  }, [card, cards, type, field, mode, data.confusions])
+    // Aynı kart art arda gelirse (yeniden öğrenme) şıklar yeniden karışsın diye counts.done da bağımlılık
+  }, [card, cards, type, field, mode, data.confusions, counts.done]) // eslint-disable-line react-hooks/exhaustive-deps
   const answered = picked !== null
   const correct = !card ? false : type === 'type' ? typedResult !== 'wrong' : picked === card[field]
 
@@ -94,13 +96,32 @@ export function Quiz({ data, mode, ids, onExit }: { data: AppData; mode: Mode; i
     shownAt.current = Date.now()
     window.scrollTo({ top: 0 })
     if (card && type === 'en-tr' && settings.autoSpeak) speak(card.word)
-  }, [card, type, settings.autoSpeak])
+  }, [card, type, settings.autoSpeak, counts.done])
 
   useEffect(() => {
     if (!undo) return
     const id = setTimeout(() => setUndo(null), UNDO_MS)
     return () => clearTimeout(id)
   }, [undo])
+
+  // Cevap paneli ekranın altına sabit; yüksekliği kadar boşluk bırakılır ve doğru cevap panelin
+  // altında kalıyorsa sayfa kaydırılır
+  const sheetRef = useRef<HTMLElement>(null)
+  const [sheetH, setSheetH] = useState(0)
+  useLayoutEffect(() => {
+    const el = sheetRef.current
+    if (!answered || !el) return
+    const h = el.offsetHeight
+    setSheetH(h)
+    const id = requestAnimationFrame(() => {
+      const target = document.querySelector('.choice.right') ?? document.querySelector('.big-input')
+      if (!target) return
+      const limit = window.innerHeight - h - 12
+      const bottom = target.getBoundingClientRect().bottom
+      if (bottom > limit) window.scrollBy({ top: bottom - limit, behavior: 'smooth' })
+    })
+    return () => cancelAnimationFrame(id)
+  }, [answered])
 
   const finished = !pick
   useEffect(() => {
@@ -197,6 +218,8 @@ export function Quiz({ data, mode, ids, onExit }: { data: AppData; mode: Mode; i
     const seconds = Math.min(60, Math.round((Date.now() - shownAt.current) / 1000))
     const xp = xpForAnswer(result, combo)
     setXpTotal((x) => x + xp)
+    // "Tahmin ettim" gerçek bilgi sayılmaz: doğru serisi sıfırlanır
+    if (result === 'unsure') setCombo(0)
     if (mode === 'exam') {
       // Sınav modu tekrar takvimini etkilemez; yanlışlar sonda listelenir
       addActivity(xp, seconds)
@@ -320,9 +343,9 @@ export function Quiz({ data, mode, ids, onExit }: { data: AppData; mode: Mode; i
         )}
       </div>
 
-      {answered && <div className="sheet-space" />}
+      {answered && <div className="sheet-space" style={{ height: sheetH }} />}
       {answered && (
-        <section className={`sheet ${correct ? 'ok' : 'no'}`}>
+        <section ref={sheetRef} className={`sheet ${correct ? 'ok' : 'no'}`}>
           <div className="row between">
             <h3>{correct ? (typedResult === 'almost' ? t('quiz.almost') : praise) : t('quiz.wrong')}</h3>
             <span className="xp-pop">+{xpForAnswer(correct ? 'correct' : 'wrong', combo)} XP</span>

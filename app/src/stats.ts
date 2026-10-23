@@ -1,7 +1,14 @@
 import { isKnown } from './srs'
 import { LEVELS, type Answer, type Card, type DayStats, type Level, type Progress } from './types'
 
-const DAY = 24 * 3600 * 1000
+
+/** `t` gününden `n` gün önceki günün öğle saati; yaz saati geçişlerinde gün atlanmasın diye ms çıkarmak yerine */
+export function daysBefore(t: number, n: number): number {
+  const d = new Date(t)
+  d.setHours(12, 0, 0, 0)
+  d.setDate(d.getDate() - n)
+  return d.getTime()
+}
 
 export function dateKey(t: number): string {
   const d = new Date(t)
@@ -67,7 +74,7 @@ export function applyFreezes(active: Set<string>, state: FreezeState, now: numbe
   // Dünden geriye, ilk "kapsanmış" güne kadar kaçırılan günleri topla
   const gap: string[] = []
   for (let i = 1; i <= 30; i++) {
-    const k = dateKey(now - i * DAY)
+    const k = dateKey(daysBefore(now, i))
     if (covered(k)) break
     gap.push(k)
     if (i === 30) return s // hiç çalışılmamış: kurtarılacak seri yok
@@ -84,7 +91,7 @@ export function computeStreak(active: Set<string>, frozen: Set<string>, now: num
   let n = 0
   let i = active.has(dateKey(now)) ? 0 : 1 // bugün henüz çalışılmadıysa seri bozulmaz
   for (; i < 3650; i++) {
-    const k = dateKey(now - i * DAY)
+    const k = dateKey(daysBefore(now, i))
     if (active.has(k)) n++
     else if (!frozen.has(k)) break
   }
@@ -104,7 +111,7 @@ export interface WeekSummary {
 function sumRange(days: Map<string, DayStats>, from: number, count: number): WeekSummary {
   const s: WeekSummary = { reviews: 0, correct: 0, xp: 0, seconds: 0, activeDays: 0 }
   for (let i = 0; i < count; i++) {
-    const d = days.get(dateKey(from - i * DAY))
+    const d = days.get(dateKey(daysBefore(from, i)))
     if (!d) continue
     s.reviews += d.reviews
     s.correct += d.correct
@@ -118,7 +125,7 @@ function sumRange(days: Map<string, DayStats>, from: number, count: number): Wee
 /** Son 7 gün ve önceki 7 gün */
 export function weekly(days: DayStats[], now: number): { current: WeekSummary; previous: WeekSummary } {
   const map = new Map(days.map((d) => [d.date, d]))
-  return { current: sumRange(map, now, 7), previous: sumRange(map, now - 7 * DAY, 7) }
+  return { current: sumRange(map, now, 7), previous: sumRange(map, daysBefore(now, 7), 7) }
 }
 
 /** Yüzde değişim; önceki hafta boşsa null */
@@ -139,7 +146,7 @@ export function heatmap(days: DayStats[], now: number, weeks = 18): { date: stri
   for (let w = 0; w < weeks; w++) {
     const col = []
     for (let d = 0; d < 7; d++) {
-      const t = start.getTime() + (w * 7 + d) * DAY
+      const t = daysBefore(start.getTime(), -(w * 7 + d))
       const k = dateKey(t)
       col.push({ date: k, reviews: map.get(k) ?? 0, future: t > today.getTime() })
     }
@@ -156,7 +163,7 @@ export function heatLevel(reviews: number): number {
 export function lastDays(days: DayStats[], now: number, count: number): DayStats[] {
   const map = new Map(days.map((d) => [d.date, d]))
   return Array.from({ length: count }, (_, i) => {
-    const k = dateKey(now - (count - 1 - i) * DAY)
+    const k = dateKey(daysBefore(now, count - 1 - i))
     return map.get(k) ?? { date: k, newCards: 0, reviews: 0, correct: 0 }
   })
 }

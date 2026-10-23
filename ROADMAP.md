@@ -130,6 +130,9 @@ Seçilen özellikler (numaralar özellik listesindeki sırayla):
 - [ ] Günlük hatırlatma bildirimi (28): web uygulamasında zamanlanmış bildirim için sunucu gerekir, mağaza uygulamasında cihazın kendi bildirimiyle yapılır
 - [ ] Capacitor ile Android ve iOS paketleri, gizlilik politikası, mağaza görselleri
 
+### Faz 9 — Görünüm ve iyileştirmeler
+- [x] Tema (sistem/açık/koyu), 5 renk paleti, yazı boyutu (31)
+- [x] Cevap paneli doğru şıkkı kapatmıyor; mantık hataları ve performans düzeltmeleri
+
 ### Sonraya bırakılanlar
-- Tema ve yazı boyutu seçimi (31)
 - Bulut senkronizasyonu (33)

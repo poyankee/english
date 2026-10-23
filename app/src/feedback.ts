@@ -10,6 +10,8 @@ export function setFeedback(sounds: boolean, vibration: boolean) {
 
 function tone(freq: number, start: number, duration: number, type: OscillatorType = 'sine', gain = 0.12) {
   ctx ??= new AudioContext()
+  // iOS ve bazı tarayıcılar sesi askıya alınmış başlatır
+  if (ctx.state === 'suspended') ctx.resume()
   const t = ctx.currentTime + start
   const osc = ctx.createOscillator()
   const g = ctx.createGain()

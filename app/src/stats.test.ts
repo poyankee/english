@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { answer, difficultyFactor, INTERVALS, KNOWN_BOX } from './srs'
-import { applyFreezes, badges, change, computeStreak, dateKey, EMPTY_FREEZES, heatLevel, weekly, xpForAnswer, xpLevel } from './stats'
+import { applyFreezes, badges, change, computeStreak, dateKey, daysBefore, EMPTY_FREEZES, heatLevel, weekly, xpForAnswer, xpLevel } from './stats'
 import type { DayStats, Progress } from './types'
 
 const DAY = 24 * 3600 * 1000
@@ -92,5 +92,14 @@ describe('rozetler', () => {
     const b = badges({ known: 60, streak: 7, level: 'B1', totalReviews: 100, bestCombo: 12, perfectSessions: 0, gamesPlayed: 0, customWords: 0, xpLevel: 2 })
     const earned = b.filter((x) => x.earned).map((x) => x.id)
     expect(earned).toEqual(['first', 'known50', 'streak3', 'streak7', 'levelA2', 'levelB1', 'combo10'])
+  })
+})
+
+describe('günler', () => {
+  it('yaz saati geçişinde gün atlamadan geriye gider', () => {
+    // Avrupa'da 2026-03-29 gece saat ileri alınır; saat diliminden bağımsız olarak ardışık günler üretilmeli
+    const now = new Date(2026, 2, 30, 0, 30).getTime()
+    const keys = [0, 1, 2].map((i) => dateKey(daysBefore(now, i)))
+    expect(keys).toEqual(['2026-03-30', '2026-03-29', '2026-03-28'])
   })
 })

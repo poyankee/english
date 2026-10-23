@@ -51,6 +51,9 @@ export type QuestionType = 'en-tr' | 'tr-en' | 'type'
 
 export type Lang = 'tr' | 'en'
 export type Accent = 'us' | 'gb'
+export type ThemeMode = 'system' | 'light' | 'dark'
+export type ColorTheme = 'violet' | 'ocean' | 'forest' | 'sunset' | 'rose'
+export type TextSize = 'small' | 'normal' | 'large'
 
 export interface Settings {
   name: string
@@ -63,6 +66,9 @@ export interface Settings {
   autoSpeak: boolean
   sounds: boolean
   vibration: boolean
+  theme: ThemeMode
+  color: ColorTheme
+  textSize: TextSize
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -75,6 +81,9 @@ export const DEFAULT_SETTINGS: Settings = {
   autoSpeak: true,
   sounds: true,
   vibration: true,
+  theme: 'system',
+  color: 'violet',
+  textSize: 'normal',
 }
 
 export interface DayStats {

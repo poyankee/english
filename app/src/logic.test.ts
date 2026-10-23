@@ -130,6 +130,15 @@ describe('session', () => {
     expect(pickNext({ ...s, served: 0 }, pool, new Map(), st, 0)?.kind).toBe('new')
   })
 
+  it('tekrarlar birikmiş olsa da kontrol sorusu sırası atlanmaz', () => {
+    const pool = [card('old', { level: 'A1' }), card('b0', { level: 'B1' })]
+    const st = settings({ currentLevel: 'B1' })
+    const progress = new Map([['b0', { id: 'b0', box: 3, due: 0, seen: 1, wrong: 0, lastSeen: 0 }]])
+    const s = { ...startSession('study', pool, progress, 0, st, 10), served: CHECKUP_EVERY - 1 }
+    expect(pickNext(s, pool, progress, st, 10)?.kind).toBe('checkup')
+    expect(pickNext({ ...s, served: 0 }, pool, progress, st, 10)?.kind).toBe('review')
+  })
+
   it('geçilen seviyedeki ve A1/A2 kartları tamamlanabilir, mevcut seviyedeki B1+ kartları tamamlanmaz', () => {
     const st = settings({ currentLevel: 'B2' })
     expect(graduates(card('a', { level: 'A2' }), st)).toBe(true)

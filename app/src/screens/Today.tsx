@@ -27,12 +27,14 @@ export function Today({
   const t = useT()
   const { cards, progress, settings, day } = data
   const now = Date.now()
-  const due = [...progress.values()].filter((p) => !p.done && p.due <= now).length
+  // Silinen kendi kelimelerin ilerlemesi sayılmasın
+  const ids = new Set(cards.map((c) => c.id))
+  const due = [...progress.values()].filter((p) => !p.done && p.due <= now && ids.has(p.id)).length
   const newLeft = Math.min(
     Math.max(settings.dailyNew - day.newCards, 0),
     cards.filter((c) => !progress.has(c.id) && inScope(c, settings)).length,
   )
-  const mistakes = [...progress.values()].filter(isMistake).length
+  const mistakes = [...progress.values()].filter((p) => isMistake(p) && ids.has(p.id)).length
   const accuracy = day.reviews ? Math.round((100 * day.correct) / day.reviews) : null
   const up = nextLevel(cards, progress, settings)
   const xp = xpLevel(totalXp(data.days))

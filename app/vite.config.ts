@@ -12,6 +12,8 @@ export default defineConfig({
       includeAssets: ['icon.svg', 'apple-touch-icon.png'],
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,json,woff2}'],
+        // Türkçe için latin ve latin-ext yeterli; diğer alfabelerin font dosyaları önbelleğe alınmaz
+        globIgnores: ['**/nunito-cyrillic*', '**/nunito-vietnamese*', '**/nunito-greek*'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       },
       manifest: {
@@ -19,8 +21,8 @@ export default defineConfig({
         short_name: 'Kelime',
         description: 'Oxford 5000 kelime ve kalıplarını aralıklı tekrarla öğren',
         lang: 'tr',
-        theme_color: '#3b5bdb',
-        background_color: '#f6f5f1',
+        theme_color: '#6c5ce7',
+        background_color: '#f4f2ff',
         display: 'standalone',
         icons: [
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },

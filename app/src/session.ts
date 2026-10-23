@@ -74,6 +74,16 @@ function shuffle<T>(xs: T[], rand: () => number): T[] {
     .map(([, x]) => x)
 }
 
+/** Rastgele sırayla eleman üretir; tamamı karıştırılmaz, sadece ihtiyaç kadarı çekilir (büyük listeler için) */
+function* sample<T>(xs: T[], rand: () => number): Generator<T> {
+  const a = xs.slice()
+  for (let i = a.length - 1; i >= 0; i--) {
+    const j = Math.floor(rand() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+    yield a[i]
+  }
+}
+
 export interface Session {
   mode: Mode
   /** Bu oturumda yanlış bilinip tekrar sorulacak kartlar; `after` 0'a inince sıra gelir */
@@ -148,8 +158,8 @@ export function startSession(
 }
 
 /**
- * Sıradaki kartı seçer. Öncelik: zamanı gelen "yeniden öğren" kartı → vadesi gelmiş tekrar →
- * (her CHECKUP_EVERY kartta bir) geçilen seviyeden kontrol sorusu → mevcut seviyeden yeni kart →
+ * Sıradaki kartı seçer. Öncelik: zamanı gelen "yeniden öğren" kartı → (her CHECKUP_EVERY kartta bir)
+ * geçilen seviyeden kontrol sorusu → vadesi gelmiş tekrar → mevcut seviyeden yeni kart →
  * bekleyen "yeniden öğren" kartı. Hiçbiri yoksa null.
  */
 export function pickNext(
@@ -169,6 +179,13 @@ export function pickNext(
     return { card: byId(id)!, kind: session.queue[0] ? 'practice' : 'relearn' }
   }
 
+  // Geçilen seviyelerden kontrol sorusu: her CHECKUP_EVERY kartta bir, tekrarlar birikmiş olsa bile
+  const passed = new Set(passedLevels(settings))
+  if (passed.size && session.served % CHECKUP_EVERY === CHECKUP_EVERY - 1) {
+    const pool = ordered.filter((c) => passed.has(c.level) && !progress.has(c.id) && (c.pos !== 'phrase' || settings.phrases))
+    if (pool.length) return { card: pool[(session.served * 7919) % pool.length], kind: 'checkup' }
+  }
+
   const waiting = new Set(session.relearn.map((r) => r.id))
   let due: Card | undefined
   let dueAt = Infinity
@@ -180,12 +197,6 @@ export function pickNext(
     }
   }
   if (due) return { card: due, kind: 'review' }
-
-  const passed = new Set(passedLevels(settings))
-  if (passed.size && session.served % CHECKUP_EVERY === CHECKUP_EVERY - 1) {
-    const pool = ordered.filter((c) => passed.has(c.level) && !progress.has(c.id) && (c.pos !== 'phrase' || settings.phrases))
-    if (pool.length) return { card: pool[(session.served * 7919) % pool.length], kind: 'checkup' }
-  }
 
   if (session.newToday < settings.dailyNew) {
     const fresh = ordered.find((c) => !progress.has(c.id) && inScope(c, settings))
@@ -237,7 +248,7 @@ export function buildChoices(
   const picks: string[] = []
   const tiers = [prefer, pool.filter((c) => c.pos === card.pos && c.level === card.level), pool.filter((c) => c.pos === card.pos), pool]
   for (const tier of tiers) {
-    for (const c of shuffle(tier, rand)) {
+    for (const c of sample(tier, rand)) {
       if (picks.length === CHOICES - 1) break
       if (c.id === card.id || c.word === card.word) continue
       const parts = key(c)
