@@ -6,11 +6,16 @@ const db = new Dexie('kelime') as Dexie & {
   progress: EntityTable<Progress, 'id'>
   days: EntityTable<DayStats, 'date'>
   meta: EntityTable<{ key: string; value: unknown }, 'key'>
+  images: EntityTable<{ id: string; blob: Blob }, 'id'>
 }
 db.version(1).stores({
   progress: 'id, due, box',
   days: 'date',
   meta: 'key',
+})
+// Sürüm 2: kullanıcının kelimelere eklediği resimler
+db.version(2).stores({
+  images: 'id',
 })
 
 export { db }
@@ -195,22 +200,80 @@ export async function markBackup() {
 }
 
 export async function exportBackup(): Promise<string> {
+  const images = await Promise.all((await db.images.toArray()).map(async (i) => ({ id: i.id, data: await blobToDataUrl(i.blob) })))
   return JSON.stringify({
     version: 1,
     exportedAt: new Date().toISOString(),
     progress: await db.progress.toArray(),
     days: await db.days.toArray(),
     meta: await db.meta.toArray(),
+    images,
   })
+}
+
+function blobToDataUrl(b: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader()
+    r.onload = () => resolve(r.result as string)
+    r.onerror = () => reject(r.error)
+    r.readAsDataURL(b)
+  })
+}
+
+/* ---------- Kelime resimleri ---------- */
+
+export async function loadImageIds(): Promise<string[]> {
+  return (await db.images.toCollection().primaryKeys()) as string[]
+}
+
+export async function loadImage(id: string): Promise<Blob | undefined> {
+  return (await db.images.get(id))?.blob
+}
+
+export async function saveImage(id: string, blob: Blob | null) {
+  if (blob) await db.images.put({ id, blob })
+  else await db.images.delete(id)
 }
 
 export async function importBackup(json: string) {
   const data = JSON.parse(json)
   if (data.version !== 1 || !Array.isArray(data.progress)) throw new Error('Geçersiz yedek dosyası')
-  await db.transaction('rw', db.progress, db.days, db.meta, async () => {
-    await Promise.all([db.progress.clear(), db.days.clear(), db.meta.clear()])
+  const images: { id: string; blob: Blob }[] = await Promise.all(
+    ((data.images ?? []) as { id: string; data: string }[]).map(async (i) => ({ id: i.id, blob: await (await fetch(i.data)).blob() })),
+  )
+  await db.transaction('rw', [db.progress, db.days, db.meta, db.images], async () => {
+    await Promise.all([db.progress.clear(), db.days.clear(), db.meta.clear(), db.images.clear()])
     await db.progress.bulkPut(data.progress)
     await db.days.bulkPut(data.days ?? [])
     await db.meta.bulkPut(data.meta ?? [])
+    await db.images.bulkPut(images)
   })
+}
+
+/** Günlük meydan okuma sonuçları: tarih -> ilk denemenin skoru */
+export interface DailyResult {
+  score: number
+  correct: number
+  seconds: number
+}
+
+export async function loadDaily(): Promise<Record<string, DailyResult>> {
+  return ((await db.meta.get('daily'))?.value as Record<string, DailyResult>) ?? {}
+}
+
+export async function saveDaily(date: string, r: DailyResult) {
+  const all = await loadDaily()
+  all[date] = r
+  await db.meta.put({ key: 'daily', value: all })
+}
+
+/** Okunan hikâyeler: id -> anlama sorularındaki doğru sayısı */
+export async function loadStoriesRead(): Promise<Record<string, number>> {
+  return ((await db.meta.get('storiesRead'))?.value as Record<string, number>) ?? {}
+}
+
+export async function markStoryRead(id: string, correct: number) {
+  const all = await loadStoriesRead()
+  all[id] = Math.max(all[id] ?? 0, correct)
+  await db.meta.put({ key: 'storiesRead', value: all })
 }

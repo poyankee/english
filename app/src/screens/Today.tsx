@@ -4,6 +4,7 @@ import { badgeList } from '../badgeList'
 import { saveSeenBadges } from '../db'
 import { downloadBackup } from '../exporter'
 import { useT, type T } from '../i18n'
+import { goalPlan } from '../plan'
 import { inScope, nextLevel } from '../session'
 import { isMistake } from '../srs'
 import { totalXp, xpLevel } from '../stats'
@@ -39,6 +40,7 @@ export function Today({
   const up = nextLevel(cards, progress, settings)
   const xp = xpLevel(totalXp(data.days))
   const fresh = badgeList(data).filter((b) => b.earned && !data.seenBadges.has(b.id))
+  const plan = goalPlan(cards, progress, settings, now)
   const [dismissed, setDismissed] = useState(false)
   const [backupLater, setBackupLater] = useState(false)
   const needsBackup = progress.size >= BACKUP_AFTER_CARDS && (!data.lastBackup || now - data.lastBackup > WEEK) && !backupLater
@@ -115,6 +117,24 @@ export function Today({
           <button className="primary" onClick={() => updateSettings({ ...settings, currentLevel: up })}>
             {t('today.levelUpBtn')}
           </button>
+        </section>
+      )}
+
+      {plan && settings.goal && (
+        <section className="goal-card" onClick={() => nav.tab('profile')}>
+          <div className="row between">
+            <b>
+              🎯 {t('goal.card', { level: settings.goal.level })}
+            </b>
+            <span className="muted small">{t('goal.daysLeft', { n: plan.daysLeft })}</span>
+          </div>
+          <div className="bar">
+            <span className="learned" style={{ width: `${plan.total ? (100 * (plan.total - plan.remaining)) / plan.total : 0}%` }} />
+          </div>
+          <small className="muted">
+            {t('goal.cardSub', { n: plan.remaining, per: plan.perDay })}
+            {plan.perDay > settings.dailyNew && !settings.autoDaily && <> · {t('goal.behind')}</>}
+          </small>
         </section>
       )}
 

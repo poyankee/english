@@ -3,6 +3,7 @@ import {
   loadConfusions,
   loadCounters,
   loadCustomWords,
+  loadDaily,
   loadDay,
   loadDays,
   loadFavorites,
@@ -12,6 +13,7 @@ import {
   loadSettings,
   saveSettings,
   streak,
+  today,
   type Counters,
 } from './db'
 import { setFeedback } from './feedback'
@@ -23,6 +25,8 @@ import { Today } from './screens/Today'
 import { newCardOrder, type Confusions, type Mode } from './session'
 import { setAccent } from './speech'
 import { applyTheme } from './theme'
+import { initImages } from './images'
+import { goalPlan, plannedDaily } from './plan'
 import type { FreezeState } from './stats'
 import type { Card, DayStats, Progress, Settings } from './types'
 
@@ -34,10 +38,16 @@ const Onboarding = lazy(() => import('./screens/Onboarding').then((m) => ({ defa
 const ProgressScreen = lazy(() => import('./screens/Progress').then((m) => ({ default: m.ProgressScreen })))
 const Words = lazy(() => import('./screens/Words').then((m) => ({ default: m.Words })))
 const Mistakes = lazy(() => import('./screens/Mistakes').then((m) => ({ default: m.Mistakes })))
+const Cloze = lazy(() => import('./games/Cloze').then((m) => ({ default: m.Cloze })))
+const Forms = lazy(() => import('./games/Forms').then((m) => ({ default: m.Forms })))
+const Daily = lazy(() => import('./games/Daily').then((m) => ({ default: m.Daily })))
+const Speak = lazy(() => import('./games/Speak').then((m) => ({ default: m.Speak })))
+const Swipe = lazy(() => import('./screens/Swipe').then((m) => ({ default: m.Swipe })))
+const Stories = lazy(() => import('./screens/Stories').then((m) => ({ default: m.Stories })))
 
 export type Tab = 'today' | 'practice' | 'words' | 'progress' | 'profile'
 /** Sekme çubuğunun gizlendiği tam ekran akışlar */
-export type Game = 'match' | 'truefalse' | 'phrase'
+export type Game = 'match' | 'truefalse' | 'phrase' | 'cloze' | 'forms' | 'daily' | 'speak' | 'swipe' | 'stories'
 type Overlay = { name: 'quiz'; mode: Mode; ids?: string[] } | { name: 'game'; game: Game } | { name: 'mistakes' } | { name: 'onboarding' } | null
 
 export interface AppData {
@@ -54,6 +64,8 @@ export interface AppData {
   counters: Counters
   seenBadges: Set<string>
   lastBackup: number | null
+  /** Bugünkü meydan okuma skoru (oynanmadıysa null) */
+  dailyToday: number | null
 }
 
 export interface Nav {
@@ -88,7 +100,8 @@ export default function App() {
   const load = useCallback(async () => {
     // Seri koruyucu günleri işaretleyebildiği için seri, günler okunmadan önce hesaplanır
     const st = await streak()
-    const [progress, settings, day, confusions, favorites, custom, days, counters, seenBadges, lastBackup] = await Promise.all([
+    await initImages()
+    const [progress, settings, day, confusions, favorites, custom, days, counters, seenBadges, lastBackup, dailyResults] = await Promise.all([
       loadProgress(),
       loadSettings(),
       loadDay(),
@@ -99,11 +112,18 @@ export default function App() {
       loadCounters(),
       loadSeenBadges(),
       loadLastBackup(),
+      loadDaily(),
     ])
     const key = `${baseCards.current.length}:${JSON.stringify(custom)}`
     if (ordered.current.key !== key) ordered.current = { key, cards: newCardOrder([...baseCards.current, ...custom]) }
     const cards = ordered.current.cards
-    return { cards, progress, settings, day, streak: st.days, freezes: st.freezes, confusions, favorites, days, counters, seenBadges, lastBackup }
+    // Hedefe göre otomatik plan: günlük yeni kelime sayısı her açılışta hedefe göre güncellenir
+    const daily = plannedDaily(goalPlan(cards, progress, settings, Date.now()), settings)
+    if (daily !== settings.dailyNew) {
+      settings.dailyNew = daily
+      await saveSettings(settings)
+    }
+    return { cards, progress, settings, day, streak: st.days, freezes: st.freezes, confusions, favorites, days, counters, seenBadges, lastBackup, dailyToday: dailyResults[today()]?.score ?? null }
   }, [])
 
   const refresh = useCallback(async () => {
@@ -154,15 +174,10 @@ export default function App() {
 
   let content
   if (overlay?.name === 'quiz') content = <Quiz data={data} mode={overlay.mode} ids={overlay.ids} onExit={close} />
-  else if (overlay?.name === 'game')
-    content =
-      overlay.game === 'match' ? (
-        <Match data={data} onExit={close} />
-      ) : overlay.game === 'truefalse' ? (
-        <TrueFalse data={data} onExit={close} />
-      ) : (
-        <PhraseFill data={data} onExit={close} />
-      )
+  else if (overlay?.name === 'game') {
+    const Screen = { match: Match, truefalse: TrueFalse, phrase: PhraseFill, cloze: Cloze, forms: Forms, daily: Daily, speak: Speak, swipe: Swipe, stories: Stories }[overlay.game]
+    content = <Screen data={data} onExit={close} />
+  }
   else if (overlay?.name === 'mistakes') content = <Mistakes data={data} onBack={close} onStudy={() => nav.quiz('mistakes')} />
   else if (overlay?.name === 'onboarding') content = <Onboarding data={data} updateSettings={updateSettings} onDone={close} />
   else if (tab === 'practice') content = <Practice data={data} nav={nav} />

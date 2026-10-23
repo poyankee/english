@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { loadCustomWords, saveCustomWords, setProgress, toggleFavorite } from '../db'
 import { useT } from '../i18n'
+import { pluralOf, verbForms } from '../forms'
+import { hasImage, onImagesChange, setImage } from '../images'
 import { canSpeak, speak } from '../speech'
 import { daysUntilDue, markDone } from '../srs'
 import type { AppData } from '../App'
 import type { Card } from '../types'
+import { CardPicture } from './CardPicture'
 
 /**
  * Kelime detayı: alttan açılan pencere. Telaffuz, kelime ailesi ve eş/zıt anlamlılar (dokununca o kelimeye
@@ -31,10 +34,15 @@ function WordDetail({
   const t = useT()
   const [fav, setFav] = useState(data.favorites.has(card.id))
   const [p, setP] = useState(data.progress.get(card.id))
+  // Resim eklenip kaldırılınca butonlar güncellensin
+  const [, setImgVersion] = useState(0)
+  useEffect(() => onImagesChange(() => setImgVersion((v) => v + 1)), [])
   const related = (words: string[] | undefined) =>
     (words ?? []).map((w) => ({ w, card: data.cards.find((c) => c.word.toLowerCase() === w) }))
   const now = Date.now()
   const days = p ? daysUntilDue(p, now) : null
+  const forms = card.pos === 'verb' ? verbForms(card.word) : undefined
+  const plural = card.pos === 'noun' ? pluralOf(card.word) : undefined
 
   async function fav_() {
     setFav((await toggleFavorite(card.id)).has(card.id))
@@ -66,7 +74,7 @@ function WordDetail({
       <section className={`modal-sheet lvl-${card.level}`} onClick={(e) => e.stopPropagation()}>
         <div className="grabber" />
         <div className="detail-head">
-          <div className="emoji-bubble">{card.emoji || '🔤'}</div>
+          <CardPicture card={card} />
           <div>
             <div className="row">
               <h2 className="word">{card.word}</h2>
@@ -86,6 +94,16 @@ function WordDetail({
           </div>
         </div>
         <p className="detail-tr">{card.tr}</p>
+        {forms && (
+          <p className="forms-line">
+            {t('detail.forms')}: {card.word} → {forms.past} → {forms.participle}
+          </p>
+        )}
+        {plural && (
+          <p className="forms-line">
+            {t('detail.plural')}: {plural}
+          </p>
+        )}
         {card.def && <p className="def">{card.def}</p>}
         {card.ex && (
           <button className="example-btn" onClick={() => speak(card.ex!)}>
@@ -140,6 +158,15 @@ function WordDetail({
           {p && (
             <button className="secondary" onClick={reset}>
               🔁 {t('detail.reset')}
+            </button>
+          )}
+          <label className="secondary file-btn">
+            🖼 {hasImage(card.id) ? t('detail.changeImage') : t('detail.addImage')}
+            <input type="file" accept="image/*" hidden onChange={(e) => e.target.files?.[0] && setImage(card.id, e.target.files[0])} />
+          </label>
+          {hasImage(card.id) && (
+            <button className="secondary" onClick={() => setImage(card.id, null)}>
+              ✕ {t('detail.removeImage')}
             </button>
           )}
           {card.custom && (

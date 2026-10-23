@@ -45,3 +45,39 @@ export async function downloadBackup() {
   download(`kelime-yedek-${new Date().toISOString().slice(0, 10)}.json`, await exportBackup(), 'application/json')
   await markBackup()
 }
+
+/**
+ * Her gün tekrar eden takvim etkinliği (.ics). Telefonun takvimi bildirimi kendisi gösterir; böylece
+ * sunucu olmadan günlük hatırlatma kurulabilir. Saat yerel saattir (saat dilimi belirtilmez).
+ */
+export function reminderIcs(time: string, title: string, text: string, url: string, now = new Date()): string {
+  const [h, m] = time.split(':').map(Number)
+  const start = new Date(now)
+  start.setDate(start.getDate() + 1)
+  start.setHours(h, m, 0, 0)
+  const pad = (n: number) => String(n).padStart(2, '0')
+  const local = (d: Date) => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`
+  const stamp = now.toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '')
+  const esc = (s: string) => s.replace(/[\\,;]/g, (c) => `\\${c}`)
+  return [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Kelime//Daily reminder//TR',
+    'BEGIN:VEVENT',
+    'UID:kelime-daily-reminder',
+    `DTSTAMP:${stamp}`,
+    `DTSTART:${local(start)}`,
+    'DURATION:PT15M',
+    'RRULE:FREQ=DAILY',
+    `SUMMARY:${esc(title)}`,
+    `DESCRIPTION:${esc(`${text} ${url}`)}`,
+    `URL:${url}`,
+    'BEGIN:VALARM',
+    'ACTION:DISPLAY',
+    `DESCRIPTION:${esc(title)}`,
+    'TRIGGER:PT0M',
+    'END:VALARM',
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\r\n')
+}

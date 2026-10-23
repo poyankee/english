@@ -8,8 +8,8 @@ import {
   afterAnswer,
   buildChoices,
   checkTyped,
-  graduates,
   inScope,
+  nextProgress,
   pickNext,
   questionType,
   startSession,
@@ -18,7 +18,6 @@ import {
   type Session,
 } from '../session'
 import { speak } from '../speech'
-import { answer } from '../srs'
 import { xpForAnswer } from '../stats'
 import type { Answer, Card, Progress, QuestionType } from '../types'
 
@@ -95,7 +94,7 @@ export function Quiz({ data, mode, ids, onExit }: { data: AppData; mode: Mode; i
   useEffect(() => {
     shownAt.current = Date.now()
     window.scrollTo({ top: 0 })
-    if (card && type === 'en-tr' && settings.autoSpeak) speak(card.word)
+    if (card && (type === 'listen' || (type === 'en-tr' && settings.autoSpeak))) speak(card.word)
   }, [card, type, settings.autoSpeak, counts.done])
 
   useEffect(() => {
@@ -238,9 +237,7 @@ export function Quiz({ data, mode, ids, onExit }: { data: AppData; mode: Mode; i
     }
     const prev = progress.get(c.id)
     const now = Date.now()
-    // Pratik modlarında vadesi gelmemiş kartın doğru cevabı takvimi ileri atmasın
-    const offSchedule = mode !== 'study' && result !== 'wrong' && prev && prev.due > now
-    const p = offSchedule ? { ...prev, seen: prev.seen + 1, lastSeen: now } : answer(prev, c.id, result, now, graduates(c, settings))
+    const p = nextProgress(prev, c, result, mode, settings, now)
     // Geçilen seviyelerden gelen kontrol soruları günlük yeni kelime hakkından düşmez
     const countsAsNew = !prev && pick.kind !== 'checkup'
     setUndo({ pick, type, prev, saved: p, countsAsNew, correct: result === 'correct', xp, seconds, session, counts, combo })

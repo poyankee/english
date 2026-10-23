@@ -134,5 +134,18 @@ Seçilen özellikler (numaralar özellik listesindeki sırayla):
 - [x] Tema (sistem/açık/koyu), 5 renk paleti, yazı boyutu (31)
 - [x] Cevap paneli doğru şıkkı kapatmıyor; mantık hataları ve performans düzeltmeleri
 
+### Faz 10 — Yeni çalışma yolları
+- [x] Dinleme modu: sadece ses, anlamını seç (yavaş dinleme seçeneği)
+- [x] Hızlı tekrar: çevrilen ve kaydırılan kartlar, tekrar takvimine yazılır
+- [x] Boşluk doldurma: örnek cümlede eksik kelime (çekimli halleri de tanır)
+- [x] Çekimler: düzensiz fiiller (V2/V3) ve düzensiz çoğullar; kelime detayında da gösterilir
+- [x] Telaffuz pratiği: konuşma tanıma ile kelimeyi söyleme (Chrome/Android, Safari/iOS)
+- [x] Günlük meydan okuma: her gün aynı 10 soru, süre ve skor, son 7 gün grafiği
+- [x] Hedef ve plan: hedef seviye + tarih, günlük yeni kelime sayısı otomatik
+- [x] Hikâyeler: her seviyeden 3 metin, dokununca kelime detayı, sesli okuma, anlama soruları
+- [x] Günlük hatırlatma: takvime her gün tekrar eden etkinlik (.ics); widget mağaza aşamasında
+- [x] Kelimelere kendi resmini ekleme (yedeğe dahil)
+
 ### Sonraya bırakılanlar
+- Ana ekran widget'ı ve uygulama bildirimi (mağaza sürümü)
 - Bulut senkronizasyonu (33)

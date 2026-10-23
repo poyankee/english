@@ -1,5 +1,5 @@
-import { isKnown, isMistake, KNOWN_BOX } from './srs'
-import { EASY_LEVELS, LEVELS, type Card, type Level, type Progress, type QuestionType, type Settings, type Topic } from './types'
+import { answer, isKnown, isMistake, KNOWN_BOX } from './srs'
+import { EASY_LEVELS, LEVELS, type Answer, type Card, type Level, type Progress, type QuestionType, type Settings, type Topic } from './types'
 
 /** Yanlış bilinen kart kaç kart sonra tekrar sorulsun */
 export const RELEARN_GAP = 4
@@ -14,7 +14,7 @@ export const LEVEL_UP_RATIO = 0.8
 export const PLACEMENT_PER_LEVEL = 6
 export const PLACEMENT_PASS = 4
 
-export type Mode = 'study' | 'mistakes' | 'verbs' | 'reverse' | 'typing' | 'exam' | 'confused' | 'favorites' | 'list'
+export type Mode = 'study' | 'mistakes' | 'verbs' | 'reverse' | 'typing' | 'exam' | 'confused' | 'favorites' | 'list' | 'listening' | 'swipe'
 /** Sınav modunda sorulacak soru sayısı */
 export const EXAM_SIZE = 30
 /** Karıştırılan kelime çiftleri: kart id -> (yanlışlıkla seçilen kart id -> kaç kez) */
@@ -40,7 +40,7 @@ export function isTypeable(card: Card): boolean {
   return card.pos !== 'phrase' && /^[a-zA-Z'-]+$/.test(card.word) && card.word.length <= 14
 }
 
-const levelIndex = (l: Level) => LEVELS.indexOf(l)
+export const levelIndex = (l: Level) => LEVELS.indexOf(l)
 
 export function passedLevels(s: Settings): Level[] {
   return LEVELS.slice(0, levelIndex(s.currentLevel))
@@ -61,13 +61,13 @@ export function newCardOrder(cards: Card[]): Card[] {
   return [...cards].sort((a, b) => Number(!!b.custom) - Number(!!a.custom) || a.level.localeCompare(b.level) || hash(a.id) - hash(b.id))
 }
 
-function hash(s: string) {
+export function hash(s: string) {
   let h = 2166136261
   for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619)
   return h >>> 0
 }
 
-function shuffle<T>(xs: T[], rand: () => number): T[] {
+export function shuffle<T>(xs: T[], rand: () => number): T[] {
   return xs
     .map((x) => [rand(), x] as const)
     .sort((a, b) => a[0] - b[0])
@@ -75,7 +75,7 @@ function shuffle<T>(xs: T[], rand: () => number): T[] {
 }
 
 /** Rastgele sırayla eleman üretir; tamamı karıştırılmaz, sadece ihtiyaç kadarı çekilir (büyük listeler için) */
-function* sample<T>(xs: T[], rand: () => number): Generator<T> {
+export function* sample<T>(xs: T[], rand: () => number): Generator<T> {
   const a = xs.slice()
   for (let i = a.length - 1; i >= 0; i--) {
     const j = Math.floor(rand() * (i + 1))
@@ -131,8 +131,10 @@ export function startSession(
     ).map((c) => c.id)
   } else if (mode === 'verbs') {
     queue = prioritized(cards.filter((c) => isVerb(c) && unlocked(c)))
-  } else if (mode === 'reverse') {
+  } else if (mode === 'reverse' || mode === 'swipe') {
     queue = prioritized(cards.filter(unlocked))
+  } else if (mode === 'listening') {
+    queue = prioritized(cards.filter((c) => unlocked(c) && c.pos !== 'phrase'))
   } else if (mode === 'typing') {
     queue = prioritized(cards.filter((c) => isTypeable(c) && unlocked(c)))
   } else if (mode === 'exam') {
@@ -205,6 +207,15 @@ export function pickNext(
   return session.relearn[0] ? { card: byId(session.relearn[0].id)!, kind: 'relearn' } : null
 }
 
+/**
+ * Cevaptan sonra kartın yeni durumu. Pratik modlarında vadesi gelmemiş kartın doğru cevabı takvimi
+ * ileri atmaz (sadece görülme sayısı artar); yanlış cevap her modda kartı yeniden öğrenmeye alır.
+ */
+export function nextProgress(prev: Progress | undefined, card: Card, result: Answer, mode: Mode, settings: Settings, now: number): Progress {
+  if (mode !== 'study' && result !== 'wrong' && prev && prev.due > now) return { ...prev, seen: prev.seen + 1, lastSeen: now }
+  return answer(prev, card.id, result, now, graduates(card, settings))
+}
+
 /** Cevaptan sonra oturum durumunu günceller (yerinde değil, yeni nesne döner) */
 export function afterAnswer(session: Session, cardId: string, wrong: boolean, countsAsNew: boolean): Session {
   const relearn = session.relearn.filter((r) => r.id !== cardId).map((r) => ({ ...r, after: r.after - 1 }))
@@ -225,6 +236,7 @@ export function afterAnswer(session: Session, cardId: string, wrong: boolean, co
 export function questionType(card: Card, p: Progress | undefined, kind: PickKind, mode: Mode, rand = Math.random): QuestionType {
   if (mode === 'reverse') return 'tr-en'
   if (mode === 'typing') return 'type'
+  if (mode === 'listening') return 'listen'
   if (mode !== 'study' || kind === 'relearn' || kind === 'checkup' || !p || p.box < KNOWN_BOX) return 'en-tr'
   if (p.box >= 5 && isTypeable(card) && rand() < 0.5) return 'type'
   return rand() < 0.5 ? 'tr-en' : 'en-tr'

@@ -1,9 +1,13 @@
 import { useState } from 'react'
 import type { AppData, Nav } from '../App'
 import { importBackup } from '../db'
-import { download, downloadBackup, toAnki, toCsv } from '../exporter'
+import { initImages } from '../images'
+import { download, downloadBackup, reminderIcs, toAnki, toCsv } from '../exporter'
 import { useT } from '../i18n'
+import { goalPlan, plannedDaily } from '../plan'
+import { levelIndex } from '../session'
 import { isMistake } from '../srs'
+import { dateKey, daysBefore } from '../stats'
 import { COLOR_THEMES, PALETTES } from '../theme'
 import { LEVELS, type Card, type Settings, type TextSize, type ThemeMode } from '../types'
 
@@ -21,7 +25,13 @@ export function ProfileScreen({
   const t = useT()
   const s = data.settings
   const [msg, setMsg] = useState('')
-  const set = (patch: Partial<Settings>) => updateSettings({ ...s, ...patch })
+  const set = (patch: Partial<Settings>) => {
+    const next = { ...s, ...patch }
+    next.dailyNew = plannedDaily(goalPlan(data.cards, data.progress, next, Date.now()), next)
+    updateSettings(next)
+  }
+  const plan = goalPlan(data.cards, data.progress, s, Date.now())
+  const inDays = (n: number) => dateKey(daysBefore(Date.now(), -n))
 
   const lists: { key: 'export.mistakes' | 'export.favorites' | 'export.studied'; file: string; cards: Card[] }[] = [
     { key: 'export.mistakes', file: 'bilemediklerim', cards: data.cards.filter((c) => { const p = data.progress.get(c.id); return p && isMistake(p) }) },
@@ -32,6 +42,7 @@ export function ProfileScreen({
   async function upload(file: File) {
     try {
       await importBackup(await file.text())
+      await initImages(true)
       await refresh()
       setMsg(t('profile.uploaded'))
     } catch (e) {
@@ -84,10 +95,72 @@ export function ProfileScreen({
           {t('profile.phrases')}
         </label>
         <h3>{t('profile.daily', { n: s.dailyNew })}</h3>
-        <input type="range" min={5} max={50} step={5} value={s.dailyNew} onChange={(e) => set({ dailyNew: Number(e.target.value) })} />
+        <input
+          type="range"
+          min={5}
+          max={50}
+          step={5}
+          value={s.dailyNew}
+          disabled={!!plan && s.autoDaily}
+          onChange={(e) => set({ dailyNew: Number(e.target.value) })}
+        />
+        {plan && s.autoDaily && <p className="muted small">{t('goal.autoNote')}</p>}
         <button className="secondary" onClick={nav.onboarding}>
           🎯 {t('profile.retest')}
         </button>
+      </section>
+
+      <section className="panel">
+        <h3>🎯 {t('goal.title')}</h3>
+        <div className="row wrap">
+          <button className={`chip ${!s.goal ? 'on' : ''}`} onClick={() => set({ goal: null })}>
+            {t('goal.none')}
+          </button>
+          {LEVELS.filter((l) => levelIndex(l) >= levelIndex(s.currentLevel)).map((l) => (
+            <button
+              key={l}
+              className={`chip lvl-${l} ${s.goal?.level === l ? 'on' : ''}`}
+              onClick={() => set({ goal: { level: l, date: s.goal?.date ?? inDays(90) } })}
+            >
+              {l}
+            </button>
+          ))}
+        </div>
+        {s.goal && (
+          <>
+            <label className="field">
+              <span>{t('goal.date')}</span>
+              <input type="date" value={s.goal.date} min={inDays(1)} onChange={(e) => e.target.value && set({ goal: { ...s.goal!, date: e.target.value } })} />
+            </label>
+            <Toggle label={t('goal.auto')} on={s.autoDaily} onChange={(v) => set({ autoDaily: v })} />
+          </>
+        )}
+        {plan && (
+          <p className={`goal-summary ${plan.tooFast ? 'warn' : ''}`}>
+            {t('goal.summary', { n: plan.remaining, days: plan.daysLeft, per: plan.perDay })}
+            {plan.tooFast && <> {t('goal.tooFast')}</>}
+          </p>
+        )}
+      </section>
+
+      <section className="panel">
+        <h3>⏰ {t('reminder.title')}</h3>
+        <p className="muted small">{t('reminder.info')}</p>
+        <div className="row">
+          <input className="time-input" type="time" value={s.reminderTime} onChange={(e) => e.target.value && set({ reminderTime: e.target.value })} />
+          <button
+            className="secondary grow"
+            onClick={() =>
+              download(
+                'kelime-hatirlatma.ics',
+                reminderIcs(s.reminderTime, t('reminder.event'), t('reminder.eventText'), location.origin + import.meta.env.BASE_URL),
+                'text/calendar;charset=utf-8',
+              )
+            }
+          >
+            📅 {t('reminder.add')}
+          </button>
+        </div>
       </section>
 
       <section className="panel">

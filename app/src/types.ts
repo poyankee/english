@@ -46,8 +46,8 @@ export interface Progress {
 
 export type Answer = 'correct' | 'wrong' | 'unsure'
 
-/** Soru tipi: İngilizce → Türkçe şık, Türkçe → İngilizce şık, ya da kelimeyi yazma */
-export type QuestionType = 'en-tr' | 'tr-en' | 'type'
+/** Soru tipi: İngilizce → Türkçe şık, Türkçe → İngilizce şık, kelimeyi yazma ya da sadece dinleyip anlamını seçme */
+export type QuestionType = 'en-tr' | 'tr-en' | 'type' | 'listen'
 
 export type Lang = 'tr' | 'en'
 export type Accent = 'us' | 'gb'
@@ -69,6 +69,12 @@ export interface Settings {
   theme: ThemeMode
   color: ColorTheme
   textSize: TextSize
+  /** Hedef: bu tarihe kadar bu seviyeyi bitirmek */
+  goal: { level: Level; date: string } | null
+  /** Günlük yeni kelime sayısı hedefe göre otomatik ayarlansın */
+  autoDaily: boolean
+  /** Günlük hatırlatma saati (takvim dosyası için), ör. "20:00" */
+  reminderTime: string
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -84,6 +90,9 @@ export const DEFAULT_SETTINGS: Settings = {
   theme: 'system',
   color: 'violet',
   textSize: 'normal',
+  goal: null,
+  autoDaily: false,
+  reminderTime: '20:00',
 }
 
 export interface DayStats {

@@ -1,8 +1,8 @@
 import { useT } from '../i18n'
 import { canSpeak, speak } from '../speech'
 import type { Card, QuestionType } from '../types'
+import { CardPicture } from './CardPicture'
 
-const POS_EMOJI: Record<string, string> = { verb: '🏃', adjective: '🎨', adverb: '⚡', phrase: '💬' }
 const LETTERS = ['A', 'B', 'C', 'D', 'E']
 
 /**
@@ -22,10 +22,31 @@ export function QuestionCard({
 }) {
   const t = useT()
   const showWord = type === 'en-tr' || revealed
+  if (type === 'listen' && !revealed) {
+    // Dinleme sorusu: kelime, resim ve açıklama gizli; sadece ses
+    return (
+      <section className={`card lvl-${card.level}`}>
+        <p className="prompt">{t('quiz.whatHeard')}</p>
+        <button className="listen-big" aria-label={t('quiz.listen')} onClick={() => speak(card.word)}>
+          🔊
+        </button>
+        <button className="link-btn" onClick={() => speak(card.word, 0.6)}>
+          🐢 {t('quiz.slow')}
+        </button>
+        <div className="meta">
+          {badges?.map((b) => (
+            <span key={b.text} className={`tag ${b.cls}`}>
+              {b.text}
+            </span>
+          ))}
+        </div>
+      </section>
+    )
+  }
   return (
     <section className={`card lvl-${card.level}`}>
-      <div className="emoji-bubble">{card.emoji || POS_EMOJI[card.pos] || '🔤'}</div>
-      <p className="prompt">{type === 'en-tr' ? t('quiz.whichTr') : type === 'tr-en' ? t('quiz.whichEn') : t('quiz.typeIt')}</p>
+      <CardPicture card={card} />
+      <p className="prompt">{type === 'en-tr' || type === 'listen' ? t('quiz.whichTr') : type === 'tr-en' ? t('quiz.whichEn') : t('quiz.typeIt')}</p>
       <div className="row center-x">
         <h2 className="word">{showWord ? card.word : card.tr}</h2>
         {canSpeak && showWord && (
@@ -44,8 +65,8 @@ export function QuestionCard({
           </span>
         ))}
       </div>
-      {type === 'en-tr' && <p className="def">{card.def}</p>}
-      {type !== 'en-tr' && revealed && <p className="def">{`${card.tr} · ${card.def}`}</p>}
+      {(type === 'en-tr' || type === 'listen') && <p className="def">{card.def}</p>}
+      {type !== 'en-tr' && type !== 'listen' && revealed && <p className="def">{`${card.tr} · ${card.def}`}</p>}
       {/* Yazma sorusunda açıklama ipucu olarak gösterilir; kelimenin kendisini içeriyorsa gizlenir */}
       {type === 'type' && !revealed && !card.def.toLowerCase().includes(card.word.toLowerCase()) && <p className="def muted">{card.def}</p>}
     </section>
