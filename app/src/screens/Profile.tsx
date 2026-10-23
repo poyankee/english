@@ -1,26 +1,37 @@
 import { useState } from 'react'
 import type { AppData, Nav } from '../App'
-import { exportBackup, importBackup } from '../db'
+import { importBackup } from '../db'
+import { download, downloadBackup, toAnki, toCsv } from '../exporter'
 import { useT } from '../i18n'
-import { LEVELS, type Settings } from '../types'
+import { isMistake } from '../srs'
+import { LEVELS, type Card, type Settings } from '../types'
 
-export function ProfileScreen({ data, updateSettings, nav }: { data: AppData; updateSettings: (s: Settings) => void; nav: Nav }) {
+export function ProfileScreen({
+  data,
+  updateSettings,
+  nav,
+  refresh,
+}: {
+  data: AppData
+  updateSettings: (s: Settings) => void
+  nav: Nav
+  refresh: () => Promise<void>
+}) {
   const t = useT()
   const s = data.settings
   const [msg, setMsg] = useState('')
   const set = (patch: Partial<Settings>) => updateSettings({ ...s, ...patch })
 
-  async function download() {
-    const blob = new Blob([await exportBackup()], { type: 'application/json' })
-    const a = document.createElement('a')
-    a.href = URL.createObjectURL(blob)
-    a.download = `kelime-yedek-${new Date().toISOString().slice(0, 10)}.json`
-    a.click()
-  }
+  const lists: { key: 'export.mistakes' | 'export.favorites' | 'export.studied'; file: string; cards: Card[] }[] = [
+    { key: 'export.mistakes', file: 'bilemediklerim', cards: data.cards.filter((c) => { const p = data.progress.get(c.id); return p && isMistake(p) }) },
+    { key: 'export.favorites', file: 'favorilerim', cards: data.cards.filter((c) => data.favorites.has(c.id)) },
+    { key: 'export.studied', file: 'calistiklarim', cards: data.cards.filter((c) => data.progress.has(c.id)) },
+  ]
 
   async function upload(file: File) {
     try {
       await importBackup(await file.text())
+      await refresh()
       setMsg(t('profile.uploaded'))
     } catch (e) {
       setMsg(t('profile.error', { msg: String(e) }))
@@ -100,7 +111,7 @@ export function ProfileScreen({ data, updateSettings, nav }: { data: AppData; up
         <h3>{t('profile.backup')}</h3>
         <p className="muted small">{t('profile.backupInfo')}</p>
         <div className="row wrap">
-          <button className="secondary" onClick={download}>
+          <button className="secondary" onClick={() => downloadBackup().then(refresh)}>
             {t('profile.download')}
           </button>
           <label className="secondary button">
@@ -108,7 +119,32 @@ export function ProfileScreen({ data, updateSettings, nav }: { data: AppData; up
             <input type="file" accept="application/json" hidden onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
           </label>
         </div>
+        <p className="muted small">
+          {data.lastBackup ? t('backup.last', { date: new Date(data.lastBackup).toLocaleDateString(s.lang === 'en' ? 'en-GB' : 'tr-TR') }) : t('backup.never')}
+        </p>
         {msg && <p>{msg}</p>}
+      </section>
+
+      <section className="panel">
+        <h3>{t('export.title')}</h3>
+        <p className="muted small">{t('export.info')}</p>
+        {lists.map((l) => (
+          <div key={l.key} className="export-row">
+            <span className="grow">
+              {t(l.key)} <span className="muted">({l.cards.length})</span>
+            </span>
+            <button
+              className="secondary small-btn"
+              disabled={!l.cards.length}
+              onClick={() => download(`${l.file}.csv`, toCsv(l.cards, data.progress), 'text/csv;charset=utf-8')}
+            >
+              {t('export.csv')}
+            </button>
+            <button className="secondary small-btn" disabled={!l.cards.length} onClick={() => download(`${l.file}-anki.txt`, toAnki(l.cards), 'text/plain;charset=utf-8')}>
+              {t('export.anki')}
+            </button>
+          </div>
+        ))}
       </section>
 
       <p className="muted small center">{t('profile.cards', { n: data.cards.length })}</p>

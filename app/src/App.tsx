@@ -6,6 +6,7 @@ import {
   loadDay,
   loadDays,
   loadFavorites,
+  loadLastBackup,
   loadProgress,
   loadSeenBadges,
   loadSettings,
@@ -49,6 +50,7 @@ export interface AppData {
   days: DayStats[]
   counters: Counters
   seenBadges: Set<string>
+  lastBackup: number | null
 }
 
 export interface Nav {
@@ -81,7 +83,7 @@ export default function App() {
   const load = useCallback(async () => {
     // Seri koruyucu günleri işaretleyebildiği için seri, günler okunmadan önce hesaplanır
     const st = await streak()
-    const [progress, settings, day, confusions, favorites, custom, days, counters, seenBadges] = await Promise.all([
+    const [progress, settings, day, confusions, favorites, custom, days, counters, seenBadges, lastBackup] = await Promise.all([
       loadProgress(),
       loadSettings(),
       loadDay(),
@@ -91,9 +93,10 @@ export default function App() {
       loadDays(),
       loadCounters(),
       loadSeenBadges(),
+      loadLastBackup(),
     ])
     const cards = newCardOrder([...baseCards.current, ...custom])
-    return { cards, progress, settings, day, streak: st.days, freezes: st.freezes, confusions, favorites, days, counters, seenBadges }
+    return { cards, progress, settings, day, streak: st.days, freezes: st.freezes, confusions, favorites, days, counters, seenBadges, lastBackup }
   }, [])
 
   const refresh = useCallback(async () => {
@@ -157,8 +160,8 @@ export default function App() {
   else if (tab === 'practice') content = <Practice data={data} nav={nav} />
   else if (tab === 'words') content = <Words data={data} nav={nav} refresh={refresh} />
   else if (tab === 'progress') content = <ProgressScreen data={data} refresh={refresh} />
-  else if (tab === 'profile') content = <ProfileScreen data={data} updateSettings={updateSettings} nav={nav} />
-  else content = <Today data={data} nav={nav} updateSettings={updateSettings} />
+  else if (tab === 'profile') content = <ProfileScreen data={data} updateSettings={updateSettings} nav={nav} refresh={refresh} />
+  else content = <Today data={data} nav={nav} updateSettings={updateSettings} refresh={refresh} />
 
   return (
     <I18n.Provider value={t}>

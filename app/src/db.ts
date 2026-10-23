@@ -185,6 +185,15 @@ export async function streak(now = Date.now()): Promise<{ days: number; freezes:
   return { days: computeStreak(active, new Set(freezes.used), now), freezes }
 }
 
+/** Son yedek indirme zamanı (hatırlatma için) */
+export async function loadLastBackup(): Promise<number | null> {
+  return ((await db.meta.get('lastBackup'))?.value as number | undefined) ?? null
+}
+
+export async function markBackup() {
+  await db.meta.put({ key: 'lastBackup', value: Date.now() })
+}
+
 export async function exportBackup(): Promise<string> {
   return JSON.stringify({
     version: 1,

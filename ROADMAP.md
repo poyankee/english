@@ -126,7 +126,7 @@ Seçilen özellikler (numaralar özellik listesindeki sırayla):
 - [x] Telaffuz yazısı / IPA (11), kelime ailesi (12), eş ve zıt anlamlılar (13), konu desteleri (16)
 
 ### Faz 8 — Yedek, bildirim, store
-- [ ] Otomatik yedek hatırlatması (34), Excel/Anki'ye dışa aktarma (35)
+- [x] Haftalık yedek hatırlatması (34), CSV (Excel/Sheets) ve Anki'ye dışa aktarma (35)
 - [ ] Günlük hatırlatma bildirimi (28): web uygulamasında zamanlanmış bildirim için sunucu gerekir, mağaza uygulamasında cihazın kendi bildirimiyle yapılır
 - [ ] Capacitor ile Android ve iOS paketleri, gizlilik politikası, mağaza görselleri
 

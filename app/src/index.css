@@ -1844,6 +1844,21 @@ input[type='checkbox'] {
   border-radius: 12px;
 }
 
+.backup-banner {
+  background: linear-gradient(135deg, #e0f7f4, #e0f2fe);
+  color: #1e1b3a;
+  align-items: flex-start;
+}
+.backup-banner .row {
+  margin-top: 8px;
+}
+.export-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
 /* ---------- Animasyonlar ---------- */
 @keyframes fade-up {
   from {

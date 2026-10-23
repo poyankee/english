@@ -2,13 +2,28 @@ import { useEffect, useState } from 'react'
 import type { AppData, Nav } from '../App'
 import { badgeList } from '../badgeList'
 import { saveSeenBadges } from '../db'
+import { downloadBackup } from '../exporter'
 import { useT, type T } from '../i18n'
 import { inScope, nextLevel } from '../session'
 import { isMistake } from '../srs'
 import { totalXp, xpLevel } from '../stats'
 import type { Settings } from '../types'
 
-export function Today({ data, nav, updateSettings }: { data: AppData; nav: Nav; updateSettings: (s: Settings) => void }) {
+/** Bu kadar kart çalışıldıktan sonra haftalık yedek hatırlatması gösterilir */
+const BACKUP_AFTER_CARDS = 30
+const WEEK = 7 * 24 * 3600 * 1000
+
+export function Today({
+  data,
+  nav,
+  updateSettings,
+  refresh,
+}: {
+  data: AppData
+  nav: Nav
+  updateSettings: (s: Settings) => void
+  refresh: () => Promise<void>
+}) {
   const t = useT()
   const { cards, progress, settings, day } = data
   const now = Date.now()
@@ -23,6 +38,8 @@ export function Today({ data, nav, updateSettings }: { data: AppData; nav: Nav; 
   const xp = xpLevel(totalXp(data.days))
   const fresh = badgeList(data).filter((b) => b.earned && !data.seenBadges.has(b.id))
   const [dismissed, setDismissed] = useState(false)
+  const [backupLater, setBackupLater] = useState(false)
+  const needsBackup = progress.size >= BACKUP_AFTER_CARDS && (!data.lastBackup || now - data.lastBackup > WEEK) && !backupLater
 
   return (
     <main className="home stagger with-tabs">
@@ -66,6 +83,24 @@ export function Today({ data, nav, updateSettings }: { data: AppData; nav: Nav; 
           >
             {t('today.ok')}
           </button>
+        </section>
+      )}
+
+      {needsBackup && (
+        <section className="levelup backup-banner">
+          <span className="badge-big">💾</span>
+          <div className="grow">
+            <b>{t('backup.remind')}</b>
+            <p>{t('backup.remindText')}</p>
+            <div className="row">
+              <button className="primary small-btn" onClick={() => downloadBackup().then(refresh)}>
+                {t('backup.now')}
+              </button>
+              <button className="secondary small-btn" onClick={() => setBackupLater(true)}>
+                {t('backup.later')}
+              </button>
+            </div>
+          </div>
         </section>
       )}
 
