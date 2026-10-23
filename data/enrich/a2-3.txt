@@ -1,0 +1,325 @@
+prevent-verb | 🛑 | önlemek, engellemek | to stop something from happening | Wash your hands to prevent illness.
+print-verb | 🖨️ | yazdırmak, basmak | to put words or pictures on paper with a machine | Can you print this document?
+printer-noun | 🖨️ | yazıcı | a machine that prints | The printer is out of paper.
+prison-noun | ⛓️ | hapishane, cezaevi | a building where criminals are kept | He spent five years in prison.
+prize-noun | 🏆 | ödül | something given to the winner | She won first prize.
+process-noun | ⚙️ | süreç, işlem | a series of actions to get a result | Learning a language is a slow process.
+produce-verb | 🏭 | üretmek | to make or grow something | The factory produces cars.
+professional-adjective | 💼 | profesyonel | connected with a job that needs training; doing something as a job | a professional footballer
+professor-noun | 👨‍🏫 | profesör | a senior university teacher | a professor of history
+profile-noun | 👤 | profil | a description of someone; a side view of a face | Update your profile picture.
+progress-noun | 📈 | ilerleme, gelişme | movement toward a goal | You're making good progress.
+progress-verb | 📈 | ilerlemek, gelişmek | to develop or move forward | Work is progressing slowly.
+promise-noun | 🤞 | söz, vaat | a statement that you will do something | Don't break your promise.
+promise-verb | 🤞 | söz vermek | to say that you will certainly do something | I promise I'll call you.
+pronounce-verb | 🗣️ | telaffuz etmek | to say a word with the correct sounds | How do you pronounce this word?
+protect-verb | 🛡️ | korumak | to keep safe from harm | Sunscreen protects your skin.
+provide-verb | 🫴 | sağlamak, temin etmek | to give something that is needed | The hotel provides free Wi-Fi.
+public-adjective | 🏛️ | kamusal, halka açık | for everyone; connected with the government | public transportation
+public-noun | 👥 | halk, kamu | people in general | The museum is open to the public.
+publish-verb | 📚 | yayımlamak | to print and sell a book or article | Her first book was published in 2020.
+pull-verb | 🫷 | çekmek | to move something toward you | Pull the door to open it.
+purpose-noun | 🎯 | amaç, maksat | the reason for doing something | What's the purpose of your visit?
+push-verb | 🫸 | itmek | to move something away from you | Push the button.
+quality-noun | 💎 | kalite; nitelik | how good something is; a characteristic | high quality products
+quantity-noun | 🔢 | miktar, nicelik | an amount | a small quantity of salt
+queen-noun | 👸 | kraliçe | a female ruler or the wife of a king | the Queen of England
+question-verb | ❓ | sorgulamak, soru sormak | to ask questions; to doubt | The police questioned him.
+quietly-adverb | 🤫 | sessizce | without much noise | She closed the door quietly.
+race-noun-competition | 🏁 | yarış | a competition to see who is fastest | He won the race.
+race-verb-competition | 🏃 | yarışmak | to compete in a race | I'll race you to the car!
+railroad-noun | 🛤️ | demiryolu | a track for trains (US) | the railroad station
+raise-verb | 🙋 | kaldırmak, yükseltmek; toplamak (para) | to lift up; to increase; to collect money | Raise your hand. / They raised prices.
+rate-noun | 📊 | oran, hız; ücret | a measurement of how often or fast; a price | the birth rate / hotel rates
+rather-adverb | 🤏 | oldukça; tercihen (would rather) | fairly; preferably | It's rather cold. / I'd rather stay home.
+reach-verb | 🖐️ | ulaşmak, varmak; uzanmak | to arrive at; to stretch your arm to touch | We reached the top. / I can't reach the shelf.
+react-verb | 😮 | tepki vermek | to behave in a particular way as a result of something | How did she react to the news?
+realize-verb | 💡 | farkına varmak, anlamak | to become aware of something | I didn't realize it was so late.
+receive-verb | 📥 | almak (gelen bir şeyi) | to get something that is given or sent | I received your email.
+recent-adjective | 🆕 | yakın zamandaki, son | happening a short time ago | in recent years
+recently-adverb | 🕐 | son zamanlarda, yakın zamanda | not long ago | I recently moved to Izmir.
+reception-noun | 🛎️ | resepsiyon; karşılama | the desk at a hotel entrance; a formal party | Ask at reception. / a wedding reception
+recipe-noun | 📜 | yemek tarifi | instructions for cooking a dish | Can you give me the recipe?
+recognize-verb | 👁️ | tanımak | to know someone or something because you have seen it before | I didn't recognize you!
+recommend-verb | 👍 | tavsiye etmek, önermek | to suggest something as good | Can you recommend a good restaurant?
+record-noun | 📀 | kayıt; rekor; plak | a written account; the best result ever; a disc of music | a world record / medical records
+record-verb | 🎙️ | kaydetmek | to store sound or pictures; to write down | They recorded a new album.
+recording-noun | 🎙️ | kayıt | sound or pictures that have been recorded | a recording of the concert
+recycle-verb | ♻️ | geri dönüştürmek | to treat waste so it can be used again | We recycle paper and glass.
+reduce-verb | 📉 | azaltmak, düşürmek | to make smaller in size or amount | Reduce your speed.
+refer-verb | 👉 | bahsetmek, değinmek (refer to) | to mention or talk about | She referred to her childhood.
+refrigerator-noun | 🧊 | buzdolabı | a machine that keeps food cold | Put the milk in the refrigerator.
+refuse-verb-1 | 🙅 | reddetmek | to say no to doing or accepting something | He refused to help me.
+region-noun | 🗺️ | bölge | a large area of a country or the world | the Black Sea region
+regular-adjective | 🔁 | düzenli, olağan | happening at the same time often; normal | regular exercise
+relationship-noun | 💞 | ilişki | the way people feel and behave toward each other | They have a good relationship.
+remove-verb | ➖ | çıkarmak, kaldırmak | to take something away | Please remove your shoes.
+repair-verb | 🔧 | tamir etmek, onarmak | to fix something broken | I need to repair my car.
+replace-verb | 🔄 | yerine koymak, değiştirmek | to put something new in place of something old | We replaced the old windows.
+reply-noun | ↩️ | cevap, yanıt | an answer | I'm waiting for a reply.
+reply-verb | ↩️ | cevap vermek | to answer | She didn't reply to my message.
+report-verb | 📢 | bildirmek, haber vermek | to give information about something | Report the accident to the police.
+reporter-noun | 🎤 | muhabir | a person who reports news | a TV reporter
+request-noun | 🙏 | rica, talep | an act of asking politely | They agreed to my request.
+research-noun | 🔬 | araştırma | a detailed study of a subject | medical research
+research-verb | 🔬 | araştırmak | to study a subject in detail | She is researching climate change.
+researcher-noun | 🧑‍🔬 | araştırmacı | a person who does research | a cancer researcher
+respond-verb | ↩️ | cevap vermek, tepki vermek | to answer or react | He didn't respond to my question.
+response-noun | 💬 | cevap, tepki | an answer or reaction | I got no response.
+rest-noun-remaining part | 🧩 | geri kalan | the part that is left | I'll do the rest tomorrow.
+rest-noun-sleep/relax | 🛋️ | dinlenme, istirahat | a period of relaxing | You need a rest.
+rest-verb-sleep/relax | 😌 | dinlenmek | to relax or sleep | Rest for a few minutes.
+review-noun | ⭐ | eleştiri, değerlendirme; tekrar | an article giving an opinion; a look at something again | The film got good reviews.
+review-verb | 🔍 | gözden geçirmek; eleştiri yazmak | to look at again; to write an opinion of | Review your notes before the exam.
+ride-noun | 🎢 | yolculuk, gezinti | a trip on a bike, horse or in a vehicle | Can you give me a ride?
+ring-noun-1 | 💍 | yüzük; halka | a circle of metal worn on a finger; a circle | a wedding ring
+ring-verb-2 | 🔔 | çalmak (zil, telefon) | to make a sound like a bell | The phone is ringing.
+rise-verb | 🌅 | yükselmek, doğmak (güneş) | to go up; to increase | The sun rises in the east. / Prices are rising.
+rock-noun-music | 🎸 | rock müzik | loud popular music with guitars | a rock band
+rock-noun-stone | 🪨 | kaya | a large piece of stone | He sat on a rock.
+role-noun | 🎭 | rol, görev | a character in a film; a function | She played the main role.
+roof-noun | 🏠 | çatı | the top covering of a building | a red roof
+round-adjective | ⚪ | yuvarlak | shaped like a circle or ball | a round table
+round-adverb | 🔄 | etrafında, çevresinde | in a circle | Turn round.
+round-preposition | 🔄 | etrafında | surrounding | We sat round the fire.
+route-noun | 🗺️ | rota, güzergâh | the way from one place to another | the fastest route
+rude-adjective | 😠 | kaba, terbiyesiz | not polite | Don't be rude!
+run-noun | 🏃 | koşu | the act of running | I go for a run every morning.
+runner-noun | 🏃 | koşucu | a person who runs | a marathon runner
+running-noun | 🏃 | koşu, koşma | the activity of running | Running is good exercise.
+sadly-adverb | 😢 | ne yazık ki; üzgün bir şekilde | unfortunately; in a sad way | Sadly, he died last year.
+safe-adjective | 🛡️ | güvenli, emniyetli | protected from danger | Is it safe to swim here?
+sail-verb | ⛵ | yelkenliyle gitmek, denize açılmak | to travel on water in a boat | We sailed around the islands.
+sailing-noun | ⛵ | yelken sporu | the sport of traveling in a boat with sails | He loves sailing.
+salary-noun | 💰 | maaş | money paid every month for a job | a high salary
+sale-noun | 🏷️ | satış; indirim | the act of selling; a time when prices are lower | The house is for sale. / There's a sale at the mall.
+sauce-noun | 🥫 | sos | a liquid served with food | tomato sauce
+save-verb | 💾 | kurtarmak; biriktirmek; kaydetmek | to rescue; to keep money; to store data | He saved her life. / Save your file.
+scared-adjective | 😨 | korkmuş | frightened | I'm scared of spiders.
+scary-adjective | 👻 | korkutucu | frightening | a scary movie
+scene-noun | 🎬 | sahne; olay yeri | a part of a film or play; a place where something happens | the first scene / the scene of the crime
+schedule-noun | 🗓️ | program, takvim | a plan of times for events | a busy schedule
+score-noun | 🔢 | skor, puan | the number of points in a game | What's the score?
+score-verb | ⚽ | sayı yapmak, gol atmak | to win points in a game | He scored two goals.
+screen-noun | 🖥️ | ekran, perde | the flat surface where pictures are shown | a computer screen
+sea-noun | 🌊 | deniz | the salt water that covers much of the earth | We swam in the sea.
+search-noun | 🔎 | arama | an attempt to find something | an internet search
+search-verb | 🔎 | aramak, araştırmak | to look carefully for something | I searched everywhere for my keys.
+season-noun | 🍂 | mevsim, sezon | one of the four parts of the year; a period for an activity | the football season
+seat-noun | 💺 | koltuk, oturacak yer | something to sit on | Is this seat free?
+second-adverb-next after the first-1 | 2️⃣ | ikinci olarak | after one other | She came second.
+secret-adjective | 🤫 | gizli | known by only a few people | a secret plan
+secret-noun | 🤫 | sır | something you don't tell others | Can you keep a secret?
+secretary-noun | 🧑‍💼 | sekreter | a person who types letters and organizes an office | The secretary answered the phone.
+seem-verb | 🤔 | gibi görünmek | to appear to be | You seem tired.
+sense-noun | 👃 | duyu; anlam; his | one of sight, hearing, etc.; meaning; a feeling | a sense of smell / It doesn't make sense.
+separate-adjective | ↔️ | ayrı | not joined | separate rooms
+series-noun | 📺 | dizi; seri | a TV show with episodes; a number of similar things | a new TV series
+serious-adjective | 😐 | ciddi | important; not joking | a serious problem
+serve-verb | 🍽️ | servis yapmak, hizmet etmek | to give food or drinks; to work for | Breakfast is served from 7 to 10.
+service-noun | 🛎️ | hizmet, servis | work done for customers | The service was slow.
+several-determiner | 🔢 | birkaç, birçok | more than two but not many | several times
+several-pronoun | 🔢 | birkaçı | more than two people or things | Several of my friends are doctors.
+shake-verb | 🤝 | sallamak, titremek | to move quickly up and down or side to side | Shake the bottle. / We shook hands.
+shape-noun | 🔷 | şekil, biçim | the form of something | a heart shape
+sheet-noun | 📄 | çarşaf; sayfa (kağıt) | a cloth on a bed; a piece of paper | a sheet of paper
+ship-noun | 🚢 | gemi | a large boat | a cruise ship
+shoulder-noun | 🤷 | omuz | the part between your neck and arm | He put his hand on my shoulder.
+shout-noun | 📢 | bağırış, haykırış | a loud cry | I heard a shout.
+shout-verb | 📢 | bağırmak | to say something very loudly | Don't shout at me!
+shut-adjective | 🔒 | kapalı | closed | Keep the door shut.
+shut-verb | 🚪 | kapatmak, kapanmak | to close | Shut the window.
+side-noun | ↔️ | taraf, yan | the left or right part; a surface | on the other side of the road
+sign-noun | 🪧 | işaret, tabela | a board with information; a mark | a road sign
+sign-verb | ✍️ | imzalamak | to write your name on a document | Sign here, please.
+silver-adjective | 🥈 | gümüş | made of silver | a silver ring
+silver-noun | 🥈 | gümüş | a shiny gray metal | The spoon is made of silver.
+simple-adjective | 👌 | basit, kolay | easy; plain | a simple question
+since-conjunction | ⏳ | -den beri; -diği için | from a time in the past; because | I've lived here since I was born.
+since-preposition | ⏳ | -den beri | from a time in the past until now | I've been waiting since 9 o'clock.
+singing-noun | 🎤 | şarkı söyleme | the activity of singing | I love singing.
+single-adjective | 1️⃣ | tek; bekâr | only one; not married | a single room / Are you single?
+single-noun | 🎵 | tekli (şarkı); tek gidiş bileti | a song sold on its own; a one-way ticket | Her new single is great.
+sir-noun | 🎩 | efendim, beyefendi | a polite way to address a man | Can I help you, sir?
+site-noun | 🏗️ | alan, yer; site | a place where something is built; a website | a building site
+size-noun | 📏 | boyut, beden | how big something is | What size are you?
+ski-adjective | ⛷️ | kayak | connected with skiing | a ski resort
+ski-noun | 🎿 | kayak (tahtası) | one of two long flat pieces for moving on snow | a pair of skis
+ski-verb | ⛷️ | kayak yapmak | to move over snow on skis | We ski every winter.
+skiing-noun | ⛷️ | kayak sporu | the sport of moving on skis | Skiing is fun.
+skin-noun | 🧴 | cilt, deri | the outer layer of the body | dry skin
+sky-noun | 🌌 | gökyüzü | the space above the earth | a blue sky
+sleep-noun | 😴 | uyku | the state of sleeping | I need more sleep.
+slowly-adverb | 🐢 | yavaşça | at a slow speed | Speak slowly, please.
+smartphone-noun | 📱 | akıllı telefon | a mobile phone that works like a computer | I use my smartphone for everything.
+smell-noun | 👃 | koku | what you notice with your nose | a nice smell
+smell-verb | 👃 | koklamak; kokmak | to notice with your nose; to have a smell | It smells good.
+smile-noun | 😊 | gülümseme | an expression with the corners of the mouth turned up | She has a lovely smile.
+smile-verb | 😊 | gülümsemek | to make a smile | Smile for the camera!
+smoke-noun | 💨 | duman | the gray gas from something burning | There's smoke coming from the kitchen.
+smoke-verb | 🚬 | sigara içmek; tütmek | to breathe in smoke from a cigarette | Do you smoke?
+smoking-noun | 🚭 | sigara içme | the habit of smoking | No smoking.
+sneaker-noun | 👟 | spor ayakkabı | a shoe for sports (US) | a pair of sneakers
+soap-noun | 🧼 | sabun | a substance used for washing | Wash your hands with soap.
+soccer-noun | ⚽ | futbol | football (US) | We play soccer every weekend.
+social-adjective | 👥 | sosyal, toplumsal | connected with society; meeting people | social media / social problems
+society-noun | 🏙️ | toplum; dernek | people living together; an organization | modern society
+sock-noun | 🧦 | çorap | a soft piece of clothing for your foot | a pair of socks
+soft-adjective | ☁️ | yumuşak | not hard | a soft pillow
+soldier-noun | 🪖 | asker | a member of an army | The soldiers marched.
+solution-noun | 💡 | çözüm | a way to solve a problem | We need a solution.
+solve-verb | 🧩 | çözmek | to find the answer to a problem | Can you solve this puzzle?
+somewhere-adverb | 📍 | bir yerde, bir yere | in or to a place | I left my keys somewhere.
+somewhere-pronoun | 📍 | bir yer | a place | Let's find somewhere to eat.
+sort-noun | 🗂️ | tür, çeşit | a type | What sort of music do you like?
+source-noun | ⛲ | kaynak | where something comes from | a source of energy
+speaker-noun | 🔊 | konuşmacı; hoparlör | a person who speaks; a device for sound | an English speaker / Bluetooth speakers
+specific-adjective | 🎯 | belirli, özel | detailed and exact | a specific question
+speech-noun | 🎤 | konuşma, nutuk | a formal talk to an audience | The president gave a speech.
+speed-noun | 🏎️ | hız | how fast something moves | at high speed
+spider-noun | 🕷️ | örümcek | a small creature with eight legs | I'm afraid of spiders.
+spoon-noun | 🥄 | kaşık | a tool for eating soup | a spoon of sugar
+square-adjective | 🟦 | kare | having four equal sides | a square table
+square-noun | 🟦 | kare; meydan | a shape with four equal sides; an open area in a town | Taksim Square
+stage-noun | 🎭 | sahne; aşama | the platform in a theater; a step in a process | on stage / the first stage
+stair-noun | 🪜 | merdiven basamağı (stairs: merdiven) | one of a series of steps | Go up the stairs.
+stamp-noun | 📮 | pul; damga | a small paper stuck on letters; a printed mark | a postage stamp
+star-verb | 🌟 | başrol oynamak | to have a main part in a film | The film stars Tom Hanks.
+start-noun | ▶️ | başlangıç | the beginning | the start of the race
+state-noun | 🏛️ | eyalet; devlet; durum | a part of a country like the US; a government; a condition | the state of California
+stay-noun | 🏨 | kalış, konaklama | a period of staying somewhere | Enjoy your stay!
+steal-verb | 🦹 | çalmak (hırsızlık) | to take something that isn't yours | Someone stole my bike.
+step-noun | 👣 | adım; basamak | a movement of the foot; one of a series of stairs | Take one step forward.
+stomach-noun | 🫃 | mide, karın | the organ where food is digested | I have a stomach ache.
+stone-noun | 🪨 | taş | a hard natural material; a small rock | a stone wall
+storm-noun | ⛈️ | fırtına | very bad weather with strong wind and rain | a big storm
+stove-noun | 🍳 | ocak | a piece of equipment for cooking (US) | The soup is on the stove.
+straight-adjective | ➖ | düz, dümdüz | not curved | straight hair
+straight-adverb | ⬆️ | dümdüz, doğrudan | in a straight line; directly | Go straight ahead.
+strange-adjective | 🤨 | garip, tuhaf | unusual | a strange noise
+strategy-noun | ♟️ | strateji | a plan to achieve something | a business strategy
+stress-noun | 😫 | stres; vurgu | pressure and worry; emphasis | I'm under a lot of stress.
+stress-verb | ❗ | vurgulamak | to emphasize | She stressed the importance of sleep.
+structure-noun | 🏗️ | yapı | the way parts are arranged; a building | the structure of a sentence
+stupid-adjective | 🤦 | aptal, aptalca | not intelligent | a stupid mistake
+subway-noun | 🚇 | metro | an underground train (US) | I take the subway to work.
+succeed-verb | 🏆 | başarmak, başarılı olmak | to achieve what you want | She succeeded in passing the exam.
+successful-adjective | 🏆 | başarılı | achieving what you want | a successful businesswoman
+such-determiner | ‼️ | öyle, böyle, o kadar | used to emphasize; of this kind | It was such a nice day.
+such-pronoun | 👉 | böylesi | the thing mentioned | Such is life.
+suddenly-adverb | ⚡ | aniden, birdenbire | quickly and unexpectedly | Suddenly, the lights went out.
+suggest-verb | 💡 | önermek | to give an idea for someone to consider | I suggest we leave early.
+suggestion-noun | 💡 | öneri | an idea you suggest | Do you have any suggestions?
+suit-noun | 🤵 | takım elbise | a jacket and pants or skirt of the same material | He wore a black suit.
+support-noun | 🤝 | destek | help and encouragement | Thanks for your support.
+support-verb | 🤝 | desteklemek; tutmak (takım) | to help; to like a sports team | My family supports me. / Which team do you support?
+suppose-verb | 🤔 | sanmak, farz etmek | to think something is probably true | I suppose you're right.
+sure-adverb | 👍 | tabii, elbette | certainly (informal) | "Can I come?" "Sure."
+surprise-noun | 🎁 | sürpriz, şaşkınlık | something unexpected | What a surprise!
+surprise-verb | 😮 | şaşırtmak | to make someone feel surprised | The news surprised everyone.
+surprised-adjective | 😲 | şaşırmış | feeling surprise | I was surprised to see him.
+surprising-adjective | 😲 | şaşırtıcı | causing surprise | surprising news
+survey-noun | 📋 | anket | a set of questions to learn people's opinions | We did a survey of 100 students.
+sweet-adjective | 🍭 | tatlı; sevimli | tasting of sugar; kind and pleasant | This cake is too sweet. / What a sweet girl!
+symbol-noun | 🔣 | sembol, simge | a sign or picture that represents something | The dove is a symbol of peace.
+system-noun | 🖧 | sistem | a group of things working together; a method | the school system
+tablet-noun | 📱 | tablet; hap | a small flat computer; a pill | Take two tablets a day.
+talk-noun | 🗣️ | konuşma, sohbet | a conversation; a speech | We need to have a talk.
+target-noun | 🎯 | hedef | a result you try to achieve; something you aim at | a sales target
+task-noun | ✅ | görev, iş | a piece of work you have to do | a difficult task
+taste-noun | 👅 | tat; zevk | the flavor of food; what someone likes | a sweet taste / She has good taste.
+taste-verb | 👅 | tadına bakmak; tadı olmak | to try food; to have a particular flavor | Taste the soup. / It tastes good.
+teaching-noun | 🧑‍🏫 | öğretmenlik, öğretim | the work of a teacher | She loves teaching.
+technology-noun | 💻 | teknoloji | scientific knowledge used in practical ways | modern technology
+teenage-adjective | 🧑 | genç, ergenlik çağındaki | between 13 and 19 years old | a teenage boy
+temperature-noun | 🌡️ | sıcaklık; ateş | how hot or cold something is | The temperature is 25 degrees.
+term-noun | 📘 | dönem; terim | a part of a school year; a word for something specific | the first term / a medical term
+text-verb | 💬 | mesaj atmak | to send a text message | Text me when you arrive.
+themselves-pronoun | 🪞 | kendileri | used when they are the object of their own action | They enjoyed themselves.
+thick-adjective | 📚 | kalın | having a large distance between sides | a thick book
+thief-noun | 🦹 | hırsız | a person who steals | The thief took my bag.
+thin-adjective | 📄 | ince; zayıf | not thick; not fat | a thin slice / She's very thin.
+thinking-noun | 💭 | düşünme, düşünce | the process of thinking | creative thinking
+third-noun | ⅓ | üçte bir | one of three equal parts | a third of the class
+thought-noun | 💭 | düşünce | an idea | That's an interesting thought.
+throw-verb | 🤾 | atmak, fırlatmak | to send something through the air with your hand | Throw me the ball.
+tie-noun | 👔 | kravat; beraberlik | a long strip worn around the neck; an equal score | He wore a red tie.
+tie-verb | 🪢 | bağlamak | to fasten with a string or rope | Tie your shoes.
+tip-noun | 💡 | ipucu; bahşiş; uç | a useful piece of advice; extra money for service; an end | Here's a tip. / We left a tip.
+tool-noun | 🔨 | alet | a thing you hold to do a job | Hammers are useful tools.
+top-adjective | 🔝 | en üstteki, en iyi | highest; best | the top shelf
+top-noun | 🔝 | tepe, üst | the highest part | at the top of the mountain
+touch-verb | 👆 | dokunmak | to put your hand on something | Don't touch the hot pan!
+tour-noun | 🚌 | tur, gezi | a trip visiting several places | a city tour
+tourism-noun | 🧳 | turizm | the business of tourists | Tourism is important for Turkey.
+toward-preposition | ➡️ | -e doğru | in the direction of | She walked toward the door.
+towel-noun | 🧺 | havlu | a cloth for drying your body | a beach towel
+tower-noun | 🗼 | kule | a tall narrow building | Galata Tower
+toy-adjective | 🧸 | oyuncak | being a model or copy of something | a toy car
+toy-noun | 🧸 | oyuncak | an object for children to play with | The kids are playing with their toys.
+track-noun | 🛤️ | iz, yol; parça (şarkı) | a path; a song on an album | a running track / the first track
+tradition-noun | 🎎 | gelenek | a custom from the past | It's a family tradition.
+traditional-adjective | 🏺 | geleneksel | following old customs | traditional Turkish food
+train-verb | 🏋️ | eğitmek; antrenman yapmak | to teach a skill; to practice for a sport | She's training for a marathon.
+training-noun | 🏋️ | eğitim, antrenman | the process of learning skills | job training
+transportation-noun | 🚌 | ulaşım | a way of traveling or moving goods | public transportation
+trash-noun | 🗑️ | çöp | waste (US) | Throw it in the trash.
+traveler-noun | 🧳 | yolcu, gezgin | a person who travels | a frequent traveler
+trouble-noun | 😰 | sorun, dert, belâ | problems or difficulty | I'm having trouble with my car.
+twin-adjective | 👯 | ikiz | being one of two identical things | twin beds / my twin brother
+twin-noun | 👯 | ikiz | one of two children born at the same time | They are twins.
+typical-adjective | 🟰 | tipik | having the usual qualities | a typical day
+underground-adjective | 🚇 | yeraltı | under the ground | an underground car park
+underground-adverb | ⬇️ | yerin altında | under the surface of the ground | They live underground.
+understanding-noun | 💡 | anlayış, kavrayış | knowledge; sympathy | a good understanding of grammar
+unfortunately-adverb | 😞 | maalesef, ne yazık ki | used to say something is sad or disappointing | Unfortunately, I can't come.
+unhappy-adjective | 😞 | mutsuz | not happy | She looks unhappy.
+uniform-noun | 👮 | üniforma | special clothes worn by a group | school uniform
+unit-noun | 📦 | birim; ünite | a single thing; a measurement; a part of a book | Unit 5 / a unit of measurement
+united-adjective | 🤝 | birleşik | joined together | the United States
+unusual-adjective | 🦄 | olağandışı, alışılmadık | not common | an unusual name
+upstairs-adjective | ⬆️ | üst kattaki | on an upper floor | an upstairs bedroom
+use-noun | 🔧 | kullanım | the act of using something | for personal use
+used to-modal verb | ⏪ | eskiden … -erdi | used to talk about past habits | I used to play football.
+user-noun | 👤 | kullanıcı | a person who uses something | internet users
+usual-adjective | 🔁 | her zamanki, olağan | normal; typical | as usual
+valley-noun | 🏞️ | vadi | low land between hills | a green valley
+variety-noun | 🌈 | çeşit, çeşitlilik | many different types | a variety of food
+vehicle-noun | 🚙 | araç, taşıt | a machine for traveling, like a car or bus | Park your vehicle here.
+view-noun | 🏔️ | manzara; görüş | what you can see from a place; an opinion | a beautiful view / my view on the subject
+village-noun | 🏡 | köy | a very small town | My grandparents live in a village.
+virus-noun | 🦠 | virüs | a tiny thing that causes disease; a harmful computer program | a flu virus
+voice-noun | 🗣️ | ses (insan sesi) | the sound you make when speaking | She has a beautiful voice.
+wait-noun | ⏳ | bekleme | a period of waiting | a long wait
+war-noun | ⚔️ | savaş | fighting between countries | World War II
+wash-noun | 🧼 | yıkama | an act of washing | Give the car a wash.
+washing-noun | 👕 | çamaşır; yıkama | clothes that need washing; the act of washing | do the washing
+wave-noun | 🌊 | dalga; el sallama | a moving line of water; a movement of the hand | big waves
+weak-adjective | 🥀 | zayıf, güçsüz | not strong | I feel weak.
+web-noun | 🕸️ | ağ; web | a net made by a spider; the internet | the World Wide Web
+wedding-noun | 💒 | düğün | a marriage ceremony | They had a beautiful wedding.
+weight-noun | ⚖️ | ağırlık, kilo | how heavy something is | I want to lose weight.
+welcome-noun | 🤗 | karşılama | a greeting | They gave us a warm welcome.
+wet-adjective | 💧 | ıslak | covered with water | Your hair is wet.
+wheel-noun | 🛞 | tekerlek | a round object that turns | A bicycle has two wheels.
+while-conjunction | ⏳ | -iken, sırasında | during the time that | I listen to music while I work.
+whole-adjective | 💯 | bütün, tüm | complete; entire | the whole day
+whose-determiner | ❓ | kimin | used to ask who something belongs to | Whose phone is this?
+whose-pronoun | ❓ | kiminki | of whom | Whose is this?
+wide-adjective | ↔️ | geniş | large from side to side | a wide road
+wild-adjective | 🐺 | vahşi, yabani | living in nature, not controlled by people | wild animals
+wind-noun-1 | 🌬️ | rüzgâr | moving air | a strong wind
+winner-noun | 🏆 | kazanan | a person who wins | the winner of the competition
+wish-noun | 🌠 | dilek, istek | a desire or hope | Make a wish!
+wish-verb | 🌠 | dilemek, istemek | to want something that may not happen | I wish I could fly.
+wood-noun | 🪵 | tahta, odun; koru | the material from trees; a small forest | a table made of wood
+wooden-adjective | 🪵 | ahşap, tahta | made of wood | a wooden chair
+working-adjective | 💼 | çalışan; çalışma | having a job; connected with work | working hours
+worried-adjective | 😟 | endişeli, kaygılı | anxious about something | I'm worried about my exam.
+worry-verb | 😟 | endişelenmek | to think about problems and feel anxious | Don't worry!
+worse-adjective | 📉 | daha kötü | more bad | The weather is worse today.
+worst-adjective | 👎 | en kötü | most bad | the worst day of my life
+wow-exclamation | 🤩 | vay!, vay be! | used to show surprise or admiration | Wow! That's amazing!
+yet-adverb | ⏳ | henüz, daha | until now (in questions and negatives) | Have you finished yet? / Not yet.
+yours-pronoun | 🫵 | seninki, sizinki | something belonging to you | Is this book yours?
+zero-number | 0️⃣ | sıfır | the number 0 | The temperature is below zero.

@@ -1,0 +1,330 @@
+ability-noun | 🦸 | yetenek, beceri | the fact that someone can do something | She has the ability to learn languages quickly.
+able-adjective | 💪 | yapabilen, muktedir (be able to) | having the power or skill to do something | I wasn't able to sleep last night.
+accept-verb | 🤝 | kabul etmek | to agree to take something or to say yes | She accepted the job offer.
+accident-noun | 🚑 | kaza | something bad that happens by chance, often causing injury | He had a car accident.
+according to-preposition | 🗞️ | -e göre | as stated by someone or something | According to the news, it will snow.
+achieve-verb | 🏆 | başarmak, elde etmek | to succeed in doing something after effort | She achieved her goal.
+act-verb | 🎭 | davranmak; rol yapmak | to do something; to perform in a play or film | We must act quickly. / He acts in films.
+active-adjective | 🏃 | aktif, hareketli | always busy doing things | My grandmother is very active.
+actually-adverb | 💬 | aslında, gerçekte | in fact; really | Actually, I don't like coffee.
+adult-adjective | 🧑 | yetişkin | fully grown | an adult cat
+advantage-noun | ➕ | avantaj, üstünlük | something that helps you or is useful | One advantage of living here is the weather.
+adventure-noun | 🗺️ | macera | an exciting and unusual experience | Our trip to the jungle was a real adventure.
+advertise-verb | 📢 | reklam yapmak, ilan etmek | to tell people about a product to make them buy it | They advertise on TV.
+advertisement-noun | 📺 | reklam, ilan | a notice, picture or film telling people about a product | I saw an advertisement for a new phone.
+advertising-noun | 📣 | reklamcılık | the business of making advertisements | She works in advertising.
+affect-verb | 🎯 | etkilemek | to produce a change in someone or something | The weather affects my mood.
+after-adverb | ⏭️ | sonra, ardından | later in time | Soon after, it started to rain.
+after-conjunction | ⏭️ | -dikten sonra | at a time later than | I'll call you after I finish work.
+against-preposition | 🥊 | -e karşı | opposing; touching | Are you for or against the plan? / He leaned against the wall.
+ah-exclamation | 😌 | ah!, oh! | used to show surprise, pleasure or understanding | Ah, now I understand.
+airline-noun | ✈️ | havayolu (şirketi) | a company that provides flights | Which airline are you flying with?
+alive-adjective | 💓 | canlı, hayatta | living; not dead | Is the fish still alive?
+all-adverb | 💯 | tamamen, bütünüyle | completely | She was all alone.
+all right-adjective | 👌 | iyi, fena değil | acceptable; safe and well | Are you all right?
+all right-adverb | 👌 | tamam, peki; iyi | used to agree; well enough | All right, I'll do it.
+allow-verb | ✅ | izin vermek | to let someone do something | Smoking is not allowed here.
+almost-adverb | 🤏 | neredeyse, hemen hemen | nearly | It's almost midnight.
+alone-adjective | 🧍 | yalnız | without other people | She lives alone.
+alone-adverb | 🧍 | yalnız başına, tek başına | without anyone else | He traveled alone.
+along-adverb | ➡️ | ileri, birlikte | forward; with someone | Come along with us.
+along-preposition | 🛤️ | boyunca | from one end toward the other end of | We walked along the beach.
+already-adverb | ✅ | zaten, çoktan, şimdiden | before now or before expected | I've already eaten.
+alternative-noun | 🔀 | alternatif, seçenek | another possibility | Is there an alternative to driving?
+although-conjunction | ↩️ | -e rağmen, gerçi | despite the fact that | Although it was cold, we went swimming.
+among-preposition | 👥 | arasında (çok kişi/şey) | in the middle of a group | She was among the best students.
+amount-noun | ⚖️ | miktar | a quantity of something | a large amount of money
+analyze-verb | 🔬 | analiz etmek, incelemek | to examine something in detail | Scientists analyzed the data.
+ancient-adjective | 🏛️ | antik, çok eski | very old; from long ago | ancient Greece
+ankle-noun | 🦶 | ayak bileği | the joint between your foot and leg | I hurt my ankle playing football.
+any-adverb | ❔ | hiç, biraz daha (karşılaştırmada) | at all; even a little | Do you feel any better?
+anybody-pronoun | 🧑 | kimse, herhangi biri | anyone | Is anybody here?
+anymore-adverb | 🚫 | artık (olumsuz) | no longer | She doesn't live here anymore.
+anyway-adverb | 🤷 | neyse, yine de, zaten | in any case; used to change the subject | It was raining, but we went anyway.
+anywhere-adverb | 📍 | hiçbir yere, herhangi bir yere | in or to any place | I can't find my keys anywhere.
+anywhere-pronoun | 📍 | herhangi bir yer | any place | Is there anywhere to eat around here?
+app-noun | 📲 | uygulama | a program for a phone or computer | I use this app to learn words.
+appear-verb | ✨ | görünmek; ortaya çıkmak | to seem; to start to be seen | She appeared tired. / A man appeared at the door.
+appearance-noun | 🪞 | görünüş, dış görünüm | the way someone or something looks | She cares a lot about her appearance.
+apply-verb | 📝 | başvurmak; uygulamak | to ask formally for something like a job; to use | I applied for a job at the bank.
+architect-noun | 📐 | mimar | a person who designs buildings | The architect designed a modern house.
+architecture-noun | 🏛️ | mimari, mimarlık | the design of buildings | I love Ottoman architecture.
+argue-verb | 🗯️ | tartışmak, kavga etmek | to speak angrily with someone because you disagree | My brothers always argue.
+argument-noun | 🗯️ | tartışma; argüman | an angry disagreement; a reason given to support an idea | We had an argument about money.
+army-noun | 🪖 | ordu | a large group of soldiers | He joined the army.
+arrange-verb | 🗂️ | düzenlemek, ayarlamak | to plan or organize something | Let's arrange a meeting.
+arrangement-noun | 📅 | düzenleme, ayarlama, plan | a plan or preparation for the future | We made arrangements for the trip.
+as-adverb | 🟰 | kadar (as … as) | used in comparisons | She is as tall as her mother.
+as-conjunction | ⏱️ | -dığı için; -ken | because; while | As it was late, we went home. / He sang as he worked.
+asleep-adjective | 😴 | uykuda | sleeping | The baby is asleep.
+assistant-adjective | 🧑‍💼 | yardımcı, asistan | helping a person of higher rank | the assistant manager
+assistant-noun | 🧑‍💼 | asistan, yardımcı | a person who helps someone in their job | My assistant will call you.
+athlete-noun | 🏃 | atlet, sporcu | a person who is good at sports | She is a professional athlete.
+attack-noun | ⚔️ | saldırı | a violent attempt to hurt someone or something | a terrorist attack
+attack-verb | ⚔️ | saldırmak | to try to hurt or damage someone or something | The dog attacked the cat.
+attend-verb | 🏫 | katılmak, devam etmek | to go to an event or a school | Many people attended the meeting.
+attention-noun | 👀 | dikkat, ilgi | the act of watching or listening carefully | Pay attention, please.
+attractive-adjective | 😍 | çekici, cazip | pleasant to look at; interesting | an attractive offer
+audience-noun | 👏 | seyirci, dinleyici | the people watching or listening to a performance | The audience clapped loudly.
+audio-adjective | 🔊 | ses, işitsel | connected with sound recording | an audio file
+audio-noun | 🔊 | ses (kaydı) | recorded sound | The video has no audio.
+author-noun | ✍️ | yazar | a person who writes books | Who is the author of this book?
+available-adjective | 🟢 | mevcut, müsait | able to be used or got; free to do something | Is this room available? / I'm available on Monday.
+average-adjective | ⚖️ | ortalama, sıradan | typical; normal | The average age of students is 20.
+average-noun | ⚖️ | ortalama | the result of adding numbers and dividing by how many there are | The average of 2, 4 and 6 is 4.
+avoid-verb | 🙅 | kaçınmak, sakınmak | to stay away from someone or something | Try to avoid sugar.
+award-noun | 🏅 | ödül | a prize for something you did well | She won an award for her film.
+awful-adjective | 🤢 | berbat, korkunç | very bad | The food was awful.
+back-adjective | 🔙 | arka | at the back | the back door
+background-noun | 🖼️ | arka plan; geçmiş (eğitim, aile) | the area behind the main thing; someone's experience and family | a blue background / She comes from a poor background.
+badly-adverb | 👎 | kötü, fena şekilde | in a bad way | He played badly.
+based-adjective | 📍 | merkezli, dayalı | having a main office in a place; using something as a basis | The company is based in Istanbul. / based on a true story
+bean-noun | 🫘 | fasulye | a seed of a plant eaten as food | green beans
+bear-noun-animal | 🐻 | ayı | a large heavy wild animal with thick fur | We saw a bear in the forest.
+beef-noun | 🥩 | sığır eti | meat from a cow | roast beef
+before-adverb | ⏮️ | daha önce | at an earlier time | I've seen this film before.
+before-conjunction | ⏮️ | -meden önce | earlier than the time when | Wash your hands before you eat.
+behave-verb | 😇 | davranmak, uslu durmak | to act in a particular way | The children behaved well.
+behavior-noun | 🧠 | davranış | the way someone acts | His behavior was strange.
+belong-verb | 🏷️ | ait olmak | to be owned by someone; to be a member | This bag belongs to me.
+belt-noun | 🪢 | kemer | a strip of leather worn around the waist | Fasten your seat belt.
+benefit-noun | 🎁 | fayda, yarar | an advantage or good effect | the benefits of exercise
+best-adverb | 🥇 | en iyi şekilde, en çok | in the best way; most | Which song do you like best?
+best-noun | 🥇 | en iyisi | the best thing or person | She's the best at math.
+better-adverb | 📈 | daha iyi | in a better way | She sings better than me.
+between-adverb | ↔️ | arada | in the middle | two houses with a garden between
+billion-number | 🔢 | milyar | the number 1,000,000,000 | The world has eight billion people.
+biology-noun | 🧬 | biyoloji | the science of living things | She studies biology.
+birth-noun | 👶 | doğum | the time when a baby is born | the date of birth
+bit-noun | 🤏 | parça, azıcık (a bit: biraz) | a small amount or piece | I'm a bit tired.
+block-noun | 🧱 | blok; sokak arası | a large solid piece; a group of buildings between streets | a block of ice / Walk two blocks.
+blood-noun | 🩸 | kan | the red liquid in your body | He lost a lot of blood.
+blow-verb | 🌬️ | esmek, üflemek | (of wind) to move; to push air out of your mouth | The wind is blowing. / Blow out the candles.
+board-noun | 📋 | tahta, pano; yönetim kurulu | a flat piece of wood; a group that controls a company | Write it on the board.
+boil-verb | ♨️ | kaynamak, kaynatmak | to heat a liquid until bubbles appear | Boil the water for tea.
+bone-noun | 🦴 | kemik | one of the hard parts inside the body | He broke a bone in his leg.
+book-verb | 📅 | rezervasyon yapmak | to arrange to have a seat, room, etc. | I booked a table for two.
+borrow-verb | 🤲 | ödünç almak | to take something that you will give back later | Can I borrow your pen?
+boss-noun | 👔 | patron, şef | the person in charge of other workers | My boss is very nice.
+bottom-adjective | ⬇️ | en alttaki | in the lowest position | the bottom shelf
+bottom-noun | ⬇️ | dip, alt | the lowest part of something | at the bottom of the page
+bowl-noun | 🥣 | kase, çanak | a deep round dish | a bowl of soup
+brain-noun | 🧠 | beyin | the organ inside your head that controls thought | The brain needs sleep.
+bridge-noun | 🌉 | köprü | a structure built over a river or road | the Bosphorus Bridge
+bright-adjective | 🔆 | parlak; zeki | full of light; intelligent | a bright sunny day / a bright student
+brilliant-adjective | 🌟 | harika; çok zeki | extremely good; very clever | That's a brilliant idea!
+broken-adjective | 💔 | kırık, bozuk | damaged; not working | a broken window
+brush-noun | 🪥 | fırça | an object with hairs on a handle, for cleaning or painting | a toothbrush / a paint brush
+brush-verb | 🪥 | fırçalamak | to clean with a brush | Brush your teeth.
+burn-verb | 🔥 | yanmak, yakmak | to be on fire; to damage with fire or heat | I burned my hand on the stove.
+businessman-noun | 👨‍💼 | iş adamı | a man who works in business | He is a successful businessman.
+button-noun | 🔘 | düğme | a small round object on clothes; a part you press on a machine | Press the red button.
+camp-noun | ⛺ | kamp | a place where people stay in tents | a summer camp
+camp-verb | ⛺ | kamp yapmak | to stay in a tent | We camped by the lake.
+camping-noun | 🏕️ | kampçılık, kamp yapma | living in a tent on vacation | We go camping every summer.
+campus-noun | 🏫 | kampüs | the buildings and land of a university | She lives on campus.
+can-noun-2 | 🥫 | teneke kutu, konserve | a metal container for food or drink | a can of soda
+candy-noun | 🍬 | şeker, şekerleme | sweet food made of sugar or chocolate | Kids love candy.
+care-noun | 🤲 | bakım, özen | the act of looking after someone; attention | Take care! / Handle with care.
+care-verb | 💗 | önemsemek, umursamak | to feel that something is important | I don't care what they think.
+careful-adjective | ⚠️ | dikkatli | giving attention to avoid danger or mistakes | Be careful! The floor is wet.
+carefully-adverb | 🧐 | dikkatlice | with care | Read the instructions carefully.
+carpet-noun | 🟥 | halı | a thick material for covering a floor | a Turkish carpet
+cartoon-noun | 🐭 | çizgi film, karikatür | a funny drawing; an animated film | Kids love cartoons.
+case-noun | 💼 | durum, olay; kutu, çanta | a particular situation; a container | in that case / a pencil case
+cash-noun | 💵 | nakit para | money in coins or notes | Do you pay in cash or by card?
+catch-verb | 🫴 | yakalamak, tutmak | to take hold of something moving; to get a bus or train | Catch the ball! / I caught the train.
+cause-noun | ❓ | sebep, neden | the reason something happens | the cause of the fire
+cause-verb | 💥 | sebep olmak, neden olmak | to make something happen | The rain caused problems.
+celebrate-verb | 🎉 | kutlamak | to do something enjoyable for a special occasion | We celebrated her birthday.
+celebrity-noun | 🌟 | ünlü kişi | a famous person | a TV celebrity
+cell-noun | 🦠 | hücre | the smallest unit of a living thing; a small room in a prison | blood cells
+century-noun | 💯 | yüzyıl, asır | a period of one hundred years | the 21st century
+certain-adjective | ✔️ | emin; belirli | sure; particular | I'm certain he'll come. / certain people
+certainly-adverb | ✔️ | kesinlikle, elbette | without doubt; of course | "Can you help me?" "Certainly."
+chance-noun | 🎲 | şans, fırsat, ihtimal | an opportunity; a possibility | Give me a chance. / There's a chance of rain.
+character-noun | 🦸 | karakter | a person in a story; someone's qualities | the main character of the book
+charity-noun | 🤲 | hayır kurumu, yardım | an organization that helps people in need | She gives money to charity.
+chat-noun | 💬 | sohbet | a friendly informal talk | We had a nice chat.
+chat-verb | 💬 | sohbet etmek | to talk in a friendly way | We chatted for an hour.
+check-noun | ✅ | kontrol; çek, hesap | an examination to see if something is right; a bill in a restaurant (US) | a security check / Can we have the check?
+chef-noun | 👨‍🍳 | aşçı, şef | a professional cook | He's a chef in a hotel.
+chemistry-noun | ⚗️ | kimya | the science of substances and how they react | a chemistry lesson
+chip-noun | 🍟 | cips; çip | a thin slice of fried potato; a small electronic part | a bag of chips
+choice-noun | 🔀 | seçim, tercih | the act of choosing; an option | You have two choices.
+church-noun | ⛪ | kilise | a building where Christians pray | an old church
+cigarette-noun | 🚬 | sigara | a thin roll of tobacco for smoking | He stopped smoking cigarettes.
+circle-noun | ⭕ | daire, çember | a perfectly round shape | Draw a circle.
+circle-verb | ⭕ | daire içine almak; etrafında dönmek | to draw a circle around; to move in a circle | Circle the correct answer.
+classical-adjective | 🎻 | klasik | traditional in style; of ancient Greece and Rome | classical music
+clear-adjective | 💎 | açık, net, berrak | easy to understand or see; transparent | clear instructions / clear water
+clearly-adverb | 🔍 | açıkça, net bir şekilde | in a way that is easy to see, hear or understand | Please speak clearly.
+clerk-noun | 🧑‍💼 | memur, kâtip; tezgâhtar | a person who works in an office or shop | a hotel clerk
+climate-noun | 🌡️ | iklim | the usual weather of a place | a warm climate
+close-adjective-2 | 📍 | yakın | near | The station is close to my house.
+closed-adjective | 🔒 | kapalı | not open | The shop is closed on Sundays.
+closet-noun | 🚪 | dolap, gömme dolap | a small room or cupboard for clothes (US) | Hang your coat in the closet.
+clothing-noun | 👚 | giyim, giysi | clothes | winter clothing
+cloud-noun | ☁️ | bulut | a white or gray mass in the sky | There are dark clouds in the sky.
+coach-noun | 🧑‍🏫 | antrenör, koç | a person who trains a sports team | the football coach
+coach-verb | 🧑‍🏫 | çalıştırmak, eğitmek | to train someone in a sport or skill | She coaches the school team.
+coast-noun | 🏖️ | kıyı, sahil | the land next to the sea | the Aegean coast
+code-noun | 🔢 | kod, şifre | a system of numbers or letters; a set of rules | Enter the code.
+colleague-noun | 🧑‍💼 | iş arkadaşı, meslektaş | a person you work with | My colleagues are friendly.
+collect-verb | 🗃️ | toplamak, biriktirmek | to bring things together; to keep things as a hobby | He collects stamps.
+column-noun | 🏛️ | sütun, kolon | a tall stone post; a vertical section of text | the second column of the table
+comedy-noun | 😂 | komedi | a funny film or play | a romantic comedy
+comfortable-adjective | 🛋️ | rahat | pleasant to sit in or wear; relaxed | a comfortable chair
+comment-noun | 💬 | yorum | something you say or write giving an opinion | Leave a comment below.
+communicate-verb | 📡 | iletişim kurmak | to share information with others | We communicate by email.
+community-noun | 🏘️ | topluluk, toplum | the people living in one area or sharing interests | the local community
+compete-verb | 🏁 | yarışmak, rekabet etmek | to try to win against others | Ten teams will compete in the race.
+competition-noun | 🏆 | yarışma, rekabet | an event where people try to win | She won a singing competition.
+complain-verb | 😤 | şikayet etmek | to say that you are not happy about something | He always complains about the food.
+completely-adverb | 💯 | tamamen | totally | I completely forgot.
+condition-noun | 🩺 | durum, koşul | the state of something; a rule that must be met | The car is in good condition.
+conference-noun | 🎤 | konferans | a large formal meeting where people discuss a subject | a medical conference
+connect-verb | 🔌 | bağlamak, bağlanmak | to join things together | Connect the printer to the computer.
+connected-adjective | 🔗 | bağlantılı, bağlı | joined; related | Are you connected to the internet?
+consider-verb | 🤔 | düşünmek, göz önünde bulundurmak | to think carefully about something | I'm considering a new job.
+contain-verb | 📦 | içermek, kapsamak | to have something inside | This drink contains sugar.
+context-noun | 🧩 | bağlam | the situation in which something happens | Guess the word from the context.
+continent-noun | 🌎 | kıta | one of the large land areas of the world | Asia is the largest continent.
+continue-verb | ⏩ | devam etmek | to keep doing something | Please continue reading.
+control-noun | 🎛️ | kontrol, denetim | the power to make decisions or direct something | She lost control of the car.
+control-verb | 🎛️ | kontrol etmek, yönetmek | to have power over something | Control your anger.
+cook-noun | 🧑‍🍳 | aşçı | a person who cooks | My mom is a great cook.
+cookie-noun | 🍪 | kurabiye | a small flat sweet cake | chocolate chip cookies
+copy-noun | 📄 | kopya, nüsha | a thing made to look like another; one book or newspaper | a copy of the letter
+copy-verb | 📋 | kopyalamak, taklit etmek | to make something the same as another | Copy the sentence into your notebook.
+corn-noun | 🌽 | mısır | a tall plant with yellow seeds | corn on the cob
+corner-noun | 📐 | köşe | the place where two sides or streets meet | The bank is on the corner.
+correctly-adverb | ✔️ | doğru bir şekilde | without mistakes | Did I spell your name correctly?
+count-verb | 🔢 | saymak | to say numbers in order; to find the total | Count to ten.
+couple-noun | 💑 | çift; birkaç | two people in a relationship; two or a few | a married couple / a couple of days
+cover-verb | 🛡️ | örtmek, kaplamak | to put something over something | Cover the pot with a lid.
+crazy-adjective | 🤪 | çılgın, deli | very strange or foolish | That's a crazy idea.
+creative-adjective | 🎨 | yaratıcı | having original ideas | a creative person
+credit-noun | 💳 | kredi; itibar | buying now and paying later; praise | a credit card
+crime-noun | 🚓 | suç | an illegal act | Crime is increasing in the city.
+criminal-noun | 🦹 | suçlu | a person who commits a crime | The police caught the criminal.
+cross-noun | ❌ | çarpı işareti, haç | a mark (x) or shape (+) | Put a cross next to the wrong answers.
+cross-verb | 🚸 | karşıdan karşıya geçmek | to go from one side to the other | Look both ways before you cross the road.
+crowd-noun | 👥 | kalabalık | a large group of people | A crowd of fans waited outside.
+crowded-adjective | 🚇 | kalabalık | full of people | The metro was very crowded.
+cry-verb | 😭 | ağlamak | to produce tears | The baby is crying.
+curly-adjective | 🌀 | kıvırcık | having curls | She has curly hair.
+cycle-noun | 🔄 | döngü | a series of events that repeat | the life cycle of a butterfly
+cycle-verb | 🚴 | bisiklete binmek | to ride a bicycle | I cycle to work.
+daily-adjective | 📅 | günlük | happening every day | my daily routine
+danger-noun | ⚠️ | tehlike | the possibility of harm | Danger! Keep out.
+dark-noun | 🌑 | karanlık | the state of having no light | Are you afraid of the dark?
+data-noun | 📊 | veri | facts or information | We collected data from 500 people.
+dead-adjective | 💀 | ölü | no longer alive | The plant is dead.
+deal-verb | 🃏 | ilgilenmek, başa çıkmak (deal with) | to take action to solve a problem | I'll deal with it tomorrow.
+death-noun | ⚰️ | ölüm | the end of life | the death of a famous singer
+decision-noun | ⚖️ | karar | a choice you make after thinking | It was a difficult decision.
+deep-adjective | 🌊 | derin | going far down | The lake is very deep.
+definitely-adverb | ✅ | kesinlikle | certainly | I'll definitely come.
+degree-noun | 🌡️ | derece; diploma | a unit of temperature or angle; a university qualification | It's 30 degrees. / a degree in law
+dentist-noun | 🦷 | diş hekimi | a doctor for teeth | I'm going to the dentist.
+department-noun | 🏢 | bölüm, departman | a section of an organization | the sales department
+depend-verb | 🔗 | bağlı olmak (depend on) | to be decided by; to need | It depends on the weather.
+desert-noun | 🏜️ | çöl | a large dry area with sand | the Sahara Desert
+designer-noun | ✏️ | tasarımcı | a person who designs things | a fashion designer
+dessert-noun | 🍮 | tatlı (yemek sonu) | sweet food eaten at the end of a meal | What's for dessert?
+destroy-verb | 💣 | yok etmek, tahrip etmek | to damage something completely | The fire destroyed the house.
+detective-noun | 🕵️ | dedektif | a person who finds information about crimes | a famous detective
+develop-verb | 🌱 | geliştirmek, gelişmek | to grow or make something grow | The city developed quickly.
+device-noun | 📱 | cihaz, alet | a machine or tool for a particular purpose | a mobile device
+diary-noun | 📔 | günlük, ajanda | a book where you write daily events | She keeps a diary.
+differently-adverb | 🔀 | farklı şekilde | in a different way | We think differently.
+digital-adjective | 💾 | dijital | using computer technology | a digital camera
+direct-adjective | ➡️ | doğrudan, direkt | going straight without stopping | a direct flight to London
+direction-noun | 🧭 | yön | the way something is going or facing | Which direction is the sea?
+director-noun | 🎬 | yönetmen, müdür | a person who directs a film or manages a company | a film director
+disagree-verb | 🙅 | aynı fikirde olmamak | to have a different opinion | I disagree with you.
+disappear-verb | 🫥 | kaybolmak, gözden kaybolmak | to become impossible to see | The cat disappeared.
+disaster-noun | 🌪️ | felaket, afet | something very bad that causes damage | a natural disaster
+discover-verb | 🔭 | keşfetmek | to find something for the first time | Who discovered America?
+discovery-noun | 💡 | keşif | the act of finding something new | an important scientific discovery
+discussion-noun | 🗣️ | tartışma, görüşme | a conversation about a subject | We had a long discussion.
+disease-noun | 🦠 | hastalık | an illness | heart disease
+distance-noun | 📏 | mesafe, uzaklık | the amount of space between two places | What's the distance from here to Ankara?
+divorced-adjective | 💔 | boşanmış | no longer married | Her parents are divorced.
+document-noun | 📄 | belge, doküman | an official paper or computer file | Sign this document.
+download-noun | ⬇️ | indirme, indirilen dosya | a file copied from the internet | a free download
+download-verb | ⬇️ | indirmek | to copy a file from the internet | Download the app for free.
+downstairs-adjective | ⬇️ | alt kattaki | on a lower floor | the downstairs bathroom
+downtown-adjective | 🏙️ | şehir merkezindeki | in the center of a city (US) | a downtown hotel
+downtown-adverb | 🏙️ | şehir merkezinde, merkeze | to or in the center of a city | Let's go downtown.
+downtown-noun | 🏙️ | şehir merkezi | the center of a city (US) | Downtown is very busy.
+drama-noun | 🎭 | drama, tiyatro | a play or serious film; exciting events | a TV drama
+drawing-noun | 🖍️ | çizim, resim | a picture made with a pen or pencil | a drawing of a horse
+dream-noun | 💭 | rüya; hayal | images in your mind while sleeping; a hope | I had a strange dream. / my dream job
+dream-verb | 💭 | rüya görmek; hayal etmek | to have a dream; to imagine | I dreamed about you.
+drive-noun | 🚗 | araba yolculuğu | a trip in a car | Let's go for a drive.
+driving-noun | 🚘 | araba sürme | the act of driving | driving lessons
+drop-verb | 🫳 | düşürmek, bırakmak | to let something fall | I dropped my phone.
+drug-noun | 💊 | ilaç; uyuşturucu | a medicine; an illegal substance | a new drug for cancer
+dry-adjective | 🏜️ | kuru | without water | dry weather
+dry-verb | 🌬️ | kurutmak, kurumak | to make or become dry | Dry your hair.
+earn-verb | 💰 | kazanmak (para) | to get money for work | She earns a good salary.
+earth-noun | 🌍 | dünya; toprak | the planet we live on; soil | The Earth goes around the Sun.
+easily-adverb | 👌 | kolayca | without difficulty | I found the house easily.
+education-noun | 🎓 | eğitim | the process of teaching and learning | Education is important.
+effect-noun | 🌀 | etki, sonuç | a change caused by something | the effects of the medicine
+either-adverb | 🚫 | de/da (olumsuz) | also (in negatives) | I don't like it either.
+either-determiner | ✌️ | her iki … de, iki … den biri | one or the other of two | You can park on either side.
+either-pronoun | ✌️ | ikisinden biri | one or the other | "Tea or coffee?" "Either is fine."
+electric-adjective | ⚡ | elektrikli | using electricity | an electric car
+electrical-adjective | 🔌 | elektrikle ilgili, elektrik | connected with electricity | electrical equipment
+electricity-noun | ⚡ | elektrik | a form of energy used for light and power | Turn off the lights to save electricity.
+electronic-adjective | 🖲️ | elektronik | using electronic parts like computer chips | electronic devices
+elevator-noun | 🛗 | asansör | a machine that carries people between floors (US) | Take the elevator to the fifth floor.
+employ-verb | 🧑‍💼 | işe almak, istihdam etmek | to give someone a job | The company employs 200 people.
+employee-noun | 👷 | çalışan, işçi | a person who works for someone else | She is a bank employee.
+employer-noun | 🏢 | işveren | a person or company that employs people | My employer pays well.
+empty-adjective | 🫙 | boş | with nothing inside | The bottle is empty.
+ending-noun | 🔚 | son, sonuç | the last part of a story | The film has a happy ending.
+energy-noun | 🔋 | enerji | power; the strength to be active | solar energy / I have no energy today.
+engine-noun | ⚙️ | motor | a machine that makes a vehicle move | The car engine won't start.
+engineer-noun | 👷 | mühendis | a person who designs machines, roads, etc. | She is a software engineer.
+enormous-adjective | 🐋 | devasa, kocaman | extremely large | an enormous house
+enter-verb | 🚪 | girmek; girmek (veri) | to go into; to type information | Enter your password.
+environment-noun | 🌳 | çevre | the natural world; the conditions around you | protect the environment
+equipment-noun | 🧰 | ekipman, donanım | the things needed for an activity | sports equipment
+error-noun | ⚠️ | hata | a mistake | There's an error in the code.
+especially-adverb | ⭐ | özellikle | more than usual; particularly | I love fruit, especially apples.
+essay-noun | 📝 | deneme, kompozisyon | a short piece of writing on a subject | Write an essay about your city.
+everyday-adjective | 📅 | günlük, sıradan | normal; used every day | everyday life
+everywhere-adverb | 🌐 | her yerde, her yere | in or to all places | I looked everywhere for my keys.
+evidence-noun | 🔎 | kanıt, delil | facts that show something is true | There's no evidence that he did it.
+exact-adjective | 🎯 | tam, kesin | completely correct | the exact time
+exactly-adverb | 🎯 | tam olarak, aynen | precisely | It's exactly 3 o'clock. / "So you're leaving?" "Exactly."
+excellent-adjective | 🌟 | mükemmel | extremely good | Your work is excellent.
+except-preposition | ➖ | hariç, dışında | not including | Everyone came except Ali.
+exist-verb | 🌌 | var olmak | to be real | Do ghosts exist?
+expect-verb | 🔮 | beklemek, ummak | to think something will happen | I expect it will rain.
+experience-noun | 🧗 | deneyim, tecrübe | knowledge or skill from doing something; an event | work experience / an amazing experience
+experiment-noun | 🧪 | deney | a scientific test | a chemistry experiment
+expert-adjective | 🎓 | uzman | having special knowledge or skill | expert advice
+expert-noun | 🎓 | uzman | a person with special knowledge | a computer expert
+explanation-noun | 💬 | açıklama | a statement that makes something clear | Can you give me an explanation?
+express-verb | 🗣️ | ifade etmek | to show a feeling or idea in words or actions | It's hard to express my feelings.
+expression-noun | 😐 | ifade, deyim | a word or phrase; the look on someone's face | a happy expression
+extreme-adjective | 🔥 | aşırı, uç | very great; very severe | extreme heat
+extremely-adverb | ‼️ | son derece, aşırı | very | It's extremely cold today.
+factor-noun | 🧩 | etken, faktör | one of the things that cause a result | Price is an important factor.
+factory-noun | 🏭 | fabrika | a building where things are made | a car factory
+fail-verb | ❌ | başarısız olmak; sınavdan kalmak | to not succeed | He failed the exam.
+fair-adjective | ⚖️ | adil, haklı | treating people equally; reasonable | That's not fair!
+fan-noun | 🙌 | hayran, taraftar; vantilatör | a person who loves someone or something; a machine that moves air | a football fan
+farm-verb | 🚜 | çiftçilik yapmak | to use land for growing crops or keeping animals | They farm wheat.
+farming-noun | 🌾 | tarım, çiftçilik | the business of managing a farm | Farming is hard work.
+fashion-noun | 👗 | moda | a popular style of clothes | the latest fashion
+fat-noun | 🧈 | yağ | an oily substance in food or under the skin | This food is high in fat.
+fear-noun | 😱 | korku | the feeling of being afraid | a fear of flying
+feature-noun | ⭐ | özellik | an important part or quality | This phone has many new features.
+feed-verb | 🍼 | beslemek, yemek vermek | to give food to | Don't forget to feed the cat.
+female-adjective | ♀️ | dişi, kadın | of the sex that can have babies | a female doctor

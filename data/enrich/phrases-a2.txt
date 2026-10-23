@@ -1,0 +1,175 @@
+phrase:a-bit | 🤏 | biraz, azıcık | slightly; a little | I'm a bit tired.
+phrase:able-to-do-sth | 💪 | bir şeyi yapabilmek | having the ability to do something | Will you be able to come?
+phrase:a-couple-of-sth | ✌️ | birkaç, bir iki | two or a few | I'll be back in a couple of days.
+phrase:add-to-sth | ➕ | -e eklemek, -i artırmak | to increase something | The music added to the atmosphere.
+phrase:again-and-again | 🔁 | tekrar tekrar | many times | I read the letter again and again.
+phrase:all-about | 📖 | her şeyiyle, tüm ayrıntılarıyla | everything concerning | Tell me all about your trip.
+phrase:all-kinds-of | 🌈 | her türlü, her çeşit | many different types of | The shop sells all kinds of things.
+phrase:all-over | 🌐 | her yerinde, her tarafında | everywhere in a place | There was water all over the floor.
+phrase:all-sorts-of | 🎨 | her türden, türlü türlü | many different kinds of | We talked about all sorts of things.
+phrase:all-the-time | ♾️ | sürekli, her zaman | very often; continuously | He complains all the time.
+phrase:a-long-time-ago | 📜 | uzun zaman önce | many years in the past | I met her a long time ago.
+phrase:a-long-way | 🛣️ | çok uzak, uzun yol | a great distance | The station is a long way from here.
+phrase:a-number-of-sth | 🔢 | birtakım, birçok | several; some | A number of students were absent.
+phrase:apply-for-sth | 📝 | -e başvurmak | to formally ask for a job, visa, etc. | I applied for a job at the bank.
+phrase:art-gallery | 🖼️ | sanat galerisi | a building where art is shown | We visited an art gallery.
+phrase:as-a-result | ➡️ | sonuç olarak, bu nedenle | because of this | It rained a lot. As a result, the roads flooded.
+phrase:as-part-of-sth | 🧩 | -in bir parçası olarak | being included in something | I work as part of a team.
+phrase:as-soon-as | ⚡ | -er -mez, … olur olmaz | immediately when | Call me as soon as you arrive.
+phrase:as-well | ➕ | de/da, ayrıca | also; too | She speaks French as well.
+phrase:at-first | 🌱 | ilk başta, başlangıçta | at the beginning | At first I didn't like it.
+phrase:at-least | ⬇️ | en azından, en az | not less than; anyway | It costs at least $50. / At least nobody was hurt.
+phrase:at-the-age-of | 🎂 | … yaşında | when someone is a particular age | She started school at the age of six.
+phrase:at-the-start-of-sth | ▶️ | -in başlangıcında | at the beginning of something | at the start of the game
+phrase:at-the-time | ⏱️ | o zamanlar, o sırada | at that particular moment in the past | I was living in Ankara at the time.
+phrase:at-the-time-of-sth | 📅 | … sırasında, … zamanında | when something happened | At the time of the accident, he was at home.
+phrase:at-the-top | 🔝 | en üstte, tepede | in the highest position | Write your name at the top of the page.
+phrase:based-on-sth | 📖 | -e dayanan, -den uyarlanan | using something as a starting point | The film is based on a true story.
+phrase:be-allowed-to-do-sth | ✅ | bir şeyi yapmaya izni olmak | to have permission to do something | We're not allowed to use phones in class.
+phrase:believe-in-sb-sth | 🙏 | -e inanmak | to feel sure that someone or something exists or is good | Do you believe in ghosts?
+phrase:belong-to-sb | 🏷️ | birine ait olmak | to be owned by someone | This car belongs to my father.
+phrase:belong-to-sth | 👥 | bir şeyin üyesi olmak | to be a member of a group | She belongs to a tennis club.
+phrase:be-made-of-sth | 🪵 | -den yapılmış olmak | to have something as its material | The table is made of wood.
+phrase:by-the-end-of-sth | 🏁 | -in sonuna kadar | not later than the end of a period | I'll finish by the end of the week.
+phrase:care-about-sth | 💗 | bir şeyi önemsemek | to think something is important | I care about the environment.
+phrase:carry-on | ⏩ | devam etmek | to continue | Carry on with your work.
+phrase:carry-sth-out | 🛠️ | bir şeyi yürütmek, gerçekleştirmek | to do a task or plan | They carried out a survey.
+phrase:check-in | 🛎️ | giriş yapmak (otel, havalimanı) | to arrive and register at a hotel or airport | We checked in at the hotel at 3 p.m.
+phrase:check-out | 🧳 | çıkış yapmak (otelden) | to pay and leave a hotel | We have to check out by noon.
+phrase:climate-change | 🌡️ | iklim değişikliği | changes in the earth's weather patterns | Climate change is a global problem.
+phrase:close-to-sb-sth | 📍 | -e yakın | near someone or something; emotionally near | The hotel is close to the beach. / I'm very close to my sister.
+phrase:come-back | ↩️ | geri gelmek | to return | When are you coming back?
+phrase:come-on | 📣 | hadi!, haydi! | used to encourage someone or tell them to hurry | Come on! We're late.
+phrase:connected-to-sth | 🔌 | bir şeye bağlı | joined to something | Is the printer connected to the computer?
+phrase:connected-with-sb-sth | 🔗 | ile ilgili, ile bağlantılı | related to someone or something | problems connected with money
+phrase:credit-card | 💳 | kredi kartı | a plastic card for buying things and paying later | Can I pay by credit card?
+phrase:deal-with-sb | 🤝 | biriyle ilgilenmek, uğraşmak | to talk to or handle a person | She deals with customers all day.
+phrase:deal-with-sth | 🛠️ | bir şeyle başa çıkmak, halletmek | to take action to solve a problem | I'll deal with the problem tomorrow.
+phrase:depend-on-sb-sth | 🫂 | -e bel bağlamak, -e güvenmek | to need someone or something for support | Children depend on their parents.
+phrase:depend-on-sth | ⚖️ | bir şeye bağlı olmak | to be decided by something | It depends on the weather.
+phrase:do-well | 🌟 | başarılı olmak, iyi iş çıkarmak | to be successful | She did well in the exam.
+phrase:each-one | 1️⃣ | her biri | every single one | I've read each one of these books.
+phrase:end-with-sth | 🔚 | ile bitmek | to have something as the last part | The concert ended with a famous song.
+phrase:even-more | ⏫ | daha da | to a greater degree than before | The second test was even more difficult.
+phrase:everyone-else | 👥 | diğer herkes | all the other people | Everyone else had left.
+phrase:except-for | ➖ | dışında, hariç | not including | The room was empty except for a chair.
+phrase:fall-in-love | 💘 | aşık olmak | to start to love someone romantically | They fell in love in Paris.
+phrase:fall-off | ⤵️ | (bir yerden) düşmek | to drop from something | He fell off his bike.
+phrase:far-away | 🏔️ | çok uzakta | at a great distance | They live far away.
+phrase:feel-good | 😊 | iyi hissetmek | to feel happy and healthy | I feel good after a run.
+phrase:feel-like-sth | 🍕 | canı bir şey istemek | to want something | I feel like pizza tonight.
+phrase:fill-sth-in | 📝 | (form) doldurmak | to complete a form with information | Please fill in this form.
+phrase:find-it-difficult-to-do-sth | 😓 | bir şeyi yapmakta zorlanmak | to have problems doing something | I find it difficult to wake up early.
+phrase:first-of-all | 1️⃣ | her şeyden önce, öncelikle | before anything else | First of all, thank you for coming.
+phrase:focus-on-sb-sth | 🎯 | -e odaklanmak | to give all your attention to | Focus on the main points.
+phrase:followed-by-sb-sth | ⏭️ | ardından … gelen | with someone or something coming after | Dinner was followed by dessert.
+phrase:for-the-rest-of-sth | ⏳ | -in geri kalanı boyunca | during the remaining part of something | I stayed home for the rest of the day.
+phrase:for-this-reason | ❓ | bu nedenle | because of this | The road was closed. For this reason, we were late.
+phrase:get-back | ↩️ | geri dönmek | to return | When did you get back from holiday?
+phrase:get-better | 📈 | iyileşmek, daha iyi olmak | to improve; to recover from illness | I hope you get better soon.
+phrase:get-lost | 🧭 | kaybolmak, yolunu kaybetmek | to be unable to find your way | We got lost in the old city.
+phrase:get-out | 🚪 | dışarı çıkmak, (araçtan) inmek | to leave a place or vehicle | Get out of the car.
+phrase:give-up | 🏳️ | pes etmek, vazgeçmek | to stop trying | Don't give up!
+phrase:give-sth-up | 🚭 | bir şeyi bırakmak (alışkanlık) | to stop doing or having something | He gave up smoking.
+phrase:go-and | 🏃 | gidip … -mek | used to say someone goes somewhere to do something | Go and get help!
+phrase:go-away | 👋 | gitmek, uzaklaşmak; tatile gitmek | to leave a place or person; to go on a trip | Go away! / We're going away for the weekend.
+phrase:go-down | 📉 | düşmek, azalmak | to decrease | Prices are going down.
+phrase:go-down-sth | ⬇️ | (bir yolda) ilerlemek, aşağı inmek | to move along or down something | Go down the road and turn left.
+phrase:go-for-sth | 🚶 | bir şeye çıkmak (yürüyüş vb.) | to do an activity | Let's go for a walk.
+phrase:go-up | 📈 | artmak, yükselmek | to increase | Prices are going up.
+phrase:good-luck | 🍀 | iyi şanslar, bol şans | used to wish someone success | Good luck in your exam!
+phrase:happen-to-sb-sth | ❓ | birinin başına gelmek | to be affected by an event | What happened to your car?
+phrase:happy-with-sb-sth | 👍 | -den memnun | satisfied with someone or something | I'm happy with my new job.
+phrase:have-a-look | 👀 | bir göz atmak, bakmak | to look at something | Can I have a look at your photos?
+phrase:have-got-to | ❗ | -mek zorunda olmak | to have to; must | I've got to go now.
+phrase:have-you-ever | ❔ | hiç … -dın mı? | used to ask about experiences | Have you ever been to Japan?
+phrase:health-problems | 🩺 | sağlık sorunları | problems with your physical or mental health | He has some health problems.
+phrase:hear-about-sb-sth | 👂 | hakkında duymak | to get news or information about | Did you hear about the accident?
+phrase:i-don-t-care | 🤷 | umurumda değil | used to say something is not important to you | I don't care what they think.
+phrase:if-necessary | ❗ | gerekirse | if it is needed | I'll stay late if necessary.
+phrase:if-you-want-to | 🙂 | istersen | if you would like to | You can come with us if you want to.
+phrase:i-guess | 🤔 | sanırım, galiba | I suppose; I think | I guess you're right.
+phrase:i-m-afraid | 😔 | maalesef, korkarım ki | used politely to give bad news | I'm afraid I can't help you.
+phrase:i-mean | 💬 | yani, demek istediğim | used to explain or correct what you said | She's nice. I mean, she's always friendly.
+phrase:in-business | 💼 | iş dünyasında, ticarette | working in commerce | He's been in business for 20 years.
+phrase:in-danger | ⚠️ | tehlikede | likely to be harmed | Many animals are in danger.
+phrase:in-history | 📜 | tarihte | in the past events of the world | the first time in history
+phrase:in-hospital | 🏥 | hastanede (yatan) | staying in a hospital as a patient | She's in hospital with a broken leg.
+phrase:in-love | 💞 | aşık | feeling romantic love | They're very much in love.
+phrase:in-prison | ⛓️ | hapiste | kept in a prison | He spent ten years in prison.
+phrase:in-some-cases | 🗂️ | bazı durumlarda | in some situations | In some cases, the treatment doesn't work.
+phrase:instead-of | 🔄 | yerine | in place of | Let's have tea instead of coffee.
+phrase:in-the-air | ☁️ | havada | above the ground | Throw the ball in the air.
+phrase:in-the-end | 🏁 | sonunda, en sonunda | finally, after a long time | In the end, we decided to stay home.
+phrase:in-the-middle | ⏺️ | ortasında | in the central part | There's a table in the middle of the room.
+phrase:in-the-same-way | 🟰 | aynı şekilde | similarly | Treat everyone in the same way.
+phrase:in-this-way | 👉 | bu şekilde, böylece | by doing this | In this way, you can save money.
+phrase:it-depends | ⚖️ | duruma bağlı, değişir | used to say the answer changes with the situation | "Are you coming?" "It depends."
+phrase:i-think-so | 👍 | sanırım öyle | used to say yes when you are not completely sure | "Is it open?" "I think so."
+phrase:lead-to-sth | ➡️ | -e yol açmak | to cause something | Stress can lead to illness.
+phrase:less-than | ⬇️ | -den az | a smaller amount than | It costs less than $10.
+phrase:let-me | 🙋 | izin ver …, ben … yapayım | used to offer to do something | Let me help you.
+phrase:let-me-know | 📩 | bana haber ver | tell me | Let me know if you need anything.
+phrase:look-after-sb-sth-yourself | 🤲 | -e bakmak, ilgilenmek | to take care of someone or something | Can you look after my cat?
+phrase:look-back-at-sth | ⏪ | geriye dönüp bakmak | to look again at something in the past | Look back at your notes.
+phrase:look-sth-up | 📖 | (sözlükte vb.) bakmak, aramak | to search for information | Look the word up in a dictionary.
+phrase:make-a-mistake | ❌ | hata yapmak | to do something wrong | Everyone makes mistakes.
+phrase:make-money | 💵 | para kazanmak | to earn money | He makes money selling cars.
+phrase:make-sense | 💡 | mantıklı olmak, anlam ifade etmek | to be logical or understandable | This sentence doesn't make sense.
+phrase:make-sure | ✅ | emin olmak, sağlamak | to check that something is done or true | Make sure you lock the door.
+phrase:much-better | 📈 | çok daha iyi | a lot better | I feel much better today.
+phrase:not-at-all | 🚫 | hiç, asla; hiç önemli değil | not in any way | I didn't enjoy it at all.
+phrase:no-way | 🙅 | asla!, mümkün değil! | used to say something will not happen or is unbelievable | No way! I'm not doing that.
+phrase:oh-dear | 😕 | eyvah, aman | used to show disappointment or worry | Oh dear, I forgot my keys.
+phrase:oh-well | 🤷 | neyse, olsun | used to accept a bad situation | Oh well, maybe next time.
+phrase:on-earth | 🌍 | dünyada; (soru vurgusu) Allah aşkına | in the world; used to emphasize a question | What on earth are you doing?
+phrase:on-the-ground | 🟫 | yerde | on the surface of the earth | The leaves are on the ground.
+phrase:on-the-other-side | ↔️ | diğer tarafta, karşı tarafta | on the opposite side | The bank is on the other side of the street.
+phrase:on-the-wall | 🖼️ | duvarda | hanging on a wall | There's a clock on the wall.
+phrase:on-time | ⏰ | zamanında, tam vaktinde | at the planned time | The train arrived on time.
+phrase:on-top-of-sth-sb | 🔝 | -in üstünde | on the highest part of something | Put the book on top of the pile.
+phrase:one-or-two | ✌️ | bir iki, birkaç | a few | I have one or two questions.
+phrase:ordinary-people | 👥 | sıradan insanlar | normal people, not famous or powerful | The film is about ordinary people.
+phrase:pay-attention | 👀 | dikkat etmek | to watch or listen carefully | Pay attention to the teacher.
+phrase:per-hour | ⏱️ | saatte, saat başına | for each hour | The speed limit is 50 kilometers per hour.
+phrase:pick-sb-sth-up | 🚗 | birini almak (arabayla); bir şeyi yerden almak | to collect someone; to lift something | I'll pick you up at six.
+phrase:police-officer | 👮 | polis memuru | a member of the police | Ask a police officer for help.
+phrase:police-station | 🚓 | karakol | the office of the local police | Where is the police station?
+phrase:public-transport | 🚌 | toplu taşıma | buses, trains, etc. that everyone can use | I use public transport every day.
+phrase:put-sth-on | 🧥 | giymek; açmak (cihaz) | to dress yourself in something; to start a device | Put your coat on.
+phrase:quite-a-lot | 📈 | epeyce, oldukça çok | a fairly large amount | I've learned quite a lot.
+phrase:reasons-why | ❓ | … nedenleri | the causes of something | There are many reasons why I love this city.
+phrase:refer-to-sb-sth | 👉 | -den bahsetmek, -e atıfta bulunmak | to mention or talk about | Who are you referring to?
+phrase:report-on-sth | 📰 | hakkında haber yapmak, rapor vermek | to give information about something | She reported on the elections.
+phrase:respond-to-sth-sb | ↩️ | -e yanıt vermek, tepki vermek | to answer or react to | He didn't respond to my email.
+phrase:save-money | 🐷 | para biriktirmek | to keep money for the future | I'm saving money for a new car.
+phrase:science-fiction | 🚀 | bilimkurgu | stories about the future and science | I love science fiction films.
+phrase:search-for-sth-sb | 🔎 | -i aramak | to look carefully for | The police are searching for the missing child.
+phrase:so-that | 🎯 | -sın diye, böylece | in order that | I left early so that I wouldn't be late.
+phrase:solution-to-sth | 💡 | -e çözüm | a way to solve a problem | There's no easy solution to this problem.
+phrase:sort-of-sth | 🗂️ | bir tür, gibi bir şey | a type of something | What sort of things do you do at the weekend?
+phrase:sound-like-sb-sth | 👂 | -e benzemek (ses), gibi gelmek | to seem similar from what you hear | That sounds like a good plan.
+phrase:start-with-sb-sth | ▶️ | ile başlamak | to have someone or something first | Let's start with the easy questions.
+phrase:such-a-an | ‼️ | öyle bir, ne kadar | used to emphasize | It was such a good idea.
+phrase:take-care-of-sb-sth-yourself | 🤲 | -e bakmak, ilgilenmek; kendine iyi bakmak | to look after | Take care of yourself!
+phrase:take-off | 🛫 | havalanmak (uçak) | (of a plane) to leave the ground | The plane took off on time.
+phrase:take-sth-off | 👟 | çıkarmak (giysi) | to remove clothes | Take your shoes off.
+phrase:take-part | 🙋 | katılmak | to be involved in an activity | I took part in a competition.
+phrase:take-place | 📅 | gerçekleşmek, yer almak | to happen | The wedding will take place in June.
+phrase:the-best-thing | 🥇 | en iyi şey | the most positive or useful thing | The best thing to do is wait.
+phrase:the-first-thing | 1️⃣ | ilk iş, ilk şey | the thing done before others | The first thing I did was call my mom.
+phrase:the-following | ⏭️ | ertesi; aşağıdaki | next; the ones listed after | the following day / Answer the following questions.
+phrase:the-important-thing | ❗ | önemli olan | the thing that matters most | The important thing is that you're safe.
+phrase:the-other-side-of-sth | 🌏 | -in öbür tarafı | the opposite side of something | They live on the other side of the world.
+phrase:the-rest-of-sth | 🧩 | -in geri kalanı | the remaining part of something | the rest of the world
+phrase:these-days | 📆 | bugünlerde, günümüzde | now, compared with the past | Everyone has a smartphone these days.
+phrase:they-say | 🗣️ | derler ki | people say | They say you can't buy happiness.
+phrase:throw-sth-away | 🗑️ | bir şeyi atmak (çöpe) | to get rid of something | Don't throw that away!
+phrase:turn-sth-off | 📴 | kapatmak (cihaz, ışık) | to stop a machine or light | Turn off the TV.
+phrase:turn-sth-on | 💡 | açmak (cihaz, ışık) | to start a machine or light | Turn on the light.
+phrase:up-and-down | ↕️ | aşağı yukarı | moving upward and downward | The kids were jumping up and down.
+phrase:why-not | 🤷 | neden olmasın?, neden … -mıyorsun? | used to make a suggestion or agree | Why not ask your teacher?
+phrase:work-out | 🏋️ | spor yapmak; iyi sonuçlanmak | to exercise; to end successfully | I work out at the gym. / Everything worked out fine.
+phrase:worried-about-sb-sth | 😟 | için endişeli | anxious about someone or something | I'm worried about my exam.
+phrase:would-love-to-do-sth | 😍 | bir şeyi yapmayı çok isterdi | to want very much to do something | I'd love to visit Japan.
+phrase:write-sth-down | ✍️ | not etmek, yazmak | to write something on paper | Write down your phone number.
