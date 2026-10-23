@@ -7,7 +7,7 @@ import { feedback } from '../feedback'
 import { baseWord, wordVariants } from '../forms'
 import { useT } from '../i18n'
 import { levelIndex } from '../session'
-import { canSpeak, speak } from '../speech'
+import { canSpeak, speak, stopSpeaking } from '../speech'
 import { isKnown } from '../srs'
 import { LEVELS, type Card } from '../types'
 
@@ -83,7 +83,7 @@ function Reader({ story, data, onBack }: { story: Story; data: AppData; onBack: 
     return m
   }, [data.cards])
 
-  useEffect(() => () => speechSynthesis?.cancel(), [])
+  useEffect(() => () => stopSpeaking(), [])
 
   function tap(raw: string) {
     const w = raw.toLowerCase().replace(/[’']s$/, '').replace(/[^a-z'-]/g, '')
@@ -98,18 +98,12 @@ function Reader({ story, data, onBack }: { story: Story; data: AppData; onBack: 
 
   function toggleRead() {
     if (reading) {
-      speechSynthesis.cancel()
+      stopSpeaking()
       setReading(false)
       return
     }
     setReading(true)
-    speak(story.text.replace(/\n+/g, ' '), 0.9)
-    const id = setInterval(() => {
-      if (!speechSynthesis.speaking) {
-        setReading(false)
-        clearInterval(id)
-      }
-    }, 500)
+    speak(story.text.replace(/\n+/g, ' '), 0.9).then(() => setReading(false))
   }
 
   async function finish() {

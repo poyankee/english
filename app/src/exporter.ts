@@ -1,3 +1,6 @@
+import { Capacitor } from '@capacitor/core'
+import { Directory, Encoding, Filesystem } from '@capacitor/filesystem'
+import { Share } from '@capacitor/share'
 import { exportBackup, markBackup } from './db'
 import { wordStatus } from './session'
 import type { Card, Progress } from './types'
@@ -32,7 +35,13 @@ export function toAnki(cards: Card[]): string {
   return ['#separator:tab', '#html:true', '#tags column:3', ...lines].join('\n')
 }
 
-export function download(name: string, text: string, type: string) {
+/** Dosyayı indirir. Android uygulamasında indirme bağlantısı çalışmadığı için dosya kaydedilip paylaşım menüsü açılır. */
+export async function download(name: string, text: string, type: string) {
+  if (Capacitor.isNativePlatform()) {
+    const { uri } = await Filesystem.writeFile({ path: name, data: text, directory: Directory.Cache, encoding: Encoding.UTF8 })
+    await Share.share({ title: name, files: [uri] }).catch(() => {})
+    return
+  }
   const a = document.createElement('a')
   a.href = URL.createObjectURL(new Blob([text], { type }))
   a.download = name
@@ -42,7 +51,7 @@ export function download(name: string, text: string, type: string) {
 
 /** Tam yedeği (ilerleme, günler, ayarlar, favoriler, kendi kelimeler) indirir ve zamanını kaydeder */
 export async function downloadBackup() {
-  download(`kelime-yedek-${new Date().toISOString().slice(0, 10)}.json`, await exportBackup(), 'application/json')
+  await download(`kelime-yedek-${new Date().toISOString().slice(0, 10)}.json`, await exportBackup(), 'application/json')
   await markBackup()
 }
 

@@ -8,6 +8,8 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      // Android uygulamasında dosyalar zaten pakette; service worker gereksiz
+      disable: !!process.env.CAPACITOR,
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg', 'apple-touch-icon.png'],
       workbox: {

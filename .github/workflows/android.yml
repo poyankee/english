@@ -1,0 +1,96 @@
+name: Android APK
+
+on:
+  push:
+    branches: [main, ccr-20db627d-mhv0pi]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    env:
+      HAS_SECRET: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' }}
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+        env:
+          CAPACITOR: '1'
+      - run: npx cap sync android
+      # İmzalama anahtarı depoda değil. ANDROID_KEYSTORE_BASE64 gizli değişkeni varsa o kullanılır (mağaza);
+      # yoksa ilk derlemede bir test anahtarı üretilip önbellekte saklanır, böylece yeni APK eskisinin üzerine kurulur.
+      - name: Test anahtarını önbellekten al
+        if: ${{ env.HAS_SECRET != 'true' }}
+        uses: actions/cache@v4
+        with:
+          path: ~/.kelime-signing
+          key: kelime-test-signing-v1
+      - name: İmzalama anahtarını hazırla
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          SECRET_STORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          SECRET_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          SECRET_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/release.keystore"
+            echo "KEYSTORE_FILE=$RUNNER_TEMP/release.keystore" >> "$GITHUB_ENV"
+            echo "KEYSTORE_PASSWORD=$SECRET_STORE_PASSWORD" >> "$GITHUB_ENV"
+            echo "KEY_ALIAS=$SECRET_KEY_ALIAS" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=$SECRET_KEY_PASSWORD" >> "$GITHUB_ENV"
+          else
+            dir="$HOME/.kelime-signing"
+            mkdir -p "$dir"
+            if [ ! -f "$dir/test.keystore" ]; then
+              openssl rand -hex 16 > "$dir/password"
+              keytool -genkeypair -keystore "$dir/test.keystore" -alias kelime -keyalg RSA -keysize 2048 -validity 10000 \
+                -storepass "$(cat "$dir/password")" -keypass "$(cat "$dir/password")" -dname "CN=Kelime Test, C=TR"
+            fi
+            pass="$(cat "$dir/password")"
+            echo "::add-mask::$pass"
+            echo "KEYSTORE_FILE=$dir/test.keystore" >> "$GITHUB_ENV"
+            echo "KEYSTORE_PASSWORD=$pass" >> "$GITHUB_ENV"
+            echo "KEY_ALIAS=kelime" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=$pass" >> "$GITHUB_ENV"
+          fi
+      - name: APK derle
+        working-directory: app/android
+        run: ./gradlew assembleRelease --no-daemon
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+      - run: cp android/app/build/outputs/apk/release/app-release.apk kelime.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kelime-apk
+          path: app/kelime.apk
+      # Telefondan giriş yapmadan indirilebilsin diye sabit bir sürüm sayfasına konur
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apk-latest
+          name: Kelime APK (son derleme)
+          body: |
+            Telefonda denemek için son derleme (${{ github.sha }}).
+            İndir: kelime.apk → aç → "bilinmeyen kaynaklardan yükleme" iznini ver → yükle.
+          files: app/kelime.apk
+          prerelease: true

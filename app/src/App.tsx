@@ -1,3 +1,5 @@
+import { App as NativeApp } from '@capacitor/app'
+import { Capacitor } from '@capacitor/core'
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   loadConfusions,
@@ -156,6 +158,23 @@ export default function App() {
   const close = () => {
     refresh().then(() => setOverlay(null))
   }
+
+  // Android geri tuşu: açık ekranı kapatır, sonra ana sekmeye döner, en son uygulamadan çıkar
+  const backState = useRef({ overlay, tab, close })
+  backState.current = { overlay, tab, close }
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return
+    const handle = NativeApp.addListener('backButton', () => {
+      const { overlay, tab, close } = backState.current
+      if (overlay?.name === 'onboarding') return
+      if (overlay) close()
+      else if (tab !== 'today') setTab('today')
+      else NativeApp.exitApp()
+    })
+    return () => {
+      handle.then((h) => h.remove())
+    }
+  }, [])
 
   const nav: Nav = {
     quiz: (mode, ids) => refresh().then(() => setOverlay({ name: 'quiz', mode, ids })),

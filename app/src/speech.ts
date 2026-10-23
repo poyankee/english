@@ -1,6 +1,11 @@
+import { Capacitor } from '@capacitor/core'
+import { QueueStrategy, TextToSpeech } from '@capacitor-community/text-to-speech'
 import type { Accent } from './types'
 
-export const canSpeak = 'speechSynthesis' in window
+/** Android uygulamasında web görünümü sesli okumayı desteklemediği için telefonun kendi sesi kullanılır */
+const native = Capacitor.isNativePlatform()
+const web = typeof window !== 'undefined' && 'speechSynthesis' in window
+export const canSpeak = native || web
 
 const LANG: Record<Accent, string> = { us: 'en-US', gb: 'en-GB' }
 let accent: Accent = 'us'
@@ -15,7 +20,7 @@ function pickVoice() {
     voices.find((v) => v.lang.startsWith('en'))
 }
 
-if (canSpeak) {
+if (web && !native) {
   pickVoice()
   speechSynthesis.addEventListener('voiceschanged', pickVoice)
 }
@@ -23,15 +28,29 @@ if (canSpeak) {
 export function setAccent(a: Accent) {
   if (a === accent) return
   accent = a
-  if (canSpeak) pickVoice()
+  if (web && !native) pickVoice()
 }
 
-export function speak(text: string, rate = 0.9) {
-  if (!canSpeak) return
+/** Metni okur; okuma bitince (ya da durdurulunca) tamamlanır */
+export function speak(text: string, rate = 0.9): Promise<void> {
+  const clean = text.replace(/\b(sb|sth)\b/g, (m) => (m === 'sb' ? 'somebody' : 'something'))
+  if (native) {
+    return TextToSpeech.speak({ text: clean, lang: LANG[accent], rate, queueStrategy: QueueStrategy.Flush }).catch(() => {})
+  }
+  if (!web) return Promise.resolve()
   speechSynthesis.cancel()
-  const u = new SpeechSynthesisUtterance(text.replace(/\b(sb|sth)\b/g, (m) => (m === 'sb' ? 'somebody' : 'something')))
+  const u = new SpeechSynthesisUtterance(clean)
   u.lang = LANG[accent]
   if (voice) u.voice = voice
   u.rate = rate
-  speechSynthesis.speak(u)
+  return new Promise((resolve) => {
+    u.onend = () => resolve()
+    u.onerror = () => resolve()
+    speechSynthesis.speak(u)
+  })
+}
+
+export function stopSpeaking() {
+  if (native) TextToSpeech.stop().catch(() => {})
+  else if (web) speechSynthesis.cancel()
 }

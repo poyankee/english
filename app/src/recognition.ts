@@ -1,3 +1,5 @@
+import { Capacitor } from '@capacitor/core'
+import { SpeechRecognition } from '@capacitor-community/speech-recognition'
 import { baseWord } from './forms'
 import { checkTyped } from './session'
 
@@ -21,10 +23,29 @@ type RecognitionCtor = new () => Recognition
 const w = (typeof window === 'undefined' ? {} : window) as unknown as { SpeechRecognition?: RecognitionCtor; webkitSpeechRecognition?: RecognitionCtor }
 const Ctor = w.SpeechRecognition ?? w.webkitSpeechRecognition
 
-export const canRecognize = !!Ctor
+/** Android uygulamasında web görünümü konuşma tanımayı desteklemez; telefonun kendi tanıma servisi kullanılır */
+const native = Capacitor.isNativePlatform()
+export const canRecognize = native || !!Ctor
+
+async function listenNative(lang: string): Promise<string[]> {
+  const perm = await SpeechRecognition.requestPermissions()
+  if (perm.speechRecognition !== 'granted') throw new Error('not-allowed')
+  const { available } = await SpeechRecognition.available()
+  if (!available) throw new Error('unavailable')
+  const r = await SpeechRecognition.start({ language: lang, maxResults: 5, popup: false, partialResults: false })
+  return r.matches ?? []
+}
 
 /** Bir kez dinler; duyulan olası metinleri döner (boşsa hiçbir şey anlaşılmadı) */
 export function listenOnce(lang: string): { result: Promise<string[]>; stop: () => void } {
+  if (native) {
+    // Konuşma algılanmazsa servis hata verir; bunu "hiçbir şey duyulmadı" sayıyoruz
+    const result = listenNative(lang).catch((e: Error) => {
+      if (e.message === 'not-allowed') throw e
+      return [] as string[]
+    })
+    return { result, stop: () => void SpeechRecognition.stop().catch(() => {}) }
+  }
   if (!Ctor) return { result: Promise.reject(new Error('unsupported')), stop: () => {} }
   const r = new Ctor()
   r.lang = lang
