@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import type { AppData } from '../App'
+import { useT } from '../i18n'
 import { speak } from '../speech'
 import { isMistake, RESCUED_BOX } from '../srs'
 
 export function Mistakes({ data, onBack, onStudy }: { data: AppData; onBack: () => void; onStudy: () => void }) {
+  const t = useT()
   const [showRescued, setShowRescued] = useState(false)
   const rows = data.cards
     .map((c) => ({ card: c, p: data.progress.get(c.id) }))
@@ -14,29 +16,27 @@ export function Mistakes({ data, onBack, onStudy }: { data: AppData; onBack: () 
   return (
     <main className="list stagger">
       <header className="page-head">
-        <button className="icon" aria-label="Geri" onClick={onBack}>
+        <button className="icon" aria-label={t('back')} onClick={onBack}>
           ←
         </button>
-        <h1>Bilemediklerim</h1>
+        <h1>{t('mistakes.title')}</h1>
         <span />
       </header>
-      <p className="muted">
-        İlk seferde bilemediğin kelimeler burada. {RESCUED_BOX} kez üst üste doğru bilince listeden çıkarlar.
-      </p>
+      <p className="muted">{t('mistakes.info', { n: RESCUED_BOX })}</p>
       <button className="action main" onClick={onStudy} disabled={!active}>
         <span className="action-icon">🧠</span>
         <span className="action-text">
-          <b>Bunları çalış</b>
-          <small>{active} kelime</small>
+          <b>{t('mistakes.study')}</b>
+          <small>{t('mistakes.count', { n: active })}</small>
         </span>
         <span className="chev">›</span>
       </button>
       <label className="row">
         <input type="checkbox" checked={showRescued} onChange={(e) => setShowRescued(e.target.checked)} />
-        Öğrendiklerimi de göster
+        {t('mistakes.showAll')}
       </label>
       {rows.length === 0 && (
-        <p className="muted center">Henüz bilemediğin kelime yok. Böyle devam! 🎉</p>
+        <p className="muted center">{t('mistakes.empty')}</p>
       )}
       <ul hidden={rows.length === 0}>
         {rows.map(({ card, p }) => (

@@ -1,7 +1,20 @@
 import { describe, expect, it } from 'vitest'
-import { answer, INTERVALS, isMistake, KNOWN_BOX } from './srs'
-import { afterAnswer, buildChoices, isVerb, pickNext, RELEARN_GAP, startSession, VERB_TEST_SIZE } from './session'
-import { DEFAULT_SETTINGS, type Card, type Progress } from './types'
+import {
+  afterAnswer,
+  buildChoices,
+  checkTyped,
+  CHECKUP_EVERY,
+  graduates,
+  isVerb,
+  nextLevel,
+  pickNext,
+  PRACTICE_SIZE,
+  questionType,
+  RELEARN_GAP,
+  startSession,
+} from './session'
+import { answer, INTERVALS, isKnown, isMistake, KNOWN_BOX, MAX_BOX } from './srs'
+import { DEFAULT_SETTINGS, type Card, type Level, type Progress, type Settings } from './types'
 
 const card = (id: string, extra: Partial<Card> = {}): Card => ({
   id,
@@ -12,6 +25,8 @@ const card = (id: string, extra: Partial<Card> = {}): Card => ({
   def: '',
   ...extra,
 })
+const settings = (patch: Partial<Settings> = {}): Settings => ({ ...DEFAULT_SETTINGS, ...patch })
+const prog = (id: string, patch: Partial<Progress> = {}): Progress => ({ id, box: 2, due: 0, seen: 1, wrong: 0, lastSeen: 0, ...patch })
 
 describe('srs', () => {
   it('ilk seferde bilinen kelime ileri kutudan başlar', () => {
@@ -39,8 +54,30 @@ describe('srs', () => {
   })
 
   it('"tahmin ettim" kartı ilerletmez', () => {
-    const prev: Progress = { id: 'a', box: 3, due: 0, seen: 2, wrong: 0, lastSeen: 0 }
-    expect(answer(prev, 'a', 'unsure', 0).box).toBe(3)
+    expect(answer(prog('a', { box: 3 }), 'a', 'unsure', 0).box).toBe(3)
+  })
+
+  it('A1/A2 kelimesi ilk seferde bilinince tamamlanır ve bir daha sorulmaz', () => {
+    const p = answer(undefined, 'a', 'correct', 0, true)
+    expect(p.done).toBe(true)
+    expect(p.box).toBe(MAX_BOX)
+    expect(p.due).toBeGreaterThan(50 * 365 * 24 * 3600 * 1000)
+  })
+
+  it('A1/A2 kelimesi bilinemezse öğrenilene kadar tekrar edilir, sonra tamamlanır', () => {
+    let p = answer(undefined, 'a', 'wrong', 0, true)
+    expect(p.done).toBeUndefined()
+    p = answer(p, 'a', 'correct', 0, true)
+    p = answer(p, 'a', 'correct', 0, true)
+    expect(p.done).toBeUndefined()
+    p = answer(p, 'a', 'correct', 0, true)
+    expect(p.done).toBe(true)
+  })
+
+  it('tamamlanmış kelime pratikte yanlış bilinirse tekrar öğrenmeye döner', () => {
+    const p = answer(prog('a', { box: MAX_BOX, done: true }), 'a', 'wrong', 0, true)
+    expect(p.done).toBeUndefined()
+    expect(isKnown(p)).toBe(false)
   })
 })
 
@@ -49,10 +86,10 @@ describe('session', () => {
 
   it('yanlış bilinen kart RELEARN_GAP kart sonra tekrar gelir', () => {
     const progress = new Map<string, Progress>()
-    let s = startSession('study', cards, progress, 0, DEFAULT_SETTINGS, 0)
+    let s = startSession('study', cards, progress, 0, settings(), 0)
     const seen: string[] = []
     for (let i = 0; i < RELEARN_GAP + 2; i++) {
-      const c = pickNext(s, cards, progress, DEFAULT_SETTINGS, 0)!
+      const c = pickNext(s, cards, progress, settings(), 0)!.card
       seen.push(c.id)
       const wrong = i === 0
       progress.set(c.id, answer(progress.get(c.id), c.id, wrong ? 'wrong' : 'correct', 0))
@@ -62,37 +99,97 @@ describe('session', () => {
   })
 
   it('günlük yeni kart sınırına uyar', () => {
-    const s = startSession('study', cards, new Map(), DEFAULT_SETTINGS.dailyNew, DEFAULT_SETTINGS, 0)
-    expect(pickNext(s, cards, new Map(), DEFAULT_SETTINGS, 0)).toBeNull()
+    const s = startSession('study', cards, new Map(), DEFAULT_SETTINGS.dailyNew, settings(), 0)
+    expect(pickNext(s, cards, new Map(), settings(), 0)).toBeNull()
   })
 
-  it('vadesi gelen tekrar yeni karttan önce gelir', () => {
-    const progress = new Map<string, Progress>([['g', { id: 'g', box: 2, due: 5, seen: 1, wrong: 0, lastSeen: 0 }]])
-    const s = startSession('study', cards, progress, 0, DEFAULT_SETTINGS, 0)
-    expect(pickNext(s, cards, progress, DEFAULT_SETTINGS, 10)!.id).toBe('g')
+  it('vadesi gelen tekrar yeni karttan önce gelir; tamamlanan kartlar hiç gelmez', () => {
+    const progress = new Map([
+      ['g', prog('g', { due: 5 })],
+      ['f', prog('f', { due: 1, done: true })],
+    ])
+    const s = startSession('study', cards, progress, 0, settings(), 0)
+    expect(pickNext(s, cards, progress, settings(), 10)).toEqual({ card: cards[6], kind: 'review' })
   })
 
-  it('seçilmeyen seviyeler gelmez', () => {
-    const s = startSession('study', [card('x', { level: 'C1' })], new Map(), 0, DEFAULT_SETTINGS, 0)
-    expect(pickNext(s, [card('x', { level: 'C1' })], new Map(), DEFAULT_SETTINGS, 0)).toBeNull()
+  it('yeni kelimeler yalnızca mevcut seviyeden gelir', () => {
+    const pool = [card('x', { level: 'C1' }), card('y', { level: 'B1' })]
+    const s = startSession('study', pool, new Map(), 0, settings({ currentLevel: 'B1' }), 0)
+    expect(pickNext(s, pool, new Map(), settings({ currentLevel: 'B1' }), 0)?.card.id).toBe('y')
+  })
+
+  it('geçilen seviyelerden belirli aralıklarla kontrol sorusu gelir', () => {
+    const pool = [card('old', { level: 'A1' }), ...Array.from({ length: 10 }, (_, i) => card(`b${i}`, { level: 'B1' }))]
+    const st = settings({ currentLevel: 'B1' })
+    const s = { ...startSession('study', pool, new Map(), 0, st, 0), served: CHECKUP_EVERY - 1 }
+    expect(pickNext(s, pool, new Map(), st, 0)).toEqual({ card: pool[0], kind: 'checkup' })
+    expect(pickNext({ ...s, served: 0 }, pool, new Map(), st, 0)?.kind).toBe('new')
+  })
+
+  it('geçilen seviyedeki ve A1/A2 kartları tamamlanabilir, mevcut seviyedeki B1+ kartları tamamlanmaz', () => {
+    const st = settings({ currentLevel: 'B2' })
+    expect(graduates(card('a', { level: 'A2' }), st)).toBe(true)
+    expect(graduates(card('b', { level: 'B1' }), st)).toBe(true)
+    expect(graduates(card('c', { level: 'B2' }), st)).toBe(false)
+  })
+
+  it('mevcut seviyenin %80i bilinince sonraki seviye açılır', () => {
+    const pool = Array.from({ length: 10 }, (_, i) => card(`k${i}`, { level: 'A1' }))
+    const progress = new Map(pool.slice(0, 8).map((c) => [c.id, prog(c.id, { box: KNOWN_BOX })]))
+    expect(nextLevel(pool, progress, settings())).toBe<Level>('A2')
+    progress.delete('k0')
+    expect(nextLevel(pool, progress, settings())).toBeNull()
   })
 })
 
-describe('fiil sınavı', () => {
-  it('sadece fiil ve fiil kalıplarını sorar, önce vadesi gelenleri', () => {
+describe('soru tipleri', () => {
+  it('yeni kart İngilizce → Türkçe, iyi bilinen kart bazen ters ya da yazma olarak gelir', () => {
+    const c = card('house')
+    expect(questionType(c, undefined, 'new', 'study')).toBe('en-tr')
+    expect(questionType(c, prog('house', { box: 3 }), 'review', 'study', () => 0.1)).toBe('tr-en')
+    expect(questionType(c, prog('house', { box: 5 }), 'review', 'study', () => 0.1)).toBe('type')
+    expect(questionType(card('look up', { pos: 'phrase' }), prog('x', { box: 6 }), 'review', 'study', () => 0.1)).toBe('tr-en')
+  })
+
+  it('pratik modları tipi kendisi belirler', () => {
+    expect(questionType(card('a'), undefined, 'practice', 'reverse')).toBe('tr-en')
+    expect(questionType(card('a'), undefined, 'practice', 'typing')).toBe('type')
+  })
+
+  it('yazma kontrolü: tam doğru, tek harf hatası, yanlış', () => {
+    expect(checkTyped(' House ', 'house')).toBe('correct')
+    expect(checkTyped('hous', 'house')).toBe('almost')
+    expect(checkTyped('mouse', 'house')).toBe('almost')
+    expect(checkTyped('home', 'house')).toBe('wrong')
+    expect(checkTyped('an', 'a, an')).toBe('correct')
+  })
+})
+
+describe('pratik', () => {
+  it('fiil sınavı sadece fiil ve fiil kalıplarını sorar, önce vadesi gelenleri', () => {
     const cards = [
       ...Array.from({ length: 30 }, (_, i) => card(`v${i}`, { pos: 'verb' })),
       card('n', { pos: 'noun' }),
       card('p1', { pos: 'phrase', word: 'get up' }),
       card('p2', { pos: 'phrase', word: 'in fact' }),
     ]
-    const progress = new Map<string, Progress>([['v29', { id: 'v29', box: 2, due: 5, seen: 1, wrong: 0, lastSeen: 0 }]])
-    const s = startSession('verbs', cards, progress, 0, DEFAULT_SETTINGS, 10)
-    expect(s.queue).toHaveLength(VERB_TEST_SIZE)
+    const progress = new Map([['v29', prog('v29', { due: 5 })]])
+    const s = startSession('verbs', cards, progress, 0, settings(), 10)
+    expect(s.queue).toHaveLength(PRACTICE_SIZE)
     expect(s.queue[0]).toBe('v29')
     expect(s.queue).not.toContain('n')
     expect(isVerb(cards[31])).toBe(true)
     expect(isVerb(cards[32])).toBe(false)
+  })
+
+  it('yazma modu kalıpları ve çok kelimeli kartları sormaz', () => {
+    const cards = [card('house'), card('look up', { pos: 'phrase' }), card('ice cream')]
+    expect(startSession('typing', cards, new Map(), 0, settings(), 0).queue).toEqual(['house'])
+  })
+
+  it('kilitli seviyeler pratikte sorulmaz', () => {
+    const cards = [card('a1'), card('c1', { level: 'C1' })]
+    expect(startSession('reverse', cards, new Map(), 0, settings(), 0).queue).toEqual(['a1'])
   })
 })
 
@@ -105,9 +202,17 @@ describe('buildChoices', () => {
     expect(choices).toContain(pool[0].tr)
   })
 
+  it('ters modda İngilizce kelimeleri şık yapar', () => {
+    const pool = Array.from({ length: 20 }, (_, i) => card(`w${i}`))
+    const choices = buildChoices(pool[0], pool, Math.random, 'word')
+    expect(choices).toContain('w0')
+    expect(choices.every((c) => c.startsWith('w'))).toBe(true)
+  })
+
   it('aynı anlamı taşıyan şıkları eler', () => {
     const pool = [card('big', { tr: 'büyük, iri' }), card('large', { tr: 'büyük' }), ...Array.from({ length: 6 }, (_, i) => card(`w${i}`))]
     expect(buildChoices(pool[0], pool)).not.toContain('büyük')
+    expect(buildChoices(pool[0], pool, Math.random, 'word')).not.toContain('large')
   })
 
   it('parantez içindeki açıklamayı yok sayarak aynı anlamı eler', () => {
@@ -122,7 +227,6 @@ describe('buildChoices', () => {
       card('the2', { pos: 'article', tr: '(belirli tanımlık)' }),
       ...Array.from({ length: 6 }, (_, i) => card(`w${i}`)),
     ]
-    const choices = buildChoices(pool[0], pool)
-    expect(new Set(choices).size).toBe(5)
+    expect(new Set(buildChoices(pool[0], pool)).size).toBe(5)
   })
 })

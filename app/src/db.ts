@@ -1,5 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie'
-import { DEFAULT_SETTINGS, type DayStats, type Progress, type Settings } from './types'
+import { DEFAULT_SETTINGS, LEVELS, type DayStats, type Level, type Progress, type Settings } from './types'
 
 const db = new Dexie('kelime') as Dexie & {
   progress: EntityTable<Progress, 'id'>
@@ -25,7 +25,13 @@ export async function loadProgress(): Promise<Map<string, Progress>> {
 
 export async function loadSettings(): Promise<Settings> {
   const row = await db.meta.get('settings')
-  return { ...DEFAULT_SETTINGS, ...(row?.value as Partial<Settings> | undefined) }
+  const stored = (row?.value ?? {}) as Partial<Settings> & { levels?: Level[] }
+  // Eski sürümde seviyeler çoklu seçiliyordu; en düşük seçili seviyeyi mevcut seviye yap
+  if (!stored.currentLevel && stored.levels?.length) {
+    stored.currentLevel = LEVELS.find((l) => stored.levels!.includes(l))
+  }
+  delete stored.levels
+  return { ...DEFAULT_SETTINGS, ...stored }
 }
 
 export async function saveSettings(s: Settings) {
@@ -45,6 +51,24 @@ export async function recordAnswer(p: Progress, wasNew: boolean, correct: boolea
     if (correct) day.correct++
     await db.days.put(day)
   })
+}
+
+/** Son cevabı geri alır: kartın önceki durumunu ve günlük sayaçları eski haline getirir */
+export async function undoAnswer(prev: Progress | undefined, current: Progress, wasNew: boolean, correct: boolean) {
+  await db.transaction('rw', db.progress, db.days, async () => {
+    if (prev) await db.progress.put(prev)
+    else await db.progress.delete(current.id)
+    const day = await loadDay(today(current.lastSeen))
+    day.reviews = Math.max(day.reviews - 1, 0)
+    if (wasNew) day.newCards = Math.max(day.newCards - 1, 0)
+    if (correct) day.correct = Math.max(day.correct - 1, 0)
+    await db.days.put(day)
+  })
+}
+
+/** Seviye tespit sınavında bilinen kartları topluca kaydeder */
+export async function savePlacement(known: Progress[]) {
+  await db.progress.bulkPut(known)
 }
 
 /** Bugünden geriye doğru, en az bir kart çalışılmış ardışık gün sayısı */

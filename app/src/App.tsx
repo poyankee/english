@@ -1,13 +1,22 @@
-import { useCallback, useEffect, useState } from 'react'
-import { loadDay, loadProgress, loadSettings, streak } from './db'
-import { Home } from './screens/Home'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { loadDay, loadProgress, loadSettings, saveSettings, streak } from './db'
+import { setFeedback } from './feedback'
+import { I18n, makeT } from './i18n'
 import { Mistakes } from './screens/Mistakes'
+import { Onboarding } from './screens/Onboarding'
+import { Practice } from './screens/Practice'
+import { ProfileScreen } from './screens/Profile'
+import { ProgressScreen } from './screens/Progress'
 import { Quiz } from './screens/Quiz'
-import { SettingsScreen } from './screens/Settings'
+import { Today } from './screens/Today'
+import { Words } from './screens/Words'
 import { newCardOrder, type Mode } from './session'
+import { setAccent } from './speech'
 import type { Card, DayStats, Progress, Settings } from './types'
 
-type Screen = { name: 'home' } | { name: 'quiz'; mode: Mode } | { name: 'mistakes' } | { name: 'settings' }
+export type Tab = 'today' | 'practice' | 'words' | 'progress' | 'profile'
+/** Sekme çubuğunun gizlendiği tam ekran akışlar */
+type Overlay = { name: 'quiz'; mode: Mode } | { name: 'mistakes' } | { name: 'onboarding' } | null
 
 export interface AppData {
   cards: Card[]
@@ -17,10 +26,28 @@ export interface AppData {
   streak: number
 }
 
+export interface Nav {
+  quiz: (mode: Mode) => void
+  mistakes: () => void
+  onboarding: () => void
+  tab: (t: Tab) => void
+}
+
+const TABS: { id: Tab; icon: string }[] = [
+  { id: 'today', icon: '🏠' },
+  { id: 'practice', icon: '🎮' },
+  { id: 'words', icon: '📚' },
+  { id: 'progress', icon: '📈' },
+  { id: 'profile', icon: '👤' },
+]
+
 export default function App() {
   const [data, setData] = useState<AppData | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [screen, setScreen] = useState<Screen>({ name: 'home' })
+  const [tab, setTab] = useState<Tab>('today')
+  const [overlay, setOverlay] = useState<Overlay>(null)
+
+  const t = useMemo(() => makeT(data?.settings.lang ?? 'tr'), [data?.settings.lang])
 
   const refresh = useCallback(async () => {
     const [progress, settings, day, s] = await Promise.all([loadProgress(), loadSettings(), loadDay(), streak()])
@@ -33,24 +60,62 @@ export default function App() {
       const cards = newCardOrder((await res.json()) as Card[])
       const [progress, settings, day, s] = await Promise.all([loadProgress(), loadSettings(), loadDay(), streak()])
       setData({ cards, progress, settings, day, streak: s })
+      if (!settings.name) setOverlay({ name: 'onboarding' })
     })().catch((e) => setError(String(e)))
   }, [])
 
-  const go = (s: Screen) => {
-    refresh().then(() => setScreen(s))
+  useEffect(() => {
+    if (!data) return
+    setAccent(data.settings.accent)
+    setFeedback(data.settings.sounds, data.settings.vibration)
+  }, [data])
+
+  const updateSettings = useCallback(async (s: Settings) => {
+    await saveSettings(s)
+    setData((d) => (d ? { ...d, settings: s } : d))
+  }, [])
+
+  const close = () => {
+    refresh().then(() => setOverlay(null))
   }
 
-  if (error) return <main className="center">Yüklenemedi: {error}</main>
-  if (!data) return <main className="center">Yükleniyor…</main>
-
-  switch (screen.name) {
-    case 'quiz':
-      return <Quiz data={data} mode={screen.mode} onExit={() => go({ name: 'home' })} />
-    case 'mistakes':
-      return <Mistakes data={data} onBack={() => go({ name: 'home' })} onStudy={() => go({ name: 'quiz', mode: 'mistakes' })} />
-    case 'settings':
-      return <SettingsScreen data={data} onBack={() => go({ name: 'home' })} />
-    default:
-      return <Home data={data} go={go} />
+  const nav: Nav = {
+    quiz: (mode) => refresh().then(() => setOverlay({ name: 'quiz', mode })),
+    mistakes: () => refresh().then(() => setOverlay({ name: 'mistakes' })),
+    onboarding: () => setOverlay({ name: 'onboarding' }),
+    tab: (id) => {
+      refresh()
+      setTab(id)
+      window.scrollTo({ top: 0 })
+    },
   }
+
+  if (error) return <main className="center">{t('loadError', { msg: error })}</main>
+  if (!data) return <main className="center">{t('loading')}</main>
+
+  let content
+  if (overlay?.name === 'quiz') content = <Quiz data={data} mode={overlay.mode} onExit={close} />
+  else if (overlay?.name === 'mistakes') content = <Mistakes data={data} onBack={close} onStudy={() => nav.quiz('mistakes')} />
+  else if (overlay?.name === 'onboarding') content = <Onboarding data={data} updateSettings={updateSettings} onDone={close} />
+  else if (tab === 'practice') content = <Practice data={data} nav={nav} />
+  else if (tab === 'words') content = <Words data={data} />
+  else if (tab === 'progress') content = <ProgressScreen data={data} />
+  else if (tab === 'profile') content = <ProfileScreen data={data} updateSettings={updateSettings} nav={nav} />
+  else content = <Today data={data} nav={nav} updateSettings={updateSettings} />
+
+  return (
+    <I18n.Provider value={t}>
+      {content}
+      {!overlay && (
+        <nav className="tabbar">
+          {TABS.map((item) => (
+            <button key={item.id} className={tab === item.id ? 'on' : ''} onClick={() => nav.tab(item.id)}>
+              <span className="tab-icon">{item.icon}</span>
+              <span>{t(`tab.${item.id}`)}</span>
+            </button>
+          ))}
+        </nav>
+      )}
+    </I18n.Provider>
+  )
 }

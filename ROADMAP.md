@@ -84,15 +84,52 @@ Her kartın bir "kutu"su var (Leitner + basit SM-2). Yanlış bilinen kelime ba�
 - [x] Fiil sınavı: seçili seviyelerden 20 fiil + fiil kalıbı, önce vadesi gelenler
 - [x] Yedekleme: ilerlemeyi JSON olarak dışa/içe aktar (telefon değişirse kaybolmasın)
 
-### Faz 3 — Daha derin öğrenme
-- [ ] Ters mod: Türkçe → İngilizce
-- [ ] Yazma modu: kelimeyi klavyeyle yaz (kutu 5+ kartlarda)
-- [ ] Dinleme modu: sadece sesi duy, anlamı seç
-- [ ] Örnek cümlede boşluk doldurma
-- [ ] Kalıp (phrase) modu: "take over", "in other words" gibi kalıpların anlamını seçme, örnek cümlede boşluğa doğru kalıbı yerleştirme
-- [ ] Günlük hatırlatma bildirimi
-- [ ] (İsteğe bağlı) Bulut senkronizasyonu — birden fazla cihaz için
+### Faz 3 — Kariyer modu ve yeni düzen
+Uygulama büyüdüğü için alt sekme çubuğuyla 5 bölüme ayrılıyor:
 
-### Faz 4 — Store
-- [ ] Capacitor ile Android (Play Store) ve iOS (App Store) paketleri
-- [ ] Gizlilik politikası, mağaza görselleri, ikon seti
+| Sekme | İçerik |
+|---|---|
+| 🏠 Bugün | Selamlama, günlük hedef, "Çalış" düğmesi, Bilemediklerim, seri |
+| 🎮 Pratik | Ters mod, yazma, kalıp tamamlama, eşleştirme, doğru/yanlış, fiil sınavı, sınav modu, karışan kelimeler |
+| 📚 Kelimeler | Arama ve filtre, kelime detayı, favoriler, kendi kelimelerim, konu desteleri |
+| 📈 İlerleme | Kariyer yolu (A1 → C1), XP ve unvan, istatistik, takvim ısı haritası, rozetler, haftalık özet |
+| 👤 Profil | İsim, dil (TR/EN), aksan, otomatik seslendirme, ses/titreşim, günlük hedef, yedek ve dışa aktarma |
+
+Kurallar:
+- **Başlangıç:** İsim sorulur, ardından her seviyeden birkaç kelimeyle **seviye tespit sınavı** yapılır. Kullanıcı bildiği seviyeleri atlar ve takıldığı seviyeden başlar.
+- **Geçilen seviyeler:** Arada bir, geçilen seviyelerden daha önce sorulmamış kelimeler kontrol amaçlı sorulur. Bilinirse bir daha sorulmaz, bilinemezse normal tekrara girer.
+- **A1 ve A2 kelimeleri:** Bir kez bilinen kelime "tamamlandı" sayılır ve tekrar sorulmaz. Bilinemeyen kelime öğrenilene kadar tekrarlanır, sonra o da tamamlanır.
+- **Seviye atlama:** Mevcut seviyenin büyük kısmı bilinince sonraki seviyenin kilidi açılır.
+- **Karışık soru tipi:** Yeni kartlar İngilizce → Türkçe sorulur. Kart iyi bilindikçe Türkçe → İngilizce soruya, sonra yazma sorusuna dönüşür.
+
+Seçilen özellikler (numaralar özellik listesindeki sırayla):
+- [x] Alt sekme düzeni, TR/EN arayüz dili (38), ilk açılış ve isim (37)
+- [x] Seviye tespit sınavı, kariyer yolu, A1/A2 ve geçilen seviye kuralları (26)
+- [x] Ters mod (1), yazma modu (2), karışık soru tipleri
+- [x] Aksan seçimi ve otomatik seslendirme (30), ses efektleri ve titreşim (23)
+- [x] Geri al (32)
+
+### Faz 4 — Pratik modları
+- [ ] Kalıp tamamlama (5), eşleştirme oyunu (7), doğru/yanlış kaydırma (8)
+- [ ] Sınav modu (27), karışan kelimeler (25)
+
+### Faz 5 — Kelimeler
+- [ ] Kelime listesi, arama, filtre (10); kelime detay sayfası (9)
+- [ ] Favori / "zaten biliyorum" işaretleme (15); kendi kelimeni ekle (14)
+
+### Faz 6 — İlerleme ve motivasyon
+- [ ] İstatistik sayfası (17), takvim ısı haritası (18)
+- [ ] Rozetler (19), XP ve unvanlar (20), seri koruyucu (21), haftalık özet (22)
+- [ ] Zor kelime tespiti: sık yanlış yapılan kelimeler daha sık gelir (24)
+
+### Faz 7 — Veri zenginleştirme
+- [ ] Telaffuz yazısı / IPA (11), kelime ailesi (12), eş ve zıt anlamlılar (13), konu desteleri (16)
+
+### Faz 8 — Yedek, bildirim, store
+- [ ] Otomatik yedek hatırlatması (34), Excel/Anki'ye dışa aktarma (35)
+- [ ] Günlük hatırlatma bildirimi (28): web uygulamasında zamanlanmış bildirim için sunucu gerekir, mağaza uygulamasında cihazın kendi bildirimiyle yapılır
+- [ ] Capacitor ile Android ve iOS paketleri, gizlilik politikası, mağaza görselleri
+
+### Sonraya bırakılanlar
+- Tema ve yazı boyutu seçimi (31)
+- Bulut senkronizasyonu (33)
