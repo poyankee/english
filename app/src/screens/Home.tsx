@@ -1,6 +1,6 @@
 import type { AppData } from '../App'
-import { inScope, type Mode } from '../session'
-import { isMistake, RESCUED_BOX } from '../srs'
+import { inScope, isVerb, VERB_TEST_SIZE, type Mode } from '../session'
+import { isMistake, KNOWN_BOX } from '../srs'
 import { LEVELS } from '../types'
 
 type Go = (s: { name: 'quiz'; mode: Mode } | { name: 'mistakes' } | { name: 'settings' }) => void
@@ -18,6 +18,7 @@ export function Home({ data, go }: { data: AppData; go: Go }) {
     scoped.filter((c) => !progress.has(c.id)).length,
   )
   const mistakes = [...progress.values()].filter(isMistake).length
+  const verbs = scoped.filter(isVerb).length
 
   return (
     <main className="home">
@@ -46,23 +47,36 @@ export function Home({ data, go }: { data: AppData; go: Go }) {
         <small>{mistakes} kelime</small>
       </button>
 
+      <button className="secondary big" onClick={() => go({ name: 'quiz', mode: 'verbs' })} disabled={!verbs}>
+        🏃 Fiil sınavı
+        <small>{VERB_TEST_SIZE} fiil · seçili seviyelerden</small>
+      </button>
+
       <section className="levels">
+        <div className="legend small">
+          <span>
+            <i className="dot learned" /> biliyorum
+          </span>
+          <span>
+            <i className="dot started" /> çalışıyorum
+          </span>
+        </div>
         {LEVELS.map((level) => {
           const inLevel = cards.filter((c) => c.level === level)
           if (!inLevel.length) return null
-          const learned = inLevel.filter((c) => (progress.get(c.id)?.box ?? 0) >= RESCUED_BOX).length
+          const known = inLevel.filter((c) => (progress.get(c.id)?.box ?? 0) >= KNOWN_BOX).length
           const started = inLevel.filter((c) => progress.has(c.id)).length
           return (
             <div key={level} className={settings.levels.includes(level) ? '' : 'muted'}>
               <div className="row between">
                 <b>{level}</b>
-                <span>
-                  {learned} / {inLevel.length}
+                <span className="small">
+                  {known} biliyorum · {started - known} çalışıyorum · {inLevel.length - started} yeni
                 </span>
               </div>
               <div className="bar">
                 <span className="started" style={{ width: `${(100 * started) / inLevel.length}%` }} />
-                <span className="learned" style={{ width: `${(100 * learned) / inLevel.length}%` }} />
+                <span className="learned" style={{ width: `${(100 * known) / inLevel.length}%` }} />
               </div>
             </div>
           )

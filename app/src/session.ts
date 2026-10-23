@@ -5,7 +5,18 @@ import type { Card, Progress, Settings } from './types'
 export const RELEARN_GAP = 4
 export const CHOICES = 5
 
-export type Mode = 'study' | 'mistakes'
+export type Mode = 'study' | 'mistakes' | 'verbs'
+/** Fiil sınavında sorulacak kart sayısı */
+export const VERB_TEST_SIZE = 20
+
+const VERB_POS = new Set(['verb', 'modal verb', 'auxiliary verb'])
+/** Fiil kalıplarını (get up, look for sth…) tanımak için: kalıbın ilk kelimesi bilinen bir fiil mi? */
+const PHRASE_VERB_STARTS = new Set(['get', 'go', 'come', 'take', 'make', 'look', 'find', 'give', 'put', 'turn', 'set', 'bring', 'keep', 'run', 'pick', 'carry', 'break', 'work', 'think', 'grow', 'wake', 'stand', 'sit', 'pay', 'wait', 'listen', 'talk', 'speak', 'ask', 'agree', 'arrive', 'live', 'play', 'spend', 'stay', 'have', 'learn', 'know', 'hold', 'fill', 'end', 'begin', 'deal', 'depend', 'fall', 'figure', 'point', 'rely', 'show', 'sort', 'throw', 'try', 'write', 'call', 'check', 'cut', 'hang', 'move', 'pass', 'pull', 'send', 'sign', 'slow', 'calm', 'cheer', 'clean', 'close', 'drop', 'eat', 'focus', 'leave', 'let', 'lie', 'log', 'shut', 'take', 'tidy', 'warm', 'wash', 'wear', 'back', 'belong', 'catch', 'die', 'do', 'dress', 'feel', 'help', 'kick', 'lead', 'lock', 'miss', 'open', 'plug', 'rule', 'settle', 'stick', 'stop', 'switch', 'tear', 'use', 'watch', 'wipe', 'add', 'apply', 'believe', 'compare', 'complain', 'concentrate', 'consist', 'cope', 'dream', 'happen', 'hear', 'hope', 'insist', 'laugh', 'mean', 'object', 'prepare', 'protect', 'provide', 'recover', 'refer', 'reply', 'respond', 'search', 'succeed', 'suffer', 'worry', 'save', 'raise', 'reach', 'build', 'hand', 'join', 'mix', 'count', 'face', 'line', 'note', 'step', 'top', 'name', 'share', 'base', 'aim', 'act', 'care', 'see', 'tell', 'say', 'enjoy', 'win', 'lose', 'meet', 'need', 'want', 'like', 'love', 'hate', 'buy', 'sell', 'drive', 'fly', 'travel', 'visit', 'study', 'teach', 'read', 'start', 'change', 'decide', 'explain', 'remember', 'forget'])
+
+export function isVerb(card: Card): boolean {
+  if (VERB_POS.has(card.pos)) return true
+  return card.pos === 'phrase' && card.word.includes(' ') && PHRASE_VERB_STARTS.has(card.word.split(' ')[0].toLowerCase())
+}
 
 export interface Session {
   mode: Mode
@@ -35,17 +46,29 @@ export function startSession(
   cards: Card[],
   progress: Map<string, Progress>,
   newToday: number,
+  settings: Settings,
+  now: number,
+  rand = Math.random,
 ): Session {
-  const queue =
-    mode === 'mistakes'
-      ? cards
-          .filter((c) => {
-            const p = progress.get(c.id)
-            return p && isMistake(p)
-          })
-          .sort(() => Math.random() - 0.5)
-          .map((c) => c.id)
-      : []
+  const shuffle = <T,>(xs: T[]) => xs.map((x) => [rand(), x] as const).sort((a, b) => a[0] - b[0]).map(([, x]) => x)
+  let queue: string[] = []
+  if (mode === 'mistakes') {
+    queue = shuffle(cards.filter((c) => {
+      const p = progress.get(c.id)
+      return p && isMistake(p)
+    })).map((c) => c.id)
+  } else if (mode === 'verbs') {
+    // Önce vadesi gelmiş fiiller, sonra daha önce görülenler, en son yeni fiiller
+    const verbs = cards.filter((c) => isVerb(c) && inScope(c, settings))
+    const rank = (c: Card) => {
+      const p = progress.get(c.id)
+      return !p ? 2 : p.due <= now ? 0 : 1
+    }
+    queue = [0, 1, 2]
+      .flatMap((r) => shuffle(verbs.filter((c) => rank(c) === r)))
+      .slice(0, VERB_TEST_SIZE)
+      .map((c) => c.id)
+  }
   return { mode, relearn: [], queue, newToday }
 }
 
@@ -64,7 +87,7 @@ export function pickNext(
   const ready = session.relearn.find((r) => r.after <= 0)
   if (ready) return byId(ready.id)
 
-  if (session.mode === 'mistakes') {
+  if (session.mode !== 'study') {
     const id = session.queue[0] ?? session.relearn[0]?.id
     return id ? byId(id) : null
   }

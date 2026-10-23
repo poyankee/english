@@ -22,13 +22,18 @@ const POS_LABEL: Record<string, string> = {
   article: 'tanımlık',
   phrase: 'kalıp',
 }
+const DONE_TITLE: Record<Mode, string> = {
+  study: 'Bugünlük bu kadar!',
+  mistakes: 'Bilemediklerin bitti!',
+  verbs: 'Fiil sınavı bitti!',
+}
 const POS_EMOJI: Record<string, string> = { verb: '🏃', adjective: '🎨', adverb: '⚡', phrase: '💬' }
 
 export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit: () => void }) {
   const { cards, settings } = data
   // Oturum boyunca ilerlemeyi yerelde tutuyoruz; her cevap ayrıca veritabanına yazılıyor
   const [progress] = useState(() => new Map(data.progress))
-  const [session, setSession] = useState<Session>(() => startSession(mode, cards, progress, data.day.newCards))
+  const [session, setSession] = useState<Session>(() => startSession(mode, cards, progress, data.day.newCards, settings, Date.now()))
   const [card, setCard] = useState<Card | null>(() => pickNext(session, cards, progress, settings, Date.now()))
   const [picked, setPicked] = useState<string | null>(null)
   const [count, setCount] = useState({ done: 0, correct: 0 })
@@ -43,7 +48,7 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
     return (
       <main className="center done">
         <div className="emoji">🎉</div>
-        <h2>{mode === 'mistakes' ? 'Bilemediklerin bitti!' : 'Bugünlük bu kadar!'}</h2>
+        <h2>{DONE_TITLE[mode]}</h2>
         <p>
           {count.done} kart · {count.correct} doğru
         </p>
@@ -60,8 +65,8 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
     const c = card!
     const prev = progress.get(c.id)
     const now = Date.now()
-    // Bilemediklerim modunda vadesi gelmemiş kartın doğru cevabı takvimi ileri atmasın
-    const offSchedule = mode === 'mistakes' && result !== 'wrong' && prev && prev.due > now
+    // Bilemediklerim / fiil sınavında vadesi gelmemiş kartın doğru cevabı takvimi ileri atmasın
+    const offSchedule = mode !== 'study' && result !== 'wrong' && prev && prev.due > now
     const p = offSchedule ? { ...prev, seen: prev.seen + 1, lastSeen: now } : answer(prev, c.id, result, now)
     progress.set(c.id, p)
     await recordAnswer(p, !prev, result === 'correct')

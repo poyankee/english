@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { answer, INTERVALS, isMistake, KNOWN_BOX } from './srs'
-import { afterAnswer, buildChoices, pickNext, RELEARN_GAP, startSession } from './session'
+import { afterAnswer, buildChoices, isVerb, pickNext, RELEARN_GAP, startSession, VERB_TEST_SIZE } from './session'
 import { DEFAULT_SETTINGS, type Card, type Progress } from './types'
 
 const card = (id: string, extra: Partial<Card> = {}): Card => ({
@@ -49,7 +49,7 @@ describe('session', () => {
 
   it('yanlış bilinen kart RELEARN_GAP kart sonra tekrar gelir', () => {
     const progress = new Map<string, Progress>()
-    let s = startSession('study', cards, progress, 0)
+    let s = startSession('study', cards, progress, 0, DEFAULT_SETTINGS, 0)
     const seen: string[] = []
     for (let i = 0; i < RELEARN_GAP + 2; i++) {
       const c = pickNext(s, cards, progress, DEFAULT_SETTINGS, 0)!
@@ -62,19 +62,37 @@ describe('session', () => {
   })
 
   it('günlük yeni kart sınırına uyar', () => {
-    const s = startSession('study', cards, new Map(), DEFAULT_SETTINGS.dailyNew)
+    const s = startSession('study', cards, new Map(), DEFAULT_SETTINGS.dailyNew, DEFAULT_SETTINGS, 0)
     expect(pickNext(s, cards, new Map(), DEFAULT_SETTINGS, 0)).toBeNull()
   })
 
   it('vadesi gelen tekrar yeni karttan önce gelir', () => {
     const progress = new Map<string, Progress>([['g', { id: 'g', box: 2, due: 5, seen: 1, wrong: 0, lastSeen: 0 }]])
-    const s = startSession('study', cards, progress, 0)
+    const s = startSession('study', cards, progress, 0, DEFAULT_SETTINGS, 0)
     expect(pickNext(s, cards, progress, DEFAULT_SETTINGS, 10)!.id).toBe('g')
   })
 
   it('seçilmeyen seviyeler gelmez', () => {
-    const s = startSession('study', [card('x', { level: 'C1' })], new Map(), 0)
+    const s = startSession('study', [card('x', { level: 'C1' })], new Map(), 0, DEFAULT_SETTINGS, 0)
     expect(pickNext(s, [card('x', { level: 'C1' })], new Map(), DEFAULT_SETTINGS, 0)).toBeNull()
+  })
+})
+
+describe('fiil sınavı', () => {
+  it('sadece fiil ve fiil kalıplarını sorar, önce vadesi gelenleri', () => {
+    const cards = [
+      ...Array.from({ length: 30 }, (_, i) => card(`v${i}`, { pos: 'verb' })),
+      card('n', { pos: 'noun' }),
+      card('p1', { pos: 'phrase', word: 'get up' }),
+      card('p2', { pos: 'phrase', word: 'in fact' }),
+    ]
+    const progress = new Map<string, Progress>([['v29', { id: 'v29', box: 2, due: 5, seen: 1, wrong: 0, lastSeen: 0 }]])
+    const s = startSession('verbs', cards, progress, 0, DEFAULT_SETTINGS, 10)
+    expect(s.queue).toHaveLength(VERB_TEST_SIZE)
+    expect(s.queue[0]).toBe('v29')
+    expect(s.queue).not.toContain('n')
+    expect(isVerb(cards[31])).toBe(true)
+    expect(isVerb(cards[32])).toBe(false)
   })
 })
 
