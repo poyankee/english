@@ -12,8 +12,8 @@ export function Mistakes({ data, onBack, onStudy }: { data: AppData; onBack: () 
   const active = rows.filter(({ p }) => isMistake(p!)).length
 
   return (
-    <main className="list">
-      <header className="row between">
+    <main className="list stagger">
+      <header className="page-head">
         <button className="icon" aria-label="Geri" onClick={onBack}>
           ←
         </button>
@@ -23,16 +23,24 @@ export function Mistakes({ data, onBack, onStudy }: { data: AppData; onBack: () 
       <p className="muted">
         İlk seferde bilemediğin kelimeler burada. {RESCUED_BOX} kez üst üste doğru bilince listeden çıkarlar.
       </p>
-      <button className="primary big" onClick={onStudy} disabled={!active}>
-        Bunları çalış<small>{active} kelime</small>
+      <button className="action main" onClick={onStudy} disabled={!active}>
+        <span className="action-icon">🧠</span>
+        <span className="action-text">
+          <b>Bunları çalış</b>
+          <small>{active} kelime</small>
+        </span>
+        <span className="chev">›</span>
       </button>
       <label className="row">
         <input type="checkbox" checked={showRescued} onChange={(e) => setShowRescued(e.target.checked)} />
         Öğrendiklerimi de göster
       </label>
-      <ul>
+      {rows.length === 0 && (
+        <p className="muted center">Henüz bilemediğin kelime yok. Böyle devam! 🎉</p>
+      )}
+      <ul hidden={rows.length === 0}>
         {rows.map(({ card, p }) => (
-          <li key={card.id} onClick={() => speak(card.word)}>
+          <li key={card.id} className={`lvl-${card.level}`} onClick={() => speak(card.word)}>
             <span className="emoji-sm">{card.emoji}</span>
             <div className="grow">
               <b>{card.word}</b> <span className="muted">{card.tr}</span>

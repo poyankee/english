@@ -30,8 +30,8 @@ export function SettingsScreen({ data, onBack }: { data: AppData; onBack: () => 
   }
 
   return (
-    <main className="list">
-      <header className="row between">
+    <main className="list stagger">
+      <header className="page-head">
         <button className="icon" aria-label="Geri" onClick={onBack}>
           ←
         </button>
@@ -39,50 +39,57 @@ export function SettingsScreen({ data, onBack }: { data: AppData; onBack: () => 
         <span />
       </header>
 
-      <h3>Seviyeler</h3>
-      <div className="row wrap">
-        {LEVELS.map((l) => {
-          const on = s.levels.includes(l)
-          return (
-            <button
-              key={l}
-              className={`chip ${on ? 'on' : ''}`}
-              onClick={() => update({ ...s, levels: on ? s.levels.filter((x) => x !== l) : [...s.levels, l] })}
-            >
-              {l} <small>{data.cards.filter((c) => c.level === l).length}</small>
-            </button>
-          )
-        })}
-      </div>
+      <section className="panel">
+        <h3>Seviyeler</h3>
+        <div className="row wrap">
+          {LEVELS.map((l) => {
+            const on = s.levels.includes(l)
+            return (
+              <button
+                key={l}
+                className={`chip lvl-${l} ${on ? 'on' : ''}`}
+                onClick={() => update({ ...s, levels: on ? s.levels.filter((x) => x !== l) : [...s.levels, l] })}
+              >
+                {l} <small>{data.cards.filter((c) => c.level === l).length}</small>
+              </button>
+            )
+          })}
+        </div>
 
-      <label className="row">
-        <input type="checkbox" checked={s.phrases} onChange={(e) => update({ ...s, phrases: e.target.checked })} />
-        Kalıpları da sor (phrasal verb, deyim…)
-      </label>
-
-      <h3>Günlük yeni kelime: {s.dailyNew}</h3>
-      <input
-        type="range"
-        min={5}
-        max={50}
-        step={5}
-        value={s.dailyNew}
-        onChange={(e) => update({ ...s, dailyNew: Number(e.target.value) })}
-      />
-
-      <h3>Yedekleme</h3>
-      <p className="muted">İlerlemen sadece bu cihazda duruyor. Telefon değiştirirken yedeği indirip yeni cihazda yükle.</p>
-      <div className="row wrap">
-        <button className="secondary" onClick={download}>
-          Yedeği indir
-        </button>
-        <label className="secondary button">
-          Yedek yükle
-          <input type="file" accept="application/json" hidden onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
+        <label className="row">
+          <input type="checkbox" checked={s.phrases} onChange={(e) => update({ ...s, phrases: e.target.checked })} />
+          Kalıpları da sor (phrasal verb, deyim…)
         </label>
-      </div>
-      {msg && <p>{msg}</p>}
-      <p className="muted small">{data.cards.length} kart yüklü</p>
+      </section>
+
+      <section className="panel">
+        <h3>Günlük yeni kelime: {s.dailyNew}</h3>
+        <input
+          type="range"
+          min={5}
+          max={50}
+          step={5}
+          value={s.dailyNew}
+          onChange={(e) => update({ ...s, dailyNew: Number(e.target.value) })}
+        />
+      </section>
+
+      <section className="panel">
+        <h3>Yedekleme</h3>
+        <p className="muted">İlerlemen sadece bu cihazda duruyor. Telefon değiştirirken yedeği indirip yeni cihazda yükle.</p>
+        <div className="row wrap">
+          <button className="secondary" onClick={download}>
+            Yedeği indir
+          </button>
+          <label className="secondary button">
+            Yedek yükle
+            <input type="file" accept="application/json" hidden onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
+          </label>
+        </div>
+        {msg && <p>{msg}</p>}
+      </section>
+
+      <p className="muted small center">{data.cards.length} kart yüklü</p>
     </main>
   )
 }
