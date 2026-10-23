@@ -5,6 +5,8 @@ import {
   checkTyped,
   CHECKUP_EVERY,
   EXAM_SIZE,
+  filterWords,
+  newCardOrder,
   phraseBlank,
   graduates,
   isVerb,
@@ -257,5 +259,33 @@ describe('sınav, karışanlar, kalıp tamamlama', () => {
     expect(b.choices).toHaveLength(4)
     expect(b.choices).toContain('after')
     expect(phraseBlank(card('in fact', { pos: 'phrase' }))).toBeNull()
+  })
+})
+
+describe('kelimeler sekmesi', () => {
+  const cards = [card('house', { tr: 'ev' }), card('mouse', { tr: 'fare' }), card('evening', { tr: 'akşam', level: 'A2' }), card('look up', { pos: 'phrase', tr: 'bakmak' })]
+  const base = { query: '', level: 'all', status: 'all', pos: 'all' } as const
+
+  it('İngilizce kelimede ve Türkçe karşılıkta arar, baştan eşleşenleri öne alır', () => {
+    expect(filterWords(cards, new Map(), new Set(), { ...base, query: 'ev' }).map((c) => c.id)).toEqual(['evening', 'house'])
+    expect(filterWords(cards, new Map(), new Set(), { ...base, query: 'ouse' }).map((c) => c.id)).toEqual(['house', 'mouse'])
+  })
+
+  it('seviye, tür, durum ve favoriye göre filtreler', () => {
+    const progress = new Map([['house', prog('house', { box: KNOWN_BOX })], ['mouse', prog('mouse', { box: 1 })]])
+    expect(filterWords(cards, progress, new Set(), { ...base, level: 'A2' }).map((c) => c.id)).toEqual(['evening'])
+    expect(filterWords(cards, progress, new Set(), { ...base, pos: 'phrase' }).map((c) => c.id)).toEqual(['look up'])
+    expect(filterWords(cards, progress, new Set(), { ...base, status: 'known' }).map((c) => c.id)).toEqual(['house'])
+    expect(filterWords(cards, progress, new Set(), { ...base, status: 'learning' }).map((c) => c.id)).toEqual(['mouse'])
+    expect(filterWords(cards, progress, new Set(['look up']), { ...base, status: 'favorites' }).map((c) => c.id)).toEqual(['look up'])
+  })
+
+  it('kullanıcının eklediği kelimeler yeni kart sırasında en önde', () => {
+    const order = newCardOrder([...cards, card('custom:1', { custom: true, level: 'B1' })])
+    expect(order[0].id).toBe('custom:1')
+  })
+
+  it('favoriler modu yalnızca favori kartları sorar', () => {
+    expect(startSession('favorites', cards, new Map(), 0, settings(), 0, Math.random, {}, new Set(['mouse'])).queue).toEqual(['mouse'])
   })
 })

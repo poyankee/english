@@ -53,3 +53,14 @@ export function isMistake(p: Progress): boolean {
 export function isKnown(p: Progress | undefined): boolean {
   return !!p && (p.done || p.box >= KNOWN_BOX)
 }
+
+/** "Zaten biliyorum": kart tamamlanır ve bir daha sorulmaz */
+export function markDone(id: string, prev: Progress | undefined, now: number): Progress {
+  return { id, box: MAX_BOX, due: now + NEVER, seen: prev?.seen ?? 0, wrong: prev?.wrong ?? 0, lastSeen: now, done: true }
+}
+
+/** Bir sonraki tekrara kalan süre (gün); vadesi geçmişse 0, tamamlandıysa null */
+export function daysUntilDue(p: Progress, now: number): number | null {
+  if (p.done) return null
+  return Math.max(0, Math.ceil((p.due - now) / DAY))
+}

@@ -48,7 +48,7 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
   const { cards, settings } = data
   // Oturum boyunca ilerlemeyi yerelde tutuyoruz; her cevap ayrıca veritabanına yazılıyor
   const [progress] = useState(() => new Map(data.progress))
-  const [session, setSession] = useState<Session>(() => startSession(mode, cards, progress, data.day.newCards, settings, Date.now(), Math.random, data.confusions))
+  const [session, setSession] = useState<Session>(() => startSession(mode, cards, progress, data.day.newCards, settings, Date.now(), Math.random, data.confusions, data.favorites))
   const [pick, setPick] = useState<Pick | null>(() => pickNext(session, cards, progress, settings, Date.now()))
   const [type, setType] = useState<QuestionType>(() =>
     pick ? questionType(pick.card, progress.get(pick.card.id), pick.kind, mode) : 'en-tr',

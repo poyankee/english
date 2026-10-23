@@ -1,5 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie'
-import { DEFAULT_SETTINGS, LEVELS, type DayStats, type Level, type Progress, type Settings } from './types'
+import { DEFAULT_SETTINGS, LEVELS, type Card, type DayStats, type Level, type Progress, type Settings } from './types'
 
 const db = new Dexie('kelime') as Dexie & {
   progress: EntityTable<Progress, 'id'>
@@ -99,6 +99,32 @@ export async function loadBest(game: string): Promise<number | null> {
 
 export async function saveBest(game: string, value: number) {
   await db.meta.put({ key: `best:${game}`, value })
+}
+
+export async function loadFavorites(): Promise<Set<string>> {
+  return new Set(((await db.meta.get('favorites'))?.value as string[]) ?? [])
+}
+
+export async function toggleFavorite(id: string): Promise<Set<string>> {
+  const favs = await loadFavorites()
+  if (favs.has(id)) favs.delete(id)
+  else favs.add(id)
+  await db.meta.put({ key: 'favorites', value: [...favs] })
+  return favs
+}
+
+export async function loadCustomWords(): Promise<Card[]> {
+  return ((await db.meta.get('customWords'))?.value as Card[]) ?? []
+}
+
+export async function saveCustomWords(words: Card[]) {
+  await db.meta.put({ key: 'customWords', value: words })
+}
+
+/** Kartın ilerlemesini doğrudan yazar ya da siler ("zaten biliyorum", "baştan öğren") */
+export async function setProgress(id: string, p: Progress | null) {
+  if (p) await db.progress.put(p)
+  else await db.progress.delete(id)
 }
 
 /** Bugünden geriye doğru, en az bir kart çalışılmış ardışık gün sayısı */

@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
-import { loadConfusions, loadDay, loadProgress, loadSettings, saveSettings, streak } from './db'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { loadConfusions, loadCustomWords, loadDay, loadFavorites, loadProgress, loadSettings, saveSettings, streak } from './db'
 import { setFeedback } from './feedback'
 import { I18n, makeT } from './i18n'
 import { Match } from './games/Match'
@@ -29,6 +29,7 @@ export interface AppData {
   day: DayStats
   streak: number
   confusions: Confusions
+  favorites: Set<string>
 }
 
 export interface Nav {
@@ -55,20 +56,37 @@ export default function App() {
 
   const t = useMemo(() => makeT(data?.settings.lang ?? 'tr'), [data?.settings.lang])
 
-  const refresh = useCallback(async () => {
-    const [progress, settings, day, s, confusions] = await Promise.all([loadProgress(), loadSettings(), loadDay(), streak(), loadConfusions()])
-    setData((d) => (d ? { ...d, progress, settings, day, streak: s, confusions } : d))
+  // cards.json'dan gelen kartlar; kullanıcının eklediği kelimeler her yüklemede bunlara eklenir
+  const baseCards = useRef<Card[]>([])
+
+  const load = useCallback(async () => {
+    const [progress, settings, day, s, confusions, favorites, custom] = await Promise.all([
+      loadProgress(),
+      loadSettings(),
+      loadDay(),
+      streak(),
+      loadConfusions(),
+      loadFavorites(),
+      loadCustomWords(),
+    ])
+    const cards = newCardOrder([...baseCards.current, ...custom])
+    return { cards, progress, settings, day, streak: s, confusions, favorites }
   }, [])
+
+  const refresh = useCallback(async () => {
+    const d = await load()
+    setData(d)
+  }, [load])
 
   useEffect(() => {
     ;(async () => {
       const res = await fetch(`${import.meta.env.BASE_URL}cards.json`)
-      const cards = newCardOrder((await res.json()) as Card[])
-      const [progress, settings, day, s, confusions] = await Promise.all([loadProgress(), loadSettings(), loadDay(), streak(), loadConfusions()])
-      setData({ cards, progress, settings, day, streak: s, confusions })
-      if (!settings.name) setOverlay({ name: 'onboarding' })
+      baseCards.current = (await res.json()) as Card[]
+      const d = await load()
+      setData(d)
+      if (!d.settings.name) setOverlay({ name: 'onboarding' })
     })().catch((e) => setError(String(e)))
-  }, [])
+  }, [load])
 
   useEffect(() => {
     if (!data) return
@@ -114,7 +132,7 @@ export default function App() {
   else if (overlay?.name === 'mistakes') content = <Mistakes data={data} onBack={close} onStudy={() => nav.quiz('mistakes')} />
   else if (overlay?.name === 'onboarding') content = <Onboarding data={data} updateSettings={updateSettings} onDone={close} />
   else if (tab === 'practice') content = <Practice data={data} nav={nav} />
-  else if (tab === 'words') content = <Words data={data} />
+  else if (tab === 'words') content = <Words data={data} nav={nav} refresh={refresh} />
   else if (tab === 'progress') content = <ProgressScreen data={data} />
   else if (tab === 'profile') content = <ProfileScreen data={data} updateSettings={updateSettings} nav={nav} />
   else content = <Today data={data} nav={nav} updateSettings={updateSettings} />

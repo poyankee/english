@@ -17,6 +17,8 @@ export interface Card {
   ex?: string
   emoji?: string
   sense?: string
+  /** Kullanıcının kendi eklediği kelime */
+  custom?: boolean
 }
 
 export interface Progress {

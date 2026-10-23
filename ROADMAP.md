@@ -114,8 +114,8 @@ Seçilen özellikler (numaralar özellik listesindeki sırayla):
 - [x] Sınav modu (27), karışan kelimeler (25)
 
 ### Faz 5 — Kelimeler
-- [ ] Kelime listesi, arama, filtre (10); kelime detay sayfası (9)
-- [ ] Favori / "zaten biliyorum" işaretleme (15); kendi kelimeni ekle (14)
+- [x] Kelime listesi, arama, filtre (10); kelime detay sayfası (9)
+- [x] Favori / "zaten biliyorum" işaretleme (15); kendi kelimeni ekle (14)
 
 ### Faz 6 — İlerleme ve motivasyon
 - [ ] İstatistik sayfası (17), takvim ısı haritası (18)

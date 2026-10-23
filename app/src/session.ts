@@ -14,7 +14,7 @@ export const LEVEL_UP_RATIO = 0.8
 export const PLACEMENT_PER_LEVEL = 6
 export const PLACEMENT_PASS = 4
 
-export type Mode = 'study' | 'mistakes' | 'verbs' | 'reverse' | 'typing' | 'exam' | 'confused'
+export type Mode = 'study' | 'mistakes' | 'verbs' | 'reverse' | 'typing' | 'exam' | 'confused' | 'favorites'
 /** Sınav modunda sorulacak soru sayısı */
 export const EXAM_SIZE = 30
 /** Karıştırılan kelime çiftleri: kart id -> (yanlışlıkla seçilen kart id -> kaç kez) */
@@ -56,9 +56,9 @@ export function inScope(card: Card, s: Settings): boolean {
   return card.level === s.currentLevel && (card.pos !== 'phrase' || s.phrases)
 }
 
-/** Kart sırası: seviye, sonra id'ye göre sabit karışık sıra (alfabetik gelmesin diye) */
+/** Kart sırası: kullanıcının eklediği kelimeler en önde, sonra seviye ve id'ye göre sabit karışık sıra */
 export function newCardOrder(cards: Card[]): Card[] {
-  return [...cards].sort((a, b) => a.level.localeCompare(b.level) || hash(a.id) - hash(b.id))
+  return [...cards].sort((a, b) => Number(!!b.custom) - Number(!!a.custom) || a.level.localeCompare(b.level) || hash(a.id) - hash(b.id))
 }
 
 function hash(s: string) {
@@ -94,6 +94,7 @@ export function startSession(
   now: number,
   rand = Math.random,
   confusions: Confusions = {},
+  favorites: Set<string> = new Set(),
 ): Session {
   let queue: string[] = []
   const unlocked = (c: Card) => levelIndex(c.level) <= levelIndex(settings.currentLevel) && (c.pos !== 'phrase' || settings.phrases)
@@ -126,6 +127,11 @@ export function startSession(
     queue = shuffle(cards.filter(unlocked), rand)
       .slice(0, EXAM_SIZE)
       .map((c) => c.id)
+  } else if (mode === 'favorites') {
+    queue = shuffle(
+      cards.filter((c) => favorites.has(c.id)),
+      rand,
+    ).map((c) => c.id)
   } else if (mode === 'confused') {
     const total = (id: string) => Object.values(confusions[id] ?? {}).reduce((a, b) => a + b, 0)
     queue = Object.keys(confusions)
@@ -356,4 +362,36 @@ export function gamePool(cards: Card[], progress: Map<string, Progress>, setting
     rand,
   )
   return [...seen, ...rest].slice(0, size)
+}
+
+export type WordStatus = 'new' | 'learning' | 'known'
+
+export function wordStatus(p: Progress | undefined): WordStatus {
+  return !p ? 'new' : isKnown(p) ? 'known' : 'learning'
+}
+
+export interface WordFilter {
+  query: string
+  level: Level | 'all'
+  status: WordStatus | 'all' | 'favorites' | 'custom'
+  pos: 'all' | 'noun' | 'verb' | 'adjective' | 'adverb' | 'phrase'
+}
+
+/** Kelimeler sekmesindeki arama ve filtreler; İngilizce kelimede ve Türkçe karşılıkta arar */
+export function filterWords(cards: Card[], progress: Map<string, Progress>, favorites: Set<string>, f: WordFilter): Card[] {
+  const q = f.query.trim().toLocaleLowerCase('tr')
+  const res = cards.filter((c) => {
+    if (f.level !== 'all' && c.level !== f.level) return false
+    if (f.pos !== 'all' && c.pos !== f.pos) return false
+    if (f.status === 'favorites' && !favorites.has(c.id)) return false
+    if (f.status === 'custom' && !c.custom) return false
+    if ((f.status === 'new' || f.status === 'learning' || f.status === 'known') && wordStatus(progress.get(c.id)) !== f.status) return false
+    return !q || c.word.toLowerCase().includes(q) || c.tr.toLocaleLowerCase('tr').includes(q)
+  })
+  // Kelimenin başında eşleşenler önce, sonra alfabetik
+  return res.sort((a, b) => {
+    const as = q && a.word.toLowerCase().startsWith(q) ? 0 : 1
+    const bs = q && b.word.toLowerCase().startsWith(q) ? 0 : 1
+    return as - bs || a.word.localeCompare(b.word)
+  })
 }

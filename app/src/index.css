@@ -1075,6 +1075,10 @@ input[type='checkbox'] {
   background: var(--surface-2);
   color: var(--text);
 }
+.field input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
 .seg {
   display: grid;
   grid-auto-flow: column;
@@ -1399,6 +1403,184 @@ input[type='checkbox'] {
 }
 .primary.no {
   background: var(--wrong);
+}
+
+/* ---------- Kelimeler ---------- */
+.words {
+  gap: 10px;
+}
+.small-btn {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+.search {
+  width: 100%;
+  font: inherit;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+}
+.search:focus {
+  border-color: var(--accent);
+}
+.chips-row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 -16px;
+  padding: 0 16px 2px;
+}
+.chips-row::-webkit-scrollbar {
+  display: none;
+}
+.chips-row .chip {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.word-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.word-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+.word-list li:last-child {
+  border-bottom: 0;
+}
+.word-list li:active {
+  background: var(--surface-2);
+}
+.word-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.word-text span {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--line);
+}
+.status-dot.learning {
+  background: var(--orange);
+}
+.status-dot.known {
+  background: var(--right);
+}
+
+/* ---------- Alttan açılan pencere ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(20, 16, 40, 0.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fade-in 0.2s ease;
+}
+.modal-sheet {
+  width: 100%;
+  max-width: 520px;
+  max-height: 88dvh;
+  overflow: auto;
+  background: var(--bg);
+  border-radius: 24px 24px 0 0;
+  padding: 10px 18px max(20px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: sheet-up 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.modal-sheet h2 {
+  margin: 0;
+}
+.grabber {
+  width: 44px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--line);
+  margin: 0 auto 4px;
+}
+.detail-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.detail-head .emoji-bubble {
+  margin: 0;
+  flex-shrink: 0;
+}
+.detail-head .word {
+  margin: 0;
+}
+.meta.left {
+  justify-content: flex-start;
+}
+.detail-tr {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--lvl, var(--accent));
+}
+.example-btn {
+  text-align: left;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--surface);
+  padding: 12px 14px;
+}
+.detail-status {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+}
+.detail-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.detail-actions .secondary {
+  font-size: 0.88rem;
+  padding: 11px 8px;
+}
+.danger {
+  color: var(--wrong);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
 }
 
 /* ---------- Animasyonlar ---------- */
