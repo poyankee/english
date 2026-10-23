@@ -4,6 +4,8 @@ import {
   buildChoices,
   checkTyped,
   CHECKUP_EVERY,
+  EXAM_SIZE,
+  phraseBlank,
   graduates,
   isVerb,
   nextLevel,
@@ -228,5 +230,32 @@ describe('buildChoices', () => {
       ...Array.from({ length: 6 }, (_, i) => card(`w${i}`)),
     ]
     expect(new Set(buildChoices(pool[0], pool)).size).toBe(5)
+  })
+})
+
+describe('sınav, karışanlar, kalıp tamamlama', () => {
+  it('sınav açılmış seviyelerden EXAM_SIZE soru seçer', () => {
+    const cards = Array.from({ length: 50 }, (_, i) => card(`w${i}`))
+    expect(startSession('exam', cards, new Map(), 0, settings(), 0).queue).toHaveLength(EXAM_SIZE)
+  })
+
+  it('karışanlar modu en çok karıştırılan kelimeden başlar', () => {
+    const cards = [card('a'), card('b'), card('c')]
+    const s = startSession('confused', cards, new Map(), 0, settings(), 0, Math.random, { a: { b: 1 }, c: { a: 3 } })
+    expect(s.queue).toEqual(['c', 'a'])
+  })
+
+  it('karışanlar modunda karıştırılan kelime şıklarda bulunur', () => {
+    const pool = Array.from({ length: 30 }, (_, i) => card(`w${i}`))
+    for (let k = 0; k < 10; k++) expect(buildChoices(pool[0], pool, Math.random, 'tr', [pool[29]])).toContain(pool[29].tr)
+  })
+
+  it('kalıpta parçacığı boşluk yapar, parçacıksız kalıbı atlar', () => {
+    const b = phraseBlank(card('look after sb/sth', { pos: 'phrase' }))!
+    expect(b.parts).toEqual(['look', null, 'sb/sth'])
+    expect(b.answer).toBe('after')
+    expect(b.choices).toHaveLength(4)
+    expect(b.choices).toContain('after')
+    expect(phraseBlank(card('in fact', { pos: 'phrase' }))).toBeNull()
   })
 })

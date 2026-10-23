@@ -71,6 +71,36 @@ export async function savePlacement(known: Progress[]) {
   await db.progress.bulkPut(known)
 }
 
+/** Karıştırılan kelimeler: yanlış şıkkı seçtiğinde hangi kartla karıştırdığı kaydedilir */
+export async function loadConfusions(): Promise<Record<string, Record<string, number>>> {
+  return ((await db.meta.get('confusions'))?.value as Record<string, Record<string, number>>) ?? {}
+}
+
+export async function recordConfusion(cardId: string, otherId: string) {
+  const all = await loadConfusions()
+  all[cardId] = { ...all[cardId], [otherId]: (all[cardId]?.[otherId] ?? 0) + 1 }
+  await db.meta.put({ key: 'confusions', value: all })
+}
+
+/** Doğru bilinince karışıklık sayacını azaltır; sıfırlanan çiftler listeden çıkar */
+export async function easeConfusion(cardId: string) {
+  const all = await loadConfusions()
+  const entry = all[cardId]
+  if (!entry) return
+  for (const k of Object.keys(entry)) if (--entry[k] <= 0) delete entry[k]
+  if (!Object.keys(entry).length) delete all[cardId]
+  await db.meta.put({ key: 'confusions', value: all })
+}
+
+/** Oyunlardaki en iyi skor (eşleştirmede süre: düşük daha iyi) */
+export async function loadBest(game: string): Promise<number | null> {
+  return ((await db.meta.get(`best:${game}`))?.value as number | undefined) ?? null
+}
+
+export async function saveBest(game: string, value: number) {
+  await db.meta.put({ key: `best:${game}`, value })
+}
+
 /** Bugünden geriye doğru, en az bir kart çalışılmış ardışık gün sayısı */
 export async function streak(now = Date.now()): Promise<number> {
   const days = new Set((await db.days.toArray()).filter((d) => d.reviews > 0).map((d) => d.date))

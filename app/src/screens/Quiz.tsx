@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { AppData } from '../App'
 import { Choices, QuestionCard } from '../components/QuestionCard'
-import { recordAnswer, undoAnswer } from '../db'
+import { easeConfusion, recordAnswer, recordConfusion, undoAnswer } from '../db'
 import { feedback } from '../feedback'
 import { useT } from '../i18n'
 import {
@@ -19,7 +19,7 @@ import {
 } from '../session'
 import { speak } from '../speech'
 import { answer } from '../srs'
-import type { Answer, Progress, QuestionType } from '../types'
+import type { Answer, Card, Progress, QuestionType } from '../types'
 
 const CONFETTI_COLORS = ['#6c5ce7', '#a66cff', '#ff6b9d', '#f97316', '#22c55e', '#3b82f6', '#facc15']
 const UNDO_MS = 5000
@@ -48,7 +48,7 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
   const { cards, settings } = data
   // Oturum boyunca ilerlemeyi yerelde tutuyoruz; her cevap ayrıca veritabanına yazılıyor
   const [progress] = useState(() => new Map(data.progress))
-  const [session, setSession] = useState<Session>(() => startSession(mode, cards, progress, data.day.newCards, settings, Date.now()))
+  const [session, setSession] = useState<Session>(() => startSession(mode, cards, progress, data.day.newCards, settings, Date.now(), Math.random, data.confusions))
   const [pick, setPick] = useState<Pick | null>(() => pickNext(session, cards, progress, settings, Date.now()))
   const [type, setType] = useState<QuestionType>(() =>
     pick ? questionType(pick.card, progress.get(pick.card.id), pick.kind, mode) : 'en-tr',
@@ -61,6 +61,7 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
   const [bestCombo, setBestCombo] = useState(0)
   const [praise, setPraise] = useState('')
   const [undo, setUndo] = useState<UndoState | null>(null)
+  const [wrongList, setWrongList] = useState<Card[]>([])
   // "Devam"a iki kez hızlıca basılınca aynı cevap iki kez kaydedilmesin
   const saving = useRef(false)
   // İlerleme çubuğu için oturumun başında planlanan kart sayısı (yanlışlar sonradan eklenir)
@@ -74,7 +75,12 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
 
   const card = pick?.card
   const field = type === 'tr-en' ? 'word' : 'tr'
-  const choices = useMemo(() => (card && type !== 'type' ? buildChoices(card, cards, Math.random, field) : []), [card, cards, type, field])
+  const choices = useMemo(() => {
+    if (!card || type === 'type') return []
+    // Karışanlar modunda daha önce karıştırılan kelimeler mutlaka şıklarda olsun
+    const prefer = mode === 'confused' ? Object.keys(data.confusions[card.id] ?? {}).flatMap((id) => cards.filter((c) => c.id === id)) : []
+    return buildChoices(card, cards, Math.random, field, prefer)
+  }, [card, cards, type, field, mode, data.confusions])
   const answered = picked !== null
   const correct = !card ? false : type === 'type' ? typedResult !== 'wrong' : picked === card[field]
 
@@ -119,6 +125,18 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
             </div>
           </div>
         )}
+        {wrongList.length > 0 && (
+          <section className="wrong-list">
+            <h3>{t('done.wrongList')}</h3>
+            <ul>
+              {wrongList.map((c) => (
+                <li key={c.id}>
+                  <span>{c.emoji}</span> <b>{c.word}</b> <span className="muted">{c.tr}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
         <button className="primary" onClick={onExit}>
           {t('done.home')}
         </button>
@@ -142,7 +160,14 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
 
   function choose(ch: string) {
     setPicked(ch)
-    react(ch === card![field])
+    const ok = ch === card![field]
+    react(ok)
+    if (!ok) {
+      const other = cards.find((c) => c[field] === ch)
+      if (other) recordConfusion(card!.id, other.id)
+    } else if (mode === 'confused') {
+      easeConfusion(card!.id)
+    }
   }
 
   function submitTyped(giveUp = false) {
@@ -156,6 +181,21 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
     if (saving.current || !pick) return
     saving.current = true
     const c = pick.card
+    if (mode === 'exam') {
+      // Sınav modu tekrar takvimini etkilemez; yanlışlar sonda listelenir
+      if (result === 'wrong') setWrongList((w) => [...w, c])
+      const s = afterAnswer(session, c.id, false, false)
+      setSession(s)
+      setCounts((n) => ({ done: n.done + 1, correct: n.correct + (result === 'wrong' ? 0 : 1), wrong: n.wrong }))
+      const nextPick = pickNext(s, cards, progress, settings, Date.now())
+      setPick(nextPick)
+      setType(nextPick ? questionType(nextPick.card, progress.get(nextPick.card.id), nextPick.kind, mode) : 'en-tr')
+      setPicked(null)
+      setTyped('')
+      setTypedResult(null)
+      saving.current = false
+      return
+    }
     const prev = progress.get(c.id)
     const now = Date.now()
     // Pratik modlarında vadesi gelmemiş kartın doğru cevabı takvimi ileri atmasın
@@ -272,7 +312,7 @@ export function Quiz({ data, mode, onExit }: { data: AppData; mode: Mode; onExit
           {type === 'type' && !correct && picked && <span className="muted">{t('quiz.youTyped', { text: picked })}</span>}
           {card.ex && <p className="example">“{card.ex}”</p>}
           <div className="row">
-            {correct && (
+            {correct && mode !== 'exam' && (
               <button className="secondary" onClick={() => next('unsure')}>
                 {t('quiz.guessed')}
               </button>

@@ -14,7 +14,11 @@ export const LEVEL_UP_RATIO = 0.8
 export const PLACEMENT_PER_LEVEL = 6
 export const PLACEMENT_PASS = 4
 
-export type Mode = 'study' | 'mistakes' | 'verbs' | 'reverse' | 'typing'
+export type Mode = 'study' | 'mistakes' | 'verbs' | 'reverse' | 'typing' | 'exam' | 'confused'
+/** Sınav modunda sorulacak soru sayısı */
+export const EXAM_SIZE = 30
+/** Karıştırılan kelime çiftleri: kart id -> (yanlışlıkla seçilen kart id -> kaç kez) */
+export type Confusions = Record<string, Record<string, number>>
 /** Kartın neden geldiği: tekrar, yeni, yeniden öğrenme ya da geçilen seviyeden kontrol */
 export type PickKind = 'relearn' | 'review' | 'new' | 'checkup' | 'practice'
 export interface Pick {
@@ -89,6 +93,7 @@ export function startSession(
   settings: Settings,
   now: number,
   rand = Math.random,
+  confusions: Confusions = {},
 ): Session {
   let queue: string[] = []
   const unlocked = (c: Card) => levelIndex(c.level) <= levelIndex(settings.currentLevel) && (c.pos !== 'phrase' || settings.phrases)
@@ -117,6 +122,16 @@ export function startSession(
     queue = prioritized(cards.filter(unlocked))
   } else if (mode === 'typing') {
     queue = prioritized(cards.filter((c) => isTypeable(c) && unlocked(c)))
+  } else if (mode === 'exam') {
+    queue = shuffle(cards.filter(unlocked), rand)
+      .slice(0, EXAM_SIZE)
+      .map((c) => c.id)
+  } else if (mode === 'confused') {
+    const total = (id: string) => Object.values(confusions[id] ?? {}).reduce((a, b) => a + b, 0)
+    queue = Object.keys(confusions)
+      .filter((id) => total(id) > 0 && cards.some((c) => c.id === id))
+      .sort((a, b) => total(b) - total(a))
+      .slice(0, PRACTICE_SIZE)
   }
   return { mode, relearn: [], queue, newToday, served: 0 }
 }
@@ -198,11 +213,18 @@ export function questionType(card: Card, p: Progress | undefined, kind: PickKind
  * en son herhangi bir karttan seçilir; aynı anlamı taşıyanlar elenir.
  * `field`: şıklar Türkçe karşılık mı (en-tr) yoksa İngilizce kelime mi (tr-en).
  */
-export function buildChoices(card: Card, pool: Card[], rand = Math.random, field: 'tr' | 'word' = 'tr'): string[] {
+export function buildChoices(
+  card: Card,
+  pool: Card[],
+  rand = Math.random,
+  field: 'tr' | 'word' = 'tr',
+  /** Önce şık yapılacak kartlar (ör. daha önce karıştırılanlar) */
+  prefer: Card[] = [],
+): string[] {
   const key = (c: Card) => (field === 'tr' ? splitTr(c.tr) : [c.word.toLowerCase(), ...splitTr(c.tr)])
   const used = new Set(key(card))
   const picks: string[] = []
-  const tiers = [pool.filter((c) => c.pos === card.pos && c.level === card.level), pool.filter((c) => c.pos === card.pos), pool]
+  const tiers = [prefer, pool.filter((c) => c.pos === card.pos && c.level === card.level), pool.filter((c) => c.pos === card.pos), pool]
   for (const tier of tiers) {
     for (const c of shuffle(tier, rand)) {
       if (picks.length === CHOICES - 1) break
@@ -283,4 +305,55 @@ export function nextLevel(cards: Card[], progress: Map<string, Progress>, s: Set
 export function placementCards(cards: Card[], level: Level, rand = Math.random): Card[] {
   const pool = cards.filter((c) => c.level === level && c.pos !== 'phrase' && ['noun', 'verb', 'adjective', 'adverb'].includes(c.pos))
   return shuffle(pool, rand).slice(0, PLACEMENT_PER_LEVEL)
+}
+
+/** Kalıp tamamlamada boşluğa gelebilecek edat ve parçacıklar */
+export const PARTICLES = ['up', 'down', 'out', 'off', 'on', 'in', 'into', 'at', 'for', 'to', 'with', 'about', 'of', 'from', 'over', 'away', 'back', 'by', 'after', 'around', 'through']
+
+export interface PhraseBlank {
+  card: Card
+  /** Boşluklu kalıp parçaları; boşluk null */
+  parts: (string | null)[]
+  answer: string
+  choices: string[]
+}
+
+/** "look after sb/sth" -> "look ___ sb/sth" ve 4 parçacık şıkkı. Uygun parçacığı olmayan kalıplar atlanır. */
+export function phraseBlank(card: Card, rand = Math.random): PhraseBlank | null {
+  const tokens = card.word.split(' ')
+  const i = tokens.findIndex((tok, idx) => idx > 0 && PARTICLES.includes(tok.toLowerCase()))
+  if (i < 0) return null
+  const answer = tokens[i].toLowerCase()
+  const others = shuffle(
+    PARTICLES.filter((p) => p !== answer),
+    rand,
+  ).slice(0, 3)
+  return {
+    card,
+    parts: tokens.map((tok, idx) => (idx === i ? null : tok)),
+    answer,
+    choices: shuffle([answer, ...others], rand),
+  }
+}
+
+export function phraseRound(cards: Card[], settings: Settings, rand = Math.random): PhraseBlank[] {
+  const unlocked = cards.filter((c) => c.pos === 'phrase' && levelIndex(c.level) <= levelIndex(settings.currentLevel))
+  return shuffle(unlocked, rand)
+    .map((c) => phraseBlank(c, rand))
+    .filter((b): b is PhraseBlank => b !== null)
+    .slice(0, PRACTICE_SIZE)
+}
+
+/** Eşleştirme ve doğru/yanlış oyunları için açılmış seviyelerden, önce görülmüş kartlar */
+export function gamePool(cards: Card[], progress: Map<string, Progress>, settings: Settings, size: number, rand = Math.random): Card[] {
+  const unlocked = cards.filter((c) => c.pos !== 'phrase' && levelIndex(c.level) <= levelIndex(settings.currentLevel))
+  const seen = shuffle(
+    unlocked.filter((c) => progress.has(c.id)),
+    rand,
+  )
+  const rest = shuffle(
+    unlocked.filter((c) => !progress.has(c.id)),
+    rand,
+  )
+  return [...seen, ...rest].slice(0, size)
 }

@@ -1255,6 +1255,152 @@ input[type='checkbox'] {
   }
 }
 
+.wrong-list {
+  width: 100%;
+  text-align: left;
+}
+.wrong-list ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-height: 40vh;
+  overflow: auto;
+}
+.wrong-list li {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.wrong-list li:last-child {
+  border-bottom: 0;
+}
+
+/* ---------- Oyunlar ---------- */
+.tile {
+  position: relative;
+}
+.tile-count {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--accent);
+}
+.match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.match-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.match-item {
+  min-height: 62px;
+  padding: 10px;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-bottom-width: 4px;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+  animation: fade-up 0.35s ease both;
+  transition:
+    transform 0.2s,
+    opacity 0.35s,
+    border-color 0.2s;
+}
+.match-item.sel {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  transform: scale(1.03);
+}
+.match-item.bad {
+  border-color: var(--wrong);
+  background: var(--wrong-bg);
+  animation: shake 0.45s ease;
+}
+.match-item.gone {
+  opacity: 0;
+  transform: scale(0.6);
+  pointer-events: none;
+}
+.tf-card {
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+  transition: transform 0.15s ease;
+  padding-bottom: 28px;
+}
+.tf-card.ok {
+  box-shadow: 0 0 0 4px var(--right);
+}
+.tf-card.no {
+  box-shadow: 0 0 0 4px var(--wrong);
+  animation: shake 0.3s ease;
+}
+.tf-eq {
+  margin: 4px 0;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--muted);
+}
+.tf-tr {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+.tf-buttons {
+  gap: 12px;
+}
+.tf-btn {
+  flex: 1;
+  padding: 18px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.tf-btn.ok {
+  background: var(--right);
+}
+.tf-btn.no {
+  background: var(--wrong);
+}
+.phrase-line {
+  margin: 14px 0 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+.blank {
+  display: inline-block;
+  min-width: 64px;
+  padding: 0 8px;
+  margin-right: 6px;
+  border-bottom: 3px dashed var(--accent);
+  color: var(--accent);
+}
+.blank.ok {
+  color: var(--right);
+  border-color: var(--right);
+  animation: pop 0.4s ease;
+}
+.blank.no {
+  color: var(--wrong);
+  border-color: var(--wrong);
+}
+.center-text {
+  justify-content: center;
+  text-align: center;
+  font-weight: 800;
+}
+.primary.ok {
+  background: var(--right);
+}
+.primary.no {
+  background: var(--wrong);
+}
+
 /* ---------- Animasyonlar ---------- */
 @keyframes fade-up {
   from {

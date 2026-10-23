@@ -110,8 +110,8 @@ Seçilen özellikler (numaralar özellik listesindeki sırayla):
 - [x] Geri al (32)
 
 ### Faz 4 — Pratik modları
-- [ ] Kalıp tamamlama (5), eşleştirme oyunu (7), doğru/yanlış kaydırma (8)
-- [ ] Sınav modu (27), karışan kelimeler (25)
+- [x] Kalıp tamamlama (5), eşleştirme oyunu (7), doğru/yanlış kaydırma (8)
+- [x] Sınav modu (27), karışan kelimeler (25)
 
 ### Faz 5 — Kelimeler
 - [ ] Kelime listesi, arama, filtre (10); kelime detay sayfası (9)
