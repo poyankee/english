@@ -1,0 +1,340 @@
+hierarchy-noun | 🔺 | hiyerarşi | a system of levels of importance | the company hierarchy
+high-profile-adjective | 🌟 | göz önündeki, tanınmış | receiving a lot of attention | a high-profile case
+hint-noun | 💡 | ipucu, ima | a small piece of advice; an indirect suggestion | Give me a hint.
+hint-verb | 💡 | ima etmek | to suggest indirectly | She hinted that she was leaving.
+homeland-noun | 🏡 | anavatan | the country where you were born | return to their homeland
+homicide-noun | 🔪 | cinayet | murder (US) | a homicide investigation
+hopeful-adjective | 🌈 | umutlu | having hope | I'm hopeful we'll win.
+horizon-noun | 🌅 | ufuk | the line where the sky meets the land or sea | The sun sank below the horizon.
+horn-noun | 📯 | boynuz; korna | a hard pointed part on an animal's head; a device making a loud sound | The driver blew his horn.
+hospitality-noun | 🤗 | misafirperverlik | friendly treatment of guests | Turkish hospitality
+hostage-noun | 🔗 | rehine | a person held prisoner to get demands | They took him hostage.
+hostile-adjective | 😠 | düşmanca | unfriendly and aggressive | a hostile reaction
+hub-noun | 🎯 | merkez | the central point of activity | a transport hub
+humanitarian-adjective | 🤲 | insani | concerned with helping people | humanitarian aid
+humanity-noun | 🌍 | insanlık | all people; kindness | crimes against humanity
+humble-adjective | 🙇 | alçakgönüllü | not proud | a humble man
+hybrid-adjective | 🔀 | hibrit, melez | made of two different things | a hybrid car
+hybrid-noun | 🔀 | melez, hibrit | a mix of two things | a hybrid of a horse and a donkey
+hydrogen-noun | 💧 | hidrojen | the lightest gas | hydrogen fuel
+identification-noun | 🪪 | kimlik; teşhis | official documents; recognizing | Do you have any identification?
+ideology-noun | 💭 | ideoloji | a set of political beliefs | political ideology
+ignorance-noun | 🙈 | cehalet, bilgisizlik | lack of knowledge | ignorance of the law
+imagery-noun | 🖼️ | imgelem, görüntüler | pictures or descriptions | satellite imagery
+immense-adjective | 🌌 | muazzam | extremely large | immense pressure
+imminent-adjective | ⏰ | eli kulağında, yakın | about to happen | imminent danger
+immunity-noun | 🛡️ | bağışıklık; dokunulmazlık | protection from disease; legal protection | immunity to the virus
+implementation-noun | ⚙️ | uygulama | putting into action | implementation of the plan
+inability-noun | 🚫 | yetersizlik, -ememe | lack of ability | an inability to concentrate
+inadequate-adjective | ➖ | yetersiz | not enough | inadequate funding
+inappropriate-adjective | 🚫 | uygunsuz | not suitable | inappropriate behavior
+incarcerate-verb | ⛓️ | hapsetmek | to put in prison | He was incarcerated for 10 years.
+incarceration-noun | ⛓️ | hapsedilme | imprisonment | rates of incarceration
+incidence-noun | 📊 | sıklık, görülme oranı | how often something happens | the incidence of disease
+inclined-adjective | 🤔 | eğilimli | likely; wanting to | I'm inclined to agree.
+inclusion-noun | ➕ | dahil etme, kapsayıcılık | being included | social inclusion
+inclusive-adjective | 🤝 | kapsayıcı; dahil | including everyone; including costs | an all-inclusive hotel
+incur-verb | 💸 | maruz kalmak, (masraf) yapmak | to experience something bad because of your actions | incur costs
+indicator-noun | 📈 | gösterge | a sign showing a state | economic indicators
+indictment-noun | ⚖️ | iddianame; suçlama | a formal accusation | an indictment for fraud
+indigenous-adjective | 🌿 | yerli | native to a place | indigenous people
+induce-verb | 💊 | neden olmak, ikna etmek | to cause; to persuade | induce sleep
+indulge-verb | 🍰 | kendini bırakmak, şımartmak | to allow yourself something enjoyable | indulge in chocolate
+inequality-noun | ⚖️ | eşitsizlik | lack of equality | income inequality
+infamous-adjective | 😈 | kötü şöhretli | famous for something bad | an infamous criminal
+infant-noun | 👶 | bebek | a very young child | infant care
+infect-verb | 🦠 | bulaştırmak | to give a disease to | The virus infected thousands.
+infectious-adjective | 🦠 | bulaşıcı | spreading easily | an infectious disease
+inflict-verb | 💥 | (zarar) vermek | to cause something unpleasant | inflict damage
+influential-adjective | 🌀 | etkili, nüfuzlu | having influence | an influential politician
+inherent-adjective | 🧬 | doğasında olan | existing as a basic part | inherent risks
+inhibit-verb | 🚧 | engellemek, bastırmak | to prevent or slow | inhibit growth
+initiate-verb | ▶️ | başlatmak | to start | initiate a conversation
+inject-verb | 💉 | enjekte etmek | to put medicine in with a needle | inject the vaccine
+injection-noun | 💉 | iğne, enjeksiyon | an act of injecting | a flu injection
+injustice-noun | ⚖️ | adaletsizlik | lack of fairness | social injustice
+inmate-noun | ⛓️ | mahkum | a prisoner | prison inmates
+inquire-verb | ❓ | sormak, soruşturmak | to ask for information | inquire about prices
+insider-noun | 🕵️ | içeriden biri | a person inside an organization | an industry insider
+inspect-verb | 🔍 | denetlemek, teftiş etmek | to examine carefully | inspect the car
+inspection-noun | 🔍 | denetim, muayene | a careful examination | a safety inspection
+inspiration-noun | ✨ | ilham | a source of new ideas | a source of inspiration
+instinct-noun | 🦊 | içgüdü | a natural feeling | trust your instincts
+institutional-adjective | 🏛️ | kurumsal | connected with institutions | institutional reform
+instruct-verb | 🧑‍🏫 | talimat vermek; öğretmek | to tell someone to do something; to teach | instructed to wait
+instrumental-adjective | 🔧 | etkili, araç olan; enstrümantal | important in making something happen; music without singing | She was instrumental in the project.
+insufficient-adjective | ➖ | yetersiz | not enough | insufficient evidence
+insult-noun | 😠 | hakaret | a rude remark | an insult to my intelligence
+insult-verb | 😠 | hakaret etmek | to say something rude | Don't insult me.
+intact-adjective | ✅ | sağlam, bozulmamış | not damaged | The house remained intact.
+intake-noun | 🍽️ | alım, tüketim | the amount taken in | calorie intake
+integral-adjective | 🧩 | ayrılmaz, temel | essential | an integral part
+integrated-adjective | 🔗 | entegre, bütünleşik | combined | an integrated system
+integration-noun | 🔗 | entegrasyon, bütünleşme | combining parts | social integration
+integrity-noun | 😇 | dürüstlük, bütünlük | honesty; being whole | a man of integrity
+intellectual-noun | 🧠 | aydın, entelektüel | a person who thinks deeply | a famous intellectual
+intensify-verb | 📈 | yoğunlaştırmak | to become stronger | The storm intensified.
+intensity-noun | 🔥 | yoğunluk, şiddet | strength | the intensity of the heat
+intensive-adjective | 🔥 | yoğun | involving a lot of effort | intensive care
+intent-noun | 🎯 | niyet | purpose | with intent to kill
+interactive-adjective | 🖱️ | etkileşimli | involving interaction | an interactive website
+interface-noun | 🖥️ | arayüz | the way a user interacts with a system | a user interface
+interfere-verb | ✋ | karışmak, müdahale etmek | to get involved without being asked | Don't interfere.
+interference-noun | 📶 | müdahale; parazit | getting involved; disturbance of a signal | radio interference
+interim-adjective | ⏳ | geçici, ara | temporary | an interim report
+interior-adjective | 🏠 | iç | inside | interior design
+interior-noun | 🏠 | iç kısım | the inside | the interior of the car
+intersection-noun | ➕ | kavşak, kesişim | a place where roads cross | a busy intersection
+intervene-verb | ✋ | müdahale etmek | to become involved to change something | The police intervened.
+intervention-noun | ✋ | müdahale | the act of intervening | military intervention
+intimate-adjective | 💞 | samimi, yakın; mahrem | very close; private | an intimate friend
+intriguing-adjective | 🤔 | merak uyandıran | very interesting | an intriguing story
+inventory-noun | 📋 | envanter, stok | a list of goods | take inventory
+investigator-noun | 🕵️ | araştırmacı, müfettiş | a person who investigates | a private investigator
+invisible-adjective | 👻 | görünmez | not visible | invisible to the eye
+invoke-verb | 📜 | başvurmak, atıfta bulunmak | to use a law or idea as support | invoke a law
+involvement-noun | 🤝 | katılım, müdahil olma | taking part | his involvement in the crime
+ironically-adverb | 🙃 | ironik bir şekilde | in an unexpected and funny way | Ironically, the fire station burned down.
+irony-noun | 🙃 | ironi | a funny or strange contrast | the irony of the situation
+irrelevant-adjective | 🚫 | konuyla ilgisiz | not connected | irrelevant details
+isolation-noun | 🏝️ | yalnızlık, izolasyon | being alone or separated | social isolation
+joint-adjective | 🤝 | ortak | shared | a joint account
+joint-noun | 🦴 | eklem | a place where two bones meet | knee joint
+judicial-adjective | ⚖️ | adli, yargısal | connected with courts | the judicial system
+jurisdiction-noun | ⚖️ | yetki alanı | the authority to make legal decisions | under US jurisdiction
+just-adjective | ⚖️ | adil | fair | a just decision
+justification-noun | ⚖️ | gerekçe | a good reason | There's no justification for violence.
+keen-adjective | 🤩 | hevesli, istekli; keskin | eager; sharp | keen to learn
+kidnap-verb | 🚐 | kaçırmak (insan) | to take someone illegally | The child was kidnapped.
+kidney-noun | 🫘 | böbrek | an organ that cleans the blood | kidney failure
+kingdom-noun | 👑 | krallık | a country ruled by a king or queen | the United Kingdom
+landlord-noun | 🏠 | ev sahibi | a person who rents property | Pay rent to the landlord.
+landmark-noun | 🗽 | simge yapı; dönüm noktası | an important building; an important event | a famous landmark
+lap-noun | 🏎️ | tur; kucak | one circuit of a track; the top of your legs when sitting | the last lap / sit on my lap
+large-scale-adjective | 📏 | büyük ölçekli | involving a lot | a large-scale project
+laser-noun | 🔴 | lazer | a strong narrow beam of light | laser surgery
+latter-adjective | ⏭️ | sonraki, ikinci | the second of two; near the end | the latter part of the year
+latter-noun | ⏭️ | sonuncusu (ikiden) | the second of two things mentioned | Of tea and coffee, I prefer the latter.
+lawmaker-noun | 🏛️ | yasa koyucu | a person who makes laws | US lawmakers
+lawn-noun | 🌱 | çimenlik | an area of short grass | mow the lawn
+lawsuit-noun | ⚖️ | dava | a legal case | file a lawsuit
+layout-noun | 📐 | yerleşim, düzen | the arrangement of parts | the layout of the page
+leak-noun | 💧 | sızıntı | a hole where liquid escapes; secret information | a water leak
+leak-verb | 💧 | sızmak, sızdırmak | to let liquid escape; to reveal secrets | The roof is leaking.
+leap-noun | 🦘 | sıçrama | a big jump | a leap forward
+leap-verb | 🦘 | sıçramak | to jump high | leap over the wall
+legacy-noun | 🏛️ | miras | something left from the past | the legacy of the empire
+legendary-adjective | 🌟 | efsanevi | very famous | a legendary player
+legislation-noun | 📜 | mevzuat, yasa | laws | new legislation
+legislative-adjective | 🏛️ | yasama | connected with making laws | legislative power
+legislature-noun | 🏛️ | yasama organı | a group that makes laws | the state legislature
+legitimate-adjective | ✅ | meşru, yasal | legal; reasonable | a legitimate reason
+lengthy-adjective | 📏 | uzun, upuzun | very long | a lengthy process
+lesbian-adjective | 🏳️‍🌈 | lezbiyen | (of a woman) attracted to women | lesbian couples
+lesser-adjective | ⬇️ | daha az, daha küçük | smaller; less important | to a lesser extent
+lethal-adjective | ☠️ | öldürücü | deadly | a lethal dose
+levy-noun | 🧾 | vergi, harç | a tax | a levy on imports
+levy-verb | 🧾 | vergi koymak | to demand a tax | levy a tax
+liable-adjective | ⚖️ | sorumlu; eğilimli | legally responsible; likely | liable for damages
+liberal-adjective | 🗽 | liberal, özgürlükçü | supporting freedom and change | liberal views
+liberal-noun | 🗽 | liberal kişi | a person with liberal views | He's a liberal.
+liberty-noun | 🗽 | özgürlük | freedom | individual liberty
+lifelong-adjective | ♾️ | ömür boyu | lasting your whole life | a lifelong friend
+likelihood-noun | 🎲 | olasılık | probability | the likelihood of success
+limb-noun | 🦵 | uzuv (kol, bacak) | an arm or leg | lost a limb
+linear-adjective | 📏 | doğrusal | in a straight line | linear growth
+lineup-noun | 📋 | kadro, dizilim | a list of people taking part | the team lineup
+linger-verb | ⏳ | oyalanmak, kalmak | to stay longer | The smell lingered.
+listing-noun | 📋 | ilan, liste | an item in a list | job listings
+liter-noun | 🥛 | litre | a unit of liquid | a liter of water
+literacy-noun | 📖 | okuryazarlık | the ability to read and write | digital literacy
+liver-noun | 🫀 | karaciğer | an organ that cleans the blood | liver disease
+lobby-noun | 🏨 | lobi; baskı grubu | an entrance hall; a group trying to influence | the hotel lobby
+lobby-verb | 🗣️ | lobi yapmak | to try to influence politicians | lobby the government
+logic-noun | 🧠 | mantık | reasonable thinking | There's no logic in it.
+long-standing-adjective | ⏳ | köklü, uzun süredir var olan | existing for a long time | a long-standing tradition
+longtime-adjective | ⏳ | uzun süreli, eski | for a long time | a longtime friend
+loom-verb | 🌫️ | belirmek, yaklaşmak (tehdit) | to appear as a threat | A storm is looming.
+loop-noun | 🔁 | döngü, halka | a circular shape; a repeated sequence | stuck in a loop
+loyalty-noun | 🐕 | sadakat | being loyal | customer loyalty
+machinery-noun | ⚙️ | makine(ler) | machines | farm machinery
+magical-adjective | 🪄 | büyülü | wonderful; having magic | a magical evening
+magnetic-adjective | 🧲 | manyetik | having magnetism | a magnetic field
+magnitude-noun | 📏 | büyüklük, şiddet | size or importance | an earthquake of magnitude 7
+mainland-noun | 🗺️ | anakara | the main land, not islands | mainland Greece
+mainstream-adjective | 🌊 | ana akım | accepted by most people | mainstream media
+mainstream-noun | 🌊 | ana akım | the ideas most people accept | outside the mainstream
+maintenance-noun | 🔧 | bakım | keeping in good condition | car maintenance
+mandate-noun | 📜 | yetki, görev | official authority | a mandate to govern
+mandatory-adjective | ❗ | zorunlu | required by law | mandatory testing
+manifest-verb | 👀 | göstermek, belirmek | to show clearly | Symptoms manifest after a week.
+manipulate-verb | 🎭 | manipüle etmek | to control in an unfair way | He manipulates people.
+manipulation-noun | 🎭 | manipülasyon | unfair control | media manipulation
+march-noun | 🚶 | yürüyüş (protesto); uygun adım | an organized walk; walking like soldiers | a peace march
+march-verb | 🚶 | yürümek (uygun adım), yürüyüş yapmak | to walk like soldiers; to protest | The soldiers marched.
+marginal-adjective | 🤏 | marjinal, küçük | small; not important | a marginal increase
+marine-adjective | 🐠 | deniz | connected with the sea | marine life
+marketplace-noun | 🛒 | pazar yeri | a place for buying and selling | the global marketplace
+mask-noun | 😷 | maske | a covering for the face | wear a mask
+massacre-noun | ⚠️ | katliam | the killing of many people | a terrible massacre
+mathematical-adjective | 📐 | matematiksel | connected with math | a mathematical problem
+mature-adjective | 🧑 | olgun | fully grown; behaving like an adult | mature for her age
+mature-verb | 🌱 | olgunlaşmak | to become mature | He has matured a lot.
+maximize-verb | 📈 | en üst düzeye çıkarmak | to make as large as possible | maximize profits
+meaningful-adjective | 💡 | anlamlı | important; serious | a meaningful relationship
+meantime-noun | ⏳ | bu arada (in the meantime) | the time between | In the meantime, wait here.
+medieval-adjective | 🏰 | ortaçağa ait | of the Middle Ages | a medieval castle
+meditation-noun | 🧘 | meditasyon | quiet thinking to relax | daily meditation
+melody-noun | 🎵 | melodi | a tune | a beautiful melody
+memo-noun | 🗒️ | not, iç yazışma | a short written message | send a memo
+memoir-noun | 📖 | anı, hatırat | a book about your life | her memoir
+memorial-noun | 🗿 | anıt | a structure remembering a person or event | a war memorial
+mentor-noun | 🧑‍🏫 | akıl hocası | an experienced adviser | She was my mentor.
+merchant-noun | 🛍️ | tüccar | a person who buys and sells | a wine merchant
+mercy-noun | 🙏 | merhamet | kindness to someone in your power | show mercy
+mere-adjective | 🤏 | sadece, sırf | only; just | a mere child
+merely-adverb | 🤏 | sadece, yalnızca | only | I was merely asking.
+merge-verb | 🔗 | birleşmek | to combine | The two companies merged.
+merger-noun | 🔗 | birleşme | the joining of companies | a merger of two banks
+merit-noun | 🏅 | değer, erdem | good quality | the merits of the plan
+methodology-noun | 🛠️ | yöntem bilimi, metodoloji | a set of methods | research methodology
+midst-noun | ⭕ | orta (in the midst of) | the middle | in the midst of the crisis
+migrant-adjective | 🧳 | göçmen | moving to find work | migrant workers
+migrant-noun | 🧳 | göçmen | a person who moves to find work | economic migrants
+migration-noun | 🦢 | göç | movement from one place to another | bird migration
+militant-adjective | ✊ | militan | aggressive in support of a cause | militant groups
+militant-noun | ✊ | militan | an aggressive activist | armed militants
+militia-noun | 🪖 | milis | a group of armed civilians | a local militia
+mill-noun | 🏭 | değirmen; fabrika | a building for grinding grain; a factory | a windmill / a paper mill
+mindset-noun | 🧠 | zihniyet | a way of thinking | a positive mindset
+minimal-adjective | 🤏 | asgari, çok az | very small | minimal damage
+minimize-verb | 📉 | en aza indirmek | to reduce as much as possible | minimize risks
+mining-noun | ⛏️ | madencilik | digging for minerals | coal mining
+ministry-noun | 🏛️ | bakanlık | a government department | the Ministry of Education
+minute-adjective-2 | 🔬 | çok küçük, minicik | extremely small | minute details
+miracle-noun | ✨ | mucize | an amazing event | It's a miracle!
+misery-noun | 😩 | sefalet, ıstırap | great unhappiness | a life of misery
+misleading-adjective | 🎭 | yanıltıcı | giving a wrong idea | misleading information
+missile-noun | 🚀 | füze | a flying weapon | a nuclear missile
+mitigate-verb | 📉 | hafifletmek | to make less severe | mitigate the effects
+mob-noun | 👥 | kalabalık güruh; mafya | an angry crowd; criminals | an angry mob
+mobile-adjective | 📱 | hareketli, mobil | able to move | a mobile phone
+mobility-noun | 🚶 | hareketlilik | the ability to move | social mobility
+mobilize-verb | 📣 | harekete geçirmek | to organize people for action | mobilize support
+moderate-adjective | ⚖️ | ılımlı, orta | not extreme | moderate exercise
+modification-noun | ✏️ | değişiklik | a small change | modifications to the design
+module-noun | 📦 | modül, birim | a unit or part | a course module
+momentum-noun | 🏃 | ivme, hız | the force of movement | gain momentum
+monopoly-noun | 🎩 | tekel | complete control of a market | a state monopoly
+motive-noun | 🎯 | güdü, sebep | a reason for doing something | the motive for the crime
+municipal-adjective | 🏛️ | belediyeye ait | connected with a city government | municipal services
+mutual-adjective | 🤝 | karşılıklı, ortak | shared by both | mutual respect
+namely-adverb | 👉 | yani, şöyle ki | that is | Two countries, namely Turkey and Greece.
+nationwide-adjective | 🗺️ | ülke çapında | across a whole country | a nationwide strike
+neglect-noun | 🏚️ | ihmal | lack of care | child neglect
+neglect-verb | 🏚️ | ihmal etmek | to not take care of | neglect your health
+neighboring-adjective | 🏘️ | komşu | near | neighboring countries
+nest-noun | 🪺 | yuva (kuş) | a bird's home | a bird's nest
+net-adjective | 💵 | net | after taxes or costs | net income
+newsletter-noun | 📰 | bülten | a regular report sent to members | a monthly newsletter
+niche-noun | 🎯 | niş, özel alan | a specialized area | a niche market
+nod-verb | 🙂 | başını sallamak (evet) | to move your head up and down | She nodded in agreement.
+nominate-verb | 🏅 | aday göstermek | to officially suggest someone | nominated for an Oscar
+nomination-noun | 🏅 | adaylık | the act of nominating | an Oscar nomination
+nominee-noun | 🏅 | aday | a person nominated | the Republican nominee
+nonetheless-adverb | ↩️ | yine de | despite this | It was hard. Nonetheless, we finished.
+nonprofit-adjective | 🤲 | kâr amacı gütmeyen | not making profit | a nonprofit organization
+nonsense-noun | 🤪 | saçmalık | silly ideas | That's nonsense!
+noon-noun | 🕛 | öğle vakti | 12 o'clock in the day | at noon
+notable-adjective | 🌟 | dikkate değer | important; interesting | a notable achievement
+notably-adverb | 🌟 | özellikle | especially | many countries, notably France
+notification-noun | 🔔 | bildirim | a message informing you | push notifications
+notify-verb | 🔔 | bildirmek | to inform officially | Notify the police.
+notorious-adjective | 😈 | adı çıkmış, kötü şöhretli | famous for something bad | a notorious criminal
+novel-adjective | 🆕 | yeni, alışılmamış | new and unusual | a novel idea
+nursery-noun | 🧸 | kreş; fidanlık | a place for young children; a place where plants are grown | a nursery school
+objection-noun | ✋ | itiraz | a reason for disagreeing | Any objections?
+oblige-verb | 🙇 | zorunda bırakmak; iyilik yapmak | to force; to help | I felt obliged to go.
+obsess-verb | 🌀 | kafayı takmak | to think about constantly | She obsesses about her weight.
+obsession-noun | 🌀 | saplantı | a constant thought | an obsession with football
+occasional-adjective | 🔀 | ara sıra olan | happening sometimes | an occasional drink
+occurrence-noun | 📅 | olay, vuku | something that happens | a common occurrence
+odds-noun | 🎲 | olasılık, şans | the chance of something happening | against all odds
+offering-noun | 🎁 | sunu, teklif | something offered | the latest offering from Apple
+offset-verb | ⚖️ | dengelemek, telafi etmek | to balance | offset the costs
+offshore-adjective | 🌊 | açık deniz; yurtdışı | away from the coast; in another country | offshore oil / offshore accounts
+operational-adjective | ⚙️ | işler durumda; operasyonel | working; connected with operations | fully operational
+opt-verb | 👉 | tercih etmek | to choose | opt for a cheaper option
+optical-adjective | 👓 | optik | connected with sight | an optical illusion
+optimism-noun | 🌈 | iyimserlik | hope for the future | a sense of optimism
+oral-adjective | 👄 | sözlü; ağızla ilgili | spoken; of the mouth | an oral exam
+organizational-adjective | 🗂️ | örgütsel | connected with organization | organizational skills
+orientation-noun | 🧭 | oryantasyon; yönelim | an introduction to a new place; direction | student orientation
+originate-verb | 🌱 | kaynaklanmak | to begin | The idea originated in China.
+outbreak-noun | 🦠 | salgın, patlak verme | a sudden start of disease or war | an outbreak of flu
+outing-noun | 🧺 | gezi | a short trip for pleasure | a family outing
+outlet-noun | 🔌 | priz; satış yeri | an electrical socket; a shop | a power outlet
+outlook-noun | 🔭 | bakış açısı; görünüm | an attitude; a prediction | a positive outlook
+outrage-noun | 😡 | öfke, infial | strong anger | public outrage
+outrage-verb | 😡 | öfkelendirmek | to make very angry | The decision outraged people.
+outsider-noun | 🧍 | yabancı, dışarıdan biri | a person not in a group | I felt like an outsider.
+overlook-verb | 🙈 | gözden kaçırmak; tepeden bakmak | to miss; to have a view of | overlook a mistake / a room overlooking the sea
+overly-adverb | ‼️ | aşırı derecede | too | overly optimistic
+oversee-verb | 👀 | denetlemek, gözetmek | to supervise | oversee the project
+overtime-noun | ⏰ | fazla mesai | extra working time | work overtime
+overturn-verb | 🔄 | devirmek; bozmak (karar) | to turn over; to reverse a decision | The court overturned the decision.
+overwhelm-verb | 🌊 | bunaltmak, alt etmek | to affect very strongly | overwhelmed with work
+overwhelming-adjective | 🌊 | ezici, bunaltıcı | very great | an overwhelming majority
+pad-noun | 🗒️ | ped, yastık; not defteri | a soft piece; a block of paper | a writing pad
+parameter-noun | 📏 | parametre, sınır | a limit | within the parameters
+parental-adjective | 👪 | ebeveyne ait | connected with parents | parental control
+parliament-noun | 🏛️ | parlamento, meclis | the group that makes laws | the Turkish Parliament
+partial-adjective | 🧩 | kısmi | not complete | a partial solution
+partially-adverb | 🧩 | kısmen | partly | partially blind
+passing-noun | 🕊️ | vefat; geçiş | death; going by | the passing of time
+passive-adjective | 😐 | pasif, edilgen | not active | passive voice
+pastor-noun | ⛪ | papaz | a Christian minister | the church pastor
+patent-noun | 📜 | patent | the legal right to an invention | a patent for a new drug
+pathway-noun | 🛤️ | yol, patika | a path; a way to achieve something | a career pathway
+patrol-noun | 🚓 | devriye | a group watching an area | a police patrol
+patrol-verb | 🚓 | devriye gezmek | to watch an area | Police patrol the streets.
+patron-noun | 🤝 | hami, müşteri | a supporter; a customer | a patron of the arts
+peak-noun | 🏔️ | zirve | the top of a mountain; the highest point | at the peak of her career
+pension-noun-1 | 👴 | emekli maaşı | money paid after retirement | live on a pension
+persist-verb | 🔁 | devam etmek, ısrar etmek | to continue | The rain persisted.
+persistent-adjective | 🔁 | ısrarlı, sürekli | continuing | a persistent cough
+personnel-noun | 👥 | personel | the people working in an organization | military personnel
+petition-noun | 📝 | dilekçe, imza kampanyası | a written request signed by many | sign a petition
+pharmaceutical-adjective | 💊 | ilaç, farmasötik | connected with medicines | the pharmaceutical industry
+pharmaceutical-noun | 💊 | ilaç | a medicine | pharmaceuticals companies
+philosopher-noun | 🤔 | filozof | a person who studies philosophy | Greek philosophers
+pickup-noun | 🛻 | kamyonet; teslim alma | a small truck; collection | a pickup truck
+pioneer-noun | 🚀 | öncü | the first to do something | a pioneer of aviation
+pioneer-verb | 🚀 | öncülük etmek | to be the first to develop | pioneer a new technique
+pipeline-noun | 🛢️ | boru hattı | pipes carrying oil or gas | an oil pipeline
+pirate-noun | 🏴‍☠️ | korsan | a person who attacks ships; someone who copies illegally | pirates in the Caribbean
+pit-noun | 🕳️ | çukur | a large hole | a deep pit
+plea-noun | 🙏 | yalvarma; savunma (mahkemede) | an urgent request; a statement in court | a plea for help
+plead-verb | 🙏 | yalvarmak; (suçunu) kabul/inkâr etmek | to beg; to answer a charge | He pleaded guilty.
+pledge-noun | 🤝 | taahhüt, söz | a serious promise | a pledge of support
+pledge-verb | 🤝 | taahhüt etmek | to promise | pledge money
+plug-noun | 🔌 | fiş; tıpa | a device connecting to electricity | Pull out the plug.
+plug-verb | 🔌 | takmak; tıkamak | to connect; to block | plug in the charger
+plunge-verb | 📉 | dalmak; hızla düşmek | to fall suddenly | Prices plunged.
+pole-noun | 🧭 | direk; kutup | a long stick; the north or south end of the earth | the North Pole
+poll-noun | 📊 | anket; seçim | a survey of opinions; voting | opinion polls
+pond-noun | 🦆 | gölet | a small area of water | ducks on the pond
+pop-verb | 🎈 | patlamak; uğramak | to burst; to go quickly | The balloon popped. / pop into a shop
+portfolio-noun | 📁 | portföy | a collection of work or investments | a design portfolio
+portray-verb | 🎭 | canlandırmak, tasvir etmek | to show or describe | portrayed as a hero
+postpone-verb | 📅 | ertelemek | to delay to a later time | The match was postponed.
+practitioner-noun | 👨‍⚕️ | uygulayıcı, hekim | a person who works in a profession | a medical practitioner
+precedent-noun | 📜 | emsal | an earlier example | set a precedent
+precision-noun | 🎯 | kesinlik, hassasiyet | exactness | with great precision
+predator-noun | 🦁 | yırtıcı | an animal that kills others | Lions are predators.
+predecessor-noun | ⏮️ | selef, önceki | a person who had a job before | her predecessor
+predominantly-adverb | 📊 | ağırlıklı olarak | mainly | a predominantly Muslim country
+pregnancy-noun | 🤰 | hamilelik | being pregnant | during pregnancy
+prejudice-noun | ⚖️ | önyargı | an unfair opinion | racial prejudice
+preliminary-adjective | 1️⃣ | ön, hazırlık | coming first | preliminary results
+premise-noun | 🏢 | öncül; bina (premises) | an idea an argument is based on; a building | No smoking on the premises.

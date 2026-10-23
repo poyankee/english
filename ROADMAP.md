@@ -65,10 +65,7 @@ Her kartın bir "kutu"su var (Leitner + basit SM-2). Yanlış bilinen kelime ba�
 - [x] Oxford 3000 → `data/oxford3000.json` (2980 kelime, 3802 kart: A1–B2)
 - [x] Oxford 5000 ek liste → `data/oxford5000-b2c1.json` (1997 kelime, 2158 kart: B2–C1)
 - [x] Oxford Phrase List → `data/oxford-phrases.json` (750 kalıp: phrasal verb, deyim, collocation; A1–C1)
-- [x] A1 zenginleştirme: 1077 kelime + 200 kalıp (`data/enrich/`)
-- [ ] A2, B1, B2, C1 zenginleştirme
-- [ ] Her kart için zenginleştirme: Türkçe karşılık(lar), İngilizce kısa açıklama, örnek cümle, emoji, benzer anlamlı 4+ çeldirici. Toplu üretilip elle örneklem kontrolü yapılacak.
-- [ ] Soyut kelimeler (ör. *assumption*) için emoji yoksa türüne göre varsayılan sembol.
+- [x] Tüm kartların zenginleştirmesi: 5958 kelime + 750 kalıp = 6708 kart (`data/enrich/`)
 
 ### Faz 1 — Çalışan ilk sürüm (MVP)
 - [x] Vite + React + TS proje iskeleti, PWA ayarları (manifest, ikon, offline)
@@ -76,7 +73,7 @@ Her kartın bir "kutu"su var (Leitner + basit SM-2). Yanlış bilinen kelime ba�
 - [x] Tekrar algoritması + IndexedDB'de ilerleme kaydı
 - [x] "Bilemediklerim" listesi ve sadece onlardan çalışma modu
 - [x] Günlük oturum: ör. 10 yeni + vadesi gelen tekrarlar
-- [ ] GitHub Pages'e otomatik yayın → telefona ekle
+- [x] GitHub Pages'e otomatik yayın → telefona ekle
 
 ### Faz 2 — Konfor ve motivasyon
 - [x] 🔊 Sesli telaffuz (tarayıcının ücretsiz ses motoru, Amerikan aksanı)
@@ -84,6 +81,7 @@ Her kartın bir "kutu"su var (Leitner + basit SM-2). Yanlış bilinen kelime ba�
 - [x] Seri (streak) 🔥, günlük ilerleme çubuğu
 - [ ] İstatistikler: öğrenilen / öğreniliyor / yeni, en çok zorlanılan kelimeler
 - [x] Karanlık mod
+- [x] Fiil sınavı: seçili seviyelerden 20 fiil + fiil kalıbı, önce vadesi gelenler
 - [x] Yedekleme: ilerlemeyi JSON olarak dışa/içe aktar (telefon değişirse kaybolmasın)
 
 ### Faz 3 — Daha derin öğrenme

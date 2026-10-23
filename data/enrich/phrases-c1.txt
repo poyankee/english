@@ -1,0 +1,75 @@
+phrase:above-all | ⭐ | her şeyden önce, en önemlisi | most importantly | Above all, be honest.
+phrase:all-but | 🤏 | neredeyse | almost | The game was all but over.
+phrase:all-the-more | ⏫ | daha da çok | even more | That makes it all the more important.
+phrase:as-far-as-sb-sth-is-concerned | 👉 | … söz konusu olduğunda, … açısından | when considering someone or something | As far as money is concerned, we're fine.
+phrase:as-of | 📅 | itibarıyla | starting from a time | As of Monday, the shop will close at 8.
+phrase:as-opposed-to | ↔️ | -in aksine, -e karşın | rather than; in contrast with | city life as opposed to village life
+phrase:as-such | 👉 | bu haliyle, tam anlamıyla | in the exact sense | There's no menu as such.
+phrase:as-to-sth | ❔ | … hakkında, … konusunda | about; concerning | There's no decision as to whether we'll go.
+phrase:at-the-expense-of-sb-sth | 💸 | … pahasına | causing harm to | success at the expense of his health
+phrase:at-the-hands-of-sb | 🤲 | birinin elinden, birinin yüzünden | caused by someone | suffering at the hands of the enemy
+phrase:back-and-forth | ↔️ | ileri geri | moving in one direction and then the other | He walked back and forth.
+phrase:bear-sb-sth-in-mind | 🧠 | aklında tutmak | to remember and consider | Bear in mind that the shop closes early.
+phrase:be-attributed-to-sb | 👉 | birine atfedilmek | to be said to be by someone | The quote is attributed to Einstein.
+phrase:be-entitled-to-sth | 🎫 | bir şeye hakkı olmak | to have a right to something | You're entitled to a refund.
+phrase:be-found-to-do-sth | 🔍 | bir şey yaptığı tespit edilmek | to be discovered to do something | He was found to be lying.
+phrase:be-meant-to-do-sth | 📋 | bir şey yapması gerekmek; … olduğu söylenmek | to be supposed to | You're meant to wear a tie.
+phrase:be-reported-to-be-sth | 📰 | … olduğu bildirilmek | to be said by reports to be | He is reported to be ill.
+phrase:be-said-to-be-sth | 🗣️ | … olduğu söylenmek | to be described by people as | The castle is said to be haunted.
+phrase:bring-sth-about | ➡️ | bir şeye yol açmak, neden olmak | to cause something to happen | The war brought about many changes.
+phrase:bring-sth-up | 💬 | (konu) açmak, gündeme getirmek | to mention a subject | Don't bring up politics at dinner.
+phrase:by-means-of-sth | 🛠️ | … aracılığıyla | using | by means of a ladder
+phrase:by-no-means | 🚫 | asla, hiç de değil | not at all | It's by no means easy.
+phrase:call-on-sb | 📣 | birine çağrıda bulunmak; birini ziyaret etmek | to ask formally; to visit | The UN called on both sides to stop.
+phrase:consistent-with-sth | 🟰 | ile tutarlı | in agreement with | consistent with the facts
+phrase:dedicated-to-sth | ❤️ | kendini bir şeye adamış | giving a lot of time to | dedicated to her work
+phrase:deprive-sb-sth-of-sth | ➖ | birini bir şeyden yoksun bırakmak | to take something away from | deprived of sleep
+phrase:dispose-of-sb-sth | 🗑️ | -den kurtulmak, bertaraf etmek | to get rid of | dispose of waste
+phrase:follow-sth-up | 🔁 | takip etmek, üzerinde durmak | to take further action | I'll follow up on your request.
+phrase:for-that-matter | ➕ | hatta, aslına bakılırsa | used to add something similar | I don't like him, or his brother for that matter.
+phrase:for-the-benefit-of-sb | 🎁 | birinin yararına | to help someone | for the benefit of the children
+phrase:for-the-sake-of-sb-sth | 🙏 | … uğruna, … hatırına | for the good of | for the sake of peace
+phrase:get-away-with-sth | 😏 | yanına kâr kalmak | to not be punished | He got away with cheating.
+phrase:given-that | 👉 | … düşünülürse, -diğine göre | considering that | Given that he's new, he did well.
+phrase:have-sb-sth-in-mind | 💭 | aklında birini/bir şeyi tutmak | to be thinking of | Do you have anyone in mind for the job?
+phrase:have-nothing-to-do-with-sb-sth | 🚫 | ile hiçbir ilgisi olmamak | to not be connected with | It has nothing to do with you.
+phrase:in-accordance-with-sth | 📜 | -e uygun olarak | following a rule | in accordance with the law
+phrase:in-any-case | 🤷 | her halükârda, zaten | whatever happens; anyway | In any case, I'll call you.
+phrase:in-a-position-to-do-sth | 💪 | bir şeyi yapabilecek durumda | able to do something | I'm not in a position to help.
+phrase:in-conjunction-with-sb-sth | 🤝 | ile birlikte, ile ortaklaşa | together with | in conjunction with the police
+phrase:in-connection-with-sb-sth | 🔗 | ile bağlantılı olarak | concerning | arrested in connection with the robbery
+phrase:in-effect | ⚙️ | aslında; yürürlükte | in fact; operating | In effect, it's a ban. / The law is in effect.
+phrase:in-full | 💯 | tamamen, eksiksiz | completely | paid in full
+phrase:in-line-with-sth | 📏 | -e uygun olarak, ile paralel | similar to; following | prices in line with inflation
+phrase:in-practice | 🛠️ | uygulamada | in reality | It sounds good, but in practice it's hard.
+phrase:in-respect-of-sth | 📌 | … ile ilgili olarak | concerning | in respect of your complaint
+phrase:in-such-a-way-that | 👉 | öyle bir şekilde ki | in a manner that | Write in such a way that everyone understands.
+phrase:in-the-absence-of-sb-sth | 🫥 | … yokluğunda | when someone or something is not present | in the absence of evidence
+phrase:in-the-course-of | ⏳ | … sırasında, … boyunca | during | in the course of the meeting
+phrase:in-the-event-of-sth | 🚨 | … durumunda | if something happens | in the event of fire
+phrase:in-the-face-of-sth | 💪 | … karşısında | despite; when facing | courage in the face of danger
+phrase:in-the-hands-of-sb | 🤲 | birinin elinde, kontrolünde | controlled by | The decision is in the hands of the judge.
+phrase:in-the-light-of-sth | 💡 | … ışığında | considering | in the light of new evidence
+phrase:in-the-meantime | ⏳ | bu arada | meanwhile | The doctor will come soon. In the meantime, rest.
+phrase:in-the-midst-of-sth | ⭕ | … ortasında | in the middle of | in the midst of a crisis
+phrase:in-the-presence-of-sb | 👥 | birinin huzurunda, önünde | with someone present | in the presence of witnesses
+phrase:in-the-wake-of-sb-sth | 🌊 | … ardından, … sonrasında | following, as a result of | in the wake of the earthquake
+phrase:involvement-in-sth | 🤝 | bir şeye karışma, katılım | taking part in | his involvement in the crime
+phrase:let-alone | 🚫 | şöyle dursun, bırak | used to say something is even less likely | I can't afford a bike, let alone a car.
+phrase:little-more-than | 🤏 | -den biraz fazla, ancak | only; not much more than | It was little more than a joke.
+phrase:live-on-sth | 💵 | ile geçinmek | to have as your money or food | live on $500 a month
+phrase:may-well | 🎲 | pekâlâ -ebilir | used to say something is quite likely | It may well rain.
+phrase:nothing-like | ≠ | hiç benzemeyen, hiç de değil | not at all like | She's nothing like her sister.
+phrase:not-to-mention | ➕ | … bir yana, üstelik | used to add a further point | It's expensive, not to mention ugly.
+phrase:on-behalf-of-sb | 🤝 | birinin adına | as a representative of | I'm writing on behalf of my client.
+phrase:on-the-part-of-sb | 👉 | birinin tarafından | done by someone | a mistake on the part of the police
+phrase:over-the-course-of | ⏳ | … boyunca | during | over the course of the year
+phrase:put-it | 💬 | ifade etmek | to say something in a particular way | How shall I put it?
+phrase:seek-to-do-sth | 🎯 | bir şeyi yapmaya çalışmak | to try to do | The government seeks to reduce crime.
+phrase:set-to-do-sth | 🔜 | bir şey yapmaya hazırlanan | likely or ready to | Prices are set to rise.
+phrase:the-extent-to-which | 📏 | … ne ölçüde | how much | the extent to which people agree
+phrase:to-date | 📍 | bugüne kadar | until now | his best work to date
+phrase:up-against-sth | 🧗 | bir şeyle karşı karşıya | facing a difficulty | We're up against strong competition.
+phrase:with-regard-to-sb-sth | 📌 | … ile ilgili olarak | concerning | with regard to your letter
+phrase:with-respect-to-sth | 📌 | … bakımından, … ile ilgili | concerning | with respect to safety
+phrase:with-the-exception-of-sb-sth | ➖ | … hariç | except | with the exception of Ali

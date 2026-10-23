@@ -109,4 +109,20 @@ describe('buildChoices', () => {
     const pool = [card('big', { tr: 'büyük, iri' }), card('large', { tr: 'büyük' }), ...Array.from({ length: 6 }, (_, i) => card(`w${i}`))]
     expect(buildChoices(pool[0], pool)).not.toContain('büyük')
   })
+
+  it('parantez içindeki açıklamayı yok sayarak aynı anlamı eler', () => {
+    const pool = [card('earn', { tr: 'kazanmak (para)' }), card('win', { tr: 'kazanmak' }), ...Array.from({ length: 6 }, (_, i) => card(`w${i}`))]
+    expect(buildChoices(pool[0], pool)).not.toContain('kazanmak')
+  })
+
+  it('tamamen parantez içindeki karşılıklar tekrar etmez', () => {
+    const pool = [
+      card('a', { pos: 'article', tr: 'bir' }),
+      card('the', { pos: 'article', tr: '(belirli tanımlık)' }),
+      card('the2', { pos: 'article', tr: '(belirli tanımlık)' }),
+      ...Array.from({ length: 6 }, (_, i) => card(`w${i}`)),
+    ]
+    const choices = buildChoices(pool[0], pool)
+    expect(new Set(choices).size).toBe(5)
+  })
 })

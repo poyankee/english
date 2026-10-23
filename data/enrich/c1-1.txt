@@ -1,0 +1,300 @@
+abolish-verb | 🚫 | kaldırmak, ilga etmek | to officially end a law or system | Slavery was abolished in 1865.
+abortion-noun | 🏥 | kürtaj | the deliberate ending of a pregnancy | the abortion debate
+absence-noun | 🫥 | yokluk, devamsızlık | the state of being away | her absence from school
+absent-adjective | 🫥 | yok, devamsız | not present | He was absent from work.
+absurd-adjective | 🤪 | saçma, absürt | completely ridiculous | an absurd idea
+abuse-noun | ⚠️ | kötüye kullanma; istismar | wrong use; cruel treatment | drug abuse / child abuse
+abuse-verb | ⚠️ | kötüye kullanmak; istismar etmek | to use wrongly; to treat cruelly | abuse your power
+academy-noun | 🎓 | akademi | a school for special training | a police academy
+accelerate-verb | 🏎️ | hızlanmak, hızlandırmak | to go faster | The car accelerated.
+acceptance-noun | ✅ | kabul | the act of accepting | acceptance into university
+accessible-adjective | ♿ | erişilebilir | easy to reach or use | The building is accessible to wheelchairs.
+accessory-noun | 👜 | aksesuar | an extra item like a bag or belt | phone accessories
+accomplishment-noun | 🏆 | başarı | something achieved | a great accomplishment
+accordingly-adverb | ➡️ | buna göre, uygun şekilde | in a suitable way; therefore | Plan accordingly.
+accountability-noun | 📋 | hesap verebilirlik | responsibility for actions | government accountability
+accountable-adjective | 📋 | sorumlu, hesap verebilir | responsible | You're accountable for your actions.
+accumulate-verb | 📈 | biriktirmek, birikmek | to gather over time | accumulate wealth
+accumulation-noun | 📈 | birikim | gradual increase | an accumulation of dust
+accusation-noun | 👉 | suçlama | a claim that someone did wrong | false accusations
+accused-noun | ⚖️ | sanık | the person charged with a crime | The accused denied everything.
+acid-adjective | 🍋 | asitli, ekşi | sour; containing acid | acid rain
+acquisition-noun | 🛒 | edinme; satın alma | the act of getting; buying a company | language acquisition
+activation-noun | ⚡ | etkinleştirme | the act of activating | account activation
+activist-noun | ✊ | aktivist | a person who campaigns for change | an environmental activist
+acute-adjective | ⚠️ | akut, şiddetli; keskin | very serious; sharp | acute pain
+adaptation-noun | 🎬 | uyarlama; uyum | a film from a book; adjusting | a film adaptation of the novel
+adhere-verb | 📌 | bağlı kalmak; yapışmak | to follow rules; to stick | adhere to the rules
+adjacent-adjective | ↔️ | bitişik | next to | adjacent rooms
+adjustment-noun | 🎛️ | ayar, düzenleme; uyum | a small change | make adjustments
+administer-verb | 💉 | yönetmek; uygulamak (ilaç) | to manage; to give medicine | administer a test
+administrative-adjective | 🗄️ | idari | connected with management | administrative staff
+administrator-noun | 🧑‍💼 | yönetici | a person who manages | a system administrator
+admission-noun | 🎟️ | giriş, kabul; itiraf | permission to enter; a confession | Admission is free.
+adolescent-noun | 🧑 | ergen | a young person between child and adult | adolescents and their parents
+adoption-noun | 👶 | evlat edinme; benimseme | the act of adopting | adoption of new technology
+adverse-adjective | ⚠️ | olumsuz, ters | harmful | adverse effects
+advocate-noun | 📣 | savunucu | a person who supports a cause | an advocate of human rights
+advocate-verb | 📣 | savunmak | to publicly support | advocate change
+aesthetic-adjective | 🎨 | estetik | connected with beauty | aesthetic value
+affection-noun | 🥰 | sevgi, şefkat | a feeling of liking | She shows affection to her kids.
+aftermath-noun | 🏚️ | sonrası, ardından gelen durum | the period after a disaster | the aftermath of the earthquake
+aggression-noun | 😠 | saldırganlık | angry behavior | an act of aggression
+agricultural-adjective | 🌾 | tarımsal | connected with farming | agricultural land
+aide-noun | 🧑‍💼 | yardımcı, danışman | an assistant to an important person | a presidential aide
+alert-adjective | 👀 | uyanık, tetikte | watchful | Stay alert.
+alert-noun | 🚨 | uyarı, alarm | a warning | a flood alert
+alert-verb | 🚨 | uyarmak | to warn | Alert the police.
+algorithm-noun | 🧮 | algoritma | a set of rules for solving a problem by computer | a search algorithm
+alien-adjective | 👽 | yabancı | strange; foreign | an alien culture
+align-verb | 📏 | hizalamak; uyumlu hale getirmek | to put in a line; to agree | align the text
+alignment-noun | 📏 | hizalama, uyum | arrangement in a line | wheel alignment
+alike-adjective | 👯 | benzer | similar | The twins look alike.
+alike-adverb | 👯 | aynı şekilde | equally | adults and children alike
+all-time-adjective | 🏆 | tüm zamanların | ever | an all-time high
+allegation-noun | 👉 | iddia | a claim without proof | allegations of corruption
+allege-verb | 👉 | iddia etmek | to claim without proof | He alleged that she lied.
+allegedly-adverb | 👉 | iddiaya göre | according to claims | He allegedly stole the money.
+alliance-noun | 🤝 | ittifak | an agreement to work together | a military alliance
+allocate-verb | 📦 | ayırmak, tahsis etmek | to give for a purpose | allocate funds
+allocation-noun | 📦 | tahsis, pay | an amount given for a purpose | budget allocation
+allowance-noun | 💵 | harçlık, ödenek | money given regularly | a weekly allowance
+ally-noun | 🤝 | müttefik | a country or person that supports you | a close ally
+aluminum-noun | 🥫 | alüminyum | a light silver metal | aluminum cans
+amateur-adjective | 🎨 | amatör | not professional | an amateur photographer
+amateur-noun | 🎨 | amatör | a person who does something for fun | He's an amateur.
+ambassador-noun | 🏛️ | büyükelçi | an official representing a country abroad | the Turkish ambassador
+amend-verb | ✏️ | değiştirmek, düzeltmek | to change a law or text | amend the constitution
+amendment-noun | 📜 | değişiklik, ek | a change to a law | a constitutional amendment
+amid-preposition | ⭕ | arasında, ortasında | in the middle of | amid the chaos
+analogy-noun | 🔗 | benzetme, analoji | a comparison | draw an analogy
+analytics-noun | 📊 | analitik | analysis of data | web analytics
+anchor-noun | ⚓ | çapa; sunucu | a heavy object to stop a ship; a news presenter | a news anchor
+angel-noun | 😇 | melek | a spiritual being; a kind person | You're an angel!
+anonymous-adjective | 🕶️ | anonim, isimsiz | with an unknown name | an anonymous letter
+apparel-noun | 👕 | giyim | clothing | sports apparel
+appealing-adjective | 😍 | çekici, cazip | attractive | an appealing idea
+appetite-noun | 🍽️ | iştah | the desire for food | I have no appetite.
+applaud-verb | 👏 | alkışlamak | to clap | The audience applauded.
+applicable-adjective | 📌 | uygulanabilir, geçerli | relevant | not applicable
+appoint-verb | 📌 | atamak | to choose for a job | She was appointed director.
+appreciation-noun | 🙏 | takdir; değer artışı | gratitude; understanding | a token of appreciation
+architectural-adjective | 🏛️ | mimari | connected with architecture | architectural design
+archive-noun | 🗄️ | arşiv | a collection of old records | the national archive
+arena-noun | 🏟️ | arena | a large area for sports or shows | a sports arena
+arm-verb | 🔫 | silahlandırmak | to give weapons to | armed police
+array-noun | 🌈 | dizi, çeşitlilik | a large group | a wide array of products
+articulate-verb | 🗣️ | açıkça ifade etmek | to express clearly | articulate your ideas
+ash-noun | 🌫️ | kül | the gray powder after burning | cigarette ash
+aspiration-noun | 🌠 | özlem, hedef | a strong hope | career aspirations
+aspire-verb | 🌠 | arzulamak, hedeflemek | to want to achieve | aspire to be a doctor
+assassination-noun | 🔫 | suikast | the murder of an important person | the assassination of the president
+assault-noun | 👊 | saldırı | a violent attack | a physical assault
+assault-verb | 👊 | saldırmak | to attack violently | He assaulted a police officer.
+assemble-verb | 🔧 | birleştirmek, toplanmak | to put together; to gather | assemble the furniture
+assembly-noun | 👥 | meclis, toplantı; montaj | a group meeting; putting together | the general assembly
+assert-verb | 🗣️ | iddia etmek, ileri sürmek | to state firmly | He asserted his innocence.
+assertion-noun | 🗣️ | iddia | a firm statement | a bold assertion
+assurance-noun | 🤝 | güvence | a promise | I give you my assurance.
+asylum-noun | 🛡️ | sığınma | protection given to a refugee | seek asylum
+attain-verb | 🏆 | ulaşmak, elde etmek | to achieve | attain a goal
+attendance-noun | 🙋 | katılım, devam | being present | school attendance
+attribute-noun | 🔍 | nitelik, özellik | a quality | a key attribute
+attribute-verb | 👉 | atfetmek | to say something is caused by | She attributes her success to hard work.
+auction-noun | 🔨 | açık artırma | a sale where people bid | sold at auction
+audit-noun | 📋 | denetim | an official check of accounts | a financial audit
+authentic-adjective | ✅ | otantik, gerçek | real; genuine | authentic Italian food
+authorize-verb | ✅ | yetkilendirmek, onaylamak | to give official permission | authorized personnel only
+auto-noun | 🚗 | otomobil | a car (US) | the auto industry
+autonomy-noun | 🗽 | özerklik | independence | regional autonomy
+autumn-noun | 🍂 | sonbahar | the season between summer and winter | in autumn
+availability-noun | 🟢 | bulunabilirlik, müsaitlik | being available | room availability
+await-verb | ⏳ | beklemek | to wait for | await a decision
+awkward-adjective | 😬 | garip, rahatsız edici; beceriksiz | uncomfortable; clumsy | an awkward silence
+backdrop-noun | 🖼️ | fon, arka plan | the background | against a backdrop of mountains
+backing-noun | 🤝 | destek | support | financial backing
+backup-noun | 💾 | yedek | a copy of data; support | a backup of your files
+bail-noun | ⚖️ | kefalet | money paid to free someone until trial | released on bail
+ballot-noun | 🗳️ | oy pusulası, oylama | a paper used to vote | a secret ballot
+bang-noun | 💥 | patlama sesi, gürültü | a loud noise | a loud bang
+bang-verb | 🚪 | çarpmak, vurmak | to hit noisily | Don't bang the door.
+bankruptcy-noun | 📉 | iflas | being unable to pay debts | The company faced bankruptcy.
+banner-noun | 🏳️ | pankart, afiş | a long piece of cloth with a message | protest banners
+bare-adjective | 🦶 | çıplak, yalın | not covered | bare feet
+barrel-noun | 🛢️ | varil, fıçı | a large round container | a barrel of oil
+bass-noun-1 | 🎸 | bas (ses), bas gitar | the lowest musical sound; a bass guitar | He plays bass.
+bat-verb | ⚾ | vuruş yapmak | to hit with a bat | It's your turn to bat.
+battlefield-noun | ⚔️ | savaş alanı | a place where a battle is fought | soldiers on the battlefield
+beam-noun | 🔦 | ışın; kiriş | a line of light; a long piece of wood | a laser beam
+beast-noun | 🐗 | canavar, hayvan | a large animal | a wild beast
+behalf-noun | 🤝 | adına (on behalf of) | as a representative of | on behalf of the company
+behavioral-adjective | 🧠 | davranışsal | connected with behavior | behavioral problems
+beloved-adjective | ❤️ | sevgili, çok sevilen | much loved | my beloved wife
+bench-noun | 🪑 | bank, sıra | a long seat | a park bench
+benchmark-noun | 📏 | ölçüt, kıyas noktası | a standard for comparison | set a benchmark
+beneath-preposition | ⬇️ | altında | under | beneath the surface
+beneficiary-noun | 🎁 | yararlanıcı, lehdar | a person who benefits | the main beneficiary
+betray-verb | 🗡️ | ihanet etmek | to be disloyal | He betrayed his friend.
+beverage-noun | 🥤 | içecek | a drink | hot beverages
+bind-verb | 🪢 | bağlamak | to tie together | bind the papers
+biography-noun | 📖 | biyografi | a book about someone's life | a biography of Atatürk
+bishop-noun | ⛪ | piskopos | a senior priest | the Bishop of London
+bizarre-adjective | 🤪 | tuhaf, acayip | very strange | a bizarre story
+blade-noun | 🔪 | bıçak ağzı | the flat cutting part | the blade of a knife
+blast-noun | 💥 | patlama | an explosion | a bomb blast
+blast-verb | 💥 | patlatmak; yüksek sesle çalmak | to explode; to play loudly | music blasting
+bleed-verb | 🩸 | kanamak | to lose blood | My nose is bleeding.
+blend-noun | 🥤 | karışım | a mixture | a blend of coffee
+blend-verb | 🥤 | karıştırmak, harmanlamak | to mix together | Blend the fruit.
+bless-verb | 🙏 | kutsamak | to ask God to protect | God bless you.
+blessing-noun | 🙏 | nimet, lütuf; onay | something good; approval | a blessing in disguise
+blow-noun | 👊 | darbe | a hard hit; a shock | a blow to the head
+boast-verb | 🦚 | övünmek | to talk proudly about yourself | He boasts about his car.
+bolster-verb | 💪 | desteklemek, güçlendirmek | to support | bolster confidence
+bonus-noun | 💰 | ikramiye, prim | extra money | a Christmas bonus
+booking-noun | 📅 | rezervasyon | an arrangement to reserve | make a booking
+boom-noun | 📈 | patlama, hızlı büyüme | a period of rapid growth | the tech boom
+boost-noun | 🚀 | destek, artış | an increase | a boost in sales
+boost-verb | 🚀 | artırmak, desteklemek | to increase | boost the economy
+bounce-verb | 🏀 | zıplamak, sekmek | to spring back | The ball bounced.
+boundary-noun | 🚧 | sınır | a dividing line | the boundary between two countries
+bout-noun | 🤧 | nöbet, atak | a short period of illness or activity | a bout of flu
+bow-noun-1 | 🙇 | reverans, eğilme | bending the head or body | take a bow
+bow-verb-1 | 🙇 | eğilmek (selam) | to bend your head or body | The actors bowed.
+breach-noun | ⚠️ | ihlal | breaking a rule or agreement | a breach of contract
+breach-verb | ⚠️ | ihlal etmek | to break a rule | breach the rules
+breakdown-noun | 🚗 | arıza; çöküş; döküm | a failure; a collapse; a detailed list | a car breakdown / a nervous breakdown
+breakthrough-noun | 💡 | atılım, buluş | an important discovery | a medical breakthrough
+breed-noun | 🐕 | cins, ırk (hayvan) | a type of animal | a dog breed
+breed-verb | 🐣 | üremek; yetiştirmek | to produce young; to raise animals | breed horses
+broadband-noun | 🌐 | geniş bant internet | fast internet connection | broadband speed
+browser-noun | 🌐 | tarayıcı | a program for viewing websites | a web browser
+brutal-adjective | 😈 | acımasız, vahşi | violent and cruel | a brutal attack
+buddy-noun | 🤝 | dost, kanka | a friend (informal) | my old buddy
+buffer-noun | 🛡️ | tampon | something that protects | a buffer zone
+bulk-noun | 📦 | büyük kısım; toptan | the main part; a large amount | buy in bulk
+bundle-noun | 📦 | demet, paket | a group of things tied together | a bundle of clothes
+bundle-verb | 📦 | paketlemek, bir araya koymak | to put together | software bundled with the computer
+burden-noun | 🏋️ | yük | a heavy responsibility | a financial burden
+burial-noun | ⚰️ | defin, cenaze | the act of burying a dead person | a burial ceremony
+burst-verb | 🎈 | patlamak | to break open suddenly | The balloon burst.
+buzz-noun | 🐝 | vızıltı; heyecan | a low continuous sound; excitement | the buzz of bees
+buzz-verb | 🐝 | vızıldamak | to make a buzzing sound | My phone buzzed.
+cabinet-noun | 🗄️ | dolap; kabine | a cupboard; the main ministers | a kitchen cabinet
+calculation-noun | 🧮 | hesaplama | the act of calculating | a quick calculation
+cancellation-noun | ❌ | iptal | the act of canceling | flight cancellation
+canvas-noun | 🖼️ | tuval; branda | strong cloth for painting | oil on canvas
+capability-noun | 💪 | yetenek, kapasite | the ability to do something | military capability
+capitalism-noun | 💹 | kapitalizm | an economic system based on private ownership | global capitalism
+capitalist-adjective | 💹 | kapitalist | connected with capitalism | a capitalist economy
+cargo-noun | 📦 | kargo, yük | goods carried by ship or plane | a cargo ship
+carriage-noun | 🛞 | at arabası; vagon | a horse-drawn vehicle; a train car | a horse and carriage
+carve-verb | 🔪 | oymak; dilimlemek | to cut into a shape; to slice meat | carve wood
+casino-noun | 🎰 | kumarhane | a place for gambling | Las Vegas casinos
+casualty-noun | 🚑 | yaralı, kayıp | a person hurt or killed | heavy casualties
+catalog-noun | 📒 | katalog | a list of products | a furniture catalog
+cater-verb | 🍽️ | yemek hizmeti vermek; hitap etmek | to provide food; to provide what is needed | cater for weddings
+cattle-noun | 🐄 | sığır | cows | a herd of cattle
+caution-noun | ⚠️ | dikkat, tedbir | care to avoid danger | Proceed with caution.
+cautious-adjective | ⚠️ | temkinli, dikkatli | careful | a cautious driver
+cease-verb | ⏹️ | durmak, sona ermek | to stop | cease fire
+cemetery-noun | 🪦 | mezarlık | a place where dead people are buried | an old cemetery
+chamber-noun | 🏛️ | oda, salon; meclis | a room; a part of parliament | a chamber of commerce
+chaos-noun | 🌪️ | kaos | complete disorder | total chaos
+characterize-verb | 🔍 | nitelendirmek | to describe the features of | characterized by hot summers
+charm-noun | ✨ | cazibe, çekicilik | an attractive quality | She has a lot of charm.
+charming-adjective | 😊 | çekici, sevimli | pleasant and attractive | a charming village
+charter-noun | 📜 | tüzük; kiralama (uçak) | an official document; a hired plane | a charter flight
+chill-noun | 🥶 | soğukluk, ürperti | a cold feeling | a chill in the air
+chill-verb | 🧊 | soğutmak; rahatlamak | to make cold; to relax (informal) | chill the wine / just chill
+choir-noun | 🎶 | koro | a group of singers | the school choir
+chronic-adjective | ⏳ | kronik, süreğen | lasting a long time | chronic pain
+chunk-noun | 🧱 | parça, yığın | a thick piece | a chunk of cheese
+circulate-verb | 🔄 | dolaşmak, yaymak | to move around; to spread | Rumors circulated.
+circulation-noun | 🩸 | dolaşım; tiraj | movement of blood; number of copies sold | blood circulation
+citizenship-noun | 🪪 | vatandaşlık | being a citizen | Turkish citizenship
+civic-adjective | 🏛️ | kentsel, yurttaşlık | connected with a city or citizens | civic duty
+civilian-adjective | 🧑 | sivil | not military | civilian life
+civilian-noun | 🧑 | sivil | a person not in the army | civilian casualties
+clarity-noun | 💎 | netlik, açıklık | clearness | clarity of thought
+clash-noun | ⚔️ | çatışma, çekişme | a fight or disagreement | clashes between police and protesters
+classification-noun | 🗂️ | sınıflandırma | arrangement into groups | the classification of animals
+cling-verb | 🫂 | yapışmak, sarılmak | to hold tightly | The child clung to her mother.
+clinical-adjective | 🏥 | klinik | connected with treating patients | clinical trials
+closure-noun | 🔒 | kapanış, kapatma | the act of closing | school closures
+cluster-noun | 🍇 | küme, grup | a group of similar things close together | a cluster of stars
+coalition-noun | 🤝 | koalisyon | a union of political parties | a coalition government
+coastal-adjective | 🏖️ | kıyı | near the coast | coastal towns
+cocktail-noun | 🍸 | kokteyl | a mixed alcoholic drink | a cocktail party
+cognitive-adjective | 🧠 | bilişsel | connected with thinking | cognitive skills
+coincide-verb | 🎯 | çakışmak, denk gelmek | to happen at the same time | Her visit coincided with my birthday.
+collaborate-verb | 🤝 | işbirliği yapmak | to work together | collaborate on a project
+collaboration-noun | 🤝 | işbirliği | working together | in collaboration with
+collective-adjective | 👥 | kolektif, ortak | shared by a group | collective responsibility
+collision-noun | 💥 | çarpışma | a crash | a collision between two cars
+columnist-noun | 📰 | köşe yazarı | a journalist who writes a regular column | a newspaper columnist
+combat-noun | ⚔️ | çatışma, muharebe | fighting | killed in combat
+combat-verb | ⚔️ | mücadele etmek | to fight against | combat crime
+comeback-noun | 🔄 | geri dönüş | a return to success | make a comeback
+commence-verb | ▶️ | başlamak | to begin | The ceremony will commence at 10.
+commentary-noun | 🎙️ | yorum, anlatım | a spoken description of an event | live commentary
+commentator-noun | 🎙️ | yorumcu, spiker | a person who describes events | a sports commentator
+commerce-noun | 💼 | ticaret | buying and selling | e-commerce
+commissioner-noun | 🧑‍💼 | komiser, yetkili | an official in charge | the police commissioner
+commodity-noun | 🛢️ | emtia, mal | a product that is bought and sold | Oil is a valuable commodity.
+communist-adjective | ☭ | komünist | connected with communism | a communist party
+companion-noun | 🤝 | arkadaş, refakatçi | a person you spend time with | a travel companion
+comparable-adjective | ⚖️ | karşılaştırılabilir, benzer | similar | comparable prices
+compassion-noun | 💗 | şefkat, merhamet | sympathy for others' suffering | show compassion
+compel-verb | 👊 | zorlamak | to force | I felt compelled to help.
+compelling-adjective | 🤩 | ilgi çekici, ikna edici | very interesting; convincing | a compelling story
+compensate-verb | 💵 | tazmin etmek, telafi etmek | to pay for loss or damage | compensate the victims
+compensation-noun | 💵 | tazminat | money paid for loss | claim compensation
+competence-noun | 🎓 | yeterlilik, yetkinlik | ability to do something well | professional competence
+competent-adjective | 🎓 | yetkin, ehil | having enough skill | a competent driver
+compile-verb | 📚 | derlemek | to collect information | compile a list
+complement-verb | 🧩 | tamamlamak | to go well with | The wine complements the food.
+complexity-noun | 🧩 | karmaşıklık | the state of being complex | the complexity of the problem
+compliance-noun | ✅ | uyum, uygunluk | obeying rules | in compliance with the law
+complication-noun | ⚠️ | komplikasyon, sorun | something that makes things difficult | medical complications
+comply-verb | ✅ | uymak | to obey a rule | comply with the law
+composition-noun | 🎼 | beste; bileşim; kompozisyon | a piece of music; what something is made of | a piano composition
+compromise-noun | 🤝 | uzlaşma | an agreement where both sides give something | reach a compromise
+compromise-verb | 🤝 | uzlaşmak; tehlikeye atmak | to agree by giving something; to put at risk | We compromised.
+conceal-verb | 🙈 | gizlemek | to hide | conceal the truth
+concede-verb | 🏳️ | kabul etmek (istemeyerek) | to admit; to give up | He conceded defeat.
+conceive-verb | 💭 | tasarlamak; hamile kalmak | to imagine; to become pregnant | conceive a plan
+concession-noun | 🤝 | taviz, ödün; indirim | something given up; a reduced price | make concessions
+condemn-verb | 👎 | kınamak; mahkum etmek | to criticize strongly; to sentence | condemn violence
+confess-verb | 🙋 | itiraf etmek | to admit you did wrong | He confessed to the crime.
+confession-noun | 🙋 | itiraf | a statement admitting guilt | a full confession
+configuration-noun | ⚙️ | yapılandırma | an arrangement of parts | system configuration
+confine-verb | 🔒 | sınırlamak; hapsetmek | to keep within limits | confined to bed
+confirmation-noun | ✅ | onay, teyit | a statement that something is true | booking confirmation
+confront-verb | 🫵 | yüzleşmek, karşı karşıya gelmek | to face a problem or person | confront your fears
+confrontation-noun | ⚔️ | çatışma, yüzleşme | a hostile meeting | a violent confrontation
+congratulate-verb | 🎉 | tebrik etmek | to praise for success | Let me congratulate you!
+congregation-noun | ⛪ | cemaat | a group of people in a church | The congregation sang.
+congressional-adjective | 🏛️ | kongreye ait | connected with Congress | congressional elections
+connectivity-noun | 📶 | bağlanabilirlik | the ability to connect | internet connectivity
+conquer-verb | ⚔️ | fethetmek | to take control by force | Mehmet II conquered Constantinople.
+conscience-noun | 😇 | vicdan | the sense of right and wrong | a guilty conscience
+consciousness-noun | 🧠 | bilinç | the state of being awake and aware | lose consciousness
+consecutive-adjective | 🔢 | ardışık | following one after another | three consecutive wins
+consensus-noun | 🤝 | uzlaşı, fikir birliği | general agreement | reach a consensus
+consent-noun | ✅ | rıza, onay | permission | without my consent
+consent-verb | ✅ | razı olmak | to agree | He consented to the operation.
+conserve-verb | 🌿 | korumak, tasarruf etmek | to protect; to use carefully | conserve energy
+consistency-noun | 🔁 | tutarlılık; kıvam | being consistent; thickness | the consistency of the sauce
+consolidate-verb | 🧱 | pekiştirmek, birleştirmek | to make stronger; to combine | consolidate your position
+constitute-verb | 🧩 | oluşturmak, teşkil etmek | to form | Women constitute 50% of the population.
+constitution-noun | 📜 | anayasa | the basic laws of a country | the Turkish constitution
+constitutional-adjective | 📜 | anayasal | connected with the constitution | constitutional rights
+constraint-noun | 🚧 | kısıt | a limitation | time constraints
+consultation-noun | 🩺 | danışma, istişare | a meeting for advice | a medical consultation
+contemplate-verb | 🤔 | düşünmek, tasarlamak | to think about carefully | contemplate the future
+contempt-noun | 😤 | küçümseme, hor görme | a feeling that someone is worthless | contempt for the law
+contend-verb | 🗣️ | iddia etmek; mücadele etmek | to argue; to compete | contend with problems
+contender-noun | 🥊 | yarışmacı, aday | a person competing | a strong contender
+content-adjective-2 | 😌 | memnun, hoşnut | happy and satisfied | She's content with her life.
+contention-noun | 🗣️ | iddia; anlaşmazlık | an opinion; disagreement | a point of contention

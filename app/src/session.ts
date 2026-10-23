@@ -152,6 +152,13 @@ export function buildChoices(card: Card, pool: Card[], rand = Math.random): stri
   return choices.sort(() => rand() - 0.5)
 }
 
+/** "kazanmak (para), elde etmek" -> ["kazanmak", "elde etmek"]; parantez içi açıklamalar karşılaştırmaya girmez */
 function splitTr(tr: string): string[] {
-  return tr.split(/[,;/]/).map((t) => t.trim().toLocaleLowerCase('tr'))
+  const parts = tr
+    .replace(/\([^)]*\)/g, '')
+    .split(/[,;/]/)
+    .map((t) => t.trim().toLocaleLowerCase('tr'))
+    .filter(Boolean)
+  // "(belirli tanımlık)" gibi tamamen parantez içindeki karşılıklarda metnin kendisiyle karşılaştır
+  return parts.length ? parts : [tr.trim().toLocaleLowerCase('tr')]
 }
