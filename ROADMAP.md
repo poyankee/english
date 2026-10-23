@@ -65,24 +65,26 @@ Her kartın bir "kutu"su var (Leitner + basit SM-2). Yanlış bilinen kelime ba�
 - [x] Oxford 3000 → `data/oxford3000.json` (2980 kelime, 3802 kart: A1–B2)
 - [x] Oxford 5000 ek liste → `data/oxford5000-b2c1.json` (1997 kelime, 2158 kart: B2–C1)
 - [x] Oxford Phrase List → `data/oxford-phrases.json` (750 kalıp: phrasal verb, deyim, collocation; A1–C1)
+- [x] A1 zenginleştirme: 1077 kelime + 200 kalıp (`data/enrich/`)
+- [ ] A2, B1, B2, C1 zenginleştirme
 - [ ] Her kart için zenginleştirme: Türkçe karşılık(lar), İngilizce kısa açıklama, örnek cümle, emoji, benzer anlamlı 4+ çeldirici. Toplu üretilip elle örneklem kontrolü yapılacak.
 - [ ] Soyut kelimeler (ör. *assumption*) için emoji yoksa türüne göre varsayılan sembol.
 
 ### Faz 1 — Çalışan ilk sürüm (MVP)
-- [ ] Vite + React + TS proje iskeleti, PWA ayarları (manifest, ikon, offline)
-- [ ] Quiz ekranı: sembol, kelime, açıklama, 5 şık, doğru/yanlış geri bildirimi
-- [ ] Tekrar algoritması + IndexedDB'de ilerleme kaydı
-- [ ] "Bilemediklerim" listesi ve sadece onlardan çalışma modu
-- [ ] Günlük oturum: ör. 10 yeni + vadesi gelen tekrarlar
+- [x] Vite + React + TS proje iskeleti, PWA ayarları (manifest, ikon, offline)
+- [x] Quiz ekranı: sembol, kelime, açıklama, 5 şık, doğru/yanlış geri bildirimi
+- [x] Tekrar algoritması + IndexedDB'de ilerleme kaydı
+- [x] "Bilemediklerim" listesi ve sadece onlardan çalışma modu
+- [x] Günlük oturum: ör. 10 yeni + vadesi gelen tekrarlar
 - [ ] GitHub Pages'e otomatik yayın → telefona ekle
 
 ### Faz 2 — Konfor ve motivasyon
-- [ ] 🔊 Sesli telaffuz (tarayıcının ücretsiz ses motoru, Amerikan aksanı)
-- [ ] Seviye filtresi (A1 … C1) ve günlük hedef ayarı
-- [ ] Seri (streak) 🔥, günlük ilerleme çubuğu
+- [x] 🔊 Sesli telaffuz (tarayıcının ücretsiz ses motoru, Amerikan aksanı)
+- [x] Seviye filtresi (A1 … C1) ve günlük hedef ayarı
+- [x] Seri (streak) 🔥, günlük ilerleme çubuğu
 - [ ] İstatistikler: öğrenilen / öğreniliyor / yeni, en çok zorlanılan kelimeler
-- [ ] Karanlık mod
-- [ ] Yedekleme: ilerlemeyi JSON olarak dışa/içe aktar (telefon değişirse kaybolmasın)
+- [x] Karanlık mod
+- [x] Yedekleme: ilerlemeyi JSON olarak dışa/içe aktar (telefon değişirse kaybolmasın)
 
 ### Faz 3 — Daha derin öğrenme
 - [ ] Ters mod: Türkçe → İngilizce

@@ -1,0 +1,200 @@
+phrase:a-few | 🤏 | birkaç, birkaç tane | a small number of | I'll be back in a few minutes.
+phrase:a-good-idea | 💡 | iyi bir fikir | a sensible or useful plan | It's a good idea to bring an umbrella.
+phrase:agree-with-sb | 🤝 | biriyle aynı fikirde olmak | to have the same opinion as someone | I agree with you.
+phrase:a-little | 🤏 | biraz, azıcık | a small amount | Can I have a little sugar?
+phrase:a-lot | 📈 | çok, epey | very much; a large amount | I have a lot to do today.
+phrase:a-lot-of-sth | 📚 | bir sürü, çok miktarda | a large number or amount of something | There are a lot of people here.
+phrase:all-day | 🌞 | bütün gün | for the whole day | I worked all day.
+phrase:all-over-the-world | 🌍 | dünyanın her yerinde | in every part of the world | People all over the world love football.
+phrase:anything-else | ➕ | başka bir şey | any other thing | Do you need anything else?
+phrase:a-period-of-time | ⏳ | bir süre, bir zaman dilimi | a length of time | He lived abroad for a period of time.
+phrase:around-the-world | 🌐 | dünya çapında, dünyanın etrafında | in many places in the world; going all the way around the world | She traveled around the world.
+phrase:arrive-at | 📍 | (bir yere, binaya) varmak | to reach a building or small place | We arrived at the airport at six.
+phrase:arrive-in | 🏙️ | (şehre, ülkeye) varmak | to reach a city or country | They arrived in London yesterday.
+phrase:ask-for-sth | 🙋 | bir şey istemek | to say that you want something | He asked for a glass of water.
+phrase:at-home | 🏠 | evde | in your house | I'm staying at home tonight.
+phrase:at-school | 🏫 | okulda | in the school building; studying at a school | The kids are at school.
+phrase:at-the-beginning-of-sth | 🌱 | -in başında | in the first part of something | at the beginning of the year
+phrase:at-the-end | 🔚 | sonunda, en sonda | in the last part | At the end, everyone was happy.
+phrase:at-the-end-of-sth | 🏁 | -in sonunda | in the last part of something | Turn left at the end of the street.
+phrase:at-the-moment | ⏱️ | şu anda, şu sıralar | now | She's busy at the moment.
+phrase:at-the-same-time | 🔁 | aynı anda, aynı zamanda | together; simultaneously | We arrived at the same time.
+phrase:at-the-weekend | 📅 | hafta sonu | on Saturday and Sunday (British) | What are you doing at the weekend?
+phrase:at-university | 🎓 | üniversitede | studying at a university | My sister is at university.
+phrase:at-work | 💼 | işte, iş yerinde | at the place where you work | He's at work until six.
+phrase:away-from-sb-sth | ↗️ | -den uzak(ta) | at a distance from someone or something | Stay away from the fire.
+phrase:bad-for-sb-sth | 🚬 | -e zararlı, için kötü | harmful to someone or something | Smoking is bad for you.
+phrase:bad-news | 😟 | kötü haber | information that makes you unhappy | I'm afraid I have some bad news.
+phrase:bad-thing | 👎 | kötü şey | something negative | The bad thing about this job is the hours.
+phrase:because-of | ⛈️ | yüzünden, nedeniyle | as a result of | We stayed in because of the rain.
+phrase:begin-with-sth | 🅰️ | ile başlamak | to have something as the first part | The word begins with "B".
+phrase:be-going-to-do-sth | 🔜 | -ecek olmak, niyetinde olmak | used to talk about plans or things that will happen | I'm going to visit my aunt.
+phrase:best-friend | 👯 | en iyi arkadaş | the friend you like most | Ayşe is my best friend.
+phrase:black-and-white | 🎞️ | siyah beyaz | showing only black, white and gray | an old black and white film
+phrase:car-park | 🅿️ | otopark | an area where people leave their cars (British) | The car park is behind the hotel.
+phrase:cell-phone | 📱 | cep telefonu | a mobile phone (American) | Turn off your cell phone.
+phrase:city-centre | 🏙️ | şehir merkezi | the main part of a city | Our hotel is in the city centre.
+phrase:come-from | 🌍 | -li olmak, -den gelmek | to have been born in or live in a place | Where do you come from?
+phrase:come-into-sth | 🚪 | bir yere girmek | to enter a place | He came into the room.
+phrase:differences-between-a-and-b | ⚖️ | A ile B arasındaki farklar | the ways in which two things are not the same | What are the differences between cats and dogs?
+phrase:difficult-for-sb | 😓 | biri için zor | hard for someone | It is difficult for me to wake up early.
+phrase:each-other | 🫂 | birbirini, birbirine | used to show that each person does the same to the other | They love each other.
+phrase:end-in-sth | 🔚 | ile sonuçlanmak, ile bitmek | to have something as the final part or result | The game ended in a draw.
+phrase:every-day | 📆 | her gün | on all days | I walk to work every day.
+phrase:excuse-me | 🙋 | affedersiniz, pardon | used politely to get someone's attention | Excuse me, where is the station?
+phrase:family-member | 👨‍👩‍👧 | aile üyesi | a person in your family | All my family members came to the wedding.
+phrase:find-out | 🔍 | öğrenmek, ortaya çıkarmak | to get information about something | I want to find out more about the course.
+phrase:for-a-long-time | ⏳ | uzun süredir, uzun zaman boyunca | during a long period | I haven't seen him for a long time.
+phrase:for-a-moment | ⏱️ | bir an için, kısa bir süre | for a very short time | Can I talk to you for a moment?
+phrase:for-example | 💡 | örneğin | used to give an example | Some animals, for example cats, sleep a lot.
+phrase:for-lunch | 🥪 | öğle yemeğinde | as the meal in the middle of the day | What did you have for lunch?
+phrase:for-many-years | 📅 | yıllarca | during a long period of years | He worked there for many years.
+phrase:for-the-first-time | 1️⃣ | ilk kez, ilk defa | as the first occasion | I saw the sea for the first time.
+phrase:get-home | 🏠 | eve varmak | to arrive at your house | What time did you get home?
+phrase:get-married | 💒 | evlenmek | to become husband and wife | They got married last year.
+phrase:get-off | 🚏 | (araçtan) inmek | to leave a bus, train or plane | Get off the bus at the next stop.
+phrase:get-on | 🚌 | (araca) binmek | to enter a bus, train or plane | Get on the bus here.
+phrase:get-ready | 🎒 | hazırlanmak | to prepare yourself | I need to get ready for work.
+phrase:get-there | 🗺️ | oraya varmak | to arrive at that place | How long does it take to get there?
+phrase:get-to | 📍 | -e varmak, -e ulaşmak | to arrive at a place | How do I get to the museum?
+phrase:get-up | 🛏️ | kalkmak (yataktan) | to leave your bed after sleeping | I get up at seven.
+phrase:go-back | ↩️ | geri dönmek | to return to a place | I want to go back to Italy.
+phrase:go-home | 🏡 | eve gitmek | to return to your house | It's late. Let's go home.
+phrase:go-into-sth | 🚪 | -e girmek | to enter a place | She went into her room.
+phrase:good-at-sth | 🌟 | -de iyi olmak, -de başarılı | able to do something well | She's good at math.
+phrase:good-for-sb-sth | 🥦 | -e iyi gelir, için faydalı | helpful or healthy for someone or something | Fruit is good for you.
+phrase:good-morning | 🌅 | günaydın | a greeting used in the morning | Good morning! Did you sleep well?
+phrase:good-news | 🎉 | iyi haber | information that makes you happy | I have some good news!
+phrase:good-thing | 👍 | iyi şey | something positive | The good thing about this city is the food.
+phrase:go-out | 🌃 | dışarı çıkmak, gezmeye çıkmak | to leave your home to have fun | Let's go out tonight.
+phrase:go-to-bed | 🛌 | yatmaya gitmek | to get into bed to sleep | I usually go to bed at eleven.
+phrase:go-to-school | 🏫 | okula gitmek | to attend school | My son goes to school by bus.
+phrase:go-to-work | 💼 | işe gitmek | to travel to your job | I go to work by metro.
+phrase:grow-up | 🧒 | büyümek, yetişmek | to change from a child into an adult | I grew up in Izmir.
+phrase:guess-what | 😃 | bil bakalım ne oldu | used before telling someone surprising news | Guess what! I passed the exam!
+phrase:half-an-hour | 🕧 | yarım saat | thirty minutes | The bus comes every half an hour.
+phrase:hard-work | 🏋️ | sıkı çalışma, zahmetli iş | a lot of effort | Learning a language is hard work.
+phrase:have-fun | 🥳 | eğlenmek, iyi vakit geçirmek | to enjoy yourself | Have fun at the party!
+phrase:have-got | 🤲 | sahip olmak, -si var | to have; to own | I've got two brothers.
+phrase:have-time | ⌛ | vakti olmak | to have enough time | I don't have time to cook today.
+phrase:he-or-she | 🧑 | o (kadın ya da erkek) | used when the person could be male or female | Ask the doctor. He or she will help you.
+phrase:high-school | 🏫 | lise | a school for students from about 14 to 18 | My brother is in high school.
+phrase:his-or-her | 🧑 | onun (kadın ya da erkek) | belonging to a person who could be male or female | Every student must bring his or her book.
+phrase:how-about | 💭 | … ne dersin?, peki ya …? | used to make a suggestion | How about going to the cinema?
+phrase:how-are-you | 👋 | nasılsın? | used to ask about someone's health or feelings | Hi, Ali! How are you?
+phrase:how-long | ⏳ | ne kadar süre? | used to ask about length of time | How long does the film last?
+phrase:how-many | 🔢 | kaç tane? | used to ask about a number of things | How many brothers do you have?
+phrase:how-much | 💲 | ne kadar?, kaç para? | used to ask about price or amount | How much is this shirt?
+phrase:how-often | 🔁 | ne sıklıkla?, hangi sıklıkta? | used to ask how many times something happens | How often do you go to the gym?
+phrase:important-for-sb-sth | ❗ | biri/bir şey için önemli | having great value for someone or something | It is important for children to sleep well.
+phrase:i-m-sorry | 😔 | özür dilerim, üzgünüm | used to apologize or show sympathy | I'm sorry I forgot your birthday.
+phrase:in-april | 🗓️ | Nisan'da (ay adıyla "in") | used with months | My birthday is in April.
+phrase:in-bed | 🛏️ | yatakta | lying in your bed | He's still in bed.
+phrase:in-class | 🏫 | derste, sınıfta | during a lesson | Don't use your phone in class.
+phrase:in-fact | ☝️ | aslında, hatta | used to add more true information | I don't mind. In fact, I like it.
+phrase:in-front-of | 🧍 | -in önünde | at a position facing the front of | I'll wait in front of the cinema.
+phrase:in-my-opinion | 💭 | bence, bana göre | used to say what you think | In my opinion, the book is better than the film.
+phrase:in-school | 🎒 | okulda (öğrenim görmek) | studying at school (American) | My kids are still in school.
+phrase:in-space | 🚀 | uzayda | in the area beyond the earth | astronauts living in space
+phrase:in-summer | ☀️ | yazın, yaz aylarında | during the summer season in general | It's very hot here in summer.
+phrase:in-the-centre | 🎯 | merkezde, ortasında | in the middle part | The hotel is in the centre of the city.
+phrase:in-the-country | 🌾 | kırsalda, taşrada | away from towns and cities | I live in the country.
+phrase:in-the-future | 🔮 | gelecekte | at a time that will come | In the future, cars will drive themselves.
+phrase:in-the-morning | 🌄 | sabahleyin, sabahları | during the morning | I study in the morning.
+phrase:in-the-north | 🧭 | kuzeyde | in the northern part of a place | It's colder in the north.
+phrase:in-the-past | 📜 | geçmişte | at a time before now | In the past, people wrote letters.
+phrase:in-the-street | 🛣️ | sokakta | outside, on a road in a town | Children were playing in the street.
+phrase:in-the-summer | 🏖️ | yazın (belirli bir yazda) | during the summer | We're going to Spain in the summer.
+phrase:in-town | 🏘️ | şehirde, kasabada | in the town or city where you live | Are you in town this weekend?
+phrase:it-is-important-to-do-sth | ❗ | bir şey yapmak önemlidir | it is necessary or valuable to do something | It is important to drink enough water.
+phrase:it-takes | ⏱️ | (zaman) sürer, alır | used to say how much time something needs | It takes an hour to get there.
+phrase:kind-of-sb-sth | 🗂️ | bir tür, çeşit | a type of person or thing | What kind of music do you like?
+phrase:know-how | 🧠 | nasıl yapılacağını bilmek | to have the skill to do something | Do you know how to swim?
+phrase:last-time | ⏮️ | geçen sefer, son sefer | the most recent occasion | Last time I saw her, she was a student.
+phrase:last-year | 📆 | geçen yıl | the year before this one | We went to Paris last year.
+phrase:learn-how-to-do-sth | 🎓 | bir şeyi yapmayı öğrenmek | to get the skill to do something | I want to learn how to drive.
+phrase:listen-to-sb-sth | 🎧 | -i dinlemek | to pay attention to someone or something you hear | I listen to music every day.
+phrase:live-with-sb | 🏠 | biriyle yaşamak | to share a home with someone | I live with my parents.
+phrase:living-room | 🛋️ | oturma odası | the main room in a house for relaxing | We watch TV in the living room.
+phrase:look-at-sb-sth | 👀 | -e bakmak | to turn your eyes toward someone or something | Look at this photo!
+phrase:look-for-sb-sth | 🔎 | -i aramak | to try to find someone or something | I'm looking for my keys.
+phrase:look-like-sb-sth | 👯 | -e benzemek | to be similar in appearance | You look like your father.
+phrase:lots-of | 📚 | birçok, bol bol | a large number or amount of | She has lots of friends.
+phrase:millions-of | 🔢 | milyonlarca | a very large number of | Millions of people watched the match.
+phrase:mobile-phone | 📱 | cep telefonu | a phone you carry with you (British) | I left my mobile phone at home.
+phrase:more-than | ⬆️ | -den fazla | a larger number or amount than | More than 100 people came.
+phrase:next-time | ⏭️ | bir dahaki sefere | on the next occasion | Next time, call me first.
+phrase:next-year | 📅 | gelecek yıl, seneye | the year after this one | I'll finish university next year.
+phrase:no-problem | 👌 | sorun değil, rica ederim | used to say that something is easy or that you don't mind | "Can you help me?" "No problem!"
+phrase:of-course | ✅ | tabii ki, elbette | used to say yes strongly | "Can I sit here?" "Of course."
+phrase:oh-no | 😱 | eyvah!, olamaz! | used to show that something bad has happened | Oh no! I missed the bus.
+phrase:oh-yes | 😃 | ah evet, tabii | used to agree strongly or show you remember | Oh yes, I remember him.
+phrase:old-friend | 👴 | eski dost, eski arkadaş | a friend you have known for a long time | I met an old friend from school.
+phrase:once-a | 1️⃣ | … -da bir (kez) | one time in each period | I call my mother once a week.
+phrase:one-day | 🌈 | bir gün (gelecekte ya da geçmişte) | at some time in the future or past | One day I'll visit Japan.
+phrase:on-holiday | 🏝️ | tatilde | taking a vacation (British) | They're on holiday in Greece.
+phrase:on-monday | 🗓️ | Pazartesi günü (gün adıyla "on") | used with days of the week | The shop is closed on Monday.
+phrase:on-television | 📺 | televizyonda | being shown on TV | What's on television tonight?
+phrase:on-the-beach | 🏖️ | plajda, kumsalda | on the sand by the sea | We spent the day on the beach.
+phrase:on-the-floor | ⬇️ | yerde | on the ground inside a room | Your bag is on the floor.
+phrase:on-the-internet | 🌐 | internette | available online | I read about it on the internet.
+phrase:on-the-left | ⬅️ | solda, sol tarafta | on the left side | The bank is on the left.
+phrase:on-the-phone | 📞 | telefonda | using the telephone | She's on the phone with her boss.
+phrase:on-tv | 📺 | televizyonda (TV) | being broadcast on television | There's a good film on TV tonight.
+phrase:out-of-sth | 🚪 | -den dışarı | from inside something to outside | He got out of the car.
+phrase:over-there | 👉 | şurada, orada | in that place, not near you | Can you see that house over there?
+phrase:pay-for-sth | 💳 | bir şeyin parasını ödemek | to give money for something | I'll pay for the drinks.
+phrase:phone-call | ☎️ | telefon görüşmesi | an act of calling someone on the phone | I have to make a phone call.
+phrase:phone-number | 🔢 | telefon numarası | the number you use to call someone | Can I have your phone number?
+phrase:plan-for-sth | 🗓️ | bir şey için plan (yapmak) | an intention or arrangement for the future | What are your plans for next year?
+phrase:play-with-sb-sth | 🧸 | ile oynamak | to have fun with someone or something | The kids are playing with the dog.
+phrase:post-office | 🏤 | postane | a place where you send letters and parcels | Where is the post office?
+phrase:pretty-good | 👍 | gayet iyi, fena değil | quite good | The food was pretty good.
+phrase:really-enjoy | 😄 | çok keyif almak | to like something very much | I really enjoyed the concert.
+phrase:really-good | 🌟 | gerçekten iyi | very good | This is a really good book.
+phrase:really-like | ❤️ | çok sevmek, çok hoşlanmak | to like very much | I'd really like to see you again.
+phrase:right-now | ⚡ | hemen şimdi, şu anda | immediately; at this moment | I'm busy right now.
+phrase:see-you | 👋 | görüşürüz | used to say goodbye | See you later!
+phrase:sit-down | 🪑 | oturmak | to move into a sitting position | Please sit down.
+phrase:someone-else | 🧑 | başka biri | a different person | Ask someone else.
+phrase:speak-to-sb | 🗣️ | biriyle konuşmak | to talk to someone | Can I speak to the manager?
+phrase:spend-time | ⏳ | vakit geçirmek | to use time doing something | I spend time with my family on Sundays.
+phrase:stand-up | 🧍 | ayağa kalkmak | to rise to your feet | Please stand up.
+phrase:stay-in | 🏠 | evde kalmak, (otelde) kalmak | to remain at home; to stay at a hotel | I'm staying in tonight.
+phrase:such-as | 👉 | gibi (örnek verirken) | for example | I like fruit such as apples and bananas.
+phrase:swimming-pool | 🏊 | yüzme havuzu | a large container of water for swimming | The hotel has a swimming pool.
+phrase:talk-about-sb-sth | 💬 | hakkında konuşmak | to discuss someone or something | Let's talk about your plans.
+phrase:thank-you | 🙏 | teşekkür ederim | used to show you are grateful | Thank you very much!
+phrase:that-day | 📅 | o gün | on the day mentioned | I remember that day very well.
+phrase:the-20th-century | 🕰️ | 20. yüzyıl | the years from 1901 to 2000 | It was built in the 20th century.
+phrase:the-next-day | ➡️ | ertesi gün | the day after | We arrived late and left the next day.
+phrase:there-is | 👉 | var (tekil) | used to say that something exists | There is a cat in the garden.
+phrase:think-about-sb-sth | 🤔 | hakkında düşünmek | to have someone or something in your mind; to consider | I'm thinking about changing jobs.
+phrase:think-of-sb-sth | 💭 | -i aklına getirmek, hakkında düşünmek | to have an idea or opinion about someone or something | What do you think of my new car?
+phrase:this-is | 🤝 | bu … (tanıştırırken) | used to introduce someone | This is my dad.
+phrase:this-kind-of | 🗂️ | bu tür, bu çeşit | of this type | I like this kind of music.
+phrase:this-morning | 🌅 | bu sabah | the morning of today | I went running this morning.
+phrase:this-time | 🎯 | bu sefer, bu kez | on this occasion | This time I'll win.
+phrase:this-year | 📅 | bu yıl | the current year | This year I want to learn English.
+phrase:thousands-of | 🔢 | binlerce | a very large number of | Thousands of people came to the festival.
+phrase:too-long | 📏 | çok uzun (fazla) | longer than you want or need | The film was too long.
+phrase:too-much | 🫗 | çok fazla | more than is needed or wanted | I ate too much.
+phrase:town-centre | 🏘️ | kasaba merkezi, çarşı | the main part of a town | The shops are in the town centre.
+phrase:tv-show | 📺 | televizyon programı | a program on television | What's your favorite TV show?
+phrase:wait-for-sb-sth | ⏳ | -i beklemek | to stay until someone comes or something happens | I'm waiting for the bus.
+phrase:wake-up | ⏰ | uyanmak | to stop sleeping | I wake up at 6 a.m.
+phrase:welcome-to-sth | 🤗 | -e hoş geldiniz | used to greet someone arriving at a place | Welcome to our home!
+phrase:what-about | ❔ | peki ya …?, … ne olacak? | used to ask about someone or something or make a suggestion | What about you? / What about a pizza?
+phrase:work-as-sth | 👩‍⚕️ | olarak çalışmak | to have a particular job | She works as a nurse.
+phrase:work-for-sb-sth | 🏢 | için çalışmak (şirket) | to be employed by a company or person | He works for a bank.
+phrase:work-hard | 💪 | çok çalışmak, sıkı çalışmak | to put a lot of effort into work | You need to work hard to pass.
+phrase:work-together | 🤝 | birlikte çalışmak | to cooperate | Let's work together on this project.
+phrase:work-with-sb | 👥 | biriyle çalışmak | to do a job with someone | I work with very nice people.
+phrase:would-like | 🙏 | istemek (kibarca) | used to say politely what you want | I would like a coffee, please.
+phrase:would-you-like | ☕ | … ister misiniz? | used to offer something politely | Would you like some tea?
+phrase:x-hours-a-day | ⏰ | günde X saat | a number of hours each day | I work eight hours a day.
+phrase:x-times-a | 🔁 | … -da X kez | a number of times in each period | I go to the gym three times a week.
+phrase:x-years-ago | ⏪ | X yıl önce | a number of years before now | I moved here five years ago.
+phrase:x-years-later | ⏩ | X yıl sonra | a number of years after that | Two years later, they got married.
+phrase:x-years-old | 🎂 | X yaşında | having lived for a number of years | My son is ten years old.
+phrase:you-re-welcome | 😊 | rica ederim | a polite answer to "thank you" | "Thanks!" "You're welcome."

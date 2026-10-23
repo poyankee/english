@@ -1,0 +1,280 @@
+enough-determiner | 👍 | yeterli, yeteri kadar | as much or as many as needed | We have enough chairs for everyone.
+enough-pronoun | 👍 | yeterince, yeteri kadarı | as much as needed | I've had enough, thank you.
+euro-noun | 💶 | avro | the money used in many European countries | It costs twenty euros.
+even-adverb | 😮 | bile, hatta | used to show something is surprising | Even my grandmother uses a smartphone.
+evening-noun | 🌆 | akşam | the part of the day between afternoon and night | What are you doing this evening?
+event-noun | 🎪 | olay, etkinlik | something important that happens; an organized occasion | The concert was the biggest event of the year.
+ever-adverb | ❔ | hiç (şimdiye kadar) | at any time | Have you ever been to Paris?
+every-determiner | 🔁 | her | all the members of a group; each | I go running every morning.
+everybody-pronoun | 👨‍👩‍👧‍👦 | herkes | every person | Everybody likes her.
+everyone-pronoun | 👨‍👩‍👧‍👦 | herkes | every person | Is everyone ready?
+everything-pronoun | 🌐 | her şey | all things | Thanks for everything.
+exam-noun | 📝 | sınav | a formal test of knowledge | I have a math exam tomorrow.
+example-noun | 💡 | örnek | something that shows what other things of the same kind are like | Can you give me an example?
+excited-adjective | 🤩 | heyecanlı | feeling very happy and enthusiastic | The kids are excited about the trip.
+exciting-adjective | 🎢 | heyecan verici | making you feel excited | It was an exciting game.
+exercise-noun | 🏋️ | egzersiz; alıştırma | physical activity to stay healthy; a task to practice | Do the exercises on page 10. / Swimming is good exercise.
+exercise-verb | 🤸 | egzersiz yapmak | to do physical activity to stay healthy | I exercise three times a week.
+expensive-adjective | 💎 | pahalı | costing a lot of money | This restaurant is too expensive.
+explain-verb | 🧑‍🏫 | açıklamak | to make something clear or easy to understand | Can you explain this word to me?
+extra-adjective | ➕ | ekstra, fazladan | more than usual | Bring an extra pair of socks.
+eye-noun | 👁️ | göz | the part of the body you see with | She has green eyes.
+face-noun | 🙂 | yüz | the front part of the head | Wash your face.
+fact-noun | 📌 | gerçek, olgu | something that is true | It's a fact that the earth goes around the sun.
+fall-noun | 🍂 | sonbahar; düşüş | the season after summer (US); a drop | The leaves turn red in the fall.
+fall-verb | 🍂 | düşmek | to go down to the ground suddenly | Be careful or you will fall.
+false-adjective | ❌ | yanlış, sahte | not true; not real | Is this sentence true or false?
+family-adjective | 👪 | aile (aileye uygun) | suitable for all ages or for families | It's a family movie.
+family-noun | 👨‍👩‍👧 | aile | parents and their children | I have a big family.
+famous-adjective | 🌟 | ünlü | known by many people | She is a famous singer.
+fantastic-adjective | ✨ | harika, muhteşem | extremely good | We had a fantastic time.
+far-adverb | 🏔️ | uzak, uzağa | at or to a long distance | Is the station far from here?
+farm-noun | 🚜 | çiftlik | land and buildings for growing crops and keeping animals | My uncle lives on a farm.
+farmer-noun | 👨‍🌾 | çiftçi | a person who owns or works on a farm | The farmer has a hundred cows.
+fast-adjective | 🏎️ | hızlı | able to move quickly | He has a fast car.
+fast-adverb | 💨 | hızlı, hızla | quickly | Don't drive so fast!
+fat-adjective | 🐷 | şişman, yağlı | having too much flesh on the body | The cat is getting fat.
+father-noun | 👨 | baba | a male parent | My father works in a bank.
+favorite-adjective | ❤️ | en sevilen, favori | liked more than others | What's your favorite color?
+favorite-noun | ❤️ | en sevdiği şey, favori | a person or thing liked more than others | This song is my favorite.
+February-noun | 🗓️ | Şubat | the second month of the year | February is the shortest month.
+feel-verb | 🤗 | hissetmek | to experience an emotion or physical feeling | I feel tired today.
+feeling-noun | 💓 | duygu, his | an emotion or physical sensation | I have a feeling that something is wrong.
+festival-noun | 🎡 | festival | a series of special events like music or films | We went to a music festival.
+few-adjective | 🤏 | az, birkaç (a few) | a small number | Only a few people came.
+few-determiner | 🤏 | az, birkaç | not many; a small number of | I have a few friends in Berlin.
+few-pronoun | 🤏 | birkaçı, azı | a small number of people or things | Few of them speak English.
+fifteen-number | 🔢 | on beş | the number 15 | The bus comes every fifteen minutes.
+fifth-number | 5️⃣ | beşinci | coming after four others | It's her fifth birthday.
+fifty-number | 🔢 | elli | the number 50 | My dad is fifty years old.
+fill-verb | 🫗 | doldurmak | to make something full | Fill the bottle with water.
+final-adjective | 🏁 | son, nihai | coming at the end | This is the final question.
+find-verb | 🔍 | bulmak | to discover where something is | I can't find my keys.
+fine-adjective | 👌 | iyi, güzel | in good health; good enough | "How are you?" "I'm fine, thanks."
+finish-verb | 🏁 | bitirmek | to come or bring to an end | Have you finished your homework?
+fire-noun | 🔥 | ateş, yangın | the flames and heat from something burning | Don't play with fire.
+first-adverb | 1️⃣ | önce, ilk olarak | before anything else | First, read the question.
+first-determiner | 🥇 | ilk, birinci | coming before all others | It was my first day at school.
+first-number | 1️⃣ | birinci | number one in a series | He finished first in the race.
+fish-noun | 🐟 | balık | an animal that lives in water and has fins | We had fish for dinner.
+five-number | 5️⃣ | beş | the number 5 | I have five cousins.
+flight-noun | ✈️ | uçuş | a journey by plane | Our flight leaves at six.
+floor-noun | 🏢 | zemin, yer; kat | the surface you walk on in a room; a level of a building | My office is on the third floor.
+flower-noun | 🌷 | çiçek | the colorful part of a plant | She gave me some flowers.
+fly-verb | 🕊️ | uçmak | to move through the air | Birds can fly.
+follow-verb | 👣 | takip etmek, izlemek | to come or go after someone | Follow me, please.
+food-noun | 🍲 | yiyecek, yemek | things people and animals eat | I love Turkish food.
+foot-noun | 🦶 | ayak | the part of the body at the end of the leg | My foot hurts.
+football-noun | 🏈 | Amerikan futbolu; futbol | a game played by two teams with an oval ball (US) | We watched football on TV.
+for-preposition | 🎁 | için | showing who receives something or the purpose | This gift is for you.
+forget-verb | 🫥 | unutmak | to not remember | Don't forget your umbrella.
+form-noun | 📋 | form; biçim | a paper with spaces for information; a type | Fill in this form, please.
+form-verb | 🔷 | oluşturmak, şekillendirmek | to make or create something | They formed a band.
+forty-number | 🔢 | kırk | the number 40 | There are forty students in the class.
+four-number | 4️⃣ | dört | the number 4 | A car has four wheels.
+fourteen-number | 🔢 | on dört | the number 14 | She is fourteen.
+fourth-number | 4️⃣ | dördüncü | coming after three others | He lives on the fourth floor.
+free-adjective | 🆓 | bedava; özgür, boş | costing nothing; not controlled; not busy | The museum is free on Sundays. / Are you free tonight?
+Friday-noun | 🗓️ | Cuma | the day after Thursday | See you on Friday.
+friend-noun | 🧑‍🤝‍🧑 | arkadaş | a person you know well and like | She is my best friend.
+friendly-adjective | 😊 | arkadaş canlısı, samimi | kind and pleasant | The people here are very friendly.
+from-preposition | 📍 | -den, -dan | showing where someone or something starts | I'm from Turkey.
+front-adjective | 🔜 | ön | at the front | Sit in the front seat.
+front-noun | 🔜 | ön, ön taraf | the part that faces forward | Let's meet at the front of the building.
+fruit-noun | 🍇 | meyve | the soft part of a plant that you eat, like apples | Eat more fruit and vegetables.
+full-adjective | 🈵 | dolu; tok | with no empty space; having eaten enough | The bus was full. / I'm full, thanks.
+fun-noun | 🎉 | eğlence | enjoyment; pleasure | Have fun at the party!
+funny-adjective | 😂 | komik | making you laugh | He told a funny story.
+future-noun | 🔮 | gelecek | the time that will come | What are your plans for the future?
+game-noun | 🎮 | oyun, maç | an activity with rules that you play for fun | Let's play a game.
+garden-noun | 🌻 | bahçe | land next to a house where flowers and plants grow | We have a small garden.
+geography-noun | 🌍 | coğrafya | the study of countries, mountains, rivers, etc. | Geography is my favorite subject.
+get-verb | 📥 | almak, elde etmek; olmak, varmak | to receive or obtain; to become; to arrive | I got a letter. / It's getting cold.
+girl-noun | 👧 | kız | a female child | The girl is reading a book.
+girlfriend-noun | 💑 | kız arkadaş, sevgili | a woman someone is having a romantic relationship with | He's meeting his girlfriend tonight.
+give-verb | 🎁 | vermek | to let someone have something | Give me the book, please.
+glass-noun | 🥛 | bardak; cam | a container for drinking; a hard transparent material | Can I have a glass of water?
+go-verb | 🚶 | gitmek | to move from one place to another | I go to school by bus.
+good-adjective | 👍 | iyi | of high quality; pleasant | That's a good idea.
+goodbye-exclamation | 👋 | hoşça kal, güle güle | said when leaving someone | Goodbye! See you soon.
+goodbye-noun | 👋 | veda | the act of saying goodbye | We said our goodbyes at the airport.
+grandfather-noun | 👴 | büyükbaba, dede | the father of your mother or father | My grandfather is ninety.
+grandmother-noun | 👵 | büyükanne, nine | the mother of your mother or father | My grandmother makes great cookies.
+grandparent-noun | 👴👵 | büyükanne/büyükbaba | the parent of your mother or father | I visit my grandparents every summer.
+gray-adjective | 🩶 | gri | having the color between black and white | The sky is gray today.
+gray-noun | 🩶 | gri renk | the color between black and white | Gray suits you.
+great-adjective | 🌟 | harika; büyük | very good; very large or important | We had a great time.
+green-adjective | 🟢 | yeşil | having the color of grass | She has green eyes.
+green-noun | 🟢 | yeşil renk | the color of grass | Green is the color of nature.
+group-noun | 👥 | grup | a number of people or things together | Work in groups of four.
+grow-verb | 🌱 | büyümek, yetiştirmek | to become bigger; to make plants develop | Children grow fast. / We grow tomatoes.
+guess-noun | 🤔 | tahmin | an answer you give without being sure | Have a guess!
+guess-verb | 🤔 | tahmin etmek | to give an answer without knowing for sure | Guess how old I am.
+guitar-noun | 🎸 | gitar | a musical instrument with strings | He plays the guitar.
+gym-noun | 🏋️ | spor salonu | a room or building with equipment for exercise | I go to the gym after work.
+hair-noun | 💇 | saç | the thin threads that grow on your head | She has long hair.
+half-determiner | ½ | yarım | being one of two equal parts | Half the class was sick.
+half-noun | ½ | yarı, yarım | one of two equal parts | I ate half of the pizza.
+half-pronoun | ½ | yarısı | an amount equal to half | Half of them are students.
+hand-noun | ✋ | el | the part of the body at the end of the arm | Raise your hand.
+happen-verb | 💥 | olmak, meydana gelmek | to take place | What happened?
+happy-adjective | 😀 | mutlu | feeling pleased | I'm happy to see you.
+hard-adjective | 🪨 | zor; sert | difficult; solid and firm | The test was hard. / This bed is too hard.
+hard-adverb | 💪 | sıkı, çok (çalışmak) | with a lot of effort | She works very hard.
+hat-noun | 🎩 | şapka | something you wear on your head | Wear a hat in the sun.
+hate-verb | 😤 | nefret etmek | to dislike very much | I hate waiting.
+have-verb | 🤲 | sahip olmak, -si olmak | to own or possess something | I have two brothers.
+have to-modal verb | ❗ | zorunda olmak, -meli | to need to do something | I have to go to work.
+he-pronoun | 👨 | o (erkek) | a man or boy already mentioned | He is my brother.
+head-noun | 🗣️ | baş, kafa | the part of the body above the neck | I have a pain in my head.
+health-noun | ❤️‍🩹 | sağlık | the condition of your body and mind | Smoking is bad for your health.
+healthy-adjective | 🥦 | sağlıklı | strong and well; good for you | Eat healthy food.
+hear-verb | 👂 | duymak | to notice sounds with your ears | Can you hear me?
+hello-exclamation | 👋 | merhaba | used as a greeting | Hello! How are you?
+hello-noun | 👋 | selam | the word "hello" said as a greeting | Say hello to your mother.
+help-noun | 🆘 | yardım | the act of helping | Thanks for your help.
+help-verb | 🤝 | yardım etmek | to make it easier for someone to do something | Can you help me?
+her-determiner | 👩 | onun (kadın) | belonging to a woman or girl | That's her car.
+her-pronoun | 👩 | onu, ona (kadın) | used as the object for a woman or girl | I called her yesterday.
+here-adverb | 📍 | burada, buraya | in or to this place | Come here.
+hey-exclamation | 🙋 | hey | used to get attention or to say hello | Hey, wait for me!
+hi-exclamation | 👋 | selam, merhaba | hello (informal) | Hi, I'm Poyraz.
+high-adjective | 🏔️ | yüksek | far from the ground; great in amount | The mountain is very high. / Prices are high.
+him-pronoun | 👨 | onu, ona (erkek) | used as the object for a man or boy | I saw him at the party.
+his-determiner | 👨 | onun (erkek) | belonging to a man or boy | This is his bag.
+history-noun | 🏛️ | tarih | the study of past events | I love history.
+hobby-noun | 🎣 | hobi, uğraş | something you do for fun in your free time | My hobby is photography.
+home-adverb | 🏠 | eve, evde | to or at the place where you live | I go home at five.
+home-noun | 🏠 | ev, yuva | the place where you live | Welcome to my home.
+homework-noun | 📚 | ödev, ev ödevi | work that students do at home | Did you do your homework?
+hope-verb | 🤞 | ummak | to want something to happen | I hope you feel better soon.
+horse-noun | 🐎 | at | a large animal that people ride | She rides a horse.
+hospital-noun | 🏥 | hastane | a place where sick people are treated | He's in the hospital.
+hot-adjective | 🌶️ | sıcak; acı | having a high temperature; spicy | It's hot today. / This sauce is hot.
+hotel-noun | 🏨 | otel | a building where you pay to stay | We stayed in a nice hotel.
+hour-noun | ⏰ | saat (süre) | a period of sixty minutes | The movie is two hours long.
+house-noun | 🏡 | ev | a building where people live | They bought a new house.
+how-adverb | ❓ | nasıl | in what way; in what condition | How are you? / How do you spell it?
+however-adverb | ↩️ | ancak, bununla birlikte | but; despite this | It was raining. However, we went out.
+hundred-number | 💯 | yüz (sayı) | the number 100 | There are a hundred people here.
+hungry-adjective | 🍽️ | aç | wanting to eat | I'm hungry. Let's eat.
+husband-noun | 🤵 | koca, eş | the man a woman is married to | Her husband is a doctor.
+I-pronoun | 🙋 | ben | the person who is speaking | I am a student.
+ice-noun | 🧊 | buz | frozen water | Do you want ice in your drink?
+ice cream-noun | 🍦 | dondurma | a sweet frozen food made from milk | I'd like a chocolate ice cream.
+idea-noun | 💡 | fikir | a plan or thought | That's a great idea!
+if-conjunction | 🔀 | eğer, -se/-sa | on the condition that | If it rains, we'll stay home.
+imagine-verb | 💭 | hayal etmek | to make a picture of something in your mind | Imagine you are on a beach.
+important-adjective | ❗ | önemli | having great value or effect | It's important to sleep well.
+improve-verb | 📈 | geliştirmek, iyileştirmek | to make or become better | I want to improve my English.
+in-adverb | 📥 | içeri, içeride | into or inside a place | Come in!
+in-preposition | 📦 | içinde, -de/-da | inside a place or thing; during | The keys are in my bag. / in June
+include-verb | ➕ | içermek, dahil etmek | to have as part of a whole | The price includes breakfast.
+information-noun | ℹ️ | bilgi | facts about something | I need more information.
+interest-noun | 🧐 | ilgi; faiz | a feeling of wanting to know about something | She has an interest in art.
+interest-verb | 🧐 | ilgisini çekmek | to make someone want to know more | History interests me.
+interested-adjective | 🤓 | ilgili, meraklı | wanting to know about something | I'm interested in music.
+interesting-adjective | 💡 | ilginç | holding your attention | This is an interesting book.
+internet-noun | 🌐 | internet | the global computer network | I found it on the internet.
+interview-noun | 🎙️ | mülakat, röportaj | a meeting where someone is asked questions | I have a job interview tomorrow.
+interview-verb | 🎙️ | mülakat yapmak, röportaj yapmak | to ask someone questions in a formal meeting | They interviewed five people for the job.
+into-preposition | ➡️ | içine | to the inside of | She went into the house.
+introduce-verb | 🤝 | tanıştırmak, tanıtmak | to tell people each other's names when they first meet | Let me introduce my friend.
+island-noun | 🏝️ | ada | land with water all around it | We spent a week on an island.
+it-pronoun | 👉 | o (cansız), bu | used for a thing or animal | Where is my phone? It's on the table.
+its-determiner | 👉 | onun (cansız) | belonging to a thing or animal | The dog wagged its tail.
+jacket-noun | 🧥 | ceket | a short coat | Take a jacket, it's windy.
+January-noun | 🗓️ | Ocak | the first month of the year | It snows a lot in January.
+jeans-noun | 👖 | kot pantolon | pants made of strong blue cotton | She is wearing jeans.
+job-noun | 💼 | iş | work that you do for money | I'm looking for a new job.
+join-verb | 🔗 | katılmak; birleştirmek | to become a member of; to connect | Why don't you join us?
+juice-noun | 🧃 | meyve suyu | the liquid from fruit | A glass of orange juice, please.
+July-noun | 🗓️ | Temmuz | the seventh month of the year | It's very hot in July.
+June-noun | 🗓️ | Haziran | the sixth month of the year | School finishes in June.
+just-adverb | ⏱️ | henüz, az önce; sadece | a very short time ago; only | I've just arrived. / It's just a joke.
+keep-verb | 🔐 | tutmak, saklamak | to have something and not give it back; to continue | Can I keep this photo? / Keep walking.
+key-adjective | 🗝️ | kilit, en önemli | very important | She is a key player in the team.
+key-noun | 🔑 | anahtar | a metal object used to open a lock | I lost my car keys.
+kind-noun-type | 🗂️ | tür, çeşit | a type of person or thing | What kind of music do you like?
+kitchen-noun | 🍳 | mutfak | a room where food is cooked | Mom is in the kitchen.
+know-verb | 🧠 | bilmek, tanımak | to have information in your mind; to be familiar with someone | I know the answer. / Do you know Ali?
+land-noun | 🏞️ | kara, arazi | the solid part of the earth; an area of ground | They bought some land.
+language-noun | 🗣️ | dil | a system of words used by people | How many languages do you speak?
+large-adjective | 🐳 | büyük, geniş | big in size | She has a large family.
+last-determiner-final-1 | 🔚 | son, geçen | coming after all others; the most recent | the last page / last week
+late-adjective | 🐢 | geç, gecikmiş | after the expected time | Sorry I'm late.
+late-adverb | 🌙 | geç | after the usual time | I went to bed late.
+later-adverb | ⏩ | daha sonra, sonra | at a time in the future | See you later.
+laugh-noun | 😂 | gülme, kahkaha | the sound you make when something is funny | She has a lovely laugh.
+laugh-verb | 😆 | gülmek | to make sounds showing you think something is funny | Everybody laughed at his joke.
+learn-verb | 🎓 | öğrenmek | to get knowledge or a skill | I'm learning English.
+leave-verb | 🚪 | ayrılmak, bırakmak | to go away from a place; to let something stay | The train leaves at nine. / Leave your bag here.
+left-adjective | ⬅️ | sol | on the side of the body where the heart is | He writes with his left hand.
+left-adverb | ⬅️ | sola | toward the left side | Turn left at the bank.
+left-noun | ⬅️ | sol taraf | the left side | The school is on the left.
+leg-noun | 🦵 | bacak | the part of the body you stand and walk on | She broke her leg skiing.
+lesson-noun | 📘 | ders | a period of time when you are taught something | I have a piano lesson today.
+let-verb | 🙆 | izin vermek, bırakmak | to allow | Let me help you.
+letter-noun | ✉️ | mektup; harf | a written message sent by mail; a sign like A or B | I wrote a letter to my friend. / "A" is the first letter.
+library-noun | 📚 | kütüphane | a place where you can borrow books | I study at the library.
+lie-verb-1 | 🛌 | uzanmak, yatmak | to be in a flat position on a surface | I lay on the bed and fell asleep.
+life-noun | 🌱 | hayat, yaşam | the state of being alive; the time someone is alive | Life is beautiful.
+light-adjective-from the sun/a lamp | 🔆 | aydınlık | full of natural light | The room is very light in the morning.
+light-noun-from the sun/a lamp | 💡 | ışık | the energy from the sun or a lamp that lets you see | Turn on the light.
+like-preposition-similar | 👯 | gibi | similar to | She looks like her mother.
+like-verb-find sb/sth pleasant | 👍 | sevmek, hoşlanmak | to find someone or something pleasant | I like chocolate.
+line-noun | ➖ | çizgi; sıra, kuyruk | a long thin mark; a row of people | Draw a line. / We waited in line.
+lion-noun | 🦁 | aslan | a large wild cat that lives in Africa | The lion is called the king of the animals.
+list-noun | 📋 | liste | a series of names or things written one below another | Make a shopping list.
+list-verb | 📝 | listelemek | to write things in a list | List five things you like.
+listen-verb | 🎧 | dinlemek | to pay attention to sounds | Listen to the music.
+little-adjective | 🐭 | küçük | small in size | They have a little house.
+little-determiner | 🤏 | az (a little: biraz) | not much | There's little time left. / a little sugar
+little-pronoun | 🤏 | az bir şey, biraz | a small amount | I understood very little.
+live-verb-1 | 🏡 | yaşamak, oturmak | to have your home somewhere; to be alive | I live in Ankara.
+local-adjective | 📍 | yerel | of the area near you | Shop at your local market.
+long-adjective-1 | 📏 | uzun | measuring a lot from end to end or in time | She has long hair. / a long day
+long-adverb-1 | ⏳ | uzun süre | for a long time | Have you been waiting long?
+look-verb | 👀 | bakmak; görünmek | to turn your eyes toward something; to seem | Look at this! / You look tired.
+lose-verb | 😞 | kaybetmek | to not be able to find something; to not win | I lost my wallet. / We lost the game.
+lot-adverb | ➕ | çok (a lot) | very much; often | I like it a lot.
+lot-determiner | 📚 | çok (a lot of) | a large number or amount of | A lot of people came.
+lot-pronoun | 📚 | çok şey | a large amount | I learned a lot.
+love-noun | ❤️ | aşk, sevgi | a very strong feeling of liking someone | It was love at first sight.
+love-verb | ❤️ | sevmek, aşık olmak | to like someone or something very much | I love you. / I love pizza.
+lunch-noun | 🥪 | öğle yemeği | the meal you eat in the middle of the day | Let's have lunch together.
+machine-noun | ⚙️ | makine | a piece of equipment that does a job | a washing machine
+magazine-noun | 📰 | dergi | a thin book with stories and pictures that comes out regularly | I read a fashion magazine.
+main-adjective | ⭐ | ana, başlıca | most important | The main problem is money.
+make-verb | 🛠️ | yapmak, yaratmak | to create or produce something | I'll make some tea.
+mall-noun | 🏬 | alışveriş merkezi, AVM | a large building with many shops | Let's go to the mall.
+man-noun | 👨 | adam, erkek | an adult male person | Who is that man?
+many-determiner | 🔢 | çok, birçok | a large number of | There are many people here.
+many-pronoun | 🔢 | birçoğu | a large number of people or things | Many of my friends live abroad.
+map-noun | 🗺️ | harita | a drawing of an area showing roads, cities, etc. | Look at the map.
+March-noun | 🗓️ | Mart | the third month of the year | Spring begins in March.
+market-noun | 🛒 | pazar, piyasa | a place where people buy and sell things | I buy vegetables at the market.
+married-adjective | 💍 | evli | having a husband or wife | Are you married?
+match-noun-contest/correspond | 🏟️ | maç | a sports game between two teams or players | We watched a football match.
+match-verb-contest/correspond | 🧩 | eşleştirmek, uymak | to go well together; to find pairs | Match the words with the pictures. / Your shoes match your bag.
+May-noun | 🗓️ | Mayıs | the fifth month of the year | My exam is in May.
+maybe-adverb | 🤷 | belki | perhaps | Maybe it will rain tomorrow.
+me-pronoun | 🙋 | beni, bana | used as the object for the speaker | Can you help me?
+meal-noun | 🍽️ | öğün, yemek | food eaten at one time, like breakfast or dinner | We had a nice meal.
+mean-verb | 💬 | anlamına gelmek, kastetmek | to have a meaning; to intend | What does this word mean?
+meaning-noun | 📖 | anlam | what a word or idea expresses | What is the meaning of this word?
+meat-noun | 🥩 | et | the flesh of animals eaten as food | I don't eat meat.
+meet-verb | 🤝 | buluşmak, tanışmak | to come together with someone; to see someone for the first time | Nice to meet you. / Let's meet at six.
+meeting-noun | 👥 | toplantı | an occasion when people come together to discuss something | I have a meeting at ten.
+member-noun | 🪪 | üye | a person who belongs to a group | She is a member of the club.
+menu-noun | 📜 | menü | a list of food in a restaurant | Can I see the menu, please?
+message-noun | 💬 | mesaj | a written or spoken piece of information | I sent you a message.
+meter-noun | 📏 | metre | a unit for measuring length (100 cm) | The pool is 25 meters long.
+midnight-noun | 🕛 | gece yarısı | twelve o'clock at night | We went home at midnight.
+mile-noun | 🛣️ | mil | a unit for measuring distance (about 1.6 km) | The beach is two miles away.
+milk-noun | 🥛 | süt | the white liquid from cows | I drink milk every morning.
+million-number | 🔢 | milyon | the number 1,000,000 | The city has two million people.
+minute-noun-1 | ⏱️ | dakika | a period of sixty seconds | Wait a minute.
+miss-verb | 😢 | özlemek; kaçırmak | to feel sad because someone is not there; to fail to catch | I miss you. / I missed the bus.
+mistake-noun | ❌ | hata, yanlış | something that is not correct | I made a mistake.
+model-noun | 🧍 | model; manken | a small copy of something; a person who wears clothes for photos | a model of a ship / She is a fashion model.
